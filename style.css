@@ -65,7 +65,12 @@ overflow-x: hidden;
         font-weight: 500;
         transition: all 0.3s ease;
         border: none;
+        text-decoration: none;
     }
+        ul button a{
+            text-decoration: none;
+            color: white;
+        }
     /* Desktop Menu - Default Visible */
     .desktop-menu {
         display: block;
