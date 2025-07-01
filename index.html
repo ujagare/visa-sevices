@@ -13,6 +13,7 @@
     <meta property="og:url" content="https://whitewingsvisa.com">
     <link rel="canonical" href="https://whitewingsvisa.com">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <title>White Wings Visa Consultancy Pune | Best Visa Services in Maharashtra | Immigration Expert</title>
@@ -24,16 +25,65 @@
                 <nav>
                     <img src="images/logo/WING LOGO.png" class="logo">
 
+    <!-- Loader -->
+    <div id="loader" class="loader-container visa-loader">
+        <div class="loader-content">
+            <div class="airplane">
+                <i class="ri-plane-line"></i>
+            </div>
+            <div class="loader-spinner"></div>
+            <div class="loader-text">White Wings Visa Consultancy</div>
+            <div class="loader-subtext">Your Gateway to Global Opportunities</div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
                     <!-- Desktop Menu -->
                     <div id="links" class="desktop-menu">
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="migrate.html">Migrate <i class="ri-arrow-down-s-line"></i></a>
+                                <div class="dropdown-content">
+                                    <a href="canada-immigration.html">Canada Immigration</a>
+                                    <a href="australia-immigration.html">Australia Immigration</a>
+                                    <a href="usa-immigration.html">USA Immigration</a>
+                                    <a href="uk-immigration.html">UK Immigration</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="study.html">Study <i class="ri-arrow-down-s-line"></i></a>
+                                <div class="dropdown-content">
+                                    <a href="study-canada.html">Study in Canada</a>
+                                    <a href="study-australia.html">Study in Australia</a>
+                                    <a href="study-usa.html">Study in USA</a>
+                                    <a href="study-uk.html">Study in UK</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="work.html">Work <i class="ri-arrow-down-s-line"></i></a>
+                                <div class="dropdown-content">
+                                    <a href="work-canada.html">Work in Canada</a>
+                                    <a href="work-australia.html">Work in Australia</a>
+                                    <a href="work-usa.html">Work in USA</a>
+                                    <a href="work-uk.html">Work in UK</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="services.html">Services <i class="ri-arrow-down-s-line"></i></a>
+                                <div class="dropdown-content">
+                                    <a href="migrate.html">Migrate</a>
+                                    <a href="study.html">Study</a>
+                                    <a href="work.html">Work</a>
+                                    <a href="services.html">Visa Services</a>
+                                </div>
+                            </li>
+                            <li><a href="coaching.html">Coaching</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                             <button>
-                                <a href="#contact">Appy Now</a>
-                               
+                                <a href="contact.html">Apply Now</a>
                             </button>
                         </ul>
                     </div>
@@ -51,10 +101,10 @@
                                 <i class="ri-close-line" id="menu-close" title="Close Menu"></i>
                             </div>
                             <ul class="mobile-nav-links">
-                                <li><a href="#home"><i class="ri-home-4-line"></i> Home</a></li>
-                                <li><a href="#about"><i class="ri-information-line"></i> About</a></li>
-                                <li><a href="#services"><i class="ri-service-line"></i> Services</a></li>
-                                <li><a href="#contact"><i class="ri-phone-line"></i> Contact</a></li>
+                                <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
+                                <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
+                                <li><a href="services.html"><i class="ri-service-line"></i> Services</a></li>
+                                <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
                             </ul>
                             <button class="mobile-apply-btn">
                                 <i class="ri-send-plane-line"></i> Apply Now
@@ -74,68 +124,83 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Japan Visa">
+                            <img src="images/hero/usa.jpeg" alt="Japan Visa">
                             <div class="slide-content">
-                              <h3>Japan Visa</h3>
-                              <p>Experience the Land of Rising Sun</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="USA Visa">
-                            <div class="slide-content">
-                              <h3>USA Visa</h3>
+                              <h3>USA VISA</h3>
                               <p>Discover the American Dream</p>
                             </div>
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1520986606214-8b456906c813?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="UK Visa">
+                            <img src="images/hero/Canada.jpeg" alt="USA Visa">
                             <div class="slide-content">
-                              <h3>UK Visa</h3>
-                              <p>Explore Great Britain</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Canada Visa">
-                            <div class="slide-content">
-                              <h3>Canada Visa</h3>
+                              <h3>CANADA VISA</h3>
                               <p>Experience the Beauty of Canada</p>
                             </div>
                           </div>
-                          <div class="swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Italy Visa">
+                        <div class="swiper-slide">
+                            <img src="images/hero/Asutrlia.jpeg" alt="Australia Visa">
                             <div class="slide-content">
-                              <h3>Italy Visa</h3>
-                              <p>La Bella Italia Experience</p>
+                                <h3>AUSTRALIA VISA</h3>
+                                <p>from India</p>
                             </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Netherlands Visa">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/hero/New Zealand.jpeg" alt="Australia Visa">
                             <div class="slide-content">
-                              <h3>Netherlands Visa</h3>
-                              <p>Discover Dutch Culture</p>
+                                <h3>NEW ZEALAND VISA</h3>
+                                <p>from India</p>
                             </div>
-                          </div>
-                          <div class="swiper-slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/hero/United Kingdom.jpeg" alt="UK Visa">
+                            <div class="slide-content">
+                                <h3>UK VISA</h3>
+                                <p>Explore Great Britain</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/hero/Schengen.jpeg" alt="UK Visa">
+                            <div class="slide-content">
+                                <h3>SCHENGEN VISA</h3>
+                                <p>from India</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/hero/Dubai.jpeg" alt="UK Visa">
+                            <div class="slide-content">
+                                <h3>DUBAI VISA</h3>
+                                <p>from India</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/hero/Singapore.jpeg" alt="UK Visa">
+                            <div class="slide-content">
+                                <h3>SINGAPORE VISA</h3>
+                                <p>from India</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
                             <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vietnam Visa">
                             <div class="slide-content">
-                              <h3>Vietnam Visa</h3>
-                              <p>from India</p>
+                                <h3>VIETNAM VISA</h3>
+                                <p>from India</p>
                             </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Singapore Visa">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/hero/Brazil.jpeg" alt="Brazil Visa">
                             <div class="slide-content">
-                              <h3>Singapore Visa</h3>
-                              <p>from India</p>
+                                <h3>BRAZIL VISA</h3>
+                                <p>from India</p>
                             </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Australia Visa">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/hero/China.jpeg" alt="China Visa">
                             <div class="slide-content">
-                              <h3>Australia Visa</h3>
-                              <p>from India</p>
+                                <h3>CHINA VISA</h3>
+                                <p>from India</p>
                             </div>
-                          </div>
+                        </div>
+                        
                         </div>
                         <div class="swiper-button-prev arrow "></div>
                         <div class="swiper-button-next arrow "></div>
@@ -152,114 +217,135 @@
         <div class="image-marquee-container">
             <div class="image-marquee-content">
                 <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Japan Visa">
-                    <div class="marquee-overlay">
-                        <h4>Japan Visa</h4>
-                        <p>from Pune India</p>
-                    </div>
-                </div>
-                <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="USA Visa">
+                    <img src="images/hero/usa.jpeg" alt="Japan Visa">
                     <div class="marquee-overlay">
                         <h4>USA Visa</h4>
-                        <p>from Pune India</p>
-
+                        <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="UK Visa">
-                    <div class="marquee-overlay">
-                        <h4>UK Visa</h4>
-                        <p>from Pune India</p>
-
-
-                    </div>
-                </div>
-                <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Canada Visa">
+                    <img src="images/hero/Canada.jpeg" alt="Japan Visa">
                     <div class="marquee-overlay">
                         <h4>Canada Visa</h4>
-                        <p>from India</p>
+                        <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Italy Visa">
-                    <div class="marquee-overlay">
-                        <h4>Schengen Visa</h4>
-                        <p>from India</p>
-                    </div>
-                </div>
-                <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Netherlands Visa">
-                    <div class="marquee-overlay">
-                        <h4>Netherlands Visa</h4>
-                        <p>from Pune India</p>
-
-                    </div>
-                </div>
-                <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Vietnam Visa">
-                    <div class="marquee-overlay">
-                        <h4>Vietnam Visa</h4>
-                        <p>for Indian Citizens</p>
-                    </div>
-                </div>
-                <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Singapore Visa">
-                    <div class="marquee-overlay">
-                        <h4>Singapore Visa</h4>
-                        <p>for Indian Citizens</p>
-                    </div>
-                </div>
-                <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Australia Visa">
+                    <img src="images/hero/Asutrlia.jpeg" alt="Japan Visa">
                     <div class="marquee-overlay">
                         <h4>Australia Visa</h4>
-                        <p>for Indian Citizens</p>
+                        <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Student Visa">
+                    <img src="images/hero/New Zealand.jpeg" alt="Japan Visa">
                     <div class="marquee-overlay">
-                        <h4>Student Visa</h4>
-                        <p>Study Abroad from India</p>
-                    </div>
-                </div>
-                <!-- Duplicate cards for seamless loop -->
-                <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Japan Visa">
-                    <div class="marquee-overlay">
-                        <h4>Japan Visa</h4>
-                        <p>from Pune India</p>
+                        <h4>New Zealand Visa</h4>
+                        <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="USA Visa">
-                    <div class="marquee-overlay">
-                        <h4>USA Visa</h4>
-                        <p>Services Pune</p>
-                    </div>
-                </div>
-                <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="UK Visa">
+                    <img src="images/hero/United Kingdom.jpeg" alt="USA Visa">
                     <div class="marquee-overlay">
                         <h4>UK Visa</h4>
-                        <p>Pune Maharashtra</p>
+                        <p>from Pune India</p>
+
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Canada Visa">
-                    <div class="marquee-overlay">
-                        <h4>Canada Visa</h4>
-                        <p>from India</p>
-                    </div>
-                </div>
-                <div class="marquee-country-card">
-                    <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Schengen Visa">
+                    <img src="images/hero/Schengen.jpeg" alt="USA Visa">
                     <div class="marquee-overlay">
                         <h4>Schengen Visa</h4>
-                        <p>from India</p>
+                        <p>From India</p>
                     </div>
+                </div>
+                <div class="marquee-country-card">
+                    <img src="images/hero/Dubai.jpeg" alt="USA Visa">
+                    <div class="marquee-overlay">
+                        <h4>Dubai Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
+                <div class="marquee-country-card">
+                    <img src="images/hero/Singapore.jpeg" alt="USA Visa">
+                    <div class="marquee-overlay">
+                        <h4>Singapore Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
+                <div class="marquee-country-card">
+                    <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                        alt="Vietnam Visa">
+                    <div class="marquee-overlay">
+                        <h4>Vietnam Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
+                <div class="marquee-country-card">
+                    <img src="images/hero/Brazil.jpeg" alt="Brazil Visa">
+                    <div class="marquee-overlay">
+                        <h4>Brazil Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
+                <div class="marquee-country-card">
+                    <img src="images/hero/China.jpeg" alt="China Visa">
+                    <div class="marquee-overlay">
+                        <h4>China Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
+                
+                <!-- Duplicate cards for seamless loop -->
+                <div class="marquee-country-card">
+                    <img src="images/hero/usa.jpeg" alt="USA Visa">
+                    <div class="marquee-overlay">
+                        <h4>USA Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
+                <div class="marquee-country-card">
+                    <img src="images/hero/Canada.jpeg" alt="Canada Visa">
+                    <div class="marquee-overlay">
+                        <h4>Canada Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
+                <div class="marquee-country-card">
+                    <img src="images/hero/Asutrlia.jpeg" alt="Australia Visa">
+                    <div class="marquee-overlay">
+                        <h4>Australia Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
+                <div class="marquee-country-card">
+                    <img src="images/hero/New Zealand.jpeg" alt="New Zealand Visa">
+                    <div class="marquee-overlay">
+                        <h4>New Zealand Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
+                <div class="marquee-country-card">
+                    <img src="images/hero/United Kingdom.jpeg" alt="UK Visa">
+                    <div class="marquee-overlay">
+                        <h4>UK Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
+                <div class="marquee-country-card">
+                    <img src="images/hero/Brazil.jpeg" alt="Brazil Visa">
+                    <div class="marquee-overlay">
+                        <h4>Brazil Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
+                <div class="marquee-country-card">
+                    <img src="images/hero/China.jpeg" alt="China Visa">
+                    <div class="marquee-overlay">
+                        <h4>China Visa</h4>
+                        <p>From India</p>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -414,6 +500,131 @@
                         <div class="country-choice-item">
                             <img src="https://flagcdn.com/w40/es.png" alt="Spain Flag">
                             <span>Spain</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Our Professional Visa Services</h2>
+                <p>Expert visa consultation and assistance for all your international travel requirements from Pune, India</p>
+            </div>
+            
+            <div class="services-content">
+                <div class="services-left">
+                    <div class="service-highlight">
+                        <div class="highlight-badge">
+                            <i class="ri-star-fill"></i>
+                            100% Success Rate
+                        </div>
+                        <h3>Why Choose White Wings?</h3>
+                        <p>We are Pune's leading visa consultancy with years of experience in helping thousands of clients achieve their international travel dreams.</p>
+                        
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <h4>5000+</h4>
+                                <p>Successful Visas</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>50+</h4>
+                                <p>Countries Covered</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>10+</h4>
+                                <p>Years Experience</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-features">
+                            <h4>Our Key Features</h4>
+                            <div class="feature-list">
+                                <div class="feature-point">
+                                    <i class="ri-check-line"></i>
+                                    <span>Expert Visa Consultants</span>
+                                </div>
+                                <div class="feature-point">
+                                    <i class="ri-check-line"></i>
+                                    <span>Document Verification</span>
+                                </div>
+                                <div class="feature-point">
+                                    <i class="ri-check-line"></i>
+                                    <span>Interview Preparation</span>
+                                </div>
+                                <div class="feature-point">
+                                    <i class="ri-check-line"></i>
+                                    <span>24/7 Customer Support</span>
+                                </div>
+                                <div class="feature-point">
+                                    <i class="ri-check-line"></i>
+                                    <span>Fast Processing</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-cta">
+                            <a href="#contact" class="cta-btn">
+                                <i class="ri-phone-line"></i>
+                                Get Free Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="services-right">
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-icon-small">
+                                <i class="ri-plane-fill"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Tourist Visa Services</h4>
+                                <p>Complete tourist visa assistance for USA, Canada, UK, Australia, Schengen countries and more with document preparation and interview guidance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item">
+                            <div class="service-icon-small">
+                                <i class="ri-briefcase-fill"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Business Visa Solutions</h4>
+                                <p>Professional business visa services for corporate travel, meetings, and conferences with fast-track processing and corporate documentation.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item">
+                            <div class="service-icon-small">
+                                <i class="ri-graduation-cap-fill"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Student Visa Guidance</h4>
+                                <p>Complete student visa assistance for studying abroad including university applications, financial documentation, and scholarship guidance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item">
+                            <div class="service-icon-small">
+                                <i class="ri-user-settings-fill"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Work Visa Support</h4>
+                                <p>Professional work visa services for employment opportunities worldwide with job offer verification and work permit assistance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item">
+                            <div class="service-icon-small">
+                                <i class="ri-heart-fill"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Family & Medical Visas</h4>
+                                <p>Specialized services for family reunion visas and medical treatment visas with complete documentation and application support.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -898,6 +1109,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-   <script src="script.js"></script>
+    <script src="loader.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,459 @@
+/* Professional UI Enhancements */
+
+/* Enhanced Hero Sections */
+.migration-hero, .study-hero, .work-hero, .coaching-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.migration-hero::before, .study-hero::before, .work-hero::before, .coaching-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.migration-hero-container, .study-hero-container, .work-hero-container, .coaching-hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.migration-hero-container h1, .study-hero-container h1, .work-hero-container h1, .coaching-hero-container h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+}
+
+.migration-hero-container p, .study-hero-container p, .work-hero-container p, .coaching-hero-container p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Enhanced Card Designs */
+.country-immigration-card, .study-destination-card, .work-destination-card, .course-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.country-immigration-card::before, .study-destination-card::before, .work-destination-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8, #1e40af);
+}
+
+.country-immigration-card:hover, .study-destination-card:hover, .work-destination-card:hover, .course-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-color: #3b82f6;
+}
+
+.country-immigration-card img, .study-destination-card img, .work-destination-card img {
+    width: 80px;
+    height: 50px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.country-immigration-card h3, .study-destination-card h3, .work-destination-card h3 {
+    color: #1e293b;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.country-immigration-card p, .study-destination-card p, .work-destination-card p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-size: 1rem;
+}
+
+/* Enhanced Tags and Badges */
+.program-tag, .highlight-tag {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+.highlight-tag {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.programs-list, .study-highlights, .work-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Enhanced Buttons */
+.immigration-btn, .study-btn, .work-btn, .course-btn, .cta-button {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 14px 0 rgba(30, 41, 59, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.immigration-btn::before, .study-btn::before, .work-btn::before, .course-btn::before, .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.immigration-btn:hover::before, .study-btn:hover::before, .work-btn:hover::before, .course-btn:hover::before, .cta-button:hover::before {
+    left: 100%;
+}
+
+.immigration-btn:hover, .study-btn:hover, .work-btn:hover, .course-btn:hover, .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px 0 rgba(30, 41, 59, 0.4);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+/* Enhanced Process Timeline */
+.process-timeline, .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline-step, .step {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    padding: 40px 32px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-step:hover, .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+    border-color: #3b82f6;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 16px rgba(30, 41, 59, 0.3);
+}
+
+.step-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.timeline-step h3, .step h3 {
+    color: #1e293b;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.timeline-step p, .step p {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Enhanced Feature Lists */
+.course-features .feature, .study-features .feature-item, .work-programs .program-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.course-features .feature:last-child, .study-features .feature-item:last-child, .work-programs .program-item:last-child {
+    border-bottom: none;
+}
+
+.course-features .feature i, .study-features .feature-item i, .work-programs .program-item i {
+    color: #10b981;
+    background: #d1fae5;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+/* Enhanced Course Cards */
+.course-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    padding: 24px 32px;
+    position: relative;
+    border-radius: 20px 20px 0 0;
+}
+
+.course-header h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.course-badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(245, 158, 11, 0.3);
+}
+
+.course-content {
+    padding: 32px;
+}
+
+/* Enhanced Job Categories */
+.job-category {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.job-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+    border-color: #3b82f6;
+}
+
+.job-category h3 {
+    color: #1e293b;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.job-category h3 i {
+    font-size: 1.6rem;
+    color: #3b82f6;
+}
+
+.job-category ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: #64748b;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.job-category ul li:hover {
+    color: #3b82f6;
+}
+
+.job-category ul li:last-child {
+    border-bottom: none;
+}
+
+/* Enhanced Success Stories */
+.story-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    padding: 32px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+}
+
+.score-badge {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+}
+
+.story-card h3 {
+    color: #1e293b;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 24px 0 16px;
+}
+
+.story-card p {
+    color: #64748b;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.story-card .destination {
+    color: #3b82f6;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Enhanced CTA Sections */
+.immigration-cta, .study-cta, .work-cta, .coaching-cta {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.immigration-cta::before, .study-cta::before, .work-cta::before, .coaching-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+}
+
+.immigration-cta h2, .study-cta h2, .work-cta h2, .coaching-cta h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.immigration-cta p, .study-cta p, .work-cta p, .coaching-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .migration-hero-container h1, .study-hero-container h1, .work-hero-container h1, .coaching-hero-container h1 {
+        font-size: 2.5rem;
+    }
+    
+    .countries-grid, .destinations-grid, .work-destinations-grid, .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .country-immigration-card, .study-destination-card, .work-destination-card, .course-card {
+        padding: 24px;
+    }
+    
+    .process-timeline, .process-steps {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .immigration-cta h2, .study-cta h2, .work-cta h2, .coaching-cta h2 {
+        font-size: 2.2rem;
+    }
+}

@@ -1,0 +1,1494 @@
+/* Internal Pages Styles */
+
+/* About Page Styles */
+.about-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    color: white;
+}
+
+.about-hero-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-hero-container p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.company-profile {
+    padding: 100px 0;
+    background: white;
+}
+
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.profile-text h2 {
+    font-size: 2.5rem;
+    color: navy;
+    margin-bottom: 40px;
+}
+
+.mission-vision {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mission, .vision {
+    padding: 30px;
+    background: #f8fafc;
+    border-radius: 15px;
+    border-left: 4px solid navy;
+}
+
+.mission h3, .vision h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: navy;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.mission h3 i, .vision h3 i {
+    font-size: 1.5rem;
+}
+
+.why-choose-us {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.choose-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.choose-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    margin-bottom: 60px;
+}
+
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.choose-item {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.choose-item:hover {
+    transform: translateY(-5px);
+}
+
+.choose-item i {
+    font-size: 3rem;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+.choose-item h3 {
+    color: navy;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.our-team {
+    padding: 100px 0;
+    background: white;
+}
+
+.team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.team-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    margin-bottom: 60px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.team-member {
+    background: #f8fafc;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.member-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border: 4px solid navy;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    color: navy;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.team-member span {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.our-office {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.office-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.office-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.office-info h2 {
+    font-size: 2.5rem;
+    color: navy;
+    margin-bottom: 40px;
+}
+
+.office-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.detail-item i {
+    font-size: 1.5rem;
+    color: navy;
+    margin-top: 5px;
+}
+
+.detail-item h4 {
+    color: navy;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.about-cta {
+    padding: 80px 0;
+    background: navy;
+    text-align: center;
+    color: white;
+}
+
+.about-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: white;
+    color: navy;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+}
+
+/* Services Page Styles */
+.services-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    color: white;
+}
+
+.services-hero-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.services-hero-container p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.visa-types {
+    padding: 100px 0;
+    background: white;
+}
+
+.types-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.types-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.visa-type-card {
+    background: #f8fafc;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.visa-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.visa-type-card i {
+    font-size: 3rem;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+.visa-type-card h3 {
+    color: navy;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.visa-type-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.visa-type-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.visa-type-card ul li {
+    color: #666;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.visa-type-card ul li::before {
+    content: '✓';
+    color: #10b981;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.learn-more {
+    background: navy;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.learn-more:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+.country-services {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.country-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.country-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.country-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.country-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+}
+
+.country-card img {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.country-card h3 {
+    color: navy;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.country-link {
+    background: navy;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.country-link:hover {
+    background: #1e40af;
+}
+
+.value-services {
+    padding: 100px 0;
+    background: white;
+}
+
+.value-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.value-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.value-item {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-item i {
+    font-size: 2.5rem;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+.value-item h3 {
+    color: navy;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.visa-process {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.process-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.process-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    margin-bottom: 60px;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.step {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: navy;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.step h3 {
+    color: navy;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.services-cta {
+    padding: 80px 0;
+    background: navy;
+    text-align: center;
+    color: white;
+}
+
+.services-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Contact Page Styles */
+.contact-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    color: white;
+}
+
+.contact-hero-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-hero-container p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.contact-main {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.faq-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.faq-item {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 4px solid navy;
+}
+
+.faq-item h3 {
+    color: navy;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Migration/Immigration Page Styles */
+.migration-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    color: white;
+}
+
+.migration-hero-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.migration-hero-container p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.immigration-countries {
+    padding: 100px 0;
+    background: white;
+}
+
+.immigration-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.immigration-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.country-immigration-card {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease;
+}
+
+.country-immigration-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.country-immigration-card img {
+    width: 60px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.country-immigration-card h3 {
+    color: navy;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.programs-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.program-tag {
+    background: navy;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.country-immigration-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.country-immigration-card ul li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.country-immigration-card ul li::before {
+    content: '✓';
+    color: #10b981;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.immigration-btn {
+    background: navy;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.immigration-btn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+.immigration-process {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-step {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background: navy;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.step-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.timeline-step h3 {
+    color: navy;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.immigration-benefits {
+    padding: 100px 0;
+    background: white;
+}
+
+.benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.benefits-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f8fafc;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-item i {
+    font-size: 3rem;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+.benefit-item h3 {
+    color: navy;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.immigration-cta {
+    padding: 80px 0;
+    background: navy;
+    text-align: center;
+    color: white;
+}
+
+.immigration-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.immigration-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Study Page Styles */
+.study-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    color: white;
+}
+
+.study-hero-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.study-hero-container p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.study-destinations {
+    padding: 100px 0;
+    background: white;
+}
+
+.study-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.study-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.study-destination-card {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease;
+}
+
+.study-destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.study-destination-card img {
+    width: 60px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.study-destination-card h3 {
+    color: navy;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.study-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.highlight-tag {
+    background: #10b981;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.study-features {
+    margin: 20px 0;
+}
+
+.study-features .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.study-features .feature-item i {
+    color: navy;
+    font-size: 1rem;
+}
+
+.study-btn {
+    background: navy;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.study-btn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+.study-cta {
+    padding: 80px 0;
+    background: navy;
+    text-align: center;
+    color: white;
+}
+
+.study-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.study-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Work Page Styles */
+.work-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    color: white;
+}
+
+.work-hero-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.work-hero-container p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.work-destinations {
+    padding: 100px 0;
+    background: white;
+}
+
+.work-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.work-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.work-destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.work-destination-card {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease;
+}
+
+.work-destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.work-destination-card img {
+    width: 60px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.work-destination-card h3 {
+    color: navy;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.work-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.work-programs {
+    margin: 20px 0;
+}
+
+.work-programs .program-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.work-programs .program-item i {
+    color: navy;
+    font-size: 1rem;
+}
+
+.work-btn {
+    background: navy;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.work-btn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+.in-demand-jobs {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.jobs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.jobs-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.jobs-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.job-category {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.job-category h3 {
+    color: navy;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.job-category h3 i {
+    font-size: 1.5rem;
+}
+
+.job-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.job-category ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e7eb;
+    color: #666;
+}
+
+.job-category ul li:last-child {
+    border-bottom: none;
+}
+
+.work-cta {
+    padding: 80px 0;
+    background: navy;
+    text-align: center;
+    color: white;
+}
+
+.work-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.work-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Coaching Page Styles */
+.coaching-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    color: white;
+}
+
+.coaching-hero-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.coaching-hero-container p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.test-courses {
+    padding: 100px 0;
+    background: white;
+}
+
+.courses-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.courses-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.course-card {
+    background: #f8fafc;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.course-header {
+    background: navy;
+    color: white;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.course-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.course-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #f59e0b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.course-content {
+    padding: 30px;
+}
+
+.course-content p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.course-features {
+    margin-bottom: 25px;
+}
+
+.course-features .feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.course-features .feature i {
+    color: #10b981;
+    font-size: 1rem;
+}
+
+.course-details {
+    margin-bottom: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.course-details .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.course-details .detail-item i {
+    color: navy;
+    font-size: 1rem;
+}
+
+.course-btn {
+    background: navy;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.course-btn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+.coaching-features {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.features-grid .feature-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.features-grid .feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.features-grid .feature-item i {
+    font-size: 3rem;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+.features-grid .feature-item h3 {
+    color: navy;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.success-stories {
+    padding: 100px 0;
+    background: white;
+}
+
+.stories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.stories-container h2 {
+    font-size: 2.5rem;
+    color: navy;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.story-card {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #e5e7eb;
+}
+
+.score-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #10b981;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.story-card h3 {
+    color: navy;
+    font-size: 1.3rem;
+    margin: 20px 0 15px;
+}
+
+.story-card p {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.story-card .destination {
+    color: #10b981;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.coaching-cta {
+    padding: 80px 0;
+    background: navy;
+    text-align: center;
+    color: white;
+}
+
+.coaching-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.coaching-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .about-hero-container h1,
+    .services-hero-container h1,
+    .contact-hero-container h1 {
+        font-size: 2.2rem;
+    }
+    
+    .profile-content,
+    .office-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .types-grid,
+    .country-grid,
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .visa-type-card {
+        min-width: auto;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .choose-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
