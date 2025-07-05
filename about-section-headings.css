@@ -1,0 +1,34 @@
+/* Navy color for all section headings in about page */
+
+/* Company Introduction Section */
+.intro-text h2 {
+    color: navy;
+}
+
+/* Mission & Vision Section */
+.section-header h2 {
+    color: navy;
+}
+
+/* Core Values Section */
+.values-container .section-header h2 {
+    color: navy;
+}
+
+/* Timeline Section */
+.timeline-container .section-header h2 {
+    color: navy;
+}
+
+/* Team Section */
+.team-container .section-header h2 {
+    color: navy;
+}
+
+/* Make all h3 headings navy too */
+.mv-card h3,
+.value-card h4,
+.timeline-content h4,
+.member-info h4 {
+    color: navy;
+}

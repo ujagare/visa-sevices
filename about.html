@@ -6,183 +6,739 @@
     <title>About Us - White Wings Visa Consultancy Pune</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pages.css">
-    <link rel="stylesheet" href="professional.css">
-    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="about-page.css">
+    <link rel="stylesheet" href="about-page-additional.css">
+    <link rel="stylesheet" href="about-section-headings.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Loader -->
-    <div id="loader" class="loader-container visa-loader">
-        <div class="loader-content">
-            <div class="airplane">
-                <i class="ri-plane-line"></i>
-            </div>
-            <div class="loader-spinner"></div>
-            <div class="loader-text">White Wings Visa Consultancy</div>
-            <div class="loader-subtext">Your Gateway to Global Opportunities</div>
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
-        </div>
-    </div>
+    <!-- Navigation - Same as Home Page -->
+    <nav-div>
+        <nav>
+            <img src="images/logo/WING LOGO.png" class="logo">
 
-    <!-- Navigation -->
-    <nav>
-        <img src="images/logo/WING LOGO.png" class="logo">
-        <div id="links" class="desktop-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <button><a href="contact.html">Apply Now</a></button>
-            </ul>
-        </div>
-        <div class="mobile-menu-btn">
-            <i class="ri-menu-line" id="menu-toggle"></i>
-        </div>
-    </nav>
-
-    <!-- About Hero Section -->
-    <section class="about-hero">
-        <div class="about-hero-container">
-            <h1>About White Wings Visa Consultancy</h1>
-            <p>Your Trusted Partner for International Travel Dreams</p>
-        </div>
-    </section>
-
-    <!-- Company Profile -->
-    <section class="company-profile">
-        <div class="profile-container">
-            <div class="profile-content">
-                <div class="profile-text">
-                    <h2>Our Mission & Vision</h2>
-                    <div class="mission-vision">
-                        <div class="mission">
-                            <h3><i class="ri-target-line"></i> Mission</h3>
-                            <p>To provide expert visa consultation services with 100% transparency, helping individuals and families achieve their international travel dreams with confidence and ease.</p>
+            <!-- Desktop Menu -->
+            <div id="links" class="desktop-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-content">
+                            <a href="study.html">
+                                <i class="ri-graduation-cap-line"></i>
+                                <div>
+                                    <strong>Study Abroad</strong>
+                                    <span>Student visa & education guidance</span>
+                                </div>
+                            </a>
+                            <a href="migrate.html">
+                                <i class="ri-home-heart-line"></i>
+                                <div>
+                                    <strong>Migrate</strong>
+                                    <span>Permanent residency & immigration</span>
+                                </div>
+                            </a>
+                            <a href="work.html">
+                                <i class="ri-briefcase-line"></i>
+                                <div>
+                                    <strong>Work Abroad</strong>
+                                    <span>Work visa & job opportunities</span>
+                                </div>
+                            </a>
+                            <a href="visit.html">
+                                <i class="ri-plane-line"></i>
+                                <div>
+                                    <strong>Visit</strong>
+                                    <span>Tourist & business visa</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="vision">
-                            <h3><i class="ri-eye-line"></i> Vision</h3>
-                            <p>To become India's most trusted visa consultancy, known for our expertise, integrity, and exceptional customer service in making global mobility accessible to everyone.</p>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <button>
+                        <a href="contact.html">Apply Now</a>
+                    </button>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn">
+                <i class="ri-menu-line" id="menu-toggle"></i>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu-content">
+                    <div class="mobile-menu-header">
+                        <img src="images/logo/WING LOGO.png" class="mobile-logo" alt="White Wings Logo">
+                        <i class="ri-close-line" id="menu-close" title="Close Menu"></i>
+                    </div>
+                    <ul class="mobile-menu-links">
+                        <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
+                        <li><a href="about.html" class="active"><i class="ri-information-line"></i> About</a></li>
+                        <li><a href="services.html"><i class="ri-service-line"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
+                    </ul>
+                    <div class="mobile-apply-btn">
+                        <a href="contact.html"><i class="ri-send-plane-line"></i> Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </nav-div>
+
+    <!-- PROFESSIONAL HERO SECTION -->
+    <section class="about-hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-shapes">
+                <div class="hero-shape hero-shape-1"></div>
+                <div class="hero-shape hero-shape-2"></div>
+                <div class="hero-shape hero-shape-3"></div>
+            </div>
+        </div>
+        <div class="about-hero-container">
+            <div class="about-hero-content">
+                <div class="hero-text-content">
+                    <div class="hero-badge">
+                        <i class="ri-building-line"></i>
+                        <span>ABOUT WHITE WINGS</span>
+                    </div>
+                    <h1>Your Trusted Partner for Global Visa Solutions</h1>
+                    <p class="hero-subtitle">Transforming dreams into destinations with expert guidance, personalized service, and unwavering commitment to your success.</p>
+
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn-primary">
+                            <i class="ri-phone-line"></i>
+                            Get Free Consultation
+                        </a>
+                        <a href="https://wa.me/919130448831" class="btn-secondary">
+                            <i class="ri-whatsapp-line"></i>
+                            WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-image-container">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="White Wings Team" class="hero-image">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-badge">
+                                    <i class="ri-award-line"></i>
+                                    <span>Award Winning Service</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="profile-image">
-                    <img src="images/about/office.jpg" alt="White Wings Office">
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPANY INTRODUCTION -->
+    <section class="company-intro-section">
+        <div class="intro-container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <div class="section-badge">
+                        <i class="ri-information-line"></i>
+                        <span>WHO WE ARE</span>
+                    </div>
+                    <h2>Simplifying Your Journey to Global Opportunities</h2>
+                    <p class="intro-description">At White Wings, we simplify the journey to your global aspirations. As one of India's most reliable visa service providers, we offer expert guidance and end-to-end support for individuals and families looking to travel, study, work, or settle abroad.</p>
+
+                    <p class="intro-description">Whether you're planning a holiday, visiting family, pursuing higher education, seeking international job opportunities, or applying for permanent residency, our team ensures a smooth and stress-free visa experience.</p>
+
+
+                </div>
+
+                <div class="intro-visual">
+                    <div class="visual-grid">
+                        <div class="visual-item">
+                            <div class="visual-icon">
+                                <i class="ri-file-list-3-line"></i>
+                            </div>
+                            <h4>Comprehensive Services</h4>
+                            <p>Tourist, family visit, work, student, PR, and job search visas.</p>
+                        </div>
+                        <div class="visual-item">
+                            <div class="visual-icon">
+                                <i class="ri-user-heart-line"></i>
+                            </div>
+                            <h4>Personalized Approach</h4>
+                            <p>Tailored solutions based on your profile and goals.</p>
+                        </div>
+                        <div class="visual-item">
+                            <div class="visual-icon">
+                                <i class="ri-global-line"></i>
+                            </div>
+                            <h4>Global Expertise</h4>
+                            <p>Visa applications for destinations worldwide.</p>
+                        </div>
+                        <div class="visual-item">
+                            <div class="visual-icon">
+                                <i class="ri-hand-heart-line"></i>
+                            </div>
+                            <h4>End-to-End Support</h4>
+                            <p>From documentation to final submission.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-choose-us">
-        <div class="choose-container">
-            <h2>Why Choose White Wings?</h2>
-            <div class="choose-grid">
-                <div class="choose-item">
-                    <i class="ri-award-line"></i>
-                    <h3>100% Success Rate</h3>
-                    <p>Proven track record with thousands of successful visa applications</p>
+    <!-- MODERN MISSION & VISION -->
+    <section class="modern-mv-section">
+        <div class="mv-container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="ri-target-line"></i>
+                    <span>OUR PURPOSE</span>
                 </div>
-                <div class="choose-item">
-                    <i class="ri-team-line"></i>
-                    <h3>Expert Team</h3>
-                    <p>Certified visa consultants with years of experience</p>
+                <h2>Driving Excellence in Global Mobility</h2>
+                <p>Our mission and vision guide every decision we make, ensuring we deliver exceptional value to our clients worldwide.</p>
+            </div>
+
+            <div class="mv-grid">
+                <div class="mv-card modern-mission">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="ri-compass-3-line"></i>
+                        </div>
+                        <div class="card-badge">Mission</div>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To simplify international travel by delivering seamless, transparent visa services powered by cutting-edge technology and dedicated expertise. We believe every dream deserves a pathway to reality.</p>
+                    <div class="card-features">
+                        <div class="feature-item">
+                            <i class="ri-check-line"></i>
+                            <span>Seamless Process</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ri-check-line"></i>
+                            <span>Transparent Service</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ri-check-line"></i>
+                            <span>Expert Guidance</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="choose-item">
-                    <i class="ri-shield-check-line"></i>
-                    <h3>Transparent Process</h3>
-                    <p>No hidden charges, complete transparency in all dealings</p>
-                </div>
-                <div class="choose-item">
-                    <i class="ri-customer-service-line"></i>
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock customer support for all your queries</p>
+
+                <div class="mv-card modern-vision">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="ri-eye-line"></i>
+                        </div>
+                        <div class="card-badge">Vision</div>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the world's leading visa partner—recognized for innovation, integrity, and excellence in every application we process. We envision a world where borders are bridges, not barriers.</p>
+                    <div class="card-features">
+                        <div class="feature-item">
+                            <i class="ri-check-line"></i>
+                            <span>Global Leadership</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ri-check-line"></i>
+                            <span>Innovation Focus</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ri-check-line"></i>
+                            <span>Excellence Standard</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Team -->
-    <section class="our-team">
+    <!-- MODERN CORE VALUES -->
+    <section class="modern-values-section">
+        <div class="values-container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="ri-heart-line"></i>
+                    <span>CORE VALUES</span>
+                </div>
+                <h2>The Principles That Drive Us</h2>
+                <p>Our core values are the foundation of everything we do, ensuring we deliver exceptional service with integrity and excellence.</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="ri-shield-check-line"></i>
+                    </div>
+                    <h4>Trust & Integrity</h4>
+                    <p>Building lasting relationships through transparency, honesty, and reliable service that our clients can depend on.</p>
+                    <div class="value-highlight">
+                        <span>98% Client Satisfaction</span>
+                    </div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="ri-lightbulb-line"></i>
+                    </div>
+                    <h4>Innovation</h4>
+                    <p>Leveraging cutting-edge technology and creative solutions to streamline the visa application process.</p>
+                    <div class="value-highlight">
+                        <span>AI-Powered Solutions</span>
+                    </div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="ri-focus-3-line"></i>
+                    </div>
+                    <h4>Precision & Accuracy</h4>
+                    <p>Meticulous attention to detail ensuring every application meets the highest standards and requirements.</p>
+                    <div class="value-highlight">
+                        <span>Zero Error Policy</span>
+                    </div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="ri-customer-service-2-line"></i>
+                    </div>
+                    <h4>24/7 Excellence</h4>
+                    <p>Round-the-clock support and guidance, ensuring our clients receive assistance whenever they need it.</p>
+                    <div class="value-highlight">
+                        <span>Always Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODERN TIMELINE -->
+    <section class="modern-timeline-section">
+        <div class="timeline-container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="ri-time-line"></i>
+                    <span>OUR JOURNEY</span>
+                </div>
+                <h2>Milestones of Excellence</h2>
+                <p>From humble beginnings to industry leadership, discover the key moments that shaped White Wings into the trusted visa consultancy it is today.</p>
+            </div>
+
+            <div class="modern-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">
+                            <i class="ri-building-line"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010</div>
+                        <h4>Foundation & Vision</h4>
+                        <p><strong>Founded</strong> by visa experts in Pune with a mission to simplify international travel for Indian families and professionals.</p>
+                        <div class="timeline-stats">
+                            <span>First Office in Pune</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">
+                            <i class="ri-global-line"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <h4>Global Expansion</h4>
+                        <p><strong>Expanded</strong> operations to 5 international offices, establishing partnerships with embassies and consulates worldwide.</p>
+                        <div class="timeline-stats">
+                            <span>5 International Offices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">
+                            <i class="ri-trophy-line"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2019</div>
+                        <h4>Major Milestone</h4>
+                        <p><strong>Achieved</strong> 10,000+ successful visa applications, earning recognition as one of India's leading visa consultancies.</p>
+                        <div class="timeline-stats">
+                            <span>10,000+ Success Stories</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">
+                            <i class="ri-robot-line"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <h4>Technology Innovation</h4>
+                        <p><strong>Launched</strong> AI-powered application tracker and digital platform, revolutionizing the visa application experience.</p>
+                        <div class="timeline-stats">
+                            <span>AI-Powered Platform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODERN TEAM -->
+    <section class="modern-team-section">
         <div class="team-container">
-            <h2>Meet Our Expert Team</h2>
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="ri-team-line"></i>
+                    <span>OUR TEAM</span>
+                </div>
+                <h2>Meet the Experts Behind Your Success</h2>
+                <p>Our dedicated team of visa specialists, immigration lawyers, and customer success managers work tirelessly to ensure your visa journey is smooth and successful.</p>
+            </div>
+
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="images/team/member1.jpg" alt="Team Member">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" alt="Mrunal Joshi">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="ri-linkedin-fill"></i></a>
+                                <a href="#"><i class="ri-mail-fill"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Mrunal Sharma</h3>
-                    <p>Founder & Senior Visa Consultant</p>
-                    <span>10+ Years Experience</span>
+                    <div class="member-info">
+                        <h4>Mrunal Joshi</h4>
+                        <p class="member-role">CEO & Founder</p>
+                        <p class="member-description">Visionary leader with 15+ years in immigration law, dedicated to making global mobility accessible for everyone.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Immigration Law</span>
+                            <span class="expertise-tag">Business Strategy</span>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="images/team/member2.jpg" alt="Team Member">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" alt="Rajesh Kumar">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="ri-linkedin-fill"></i></a>
+                                <a href="#"><i class="ri-mail-fill"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Priya Patel</h3>
-                    <p>Immigration Specialist</p>
-                    <span>8+ Years Experience</span>
+                    <div class="member-info">
+                        <h4>Rajesh Kumar</h4>
+                        <p class="member-role">Head of Operations</p>
+                        <p class="member-description">Operations expert ensuring seamless processes and exceptional client experiences across all service touchpoints.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Operations</span>
+                            <span class="expertise-tag">Process Optimization</span>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="images/team/member3.jpg" alt="Team Member">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" alt="Priya Sharma">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="ri-linkedin-fill"></i></a>
+                                <a href="#"><i class="ri-mail-fill"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Rahul Desai</h3>
-                    <p>Document Verification Expert</p>
-                    <span>6+ Years Experience</span>
+                    <div class="member-info">
+                        <h4>Priya Sharma</h4>
+                        <p class="member-role">Chief Visa Consultant</p>
+                        <p class="member-description">Senior consultant specializing in complex visa cases with expertise in 50+ countries' immigration policies.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Visa Consulting</span>
+                            <span class="expertise-tag">Immigration Policy</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Office -->
-    <section class="our-office">
-        <div class="office-container">
-            <div class="office-content">
-                <div class="office-info">
-                    <h2>Visit Our Pune Office</h2>
-                    <div class="office-details">
-                        <div class="detail-item">
-                            <i class="ri-map-pin-line"></i>
-                            <div>
-                                <h4>Address</h4>
-                                <p>White Wings Visa Consultancy<br>Pune, Maharashtra, India</p>
-                            </div>
+    <!-- ENHANCED ACHIEVEMENTS SECTION -->
+    <section class="enhanced-achievements-section">
+        <div class="achievements-background">
+            <div class="achievements-overlay"></div>
+            <div class="floating-elements">
+                <div class="floating-element element-1"></div>
+                <div class="floating-element element-2"></div>
+                <div class="floating-element element-3"></div>
+                <div class="floating-element element-4"></div>
+            </div>
+        </div>
+
+        <div class="achievements-container">
+            <div class="achievements-header">
+                <div class="header-badge">
+                    <i class="ri-award-line"></i>
+                    <span>OUR ACHIEVEMENTS</span>
+                </div>
+                <h2>Excellence Measured in Numbers</h2>
+                <p>Our proven track record speaks volumes about our dedication to transforming visa dreams into reality with unmatched expertise and client satisfaction.</p>
+            </div>
+
+            <div class="achievements-grid">
+                <div class="achievement-card primary-card">
+                    <div class="card-glow"></div>
+                    <div class="achievement-icon-wrapper">
+                        <div class="achievement-icon">
+                            <i class="ri-file-check-line"></i>
                         </div>
-                        <div class="detail-item">
-                            <i class="ri-time-line"></i>
-                            <div>
-                                <h4>Business Hours</h4>
-                                <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: 10:00 AM - 5:00 PM</p>
-                            </div>
+                        <div class="icon-pulse"></div>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-number">
+                            <span class="count" data-target="15000">0</span>
+                            <span class="number-suffix">+</span>
                         </div>
-                        <div class="detail-item">
-                            <i class="ri-phone-line"></i>
-                            <div>
-                                <h4>Contact</h4>
-                                <p>+91 9130448831<br>mrunal@whitewingsvisa.com</p>
-                            </div>
+                        <h3>Visas Processed</h3>
+                        <p>Successfully handled applications across all visa categories with precision and care</p>
+                        <div class="achievement-progress">
+                            <div class="progress-bar" data-progress="95"></div>
                         </div>
                     </div>
                 </div>
-                <div class="office-image">
-                    <img src="images/about/pune-office.jpg" alt="Pune Office">
+
+                <div class="achievement-card featured-card">
+                    <div class="card-glow"></div>
+                    <div class="featured-ribbon">
+                        <span>Best in Industry</span>
+                    </div>
+                    <div class="achievement-icon-wrapper">
+                        <div class="achievement-icon">
+                            <i class="ri-trophy-line"></i>
+                        </div>
+                        <div class="icon-pulse"></div>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-number">
+                            <span class="count" data-target="98">0</span>
+                            <span class="number-suffix">%</span>
+                        </div>
+                        <h3>Success Rate</h3>
+                        <p>Industry-leading approval rate that sets us apart from the competition</p>
+                        <div class="achievement-progress">
+                            <div class="progress-bar" data-progress="98"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement-card secondary-card">
+                    <div class="card-glow"></div>
+                    <div class="achievement-icon-wrapper">
+                        <div class="achievement-icon">
+                            <i class="ri-global-line"></i>
+                        </div>
+                        <div class="icon-pulse"></div>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-number">
+                            <span class="count" data-target="50">0</span>
+                            <span class="number-suffix">+</span>
+                        </div>
+                        <h3>Countries Served</h3>
+                        <p>Comprehensive visa services for destinations across the globe</p>
+                        <div class="achievement-progress">
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement-card accent-card">
+                    <div class="card-glow"></div>
+                    <div class="achievement-icon-wrapper">
+                        <div class="achievement-icon">
+                            <i class="ri-customer-service-2-line"></i>
+                        </div>
+                        <div class="icon-pulse"></div>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-number">
+                            <span class="count" data-target="24">0</span>
+                            <span class="number-suffix">/7</span>
+                        </div>
+                        <h3>Expert Support</h3>
+                        <p>Round-the-clock assistance from our dedicated professional team</p>
+                        <div class="achievement-progress">
+                            <div class="progress-bar" data-progress="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements-footer">
+                <div class="footer-stats">
+                    <div class="footer-stat">
+                        <i class="ri-time-line"></i>
+                        <span>13+ Years Experience</span>
+                    </div>
+                    <div class="footer-stat">
+                        <i class="ri-shield-check-line"></i>
+                        <span>100% Secure Process</span>
+                    </div>
+                    <div class="footer-stat">
+                        <i class="ri-medal-line"></i>
+                        <span>Award Winning Service</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="about-cta">
-        <div class="cta-container">
-            <h2>Ready to Start Your Visa Journey?</h2>
-            <p>Get expert guidance from our experienced visa consultants</p>
-            <a href="contact.html" class="cta-button">Get Free Consultation</a>
-        </div>
-    </section>
 
-    <script src="loader.js"></script>
+
+    <!-- Footer - Same as Home Page -->
+    <footer class="footer-section">
+        <!-- Apply for Visa CTA Section -->
+        <div class="apply-visa-cta">
+            <div class="cta-container">
+                <h6>APPLY FOR A VISA</h6>
+                <h2>You Focus on Flying, We'll Handle the Paperwork!</h2>
+                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and guaranteed success.</p>
+                <a href="https://wa.me/919130448831" class="apply-btn">APPLY NOW</a>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <!-- Left Column - Logo and Social -->
+                    <div class="footer-left">
+                        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="footer-logo">
+                        <p class="footer-tagline">Hassle-free travel shouldn't just be a dream.</p>
+                        <p class="footer-slogan">White Wings - Visa Simplified.</p>
+                        <div class="social-links">
+                            <a href="https://wa.me/919130448831"><i class="ri-whatsapp-fill"></i></a>
+                            <a href="mailto:mrunal@whitewingsvisa.com"><i class="ri-mail-fill"></i></a>
+                            <a href="#"><i class="ri-instagram-fill"></i></a>
+                            <a href="#"><i class="ri-facebook-fill"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Middle Column - Quick Links -->
+                    <div class="footer-middle">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html">Apply Now</a></li>
+                            <li><a href="tel:+919130448831">Call Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Column - Contact Info -->
+                    <div class="footer-right">
+                        <h4>Get In Touch</h4>
+                        <div class="contact-details">
+                            <p>📞 +91 9130448831</p>
+                            <p><strong>✉ mrunal@whitewingsvisa.com</strong></p>
+                            <p>📍 Pune, Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p>Copyright © 2025 White Wings. All Rights Reserved.</p>
+                        <p>Powered by White Wings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Counter Animation for Stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.count');
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let current = 0;
+
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                updateCounter();
+            });
+        }
+
+        // Progress Bar Animation
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+
+            progressBars.forEach(bar => {
+                const progress = bar.getAttribute('data-progress');
+                bar.style.setProperty('--progress', progress + '%');
+                bar.style.width = progress + '%';
+            });
+        }
+
+        // Intersection Observer for Stats Animation
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    animateProgressBars();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        // Observe achievements section when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const achievementsSection = document.querySelector('.enhanced-achievements-section');
+            if (achievementsSection) {
+                statsObserver.observe(achievementsSection);
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

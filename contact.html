@@ -6,251 +6,411 @@
     <title>Contact Us - White Wings Visa Consultancy Pune</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pages.css">
-    <link rel="stylesheet" href="professional.css">
-    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="contact-page.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Loader -->
-    <div id="loader" class="loader-container visa-loader">
-        <div class="loader-content">
-            <div class="airplane">
-                <i class="ri-plane-line"></i>
-            </div>
-            <div class="loader-spinner"></div>
-            <div class="loader-text">White Wings Visa Consultancy</div>
-            <div class="loader-subtext">Your Gateway to Global Opportunities</div>
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
-        </div>
-    </div>
+    <!-- Navigation - Same as Home Page -->
+    <nav-div>
+        <nav>
+            <img src="images/logo/WING LOGO.png" class="logo">
 
-    <!-- Navigation -->
-    <nav>
-        <img src="images/logo/WING LOGO.png" class="logo">
-        <div id="links" class="desktop-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <button><a href="contact.html">Apply Now</a></button>
-            </ul>
-        </div>
-        <div class="mobile-menu-btn">
-            <i class="ri-menu-line" id="menu-toggle"></i>
-        </div>
-    </nav>
+            <!-- Desktop Menu -->
+            <div id="links" class="desktop-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-content">
+                            <a href="study.html">
+                                <i class="ri-graduation-cap-line"></i>
+                                <div>
+                                    <strong>Study Abroad</strong>
+                                    <span>Student visa & education guidance</span>
+                                </div>
+                            </a>
+                            <a href="migrate.html">
+                                <i class="ri-home-heart-line"></i>
+                                <div>
+                                    <strong>Migrate</strong>
+                                    <span>Permanent residency & immigration</span>
+                                </div>
+                            </a>
+                            <a href="work.html">
+                                <i class="ri-briefcase-line"></i>
+                                <div>
+                                    <strong>Work Abroad</strong>
+                                    <span>Work visa & job opportunities</span>
+                                </div>
+                            </a>
+                            <a href="visit.html">
+                                <i class="ri-plane-line"></i>
+                                <div>
+                                    <strong>Visit</strong>
+                                    <span>Tourist & business visa</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <button>
+                        <a href="contact.html">Apply Now</a>
+                    </button>
+                </ul>
+            </div>
 
-    <!-- Contact Hero -->
-    <section class="contact-hero">
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn">
+                <i class="ri-menu-line" id="menu-toggle"></i>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu-content">
+                    <div class="mobile-menu-header">
+                        <img src="images/logo/WING LOGO.png" class="mobile-logo" alt="White Wings Logo">
+                        <i class="ri-close-line" id="menu-close" title="Close Menu"></i>
+                    </div>
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
+                        <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
+                        <li><a href="services.html"><i class="ri-service-line"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
+                    </ul>
+                    <button class="mobile-apply-btn">
+                        <a href="contact.html"><i class="ri-send-plane-line"></i> Apply Now</a>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </nav-div>
+
+    <!-- HERO SECTION -->
+    <section class="contact-hero-section">
+        <div class="contact-hero-background">
+            <div class="contact-hero-overlay"></div>
+            <div class="contact-hero-shapes">
+                <div class="contact-hero-shape contact-hero-shape-1"></div>
+                <div class="contact-hero-shape contact-hero-shape-2"></div>
+                <div class="contact-hero-shape contact-hero-shape-3"></div>
+            </div>
+        </div>
         <div class="contact-hero-container">
-            <h1>Get In Touch</h1>
-            <p>Ready to start your visa journey? Contact our expert team today</p>
-        </div>
-    </section>
+            <div class="contact-hero-content">
+                <div class="contact-hero-text">
+                    <div class="contact-hero-badge">
+                        <i class="ri-customer-service-line"></i>
+                        <span>GET IN TOUCH</span>
+                    </div>
+                    <h1>Welcome to White Wings — Your Trusted Visa Partner</h1>
+                    <div class="contact-hero-description">
+                        <p>At White Wings, we simplify the journey to your global aspirations. As one of India's most reliable visa service providers, we offer expert guidance and end-to-end support for individuals and families looking to travel, study, work, or settle abroad.</p>
 
-    <!-- Contact Section -->
-    <section class="contact-main">
-        <div class="contact-container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-info-header">
-                        <h3>Let's Connect</h3>
-                        <p>Ready to start your visa journey? Get in touch with our expert team for personalized assistance.</p>
+                        <p>Whether you're planning a holiday, visiting family, pursuing higher education, seeking international job opportunities, or applying for permanent residency, our team ensures a smooth and stress-free visa experience. Our services are tailored to each client's unique needs, helping you choose the right path and navigate every step of the visa process with confidence.</p>
                     </div>
 
-                    <div class="info-cards">
-                        <div class="info-card">
-                            <div class="info-item">
-                                <div class="info-icon">
-                                    <i class="ri-phone-fill"></i>
-                                </div>
-                                <div class="info-text">
-                                    <h4>Call Us</h4>
-                                    <p>+91 9130448831</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="info-card">
-                            <div class="info-item">
-                                <div class="info-icon">
-                                    <i class="ri-mail-fill"></i>
-                                </div>
-                                <div class="info-text">
-                                    <h4>Email Us</h4>
-                                    <p>mrunal@whitewingsvisa.com</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="info-card">
-                            <div class="info-item">
-                                <div class="info-icon">
-                                    <i class="ri-map-pin-fill"></i>
-                                </div>
-                                <div class="info-text">
-                                    <h4>Visit Us</h4>
-                                    <p>White Wings Visa Consultancy<br>Pune, Maharashtra, India</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="info-item">
-                                <div class="info-icon">
-                                    <i class="ri-time-fill"></i>
-                                </div>
-                                <div class="info-text">
-                                    <h4>Business Hours</h4>
-                                    <p>Mon-Sat: 9:00 AM - 7:00 PM<br>Sunday: 10:00 AM - 5:00 PM</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="info-card social-card">
-                            <div class="info-item">
-                                <div class="info-icon">
-                                    <i class="ri-share-fill"></i>
-                                </div>
-                                <div class="info-text">
-                                    <h4>Follow Us</h4>
-                                    <div class="social-icons-list">
-                                        <a href="#" class="social-link">
-                                            <i class="ri-facebook-fill"></i>
-                                        </a>
-                                        <a href="#" class="social-link">
-                                            <i class="ri-instagram-fill"></i>
-                                        </a>
-                                        <a href="#" class="social-link">
-                                            <i class="ri-twitter-fill"></i>
-                                        </a>
-                                        <a href="#" class="social-link">
-                                            <i class="ri-linkedin-fill"></i>
-                                        </a>
-                                        <a href="https://wa.me/919130448831" class="social-link">
-                                            <i class="ri-whatsapp-fill"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-cta">
-                        <a href="tel:+919130448831" class="cta-button">
-                            <i class="ri-phone-fill"></i>
-                            <span>Call Now</span>
+                    <div class="contact-hero-actions">
+                        <a href="tel:+919130448831" class="contact-btn-primary">
+                            <i class="ri-phone-line"></i>
+                            Call Now
+                        </a>
+                        <a href="https://wa.me/919130448831" class="contact-btn-secondary">
+                            <i class="ri-whatsapp-line"></i>
+                            WhatsApp
                         </a>
                     </div>
                 </div>
 
-                <div class="contact-form">
-                    <div class="form-header">
-                        <h3>Send Us A Message</h3>
-                        <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                <div class="contact-hero-visual">
+                    <div class="contact-hero-image-container">
+                        <img src="images/hero/top-view-green-card-passport.jpg" alt="Contact White Wings" class="contact-hero-image">
+                        <div class="contact-image-overlay">
+                            <div class="contact-overlay-content">
+                                <div class="contact-overlay-badge">
+                                    <i class="ri-customer-service-2-line"></i>
+                                    <span>Expert Support Team</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="features-area">
+        <div class="wrapper">
+            <h2>Why Choose Our Visa Services</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="icon-wrapper">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Expert Team" />
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Decades of combined experience ensuring flawless applications.</p>
+                </div>
+                <div class="feature">
+                    <div class="icon-wrapper">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2997/2997933.png" alt="Fast Processing" />
+                    </div>
+                    <h3>Fast Processing</h3>
+                    <p>Streamlined workflows cut waiting times dramatically.</p>
+                </div>
+                <div class="feature">
+                    <div class="icon-wrapper">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" alt="Affordable Fees" />
+                    </div>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden charges—clear, competitive rates from the start.</p>
+                </div>
+                <div class="feature">
+                    <div class="icon-wrapper">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="24/7 Support" />
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Always on call for advice, updates, or last-minute changes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CARD SECTION -->
+    <section class="contact-card-section">
+        <div class="card-wrapper">
+            <h2>Contact Our Visa Experts</h2>
+            <div class="contact-card">
+                <form id="visaContact" enctype="multipart/form-data" novalidate>
+                    <div class="field">
+                        <label for="name">Full Name *</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-user-line"></i></span>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+                        </div>
+                        <div class="error-message"></div>
                     </div>
 
-                    <form class="contact-form-wrapper">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>First Name *</label>
-                                <input type="text" name="firstName" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Last Name *</label>
-                                <input type="text" name="lastName" required>
-                            </div>
+                    <div class="field">
+                        <label for="email">Email Address *</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-mail-line"></i></span>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required />
                         </div>
+                        <div class="error-message"></div>
+                    </div>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Email Address *</label>
-                                <input type="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Phone Number</label>
-                                <input type="tel" name="phone">
-                            </div>
+                    <div class="field">
+                        <label for="phone">Phone Number *</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-phone-line"></i></span>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
                         </div>
+                        <div class="error-message"></div>
+                    </div>
 
-                        <div class="form-group">
-                            <label>Visa Type *</label>
-                            <select name="visaType" required>
-                                <option value="">Select visa type</option>
-                                <option value="tourist">Tourist Visa</option>
-                                <option value="business">Business Visa</option>
-                                <option value="student">Student Visa</option>
-                                <option value="work">Work Visa</option>
-                                <option value="family">Family Visa</option>
-                                <option value="medical">Medical Visa</option>
+                    <div class="field">
+                        <label for="country">Country of Residence *</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-earth-line"></i></span>
+                            <input type="text" id="country" name="country" placeholder="Enter your country" required />
+                        </div>
+                        <div class="error-message"></div>
+                    </div>
+
+                    <div class="field">
+                        <label for="visaType">Visa Type *</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-passport-line"></i></span>
+                            <select id="visaType" name="visaType" required>
+                                <option value="">Select a visa type</option>
+                                <option>Tourist Visa</option>
+                                <option>Student Visa</option>
+                                <option>Work Visa</option>
+                                <option>Business Visa</option>
+                                <option>Transit Visa</option>
                             </select>
                         </div>
+                        <div class="error-message"></div>
+                    </div>
 
-                        <div class="form-group">
-                            <label>Destination Country *</label>
-                            <select name="country" required>
-                                <option value="">Select destination</option>
-                                <option value="usa">United States</option>
-                                <option value="canada">Canada</option>
-                                <option value="uk">United Kingdom</option>
-                                <option value="australia">Australia</option>
-                                <option value="schengen">Schengen Countries</option>
-                                <option value="singapore">Singapore</option>
-                                <option value="other">Other</option>
+                    <div class="field">
+                        <label for="travelDate">Travel Date *</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-calendar-line"></i></span>
+                            <input type="date" id="travelDate" name="travelDate" required />
+                        </div>
+                        <div class="error-message"></div>
+                    </div>
+
+                    <div class="field">
+                        <label for="passportNo">Passport Number *</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-book-line"></i></span>
+                            <input type="text" id="passportNo" name="passportNo" placeholder="Enter passport number" required />
+                        </div>
+                        <div class="error-message"></div>
+                    </div>
+
+                    <div class="field">
+                        <label for="expiry">Passport Expiry *</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-calendar-check-line"></i></span>
+                            <input type="date" id="expiry" name="expiry" required />
+                        </div>
+                        <div class="error-message"></div>
+                    </div>
+
+                    <div class="field">
+                        <label for="travelers">Number of Travelers *</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-group-line"></i></span>
+                            <input type="number" id="travelers" name="travelers" min="1" placeholder="1" required />
+                        </div>
+                        <div class="error-message"></div>
+                    </div>
+
+                    <div class="field">
+                        <label for="contactPref">Preferred Contact *</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-contacts-line"></i></span>
+                            <select id="contactPref" name="contactPref" required>
+                                <option value="">Choose contact method</option>
+                                <option>Email</option>
+                                <option>Phone</option>
+                                <option>WhatsApp</option>
                             </select>
                         </div>
+                        <div class="error-message"></div>
+                    </div>
 
-                        <div class="form-group">
-                            <label>Message *</label>
-                            <textarea name="message" rows="5" placeholder="Tell us about your visa requirements, travel dates, and any specific questions..." required></textarea>
+                    <div class="field full">
+                        <label for="address">Full Address</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-map-pin-line"></i></span>
+                            <textarea id="address" name="address" rows="3" placeholder="Enter your complete address"></textarea>
                         </div>
+                        <div class="error-message"></div>
+                    </div>
 
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="privacy" required>
-                                <span class="checkmark"></span>
-                                I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>
-                            </label>
+                    <div class="field full">
+                        <label for="docs">Upload Passport Copy *</label>
+                        <div class="input-container file-input">
+                            <span class="input-icon"><i class="ri-upload-line"></i></span>
+                            <input type="file" id="docs" name="docs" accept=".pdf,.jpg,.png,.jpeg" required />
+                            <span class="file-text">Choose file or drag here</span>
                         </div>
+                        <small>Accepted formats: PDF, JPG, PNG (Max 5MB)</small>
+                        <div class="error-message"></div>
+                    </div>
 
-                        <button type="submit" class="submit-btn">
-                            <span>Send Message</span>
-                            <i class="ri-send-plane-fill"></i>
-                        </button>
-                    </form>
+                    <div class="field full">
+                        <label for="notes">Additional Notes</label>
+                        <div class="input-container">
+                            <span class="input-icon"><i class="ri-file-text-line"></i></span>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Tell us about any special requirements or additional information..."></textarea>
+                        </div>
+                        <div class="error-message"></div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="ri-send-plane-line"></i>
+                        Submit Request
+                    </button>
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div class="success-card" style="display: none;">
+                    <div class="success-icon">
+                        <i class="ri-check-double-line"></i>
+                    </div>
+                    <h3>Thank You!</h3>
+                    <p>Your visa request has been submitted successfully. Our experts will contact you within 24 hours.</p>
+                    <button class="btn-new-request" onclick="showForm()">Submit Another Request</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="faq-container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>How long does visa processing take?</h3>
-                    <p>Processing time varies by country and visa type, typically 7-21 working days. We provide exact timelines during consultation.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What documents do I need?</h3>
-                    <p>Document requirements vary by visa type and destination. We provide a complete checklist after initial consultation.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can I track my application?</h3>
-                    <p>Yes, we provide regular updates and tracking information throughout the application process.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What are your service charges?</h3>
-                    <p>Our fees are transparent and competitive. We provide detailed cost breakdown during consultation with no hidden charges.</p>
-                </div>
+    <!-- MAP SECTION -->
+    <section class="map-area">
+        <div class="wrapper">
+            <h2>Our Office Location</h2>
+            <div class="map-frame">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2674515309!2d73.8567437!3d18.5204303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0d0d0d0d0d0%3A0x0!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
             </div>
         </div>
     </section>
 
-    <script src="loader.js"></script>
+    <!-- Footer - Same as Home Page -->
+    <footer class="footer-section">
+        <!-- Apply for Visa CTA Section -->
+        <div class="apply-visa-cta">
+            <div class="cta-container">
+                <h6>APPLY FOR A VISA</h6>
+                <h2>You Focus on Flying, We'll Handle the Paperwork!</h2>
+                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and guaranteed success.</p>
+                <a href="https://wa.me/919130448831" class="apply-btn">APPLY NOW</a>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <!-- Left Column - Logo and Social -->
+                    <div class="footer-left">
+                        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="footer-logo">
+                        <p class="footer-tagline">Hassle-free travel shouldn't just be a dream.</p>
+                        <p class="footer-slogan">White Wings - Visa Simplified.</p>
+                        <div class="social-links">
+                            <a href="https://wa.me/919130448831"><i class="ri-whatsapp-fill"></i></a>
+                            <a href="mailto:mrunal@whitewingsvisa.com"><i class="ri-mail-fill"></i></a>
+                            <a href="#"><i class="ri-instagram-fill"></i></a>
+                            <a href="#"><i class="ri-facebook-fill"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Middle Column - Quick Links -->
+                    <div class="footer-middle">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html">Apply Now</a></li>
+                            <li><a href="tel:+919130448831">Call Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Column - Contact Info -->
+                    <div class="footer-right">
+                        <h4>Get In Touch</h4>
+                        <div class="contact-details">
+                            <p>📞 +91 9130448831</p>
+                            <p><strong>✉ mrunal@whitewingsvisa.com</strong></p>
+                            <p>📍 Pune, Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p>Copyright © 2025 White Wings. All Rights Reserved.</p>
+                        <p>Powered by White Wings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>

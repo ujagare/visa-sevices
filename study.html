@@ -3,253 +3,784 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Abroad Services - White Wings Visa Consultancy</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Study Abroad - White Wings Visa Consultancy</title>
     <link rel="stylesheet" href="pages.css">
-    <link rel="stylesheet" href="professional.css">
-    <link rel="stylesheet" href="loader.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css">
 </head>
-<body>
-    <!-- Loader -->
-    <div id="loader" class="loader-container visa-loader">
-        <div class="loader-content">
-            <div class="airplane">
-                <i class="ri-plane-line"></i>
-            </div>
-            <div class="loader-spinner"></div>
-            <div class="loader-text">White Wings Visa Consultancy</div>
-            <div class="loader-subtext">Your Gateway to Global Opportunities</div>
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
-        </div>
-    </div>
-
+<body data-scroll-container>
     <!-- Navigation -->
-    <nav>
-        <img src="images/logo/WING LOGO.png" class="logo">
-        <div id="links" class="desktop-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <button><a href="contact.html">Apply Now</a></button>
-            </ul>
-        </div>
-        <div class="mobile-menu-btn">
-            <i class="ri-menu-line" id="menu-toggle"></i>
-        </div>
-    </nav>
+    <nav-div>
+        <nav>
+            <img src="images/logo/WING LOGO.png" class="logo">
 
-    <!-- Study Hero -->
-    <section class="study-hero">
+            <!-- Desktop Menu -->
+            <div id="links" class="desktop-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-content">
+                            <a href="study.html">
+                                <i class="ri-graduation-cap-line"></i>
+                                <div>
+                                    <strong>Study Abroad</strong>
+                                    <span>Student visa & education guidance</span>
+                                </div>
+                            </a>
+                            <a href="migrate.html">
+                                <i class="ri-home-heart-line"></i>
+                                <div>
+                                    <strong>Migrate</strong>
+                                    <span>Permanent residency & immigration</span>
+                                </div>
+                            </a>
+                            <a href="work.html">
+                                <i class="ri-briefcase-line"></i>
+                                <div>
+                                    <strong>Work Abroad</strong>
+                                    <span>Work visa & job opportunities</span>
+                                </div>
+                            </a>
+                            <a href="visit.html">
+                                <i class="ri-plane-line"></i>
+                                <div>
+                                    <strong>Visit</strong>
+                                    <span>Tourist & business visa</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <button>
+                        <a href="contact.html">Apply Now</a>
+                    </button>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn">
+                <i class="ri-menu-line" id="menu-toggle"></i>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu-content">
+                    <div class="mobile-menu-header">
+                        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-logo">
+                        <i class="ri-close-line" id="menu-close" title="Close Menu"></i>
+                    </div>
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
+                        <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
+                        <li><a href="services.html"><i class="ri-service-line"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
+                    </ul>
+                    <button class="mobile-apply-btn">
+                        <a href="contact.html"><i class="ri-send-plane-line"></i> Apply Now</a>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </nav-div>
+
+    <!-- Study Hero Section -->
+    <section class="study-hero-section" data-scroll-section>
+        <!-- Background Elements -->
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+            <div class="floating-elements">
+                <div class="floating-icon" style="top: 10%; left: 10%;">
+                    <i class="ri-graduation-cap-line"></i>
+                </div>
+                <div class="floating-icon" style="top: 20%; right: 15%;">
+                    <i class="ri-book-open-line"></i>
+                </div>
+                <div class="floating-icon" style="bottom: 30%; left: 8%;">
+                    <i class="ri-global-line"></i>
+                </div>
+                <div class="floating-icon" style="bottom: 15%; right: 10%;">
+                    <i class="ri-award-line"></i>
+                </div>
+            </div>
+        </div>
+
         <div class="study-hero-container">
-            <h1>Study Abroad Services</h1>
-            <p>Your gateway to world-class education and global career opportunities</p>
+            <div class="study-hero-content">
+                <div class="hero-left">
+                    <div class="hero-badge">
+                        <span class="badge-icon">
+                            <i class="ri-graduation-cap-line"></i>
+                        </span>
+                        <span class="badge-text">Study Abroad Excellence</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="title-main">Study abroad,</span>
+                        <span class="title-highlight">succeed anywhere</span>
+                    </h1>
+
+                    <p class="hero-subtitle">Transform your career with world-class education. White Wings' <strong>Right Course, Right Path</strong> methodology connects you to top universities globally, ensuring not just education but a pathway to international success.</p>
+
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="ri-check-double-line"></i>
+                            </div>
+                            <span>Expert University Selection</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="ri-check-double-line"></i>
+                            </div>
+                            <span>100% Visa Assistance</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="ri-check-double-line"></i>
+                            </div>
+                            <span>Scholarship Guidance</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="ri-user-star-line"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label">Students Placed</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="ri-building-2-line"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Universities</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="ri-earth-line"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">25+</div>
+                                <div class="stat-label">Countries</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="ri-award-line"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-label">Success Rate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta-section">
+                        <div class="cta-buttons">
+                            <a href="contact.html" class="primary-cta">
+                                <span class="cta-icon">
+                                    <i class="ri-user-star-line"></i>
+                                </span>
+                                <span class="cta-text">Get Free Consultation</span>
+                            </a>
+                            <a href="tel:9130448831" class="secondary-cta">
+                                <span class="cta-icon">
+                                    <i class="ri-phone-line"></i>
+                                </span>
+                                <span class="cta-text">Call Expert Now</span>
+                            </a>
+                        </div>
+                        <div class="cta-note">
+                            <i class="ri-time-line"></i>
+                            <span>Free 30-minute consultation • No obligations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="hero-visual">
+                        <div class="main-image">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Study Abroad Success">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <div class="success-badge">
+                                        <i class="ri-trophy-line"></i>
+                                        <span>Top Rated Consultancy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="floating-cards">
+                            <div class="info-card card-1">
+                                <div class="card-icon">
+                                    <i class="ri-graduation-cap-line"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Top Universities</h4>
+                                    <p>Harvard, MIT, Oxford</p>
+                                </div>
+                            </div>
+
+                            <div class="info-card card-2">
+                                <div class="card-icon">
+                                    <i class="ri-money-dollar-circle-line"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Scholarships</h4>
+                                    <p>Up to $50K funding</p>
+                                </div>
+                            </div>
+
+                            <div class="info-card card-3">
+                                <div class="card-icon">
+                                    <i class="ri-time-line"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Quick Process</h4>
+                                    <p>6-8 weeks approval</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Assessment Form -->
+        <div class="quick-assessment-section">
+            <div class="assessment-container">
+                <div class="assessment-header">
+                    <h3>Get Your Free Study Abroad Assessment</h3>
+                    <p>Find the perfect course and university for your career goals</p>
+                </div>
+                <form class="quick-assessment-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Course Level</option>
+                                <option value="bachelors">Bachelors</option>
+                                <option value="masters">Masters</option>
+                                <option value="mba">MBA</option>
+                                <option value="phd">PhD</option>
+                                <option value="diploma">Diploma</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Preferred Country</option>
+                                <option value="usa">USA</option>
+                                <option value="canada">Canada</option>
+                                <option value="uk">UK</option>
+                                <option value="australia">Australia</option>
+                                <option value="germany">Germany</option>
+                                <option value="europe">Europe</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="assessment-submit">Get Free Assessment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Study Destinations -->
-    <section class="study-destinations">
-        <div class="study-container">
-            <h2>Top Study Destinations</h2>
-            <div class="destinations-grid">
+    <!-- Study Opportunity Section -->
+    <section class="study-opportunity-section">
+        <div class="study-opportunity-container">
+            <div class="section-header">
+                <h2>Study Opportunity</h2>
+                <p>Explore top destinations for international education</p>
+            </div>
+
+            <div class="study-destinations-grid">
                 <div class="study-destination-card">
-                    <img src="https://flagcdn.com/w80/ca.png" alt="Canada Flag">
+                    <div class="destination-flag">
+                        <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Canada">
+                    </div>
                     <h3>Study in Canada</h3>
-                    <div class="study-highlights">
-                        <span class="highlight-tag">Post-Study Work Permit</span>
-                        <span class="highlight-tag">PR Pathway</span>
-                        <span class="highlight-tag">Affordable Tuition</span>
+                    <div class="destination-features">
+                        <span class="feature-tag">Masters</span>
+                        <span class="feature-tag">Bachelors</span>
+                        <span class="feature-tag">MBA</span>
                     </div>
-                    <p>World-renowned universities with excellent post-graduation work opportunities</p>
-                    <div class="study-features">
-                        <div class="feature-item">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Top Universities: University of Toronto, UBC, McGill</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="ri-money-dollar-circle-line"></i>
-                            <span>Tuition: CAD 15,000 - 35,000/year</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="ri-briefcase-line"></i>
-                            <span>Work Permit: Up to 3 years post-graduation</span>
-                        </div>
-                    </div>
-                    <a href="study-canada.html" class="study-btn">Explore Canada</a>
+                    <p>World-class education with post-study work opportunities</p>
+                    <a href="#" class="destination-btn">Explore Canada</a>
                 </div>
 
                 <div class="study-destination-card">
-                    <img src="https://flagcdn.com/w80/au.png" alt="Australia Flag">
+                    <div class="destination-flag">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Australia">
+                    </div>
                     <h3>Study in Australia</h3>
-                    <div class="study-highlights">
-                        <span class="highlight-tag">Quality Education</span>
-                        <span class="highlight-tag">Work Rights</span>
-                        <span class="highlight-tag">Lifestyle</span>
+                    <div class="destination-features">
+                        <span class="feature-tag">MBA</span>
+                        <span class="feature-tag">Masters</span>
+                        <span class="feature-tag">PhD</span>
                     </div>
-                    <p>High-quality education system with excellent research opportunities</p>
-                    <div class="study-features">
-                        <div class="feature-item">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Top Universities: ANU, Melbourne, Sydney</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="ri-money-dollar-circle-line"></i>
-                            <span>Tuition: AUD 20,000 - 45,000/year</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="ri-briefcase-line"></i>
-                            <span>Work Rights: 20 hours/week during studies</span>
-                        </div>
-                    </div>
-                    <a href="study-australia.html" class="study-btn">Explore Australia</a>
+                    <p>High-quality education with excellent research opportunities</p>
+                    <a href="#" class="destination-btn">Explore Australia</a>
                 </div>
 
                 <div class="study-destination-card">
-                    <img src="https://flagcdn.com/w80/us.png" alt="USA Flag">
-                    <h3>Study in USA</h3>
-                    <div class="study-highlights">
-                        <span class="highlight-tag">World's Best Universities</span>
-                        <span class="highlight-tag">Research Excellence</span>
-                        <span class="highlight-tag">OPT/STEM</span>
+                    <div class="destination-flag">
+                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Germany">
                     </div>
-                    <p>Home to world's top universities with cutting-edge research facilities</p>
-                    <div class="study-features">
-                        <div class="feature-item">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Top Universities: Harvard, MIT, Stanford</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="ri-money-dollar-circle-line"></i>
-                            <span>Tuition: USD 25,000 - 60,000/year</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="ri-briefcase-line"></i>
-                            <span>OPT: 12 months (36 months for STEM)</span>
-                        </div>
+                    <h3>Study in Germany</h3>
+                    <div class="destination-features">
+                        <span class="feature-tag">B.TECH</span>
+                        <span class="feature-tag">Masters</span>
+                        <span class="feature-tag">Engineering</span>
                     </div>
-                    <a href="study-usa.html" class="study-btn">Explore USA</a>
+                    <p>Affordable education with strong engineering programs</p>
+                    <a href="#" class="destination-btn">Explore Germany</a>
                 </div>
 
                 <div class="study-destination-card">
-                    <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag">
+                    <div class="destination-flag">
+                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="UK">
+                    </div>
                     <h3>Study in UK</h3>
-                    <div class="study-highlights">
-                        <span class="highlight-tag">Historic Universities</span>
-                        <span class="highlight-tag">Graduate Route</span>
-                        <span class="highlight-tag">Short Duration</span>
+                    <div class="destination-features">
+                        <span class="feature-tag">Masters</span>
+                        <span class="feature-tag">MBA</span>
+                        <span class="feature-tag">Research</span>
                     </div>
-                    <p>Historic universities with excellent academic reputation worldwide</p>
-                    <div class="study-features">
-                        <div class="feature-item">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Top Universities: Oxford, Cambridge, Imperial</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="ri-money-dollar-circle-line"></i>
-                            <span>Tuition: GBP 15,000 - 40,000/year</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="ri-briefcase-line"></i>
-                            <span>Graduate Route: 2-3 years post-study work</span>
-                        </div>
+                    <p>Prestigious universities with rich academic heritage</p>
+                    <a href="#" class="destination-btn">Explore UK</a>
+                </div>
+
+                <div class="study-destination-card">
+                    <div class="destination-flag">
+                        <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="USA">
                     </div>
-                    <a href="study-uk.html" class="study-btn">Explore UK</a>
+                    <h3>Study in USA</h3>
+                    <div class="destination-features">
+                        <span class="feature-tag">Bachelors</span>
+                        <span class="feature-tag">Masters</span>
+                        <span class="feature-tag">MBA</span>
+                    </div>
+                    <p>World's top universities with diverse academic programs</p>
+                    <a href="#" class="destination-btn">Explore USA</a>
+                </div>
+
+                <div class="study-destination-card">
+                    <div class="destination-flag">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Europe">
+                    </div>
+                    <h3>Study in Europe</h3>
+                    <div class="destination-features">
+                        <span class="feature-tag">Erasmus</span>
+                        <span class="feature-tag">Masters</span>
+                        <span class="feature-tag">Research</span>
+                    </div>
+                    <p>Diverse cultures with excellent educational opportunities</p>
+                    <a href="#" class="destination-btn">Explore Europe</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Study Services -->
-    <section class="study-services">
-        <div class="services-container">
-            <h2>Our Study Abroad Services</h2>
+    <!-- Study Services Section -->
+    <section class="study-services-section">
+        <div class="study-services-container">
+            <div class="section-header">
+                <h2>Our Study Abroad Services</h2>
+                <p>Comprehensive support for your international education journey</p>
+            </div>
+
             <div class="services-grid">
                 <div class="service-card">
-                    <i class="ri-search-line"></i>
-                    <h3>University Selection</h3>
-                    <p>Expert guidance to choose the right university and program based on your profile</p>
+                    <div class="service-icon">
+                        <i class="ri-user-star-line"></i>
+                    </div>
+                    <h3>Expert Counseling</h3>
+                    <p>Personalized guidance from experienced education consultants</p>
+                    <ul>
+                        <li>Career assessment</li>
+                        <li>Course recommendations</li>
+                        <li>University selection</li>
+                    </ul>
+                    <a href="contact.html" class="service-btn">Get Counseling</a>
                 </div>
+
                 <div class="service-card">
-                    <i class="ri-file-text-line"></i>
-                    <h3>Application Assistance</h3>
-                    <p>Complete support for university applications, SOP, and documentation</p>
+                    <div class="service-icon">
+                        <i class="ri-file-list-3-line"></i>
+                    </div>
+                    <h3>Admission Services</h3>
+                    <p>Complete application assistance for university admissions</p>
+                    <ul>
+                        <li>Application preparation</li>
+                        <li>Document verification</li>
+                        <li>Deadline management</li>
+                    </ul>
+                    <a href="contact.html" class="service-btn">Apply Now</a>
                 </div>
+
                 <div class="service-card">
-                    <i class="ri-money-dollar-circle-line"></i>
-                    <h3>Scholarship Guidance</h3>
-                    <p>Help you find and apply for scholarships and financial aid opportunities</p>
+                    <div class="service-icon">
+                        <i class="ri-passport-line"></i>
+                    </div>
+                    <h3>Student Visa Services</h3>
+                    <p>Professional visa assistance with high success rate</p>
+                    <ul>
+                        <li>Visa documentation</li>
+                        <li>Interview preparation</li>
+                        <li>Application tracking</li>
+                    </ul>
+                    <a href="contact.html" class="service-btn">Get Visa Help</a>
                 </div>
+
                 <div class="service-card">
-                    <i class="ri-passport-line"></i>
-                    <h3>Student Visa</h3>
-                    <p>End-to-end student visa processing with high success rate</p>
+                    <div class="service-icon">
+                        <i class="ri-edit-line"></i>
+                    </div>
+                    <h3>SOP & LOR Writing</h3>
+                    <p>Professional statement and recommendation letter services</p>
+                    <ul>
+                        <li>Statement of Purpose</li>
+                        <li>Letters of Recommendation</li>
+                        <li>Essay writing support</li>
+                    </ul>
+                    <a href="contact.html" class="service-btn">Get Writing Help</a>
                 </div>
+
                 <div class="service-card">
-                    <i class="ri-english-input"></i>
+                    <div class="service-icon">
+                        <i class="ri-book-open-line"></i>
+                    </div>
                     <h3>Test Preparation</h3>
-                    <p>IELTS, TOEFL, GRE, GMAT coaching and preparation support</p>
+                    <p>Comprehensive coaching for standardized tests</p>
+                    <ul>
+                        <li>IELTS & TOEFL</li>
+                        <li>GRE & GMAT</li>
+                        <li>SAT & PTE</li>
+                    </ul>
+                    <a href="contact.html" class="service-btn">Start Coaching</a>
                 </div>
+
                 <div class="service-card">
-                    <i class="ri-plane-line"></i>
-                    <h3>Pre-Departure Support</h3>
-                    <p>Accommodation, travel, and settling-in assistance for smooth transition</p>
+                    <div class="service-icon">
+                        <i class="ri-money-dollar-circle-line"></i>
+                    </div>
+                    <h3>Scholarship Assistance</h3>
+                    <p>Help finding and applying for scholarships and financial aid</p>
+                    <ul>
+                        <li>Scholarship search</li>
+                        <li>Application assistance</li>
+                        <li>Financial planning</li>
+                    </ul>
+                    <a href="contact.html" class="service-btn">Find Scholarships</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Study Process -->
-    <section class="study-process">
-        <div class="process-container">
-            <h2>Study Abroad Process</h2>
+    <!-- Study Process Section -->
+    <section class="study-process-section">
+        <div class="study-process-container">
+            <div class="section-header">
+                <h2>Your Study Abroad Journey</h2>
+                <p>Step-by-step guidance from application to arrival</p>
+            </div>
+            
             <div class="process-steps">
-                <div class="step">
+                <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>Counseling & Assessment</h3>
-                    <p>Free career counseling and profile evaluation</p>
+                    <div class="step-content">
+                        <h3>Counseling & Planning</h3>
+                        <p>Understand your goals and choose the right course and country</p>
+                    </div>
                 </div>
-                <div class="step">
+                
+                <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3>University Selection</h3>
-                    <p>Choose best-fit universities and programs</p>
+                    <div class="step-content">
+                        <h3>University Selection</h3>
+                        <p>Find the perfect university that matches your profile and budget</p>
+                    </div>
                 </div>
-                <div class="step">
+                
+                <div class="process-step">
                     <div class="step-number">3</div>
-                    <h3>Test Preparation</h3>
-                    <p>IELTS/TOEFL and other required test preparation</p>
+                    <div class="step-content">
+                        <h3>Application Process</h3>
+                        <p>Complete application with required documents and essays</p>
+                    </div>
                 </div>
-                <div class="step">
+                
+                <div class="process-step">
                     <div class="step-number">4</div>
-                    <h3>Application Submission</h3>
-                    <p>Complete application and document submission</p>
+                    <div class="step-content">
+                        <h3>Visa Application</h3>
+                        <p>Student visa processing with interview preparation</p>
+                    </div>
                 </div>
-                <div class="step">
+                
+                <div class="process-step">
                     <div class="step-number">5</div>
-                    <h3>Visa Processing</h3>
-                    <p>Student visa application and approval</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">6</div>
-                    <h3>Pre-Departure</h3>
-                    <p>Travel arrangements and settling-in support</p>
+                    <div class="step-content">
+                        <h3>Pre-departure</h3>
+                        <p>Accommodation, travel arrangements, and orientation</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Study CTA -->
-    <section class="study-cta">
-        <div class="cta-container">
-            <h2>Ready to Study Abroad?</h2>
-            <p>Get free counseling and start your study abroad journey today</p>
-            <a href="contact.html" class="cta-button">Get Free Counseling</a>
+    <!-- University Placements Section -->
+    <section class="university-placements-section">
+        <div class="placements-container">
+            <div class="section-header">
+                <h2>Top University Placements</h2>
+                <p>Our students have been successfully placed in world-renowned universities</p>
+            </div>
+
+            <div class="universities-by-country">
+                <div class="country-universities">
+                    <h3>United States</h3>
+                    <div class="university-logos">
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Harvard University">
+                            <span>Harvard University</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Stanford University">
+                            <span>Stanford University</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="MIT">
+                            <span>MIT</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="UC Berkeley">
+                            <span>UC Berkeley</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="country-universities">
+                    <h3>United Kingdom</h3>
+                    <div class="university-logos">
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c93a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Oxford University">
+                            <span>Oxford University</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cambridge University">
+                            <span>Cambridge University</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Imperial College">
+                            <span>Imperial College</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="University of Edinburgh">
+                            <span>University of Edinburgh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="country-universities">
+                    <h3>Canada</h3>
+                    <div class="university-logos">
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="University of Toronto">
+                            <span>University of Toronto</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="UBC">
+                            <span>University of British Columbia</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="McGill University">
+                            <span>McGill University</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="University of Waterloo">
+                            <span>University of Waterloo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="country-universities">
+                    <h3>Australia</h3>
+                    <div class="university-logos">
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="University of Melbourne">
+                            <span>University of Melbourne</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="University of Sydney">
+                            <span>University of Sydney</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="ANU">
+                            <span>Australian National University</span>
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="UNSW">
+                            <span>UNSW Sydney</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <script src="loader.js"></script>
+    <!-- Student Success Stories Section -->
+    <section class="student-success-section">
+        <div class="success-container">
+            <div class="section-header">
+                <h2>Student Success Stories</h2>
+                <p>Hear from our students who achieved their dreams</p>
+            </div>
+
+            <div class="success-stories-grid">
+                <div class="success-story">
+                    <div class="student-photo">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Rahul Sharma">
+                    </div>
+                    <div class="story-content">
+                        <h4>Rahul Sharma</h4>
+                        <p class="university">Masters in Computer Science, Stanford University</p>
+                        <p class="testimonial">"White Wings helped me secure admission to my dream university. Their guidance throughout the application process was invaluable."</p>
+                        <div class="story-tags">
+                            <span>USA</span>
+                            <span>Computer Science</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="success-story">
+                    <div class="student-photo">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Priya Patel">
+                    </div>
+                    <div class="story-content">
+                        <h4>Priya Patel</h4>
+                        <p class="university">MBA, University of Toronto</p>
+                        <p class="testimonial">"The team's expertise in visa processing made my journey smooth. I'm now pursuing my MBA in Canada!"</p>
+                        <div class="story-tags">
+                            <span>Canada</span>
+                            <span>MBA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="success-story">
+                    <div class="student-photo">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Arjun Kumar">
+                    </div>
+                    <div class="story-content">
+                        <h4>Arjun Kumar</h4>
+                        <p class="university">Engineering, University of Melbourne</p>
+                        <p class="testimonial">"From course selection to visa approval, White Wings supported me at every step. Highly recommended!"</p>
+                        <div class="story-tags">
+                            <span>Australia</span>
+                            <span>Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta-section">
+        <div class="contact-cta-container">
+            <h2>Ready to Start Your Study Abroad Journey?</h2>
+            <p>Get expert guidance from our education consultants</p>
+            <a href="contact.html" class="cta-button">Get Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="apply-visa-cta">
+            <div class="cta-container">
+                <h6>Ready to Apply?</h6>
+                <h2>Start Your Visa Application Today</h2>
+                <p>Get expert assistance for your visa application process. Our team is here to help you achieve your international goals.</p>
+                <a href="contact.html" class="apply-btn">Apply Now</a>
+                <h2 class="get-in-touch-heading">Get In Touch</h2>
+            </div>
+        </div>
+
+        <div class="main-footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="footer-logo">
+                        <p class="footer-tagline">Your trusted partner for international visa services</p>
+                        <p class="footer-slogan">Making Global Dreams Come True</p>
+                        <div class="social-links">
+                            <a href="#"><i class="ri-facebook-fill"></i></a>
+                            <a href="#"><i class="ri-instagram-fill"></i></a>
+                            <a href="#"><i class="ri-twitter-fill"></i></a>
+                            <a href="#"><i class="ri-linkedin-fill"></i></a>
+                            <a href="https://wa.me/919130448831"><i class="ri-whatsapp-fill"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-middle">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html">Apply Now</a></li>
+                            <li><a href="tel:+919130448831">Call Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-right">
+                        <h4>Get In Touch</h4>
+                        <div class="contact-details">
+                            <p>📞 +91 9130448831</p>
+                            <p><strong>✉ mrunal@whitewingsvisa.com</strong></p>
+                            <p>📍 Pune, Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <p>&copy; 2024 White Wings Visa Consultancy. All rights reserved.</p>
+                    <p>Best Visa Consultant in Pune, Maharashtra | Expert Immigration Services</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Locomotive Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+    <script src="smooth-scroll.js"></script>
 </body>
 </html>

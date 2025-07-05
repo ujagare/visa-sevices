@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visa Services - White Wings Visa Consultancy Pune</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Comprehensive Visa Services - White Wings Visa Consultancy Pune. Expert assistance for tourist, business, student, and immigration visas worldwide.">
+    <meta name="keywords" content="visa services pune, immigration consultant pune, tourist visa, business visa, student visa, work visa, visa consultancy">
+    <title>Our Services - White Wings Visa Consultancy Pune</title>
+
     <link rel="stylesheet" href="pages.css">
-    <link rel="stylesheet" href="professional.css">
-    <link rel="stylesheet" href="loader.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css">
 </head>
-<body>
+<body data-scroll-container>
     <!-- Loader -->
     <div id="loader" class="loader-container visa-loader">
         <div class="loader-content">
@@ -27,21 +30,48 @@
     </div>
 
     <!-- Navigation -->
-    <nav>
-        <img src="images/logo/WING LOGO.png" class="logo">
-        <div id="links" class="desktop-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <button><a href="contact.html">Apply Now</a></button>
-            </ul>
-        </div>
-        <div class="mobile-menu-btn">
-            <i class="ri-menu-line" id="menu-toggle"></i>
-        </div>
-    </nav>
+    <nav-div>
+        <nav>
+            <img src="images/logo/WING LOGO.png" class="logo">
+
+            <!-- Desktop Menu -->
+            <div id="links" class="desktop-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <button>
+                        <a href="contact.html">Apply Now</a>
+                    </button>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn">
+                <i class="ri-menu-line" id="menu-toggle"></i>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu-content">
+                    <div class="mobile-menu-header">
+                        <img src="images/logo/WING LOGO.png" class="mobile-logo" alt="White Wings Logo">
+                        <i class="ri-close-line" id="menu-close" title="Close Menu"></i>
+                    </div>
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
+                        <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
+                        <li><a href="services.html"><i class="ri-service-line"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
+                    </ul>
+                    <button class="mobile-apply-btn">
+                        <a href="contact.html"><i class="ri-send-plane-line"></i> Apply Now</a>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </nav-div>
 
     <!-- Services Hero -->
     <section class="services-hero">
@@ -248,6 +278,68 @@
         </div>
     </section>
 
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <!-- Apply for Visa CTA Section -->
+        <div class="apply-visa-cta">
+            <div class="cta-container">
+                <h6>APPLY FOR A VISA</h6>
+                <h2>You Focus on Flying, We'll Handle the Paperwork!</h2>
+                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and guaranteed success.</p>
+                <a href="https://wa.me/919130448831" class="apply-btn">APPLY NOW</a>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <!-- Left Column - Logo and Social -->
+                    <div class="footer-left">
+                        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="footer-logo">
+                        <p class="footer-tagline">Hassle-free travel shouldn't just be a dream.</p>
+                        <p class="footer-slogan">White Wings - Visa Simplified.</p>
+                        <div class="social-links">
+                            <a href="https://wa.me/919130448831"><i class="ri-whatsapp-fill"></i></a>
+                            <a href="mailto:mrunal@whitewingsvisa.com"><i class="ri-mail-fill"></i></a>
+                            <a href="#"><i class="ri-instagram-fill"></i></a>
+                            <a href="#"><i class="ri-facebook-fill"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Middle Column - Quick Links -->
+                    <div class="footer-middle">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html">Apply Now</a></li>
+                            <li><a href="tel:+919130448831">Call Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Column - Contact Info -->
+                    <div class="footer-right">
+                        <h4>Get In Touch</h4>
+                        <div class="contact-details">
+                            <p>📞 +91 9130448831</p>
+                            <p><strong>✉ mrunal@whitewingsvisa.com</strong></p>
+                            <p>📍 Pune, Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="copyright">
+                    <p>Copyright © 2025 White Wings. All Rights Reserved.</p>
+                    <p>Powered by White Wings</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="loader.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

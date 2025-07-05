@@ -181,8 +181,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Make Apply Now buttons functional
-    const applyButtons = document.querySelectorAll('button:contains("Apply Now"), .mobile-apply-btn, .apply-btn');
+    const applyButtons = document.querySelectorAll('.mobile-apply-btn, .apply-btn');
+    const navButtons = document.querySelectorAll('nav button, nav button a');
+
+    // Handle apply buttons
     applyButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Scroll to contact form
+            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Handle navigation buttons
+    navButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             // Scroll to contact form
@@ -198,6 +210,284 @@ document.addEventListener('DOMContentLoaded', function() {
             // Direct to WhatsApp for free consultation
             const whatsappUrl = 'https://wa.me/919130448831?text=Hi, I would like to book a free visa consultation.';
             window.open(whatsappUrl, '_blank');
+        });
+    }
+
+    // Read More functionality for testimonials
+    function initReadMore() {
+        const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+        readMoreBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const testimonialText = this.previousElementSibling;
+
+                if (testimonialText.classList.contains('truncated')) {
+                    // Expand text
+                    testimonialText.classList.remove('truncated');
+                    testimonialText.classList.add('expanded');
+                    this.textContent = 'Read Less';
+                } else {
+                    // Collapse text
+                    testimonialText.classList.remove('expanded');
+                    testimonialText.classList.add('truncated');
+                    this.textContent = 'Read More';
+                }
+            });
+        });
+    }
+
+    // Initialize read more functionality
+    initReadMore();
+
+    // Re-initialize after swiper updates
+    setTimeout(() => {
+        initReadMore();
+    }, 1000);
+
+    // Stats Counter Animation
+    function animateStats() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target;
+                    const finalValue = statNumber.getAttribute('data-count');
+                    const isPercentage = statNumber.textContent.includes('%');
+                    const hasPlus = statNumber.textContent.includes('+');
+
+                    let currentValue = 0;
+                    const increment = finalValue / 50; // 50 steps for smooth animation
+
+                    const timer = setInterval(() => {
+                        currentValue += increment;
+
+                        if (currentValue >= finalValue) {
+                            currentValue = finalValue;
+                            clearInterval(timer);
+                        }
+
+                        let displayValue = Math.floor(currentValue);
+
+                        if (isPercentage) {
+                            statNumber.textContent = displayValue + '%';
+                        } else if (hasPlus) {
+                            statNumber.textContent = displayValue + '+';
+                        } else {
+                            statNumber.textContent = displayValue;
+                        }
+                    }, 30);
+
+                    observer.unobserve(statNumber);
+                }
+            });
+        }, observerOptions);
+
+        statNumbers.forEach(statNumber => {
+            observer.observe(statNumber);
+        });
+    }
+
+    // Initialize stats animation
+    animateStats();
+
+    // Enhanced Contact Form Validation and Submission
+    const visaContactForm = document.getElementById('visaContact');
+    if (visaContactForm) {
+        // Real-time validation
+        const inputs = visaContactForm.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', validateField);
+            input.addEventListener('input', clearError);
+        });
+
+        function validateField(e) {
+            const field = e.target;
+            const fieldContainer = field.closest('.field');
+            const errorMessage = fieldContainer.querySelector('.error-message');
+
+            // Clear previous error
+            fieldContainer.classList.remove('error');
+            errorMessage.textContent = '';
+
+            // Validate required fields
+            if (field.hasAttribute('required') && !field.value.trim()) {
+                showError(fieldContainer, 'This field is required');
+                return false;
+            }
+
+            // Email validation
+            if (field.type === 'email' && field.value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(field.value)) {
+                    showError(fieldContainer, 'Please enter a valid email address');
+                    return false;
+                }
+            }
+
+            // Phone validation
+            if (field.type === 'tel' && field.value) {
+                const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+                if (!phoneRegex.test(field.value)) {
+                    showError(fieldContainer, 'Please enter a valid phone number');
+                    return false;
+                }
+            }
+
+            // File validation
+            if (field.type === 'file' && field.files.length > 0) {
+                const file = field.files[0];
+                const maxSize = 5 * 1024 * 1024; // 5MB
+                const allowedTypes = ['application/pdf', 'image/jpeg', 'image/jpg', 'image/png'];
+
+                if (file.size > maxSize) {
+                    showError(fieldContainer, 'File size must be less than 5MB');
+                    return false;
+                }
+
+                if (!allowedTypes.includes(file.type)) {
+                    showError(fieldContainer, 'Only PDF, JPG, and PNG files are allowed');
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function showError(fieldContainer, message) {
+            fieldContainer.classList.add('error');
+            const errorMessage = fieldContainer.querySelector('.error-message');
+            errorMessage.textContent = message;
+        }
+
+        function clearError(e) {
+            const fieldContainer = e.target.closest('.field');
+            fieldContainer.classList.remove('error');
+            const errorMessage = fieldContainer.querySelector('.error-message');
+            errorMessage.textContent = '';
+        }
+
+        // Form submission
+        visaContactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Validate all fields
+            let isValid = true;
+            inputs.forEach(input => {
+                if (!validateField({ target: input })) {
+                    isValid = false;
+                }
+            });
+
+            if (!isValid) {
+                return;
+            }
+
+            const data = new FormData(visaContactForm);
+            console.log('Form Data Submitted:', Object.fromEntries(data.entries()));
+
+            // Show loading state
+            const submitBtn = visaContactForm.querySelector('.btn-submit');
+            const originalHTML = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="ri-loader-4-line"></i> Submitting...';
+            submitBtn.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                // Hide form and show success card
+                visaContactForm.style.display = 'none';
+                const successCard = document.querySelector('.success-card');
+                successCard.style.display = 'block';
+                successCard.style.animation = 'fadeIn 0.5s ease-in';
+
+                // Optional: Send to WhatsApp
+                const formData = Object.fromEntries(data.entries());
+                const whatsappMessage = `New Visa Application:\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCountry: ${formData.country}\nVisa Type: ${formData.visaType}\nTravel Date: ${formData.travelDate}\nTravelers: ${formData.travelers}\nNotes: ${formData.notes}`;
+                const whatsappUrl = `https://wa.me/919130448831?text=${encodeURIComponent(whatsappMessage)}`;
+
+                // Auto-redirect to WhatsApp after 3 seconds
+                setTimeout(() => {
+                    if (confirm('Would you like to continue this conversation on WhatsApp for faster processing?')) {
+                        window.open(whatsappUrl, '_blank');
+                    }
+                }, 3000);
+            }, 2000);
+        });
+    }
+
+    // Function to show form again (for new request button)
+    window.showForm = function() {
+        const form = document.getElementById('visaContact');
+        const successCard = document.querySelector('.success-card');
+
+        form.style.display = 'grid';
+        successCard.style.display = 'none';
+        form.reset();
+
+        // Clear all errors
+        const fields = form.querySelectorAll('.field');
+        fields.forEach(field => {
+            field.classList.remove('error');
+            const errorMessage = field.querySelector('.error-message');
+            errorMessage.textContent = '';
+        });
+
+        // Reset button
+        const submitBtn = form.querySelector('.btn-submit');
+        submitBtn.innerHTML = '<i class="ri-send-plane-line"></i> Submit Request';
+        submitBtn.disabled = false;
+    };
+
+    // File input enhancement
+    const fileInput = document.getElementById('docs');
+    if (fileInput) {
+        fileInput.addEventListener('change', function() {
+            const fileText = this.closest('.input-container').querySelector('.file-text');
+            if (this.files.length > 0) {
+                fileText.textContent = this.files[0].name;
+                fileText.style.color = '#000080';
+            } else {
+                fileText.textContent = 'Choose file or drag here';
+                fileText.style.color = '#666';
+            }
+        });
+    }
+
+    // About Page Counter Animation
+    const counters = document.querySelectorAll('.count');
+    if (counters.length > 0) {
+        counters.forEach(el => {
+            const target = +el.dataset.target;
+            let count = 0;
+            const step = Math.ceil(target / 200);
+
+            const updateCounter = () => {
+                count += step;
+                if (count >= target) {
+                    el.textContent = target;
+                } else {
+                    el.textContent = count;
+                    requestAnimationFrame(updateCounter);
+                }
+            };
+
+            // Start animation when element is in view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateCounter();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            observer.observe(el);
         });
     }
 });
