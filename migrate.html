@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Migrate - White Wings Visa Consultancy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-fix.css">
     <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="migrate-styles.css">
+    <link rel="stylesheet" href="migrate-destinations.css">
+    <link rel="stylesheet" href="migrate-process.css">
+    <link rel="stylesheet" href="migrate-benefits.css">
+    <link rel="stylesheet" href="migrate-sections.css">
+    <link rel="stylesheet" href="simple-mobile-navbar.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-
-    <!-- Locomotive Scroll CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css">
 </head>
-<body data-scroll-container>
+<body>
     <!-- Navigation -->
     <nav-div>
         <nav>
@@ -22,7 +27,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="dropdown">
-                        <a href="services.html">Services <i class="ri-arrow-down-s-line"></i></a>
+                        <a href="#" onclick="return false;">Services <i class="ri-arrow-down-s-line"></i></a>
                         <div class="dropdown-content">
                             <a href="study.html">
                                 <i class="ri-graduation-cap-line"></i>
@@ -75,8 +80,34 @@
                     </div>
                     <ul class="mobile-nav-links">
                         <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
+                        <li class="mobile-services-item">
+                            <div class="mobile-services-toggle">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <i class="ri-service-line"></i>
+                                    <span>Services</span>
+                                </div>
+                                <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                            </div>
+                            <div class="mobile-services-dropdown">
+                                <a href="study.html">
+                                    <i class="ri-graduation-cap-line"></i>
+                                    <span>Study Abroad</span>
+                                </a>
+                                <a href="migrate.html" class="active">
+                                    <i class="ri-home-heart-line"></i>
+                                    <span>Migrate</span>
+                                </a>
+                                <a href="work.html">
+                                    <i class="ri-briefcase-line"></i>
+                                    <span>Work Abroad</span>
+                                </a>
+                                <a href="visit.html">
+                                    <i class="ri-plane-line"></i>
+                                    <span>Visit</span>
+                                </a>
+                            </div>
+                        </li>
                         <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
-                        <li><a href="services.html"><i class="ri-service-line"></i> Services</a></li>
                         <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
                     </ul>
                     <button class="mobile-apply-btn">
@@ -88,7 +119,7 @@
     </nav-div>
 
     <!-- Migrate Hero Section -->
-    <section class="migrate-hero-section" data-scroll-section>
+    <section class="migrate-hero-section">
         <!-- Background Elements -->
         <div class="hero-background">
             <div class="hero-pattern"></div>
@@ -123,21 +154,24 @@
                     <!-- Quick Form -->
                     <div class="hero-form">
                         <h3>I want to migrate to</h3>
-                        <form class="migrate-form">
+                        <form class="migrate-form" action="https://formsubmit.co/mrunal@whitewingsvisa.com" method="POST">
+                            <input type="hidden" name="_subject" value="Migration Form Submission">
+                            <input type="hidden" name="_next" value="https://whitewingsvisa.com/thank-you.html">
+                            <input type="hidden" name="_captcha" value="false">
                             <div class="form-row">
-                                <select class="form-select">
-                                    <option>Select Country</option>
-                                    <option>Canada</option>
-                                    <option>Australia</option>
-                                    <option>Germany</option>
-                                    <option>UK</option>
+                                <select class="form-select" name="destination_country" required>
+                                    <option value="">Select Country</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="UK">UK</option>
                                 </select>
                             </div>
                             <div class="form-row">
-                                <input type="tel" placeholder="Phone Number" class="form-input">
+                                <input type="tel" placeholder="Phone Number" name="phone" class="form-input" required>
                             </div>
                             <div class="form-row">
-                                <input type="email" placeholder="Email Address" class="form-input">
+                                <input type="email" placeholder="Email Address" name="email" class="form-input" required>
                             </div>
                             <button type="submit" class="form-submit">Get Free Assessment</button>
                         </form>
@@ -165,93 +199,139 @@
     <section class="migrate-opportunity-section">
         <div class="migrate-opportunity-container">
             <div class="section-header">
+                <div class="section-badge">
+                    <i class="ri-earth-line"></i>
+                    <span>GLOBAL OPPORTUNITIES</span>
+                </div>
                 <h2>Popular Migration Destinations</h2>
                 <p>Explore top countries for permanent residency and work opportunities</p>
             </div>
 
             <div class="destinations-grid">
                 <div class="destination-card">
-                    <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Australia">
+                    <div class="destination-header">
+                        <div class="destination-icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
                     </div>
-                    <h3>Australia</h3>
+                    <div class="destination-flag">
+                        <img src="https://flagcdn.com/w80/au.png" alt="Australia Flag">
+                    </div>
+                    <div class="destination-content">
+                    <h3><i class="ri-map-pin-2-fill"></i> Australia</h3>
                     <div class="destination-features">
                         <span class="feature-tag">PR Visa</span>
                         <span class="feature-tag">Work Visa</span>
                         <span class="feature-tag">Study Visa</span>
                     </div>
                     <p>Points-based immigration system with excellent quality of life</p>
-                    <a href="#" class="destination-btn">Explore Australia</a>
+                    <a href="#" class="destination-btn">Explore Australia <i class="ri-arrow-right-line"></i></a>
+                    </div>
                 </div>
 
                 <div class="destination-card">
-                    <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Canada">
+                    <div class="destination-header">
+                        <div class="destination-icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
                     </div>
-                    <h3>Canada</h3>
+                    <div class="destination-flag">
+                        <img src="https://flagcdn.com/w80/ca.png" alt="Canada Flag">
+                    </div>
+                    <div class="destination-content">
+                    <h3><i class="ri-map-pin-2-fill"></i> Canada</h3>
                     <div class="destination-features">
                         <span class="feature-tag">Express Entry</span>
                         <span class="feature-tag">PNP</span>
                         <span class="feature-tag">Work Permit</span>
                     </div>
                     <p>Welcoming immigration policies and multicultural society</p>
-                    <a href="#" class="destination-btn">Explore Canada</a>
+                    <a href="#" class="destination-btn">Explore Canada <i class="ri-arrow-right-line"></i></a>
+                    </div>
                 </div>
 
                 <div class="destination-card">
-                    <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Germany">
+                    <div class="destination-header">
+                        <div class="destination-icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
                     </div>
-                    <h3>Germany</h3>
+                    <div class="destination-flag">
+                        <img src="https://flagcdn.com/w80/de.png" alt="Germany Flag">
+                    </div>
+                    <div class="destination-content">
+                    <h3><i class="ri-map-pin-2-fill"></i> Germany</h3>
                     <div class="destination-features">
                         <span class="feature-tag">Opportunity Card</span>
                         <span class="feature-tag">EU Blue Card</span>
                         <span class="feature-tag">Job Seeker</span>
                     </div>
                     <p>Strong economy and excellent work-life balance</p>
-                    <a href="#" class="destination-btn">Explore Germany</a>
+                    <a href="#" class="destination-btn">Explore Germany <i class="ri-arrow-right-line"></i></a>
+                    </div>
                 </div>
 
                 <div class="destination-card">
-                    <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="UK">
+                    <div class="destination-header">
+                        <div class="destination-icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
                     </div>
-                    <h3>United Kingdom</h3>
+                    <div class="destination-flag">
+                        <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag">
+                    </div>
+                    <div class="destination-content">
+                    <h3><i class="ri-map-pin-2-fill"></i> United Kingdom</h3>
                     <div class="destination-features">
                         <span class="feature-tag">Skilled Worker</span>
                         <span class="feature-tag">Global Talent</span>
                         <span class="feature-tag">Innovator</span>
                     </div>
                     <p>Rich history and diverse career opportunities</p>
-                    <a href="#" class="destination-btn">Explore UK</a>
+                    <a href="#" class="destination-btn">Explore UK <i class="ri-arrow-right-line"></i></a>
+                    </div>
                 </div>
 
                 <div class="destination-card">
-                    <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="USA">
+                    <div class="destination-header">
+                        <div class="destination-icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
                     </div>
-                    <h3>United States</h3>
+                    <div class="destination-flag">
+                        <img src="https://flagcdn.com/w80/us.png" alt="USA Flag">
+                    </div>
+                    <div class="destination-content">
+                    <h3><i class="ri-map-pin-2-fill"></i> United States</h3>
                     <div class="destination-features">
                         <span class="feature-tag">H-1B</span>
                         <span class="feature-tag">Green Card</span>
                         <span class="feature-tag">L-1 Visa</span>
                     </div>
                     <p>Land of opportunities with diverse career prospects</p>
-                    <a href="#" class="destination-btn">Explore USA</a>
+                    <a href="#" class="destination-btn">Explore USA <i class="ri-arrow-right-line"></i></a>
+                    </div>
                 </div>
 
                 <div class="destination-card">
-                    <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="New Zealand">
+                    <div class="destination-header">
+                        <div class="destination-icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
                     </div>
-                    <h3>New Zealand</h3>
+                    <div class="destination-flag">
+                        <img src="https://flagcdn.com/w80/nz.png" alt="New Zealand Flag">
+                    </div>
+                    <div class="destination-content">
+                    <h3><i class="ri-map-pin-2-fill"></i> New Zealand</h3>
                     <div class="destination-features">
                         <span class="feature-tag">Skilled Migrant</span>
                         <span class="feature-tag">Work Visa</span>
                         <span class="feature-tag">Investor</span>
                     </div>
                     <p>Beautiful landscapes and high quality of life</p>
-                    <a href="#" class="destination-btn">Explore New Zealand</a>
+                    <a href="#" class="destination-btn">Explore New Zealand <i class="ri-arrow-right-line"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -262,13 +342,39 @@
         <div class="eligibility-container">
             <div class="eligibility-content">
                 <div class="eligibility-left">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Check Your Eligibility">
+                    <div class="eligibility-image-container">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Check Your Eligibility">
+                        <div class="eligibility-badge">
+                            <div class="badge-icon">
+                                <i class="ri-check-double-line"></i>
+                            </div>
+                            <div class="badge-text">98% Success Rate</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="eligibility-right">
+                    <div class="section-badge">
+                        <i class="ri-shield-check-line"></i>
+                        <span>FREE ASSESSMENT</span>
+                    </div>
                     <h2>Check your eligibility instantly</h2>
-                    <p>Evaluate your eligibility instantly for free!</p>
+                    <p>Evaluate your chances of migration success with our comprehensive eligibility assessment tool. Get personalized results in minutes!</p>
+                    <div class="eligibility-features">
+                        <div class="eligibility-feature">
+                            <i class="ri-time-line"></i>
+                            <span>Quick Results</span>
+                        </div>
+                        <div class="eligibility-feature">
+                            <i class="ri-file-list-3-line"></i>
+                            <span>Detailed Report</span>
+                        </div>
+                        <div class="eligibility-feature">
+                            <i class="ri-user-star-line"></i>
+                            <span>Expert Analysis</span>
+                        </div>
+                    </div>
                     <a href="contact.html" class="eligibility-btn">
-                        Check Eligibility
+                        Check Eligibility Now
                         <i class="ri-arrow-right-line"></i>
                     </a>
                 </div>
@@ -280,62 +386,95 @@
     <section class="migration-process-section">
         <div class="migration-process-container">
             <div class="section-header">
-                <h2>Migrate Process</h2>
-                <p>In recent times, migration has become a dream for everyone willing to settle abroad. People move abroad to study, work, or have a better quality of life.</p>
+                <div class="section-badge">
+                    <i class="ri-road-map-line"></i>
+                    <span>YOUR JOURNEY</span>
+                </div>
+                <h2>Our Migration Process</h2>
+                <p>A simple, transparent approach to help you achieve your migration goals</p>
             </div>
 
-            <div class="process-flow">
+            <div class="process-timeline">
+                <div class="timeline-track"></div>
+                
                 <div class="process-step">
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Inquiry">
-                    </div>
-                    <h3>Inquiry</h3>
-                    <p>Welcome! Your immigration journey starts here...</p>
-                    <div class="step-arrow">
-                        <i class="ri-arrow-right-line"></i>
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="ri-customer-service-2-line"></i>
+                        </div>
+                        <h3>Initial Consultation</h3>
+                        <p>Free assessment of your profile and migration options based on your goals and qualifications.</p>
+                        <div class="step-features">
+                            <span class="step-feature">Profile Evaluation</span>
+                            <span class="step-feature">Goal Setting</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="process-step">
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Expert Counselling">
-                    </div>
-                    <h3>Expert Counselling</h3>
-                    <p>Our expert will personally guide you based on your interests and goals.</p>
-                    <div class="step-arrow">
-                        <i class="ri-arrow-right-line"></i>
-                    </div>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Eligibility">
-                    </div>
-                    <h3>Eligibility</h3>
-                    <p>Check your eligibility for immigration to specific country and sign-up for this process.</p>
-                    <div class="step-arrow">
-                        <i class="ri-arrow-right-line"></i>
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="ri-file-search-line"></i>
+                        </div>
+                        <h3>Eligibility Assessment</h3>
+                        <p>Comprehensive evaluation of your eligibility for various immigration pathways and programs.</p>
+                        <div class="step-features">
+                            <span class="step-feature">Points Calculation</span>
+                            <span class="step-feature">Program Selection</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="process-step">
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Documentation">
-                    </div>
-                    <h3>Documentation</h3>
-                    <p>All your documents will be compiled to create a strong application.</p>
-                    <div class="step-arrow">
-                        <i class="ri-arrow-right-line"></i>
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="ri-file-list-3-line"></i>
+                        </div>
+                        <h3>Documentation</h3>
+                        <p>Expert guidance on preparing and organizing all required documents for a strong application.</p>
+                        <div class="step-features">
+                            <span class="step-feature">Document Checklist</span>
+                            <span class="step-feature">Verification Support</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="process-step">
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Processing">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="ri-send-plane-line"></i>
+                        </div>
+                        <h3>Application Submission</h3>
+                        <p>Professional filing of your application with attention to detail and adherence to all requirements.</p>
+                        <div class="step-features">
+                            <span class="step-feature">Quality Assurance</span>
+                            <span class="step-feature">Timely Filing</span>
+                        </div>
                     </div>
-                    <h3>Processing</h3>
-                    <p>Assists you in every step while filing the application.</p>
                 </div>
+
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="ri-flight-takeoff-line"></i>
+                        </div>
+                        <h3>Approval & Beyond</h3>
+                        <p>Continued support through approval, pre-departure preparation, and post-landing assistance.</p>
+                        <div class="step-features">
+                            <span class="step-feature">Visa Approval</span>
+                            <span class="step-feature">Settlement Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-cta">
+                <a href="contact.html" class="process-btn">Start Your Journey Today <i class="ri-arrow-right-line"></i></a>
             </div>
         </div>
     </section>
@@ -412,88 +551,134 @@
     <section class="migration-benefits-section">
         <div class="benefits-container">
             <div class="section-header">
+                <div class="section-badge">
+                    <i class="ri-rocket-line"></i>
+                    <span>BETTER LIFE ABROAD</span>
+                </div>
                 <h2>Migrate Overseas to Build a Better Future</h2>
                 <p>Discover the amazing benefits of migrating to your dream destination</p>
             </div>
 
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="ri-trophy-line"></i>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">
+                            <i class="ri-trophy-line"></i>
+                        </div>
                     </div>
                     <h3>High Standards of Living</h3>
                     <p>Experience world-class infrastructure and quality of life</p>
+                    <div class="benefit-hover-overlay"></div>
                 </div>
 
                 <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="ri-scales-line"></i>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">
+                            <i class="ri-scales-line"></i>
+                        </div>
                     </div>
                     <h3>Excellent Work-Life Balance</h3>
                     <p>Enjoy flexible working hours and family time</p>
+                    <div class="benefit-hover-overlay"></div>
                 </div>
 
                 <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="ri-money-dollar-circle-line"></i>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">
+                            <i class="ri-money-dollar-circle-line"></i>
+                        </div>
                     </div>
                     <h3>Earn 5x More Income</h3>
                     <p>Significantly higher salary than your current earnings</p>
+                    <div class="benefit-hover-overlay"></div>
                 </div>
 
                 <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="ri-briefcase-4-line"></i>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">
+                            <i class="ri-briefcase-4-line"></i>
+                        </div>
                     </div>
                     <h3>Millions of Job Opportunities</h3>
                     <p>Diverse career prospects in various sectors</p>
+                    <div class="benefit-hover-overlay"></div>
                 </div>
 
                 <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="ri-graduation-cap-line"></i>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">
+                            <i class="ri-graduation-cap-line"></i>
+                        </div>
                     </div>
                     <h3>FREE Education for Children</h3>
                     <p>Quality education system for your family</p>
+                    <div class="benefit-hover-overlay"></div>
                 </div>
 
                 <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="ri-heart-pulse-line"></i>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">
+                            <i class="ri-heart-pulse-line"></i>
+                        </div>
                     </div>
                     <h3>Healthcare & Social Benefits</h3>
                     <p>Comprehensive medical coverage and social security</p>
+                    <div class="benefit-hover-overlay"></div>
                 </div>
 
                 <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="ri-shield-check-line"></i>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">
+                            <i class="ri-shield-check-line"></i>
+                        </div>
                     </div>
                     <h3>Retirement Benefits</h3>
                     <p>Secure your future with excellent pension plans</p>
+                    <div class="benefit-hover-overlay"></div>
                 </div>
 
                 <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="ri-passport-line"></i>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">
+                            <i class="ri-passport-line"></i>
+                        </div>
                     </div>
                     <h3>Apply for Citizenship</h3>
                     <p>Path to permanent citizenship based on eligibility</p>
+                    <div class="benefit-hover-overlay"></div>
                 </div>
             </div>
 
-            <div class="migration-stats">
-                <div class="stat-item">
-                    <div class="stat-number">281M</div>
-                    <div class="stat-label">International Migrants Worldwide</div>
+            <div class="migration-stats-wrapper visible">
+                <div class="stats-header">
+                    <h3>Global Migration Statistics</h3>
+                    <p>The latest figures showing the growing trend of international migration</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">49%</div>
-                    <div class="stat-label">Growth Since 2000</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">18M</div>
-                    <div class="stat-label">Indians Living Abroad</div>
+                <div class="migration-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="ri-global-line"></i>
+                        </div>
+                        <div class="stat-number" data-count="281">0</div>
+                        <div class="stat-unit">Million</div>
+                        <div class="stat-label">International Migrants Worldwide</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="ri-line-chart-line"></i>
+                        </div>
+                        <div class="stat-number" data-count="49">0</div>
+                        <div class="stat-unit">%</div>
+                        <div class="stat-label">Growth Since 2000</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="ri-team-line"></i>
+                        </div>
+                        <div class="stat-number" data-count="18">0</div>
+                        <div class="stat-unit">Million</div>
+                        <div class="stat-label">Indians Living Abroad</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -510,15 +695,6 @@
 
     <!-- Footer -->
     <footer class="footer-section">
-        <div class="apply-visa-cta">
-            <div class="cta-container">
-                <h6>Ready to Apply?</h6>
-                <h2>Start Your Visa Application Today</h2>
-                <p>Get expert assistance for your visa application process. Our team is here to help you achieve your international goals.</p>
-                <a href="contact.html" class="apply-btn">Apply Now</a>
-                <h2 class="get-in-touch-heading">Get In Touch</h2>
-            </div>
-        </div>
 
         <div class="main-footer">
             <div class="footer-container">
@@ -569,11 +745,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- Locomotive Scroll -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
 
     <!-- Custom Scripts -->
+    <script src="universal-lenis.js"></script>
+    <script src="universal-mobile-menu.js"></script>
     <script src="script.js"></script>
-    <script src="smooth-scroll.js"></script>
+    <script src="migrate-stats.js"></script>
+    <script src="enable-scroll.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,269 @@
+/* Modern Cards Styles */
+.modern-section {
+    padding: 100px 0;
+    background: #f0f9ff;
+    position: relative;
+}
+
+.modern-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.modern-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.modern-header span {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(0, 0, 128, 0.1);
+    color: #000080;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.modern-header h2 {
+    font-size: 2.8rem;
+    color: #000080;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.modern-header p {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.modern-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.modern-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    height: 100%;
+}
+
+.modern-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: #000080;
+}
+
+.modern-card-inner {
+    display: flex;
+    height: 100%;
+}
+
+.modern-card-left {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.modern-card:hover .modern-card-image {
+    transform: scale(1.1);
+}
+
+.modern-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 128, 0.7), rgba(0, 0, 128, 0.4));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.modern-card-icon {
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.modern-card:hover .modern-card-icon {
+    transform: scale(1.1);
+}
+
+.modern-card-icon i {
+    font-size: 2rem;
+    color: #000080;
+}
+
+.modern-card-right {
+    width: 60%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modern-card-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 6px 12px;
+    background: #f59e0b;
+    color: white;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modern-card-title {
+    margin-bottom: 20px;
+}
+
+.modern-card-title h3 {
+    font-size: 1.8rem;
+    color: #000080;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.modern-card-title p {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+.modern-card-features {
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+.modern-card-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modern-card-features ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.modern-card-features ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background: rgba(0, 0, 128, 0.1);
+    border-radius: 50%;
+}
+
+.modern-card-features ul li::after {
+    content: "✓";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000080;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.modern-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #000080;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 128, 0.2);
+}
+
+.modern-card-btn:hover {
+    background: #000066;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 128, 0.3);
+}
+
+.modern-card-btn i {
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.modern-card-btn:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+    .modern-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modern-header h2 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .modern-card-inner {
+        flex-direction: column;
+    }
+    
+    .modern-card-left {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .modern-card-right {
+        width: 100%;
+    }
+    
+    .modern-section {
+        padding: 70px 0;
+    }
+    
+    .modern-header h2 {
+        font-size: 2rem;
+    }
+}

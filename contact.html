@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - White Wings Visa Consultancy Pune</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-fix.css">
     <link rel="stylesheet" href="pages.css">
     <link rel="stylesheet" href="contact-page.css">
+    <link rel="stylesheet" href="simple-mobile-navbar.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
@@ -21,7 +23,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="dropdown">
-                        <a href="services.html">Services <i class="ri-arrow-down-s-line"></i></a>
+                        <a href="#" onclick="return false;">Services <i class="ri-arrow-down-s-line"></i></a>
                         <div class="dropdown-content">
                             <a href="study.html">
                                 <i class="ri-graduation-cap-line"></i>
@@ -60,12 +62,12 @@
                 </ul>
             </div>
 
-            <!-- Mobile Menu Button -->
+            <!-- Universal Mobile Menu Button -->
             <div class="mobile-menu-btn">
                 <i class="ri-menu-line" id="menu-toggle"></i>
             </div>
 
-            <!-- Mobile Menu -->
+            <!-- Universal Mobile Menu -->
             <div class="mobile-menu" id="mobile-menu">
                 <div class="mobile-menu-content">
                     <div class="mobile-menu-header">
@@ -74,9 +76,35 @@
                     </div>
                     <ul class="mobile-nav-links">
                         <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
+                        <li class="mobile-services-item">
+                            <div class="mobile-services-toggle">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <i class="ri-service-line"></i>
+                                    <span>Services</span>
+                                </div>
+                                <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                            </div>
+                            <div class="mobile-services-dropdown">
+                                <a href="study.html">
+                                    <i class="ri-graduation-cap-line"></i>
+                                    <span>Study Abroad</span>
+                                </a>
+                                <a href="migrate.html">
+                                    <i class="ri-home-heart-line"></i>
+                                    <span>Migrate</span>
+                                </a>
+                                <a href="work.html">
+                                    <i class="ri-briefcase-line"></i>
+                                    <span>Work Abroad</span>
+                                </a>
+                                <a href="visit.html">
+                                    <i class="ri-plane-line"></i>
+                                    <span>Visit</span>
+                                </a>
+                            </div>
+                        </li>
                         <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
-                        <li><a href="services.html"><i class="ri-service-line"></i> Services</a></li>
-                        <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
+                        <li><a href="contact.html" class="active"><i class="ri-phone-line"></i> Contact</a></li>
                     </ul>
                     <button class="mobile-apply-btn">
                         <a href="contact.html"><i class="ri-send-plane-line"></i> Apply Now</a>
@@ -183,7 +211,10 @@
         <div class="card-wrapper">
             <h2>Contact Our Visa Experts</h2>
             <div class="contact-card">
-                <form id="visaContact" enctype="multipart/form-data" novalidate>
+                <form id="visaContact" action="https://formsubmit.co/mrunal@whitewingsvisa.com" method="POST" enctype="multipart/form-data" novalidate>
+                    <input type="hidden" name="_subject" value="New Visa Application Request">
+                    <input type="hidden" name="_next" value="https://whitewingsvisa.com/thank-you.html">
+                    <input type="hidden" name="_captcha" value="false">
                     <div class="field">
                         <label for="name">Full Name *</label>
                         <div class="input-container">
@@ -410,7 +441,18 @@
         </div>
     </footer>
 
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+
     <!-- Scripts -->
+    <script src="universal-lenis.js"></script>
+    <script src="universal-mobile-menu.js"></script>
     <script src="script.js"></script>
+    <script src="enable-scroll.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,17 @@
+/* Heading Font Weight Fix */
+.codex-section-title h2,
+.services-header h2,
+.destinations-section h2,
+.process-enhanced h2,
+.testimonials-header h2,
+.codex-faq-header h2,
+.codex-cta-content h2,
+.codex-contact h2,
+.about-title {
+    font-weight: 500 !important;
+}
+
+/* Hero heading should remain bold */
+.hero-codex-title {
+    font-weight: 700 !important;
+}

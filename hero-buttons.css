@@ -1,0 +1,60 @@
+/* Hero Buttons Styling */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-primary, 
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #000080;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 128, 0.2);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary:hover {
+    background: #3b82f6;
+    box-shadow: 0 15px 30px rgba(0, 0, 128, 0.3);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-primary, 
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 20px;
+    }
+}

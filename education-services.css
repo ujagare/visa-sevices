@@ -1,0 +1,322 @@
+/* Modern Education Services Section */
+.education-services-section {
+    padding: 100px 0;
+    background: #fff;
+    position: relative;
+    z-index: auto;
+    overflow: visible;
+}
+
+.education-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.education-services-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.education-services-header .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0f9ff;
+    color: #3b82f6;
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.education-services-header .section-badge i {
+    font-size: 1.2rem;
+}
+
+.education-services-header h2 {
+    font-size: 2.5rem;
+    color: #000080;
+    margin-bottom: 15px;
+}
+
+.education-services-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 128, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 128, 0.1);
+}
+
+.service-card.featured {
+    background: linear-gradient(135deg, #000080 0%, #3b82f6 100%);
+    color: white;
+    position: relative;
+}
+
+.featured-tag {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #ff6b6b;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 5px 10px rgba(255, 107, 107, 0.3);
+    z-index: 1;
+}
+
+.service-header {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.service-card.featured .service-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #e2e8f0;
+    line-height: 1;
+}
+
+.service-card.featured .service-number {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: #f0f9ff;
+    color: #000080;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.service-card.featured .service-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.service-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #000080;
+    margin-bottom: 15px;
+}
+
+.service-card.featured h3 {
+    color: white;
+}
+
+.service-card p {
+    color: #64748b;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service-card.featured p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.service-features {
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.service-feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #64748b;
+}
+
+.service-card.featured .service-feature {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.service-feature i {
+    color: #3b82f6;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.service-card.featured .service-feature i {
+    color: white;
+}
+
+.service-btn {
+    display: inline-block;
+    background: #000080;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.service-card.featured .service-btn {
+    background: white;
+    color: #000080;
+}
+
+.service-btn i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.service-btn:hover {
+    background: #3b82f6;
+    transform: translateY(-3px);
+}
+
+.service-card.featured .service-btn:hover {
+    background: #f0f9ff;
+}
+
+.service-btn:hover i {
+    transform: translateX(5px);
+}
+
+.additional-services {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.additional-service {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 128, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.additional-service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 128, 0.1);
+}
+
+.additional-service-icon {
+    width: 50px;
+    height: 50px;
+    background: #f0f9ff;
+    color: #000080;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.additional-service-content {
+    flex-grow: 1;
+}
+
+.additional-service-content h4 {
+    font-size: 1.2rem;
+    color: #000080;
+    margin-bottom: 10px;
+}
+
+.additional-service-content p {
+    color: #64748b;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.text-link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.text-link i {
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.text-link:hover {
+    color: #000080;
+}
+
+.text-link:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .additional-services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .additional-services {
+        grid-template-columns: 1fr;
+    }
+    
+    .education-services-header h2 {
+        font-size: 2rem;
+    }
+}

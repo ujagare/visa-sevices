@@ -44,6 +44,10 @@
     </script>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-fix.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="mobile-button-fix.css">
+    <link rel="stylesheet" href="simple-mobile-navbar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
@@ -52,7 +56,7 @@
 
     <title>White Wings Visa Consultancy Pune | Best Visa Services in Maharashtra | Immigration Expert</title>
 </head>
-<body data-scroll-container>
+<body>
     <div>
         <div class="main">
             <div class="hero" id="home">
@@ -60,18 +64,10 @@
                     <nav>
                         <img src="images/logo/WING LOGO.png" class="logo">
 
-    <!-- Loader -->
-    <div id="loader" class="loader-container visa-loader">
+    <!-- Loader with Lottie Animation -->
+    <div id="loader" class="loader-container lottie-loader">
         <div class="loader-content">
-            <div class="airplane">
-                <i class="ri-plane-line"></i>
-            </div>
-            <div class="loader-spinner"></div>
-            <div class="loader-text">White Wings Visa Consultancy</div>
-            <div class="loader-subtext">Your Gateway to Global Opportunities</div>
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
+            <div class="lottie-animation" id="lottie-loader"></div>
         </div>
     </div>
 
@@ -81,7 +77,7 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About</a></li>
                             <li class="dropdown">
-                                <a href="services.html">Services <i class="ri-arrow-down-s-line"></i></a>
+                                <a href="#" onclick="return false;">Services <i class="ri-arrow-down-s-line"></i></a>
                                 <div class="dropdown-content">
                                     <a href="study.html">
                                         <i class="ri-graduation-cap-line"></i>
@@ -120,12 +116,12 @@
                         </ul>
                     </div>
 
-                    <!-- Mobile Menu Button -->
+                    <!-- Simple Mobile Menu Button -->
                     <div class="mobile-menu-btn">
                         <i class="ri-menu-line" id="menu-toggle"></i>
                     </div>
 
-                    <!-- Mobile Menu -->
+                    <!-- Simple Mobile Menu -->
                     <div class="mobile-menu" id="mobile-menu">
                         <div class="mobile-menu-content">
                             <div class="mobile-menu-header">
@@ -134,8 +130,34 @@
                             </div>
                             <ul class="mobile-nav-links">
                                 <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
+                                <li class="mobile-services-item">
+                                    <div class="mobile-services-toggle">
+                                        <div style="display: flex; align-items: center; gap: 12px;">
+                                            <i class="ri-service-line"></i>
+                                            <span>Services</span>
+                                        </div>
+                                        <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                                    </div>
+                                    <div class="mobile-services-dropdown">
+                                        <a href="study.html">
+                                            <i class="ri-graduation-cap-line"></i>
+                                            <span>Study Abroad</span>
+                                        </a>
+                                        <a href="migrate.html">
+                                            <i class="ri-home-heart-line"></i>
+                                            <span>Migrate</span>
+                                        </a>
+                                        <a href="work.html">
+                                            <i class="ri-briefcase-line"></i>
+                                            <span>Work Abroad</span>
+                                        </a>
+                                        <a href="visit.html">
+                                            <i class="ri-plane-line"></i>
+                                            <span>Visit</span>
+                                        </a>
+                                    </div>
+                                </li>
                                 <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
-                                <li><a href="services.html"><i class="ri-service-line"></i> Services</a></li>
                                 <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
                             </ul>
                             <button class="mobile-apply-btn">
@@ -145,6 +167,8 @@
                     </div>
                 </nav>
             </nav-div>
+
+
             <div class="hero-container">
                 <div class="hero-text">
                     <h1>Reach New Heights</h1>
@@ -554,7 +578,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services-section" id="services" data-scroll-section>
+    <section class="services-section" id="services">
         <div class="services-container">
             <div class="services-header">
                 <h2>Our Professional Visa Services</h2>
@@ -770,7 +794,7 @@
     </section>
 
     <!-- What Sets Us Apart Section -->
-    <section class="sets-apart-section" data-scroll-section>
+    <section class="sets-apart-section">
         <div class="sets-apart-container">
             <div class="sets-apart-content">
                 <div class="sets-apart-text">
@@ -809,7 +833,7 @@
 
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section" data-scroll-section>
+    <section id="testimonials" class="testimonials-section">
         <div class="testimonials-container">
             <div class="testimonials-header">
                 <span class="testimonial-badge">GOOGLE REVIEWS</span>
@@ -1061,7 +1085,10 @@
                         <p>Fill out the form below and we'll get back to you as soon as possible.</p>
                     </div>
 
-                    <form class="contact-form-wrapper">
+                    <form class="contact-form-wrapper" action="https://formsubmit.co/mrunal@whitewingsvisa.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from Website">
+                        <input type="hidden" name="_next" value="https://whitewingsvisa.com/thank-you.html">
+                        <input type="hidden" name="_captcha" value="false">
                         <div class="form-row">
                             <div class="form-group">
                                 <label>First Name *</label>
@@ -1183,15 +1210,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- Locomotive Scroll -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+
+    <!-- Lottie Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+    <!-- Animation Data -->
+    <script src="animation-data.js"></script>
 
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Custom Scripts -->
     <script src="loader.js"></script>
+    <script src="universal-lenis.js"></script>
+    <script src="universal-mobile-menu.js"></script>
     <script src="script.js"></script>
-    <script src="smooth-scroll.js"></script>
+    <script>
+        // Immediate scroll fix
+        document.body.style.overflow = 'auto';
+        document.documentElement.style.overflow = 'auto';
+        document.body.style.height = 'auto';
+        document.documentElement.style.height = 'auto';
+    </script>
     </body>
 </html>

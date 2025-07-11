@@ -1,0 +1,146 @@
+/* Discover Cards Section Styles */
+.discover-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.discover-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.discover-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.discover-header h2 {
+    font-size: 2.5rem;
+    color: #000080;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.discover-header p {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.discover-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.discover-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+}
+
+.discover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #000080;
+}
+
+.discover-card-header {
+    padding: 20px;
+    background: #000080;
+    color: white;
+    text-align: center;
+}
+
+.discover-card-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.discover-card-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-card-content p {
+    color: #64748b;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.discover-features {
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.discover-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.discover-features ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.discover-features ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #000080;
+    font-weight: bold;
+}
+
+.discover-card-footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+.discover-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #000080;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.discover-btn:hover {
+    background: #000066;
+}
+
+@media (max-width: 992px) {
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .discover-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .discover-header h2 {
+        font-size: 2rem;
+    }
+}

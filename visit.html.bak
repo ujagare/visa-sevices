@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Visa Services - White Wings Visa Consultancy</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="yaxis-replica.css">
+    <link rel="stylesheet" href="visit-codex.css">
+    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="services-enhanced.css">
+    <link rel="stylesheet" href="destination-features.css">
+    <link rel="stylesheet" href="process-enhanced.css">
+    <link rel="stylesheet" href="hero-codex.css">
+    <link rel="stylesheet" href="about-enhanced.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <h3>Loading...</h3>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+  
+    <!-- Navigation -->
+    <nav>
+        <img src="images/logo/WING LOGO.png" class="logo">
+
+        <!-- Desktop Menu -->
+        <div id="links" class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Services <i class="ri-arrow-down-s-line"></i></a>
+                    <div class="dropdown-content">
+                        <a href="study.html">
+                            <i class="ri-graduation-cap-line"></i>
+                            <div>
+                                <strong>Study Abroad</strong>
+                                <span>Student visa & education guidance</span>
+                            </div>
+                        </a>
+                        <a href="migrate.html">
+                            <i class="ri-home-heart-line"></i>
+                            <div>
+                                <strong>Migrate</strong>
+                                <span>Permanent residency & immigration</span>
+                            </div>
+                        </a>
+                        <a href="work.html">
+                            <i class="ri-briefcase-line"></i>
+                            <div>
+                                <strong>Work Abroad</strong>
+                                <span>Work visa & job opportunities</span>
+                            </div>
+                        </a>
+                        <a href="visit.html">
+                            <i class="ri-plane-line"></i>
+                            <div>
+                                <strong>Visit</strong>
+                                <span>Tourist & business visa</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <button>
+                    <a href="contact.html">Apply Now</a>
+                </button>
+            </ul>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="mobile-menu-btn">
+            <i class="ri-menu-line" id="menu-toggle"></i>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-logo">
+                    <i class="ri-close-line" id="menu-close" title="Close Menu"></i>
+                </div>
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
+                    <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
+                    <li><a href="services.html"><i class="ri-service-line"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
+                </ul>
+                <button class="mobile-apply-btn">
+                    <a href="contact.html"><i class="ri-send-plane-line"></i> Apply Now</a>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Codex Hero Section -->
+    <section class="hero-codex">
+        <div class="hero-codex-overlay"></div>
+        <div class="hero-codex-image">
+            <img src="images/hero/high-angle-passport-tickets-arrangement.jpg" alt="Visit Visa Services - Passport and Tickets" class="hero-codex-img">
+        </div>
+        <div class="hero-codex-container">
+            <div class="hero-codex-content">
+                <div class="hero-codex-text">
+                    <div class="hero-codex-subtitle">Professional Visa Services</div>
+                    <h1 class="hero-codex-title">Expert Visit Visa Services for Your Global Travel Needs</h1>
+                    <p class="hero-codex-description">Get professional assistance for tourist, business, family, and medical visit visas with our experienced consultants. We ensure a smooth and hassle-free visa application process.</p>
+                    
+                    <div class="hero-codex-stats">
+                        <div class="hero-codex-stat">
+                            <div class="hero-codex-stat-icon">
+                                <i class="ri-verified-badge-fill"></i>
+                            </div>
+                            <div class="hero-codex-stat-text">
+                                <span class="hero-codex-stat-value">98%</span>
+                                <span class="hero-codex-stat-label">Success Rate</span>
+                            </div>
+                        </div>
+                        <div class="hero-codex-stat">
+                            <div class="hero-codex-stat-icon">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <div class="hero-codex-stat-text">
+                                <span class="hero-codex-stat-value">10+</span>
+                                <span class="hero-codex-stat-label">Years Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-codex-buttons">
+                        <a href="contact.html" class="hero-codex-btn-primary">Get Free Consultation</a>
+                        <a href="#services" class="hero-codex-btn-secondary">Explore Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-codex-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Enhanced About Section -->
+    <section class="about-enhanced">
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-img-container">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="About Visit Visa Services" class="about-img">
+                    </div>
+                    <div class="about-badge">
+                        <i class="ri-award-line"></i>
+                        <span>Award Winning Service</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="about-subtitle">About Our Services</div>
+                    <h2 class="about-title">Your Trusted Partner for Visit Visa Solutions</h2>
+                    <p class="about-description">At White Wings Visa Consultancy, we specialize in providing comprehensive visit visa services tailored to your specific travel needs. With years of experience and a team of dedicated professionals, we ensure a smooth and hassle-free visa application process.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="ri-check-double-line"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h5>Expert Guidance</h5>
+                                <p>Professional advice from experienced visa consultants</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="ri-file-list-3-line"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h5>Documentation Support</h5>
+                                <p>Complete assistance with all required paperwork</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="ri-calendar-check-line"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h5>Interview Preparation</h5>
+                                <p>Thorough preparation for visa interviews</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="ri-customer-service-2-line"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h5>24/7 Support</h5>
+                                <p>Round-the-clock assistance throughout the process</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-action">
+                        <a href="contact.html" class="about-btn">
+                            Learn More About Us <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Services Section -->
+    <section id="services" class="services-enhanced">
+        <div class="services-container">
+            <div class="services-header">
+                <div class="codex-section-title">
+                    <h6>What We Offer</h6>
+                    <h2>Our Visit Visa Services</h2>
+                </div>
+                <p>Comprehensive visa assistance for all your international travel needs with expert guidance</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Tourist Visa Card -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="ri-earth-line"></i>
+                        </div>
+                        <div class="service-title">
+                            <h3>Tourist Visa</h3>
+                            <p>For leisure travel and sightseeing</p>
+                        </div>
+                        <div class="service-badge">
+                            <i class="ri-star-fill"></i>
+                            <span>Popular</span>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-description">Our expert consultants provide comprehensive assistance for your tourist visa applications to destinations worldwide, ensuring a smooth and hassle-free process.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Complete documentation support</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Itinerary planning assistance</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Travel insurance guidance</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Embassy appointment booking</span>
+                            </div>
+                        </div>
+                        <div class="service-action">
+                            <a href="contact.html" class="service-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Visa Card -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="ri-briefcase-4-line"></i>
+                        </div>
+                        <div class="service-title">
+                            <h3>Business Visa</h3>
+                            <p>For meetings and business opportunities</p>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-description">We help professionals secure business visas with our specialized services, ensuring you can attend meetings, conferences, and explore business opportunities abroad.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Business invitation letters</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Company documentation</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Meeting arrangements</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Multiple entry options</span>
+                            </div>
+                        </div>
+                        <div class="service-action">
+                            <a href="contact.html" class="service-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Visa Card -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="ri-graduation-cap-line"></i>
+                        </div>
+                        <div class="service-title">
+                            <h3>Student Visa</h3>
+                            <p>For international education abroad</p>
+                        </div>
+                        <div class="service-badge" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                            <i class="ri-book-open-line"></i>
+                            <span>High Success</span>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-description">We guide students through the entire visa process for their academic pursuits abroad, from university applications to pre-departure orientation.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">University application assistance</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Education loan guidance</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Admission documentation</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Pre-departure orientation</span>
+                            </div>
+                        </div>
+                        <div class="service-action">
+                            <a href="study.html" class="service-btn">Learn More <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Visa Card -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="ri-suitcase-line"></i>
+                        </div>
+                        <div class="service-title">
+                            <h3>Work Visa</h3>
+                            <p>For employment opportunities abroad</p>
+                        </div>
+                        <div class="service-badge" style="background: linear-gradient(135deg, #10b981, #059669);">
+                            <i class="ri-user-search-line"></i>
+                            <span>Job Support</span>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-description">Our experts help you navigate the complex process of securing work visas worldwide, with additional support for job search and skill assessment.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Job search assistance</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Employment documentation</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Skill assessment guidance</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Work permit processing</span>
+                            </div>
+                        </div>
+                        <div class="service-action">
+                            <a href="work.html" class="service-btn">Learn More <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Visit Visa Card -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="ri-home-heart-line"></i>
+                        </div>
+                        <div class="service-title">
+                            <h3>Family Visit Visa</h3>
+                            <p>For visiting relatives abroad</p>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-description">We provide specialized assistance for family visit visas, helping you reunite with your loved ones abroad for special occasions or extended stays.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Sponsorship documentation</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Relationship proof assistance</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Financial documentation</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Extended stay applications</span>
+                            </div>
+                        </div>
+                        <div class="service-action">
+                            <a href="contact.html" class="service-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Visa Card -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="ri-heart-pulse-line"></i>
+                        </div>
+                        <div class="service-title">
+                            <h3>Medical Visa</h3>
+                            <p>For treatment and healthcare abroad</p>
+                        </div>
+                        <div class="service-badge">
+                            <i class="ri-time-line"></i>
+                            <span>Fast Track</span>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-description">We offer specialized medical visa services for those seeking treatment abroad, with expedited processing and comprehensive support throughout your healthcare journey.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Hospital appointment letters</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Medical documentation</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Expedited processing</span>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature-icon">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="service-feature-text">Attendant visa assistance</span>
+                            </div>
+                        </div>
+                        <div class="service-action">
+                            <a href="contact.html" class="service-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Destinations Section -->
+    <section class="destinations-section">
+        <div class="destinations-container">
+            <div class="codex-section-title" style="text-align: center; margin-bottom: 40px;">
+                <h6>Global Reach</h6>
+                <h2>Popular Visa Destinations</h2>
+                <p style="max-width: 700px; margin: 15px auto 0;">We provide expert visa services for these popular destinations and many more countries worldwide</p>
+            </div>
+
+            <div class="destinations-grid">
+                <!-- USA Card -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="USA Landmarks">
+                        <div class="destination-flag">
+                            <img src="https://flagcdn.com/h120/us.png" alt="USA Flag">
+                        </div>
+                        <div class="destination-badge">
+                            <i class="ri-star-fill"></i>
+                            <span>Most Popular</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-name">United States</h3>
+                        <div class="destination-info">
+                            <div class="feature-count">3 Visa Types</div>
+                            <div class="destination-feature">
+                                <i class="ri-plane-line"></i>
+                                <span>Tourist & Business Visas</span>
+                                <div class="feature-tooltip">B1/B2 Visa Available</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-team-line"></i>
+                                <span>Family Visit Visas</span>
+                                <div class="feature-tooltip">Multiple Entry Options</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-heart-pulse-line"></i>
+                                <span>Medical Treatment Visas</span>
+                                <div class="feature-tooltip">Fast Processing Available</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="destination-link">Apply Now <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <!-- Canada Card -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Canada Landmarks">
+                        <div class="destination-flag">
+                            <img src="https://flagcdn.com/h120/ca.png" alt="Canada Flag">
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-name">Canada</h3>
+                        <div class="destination-info">
+                            <div class="feature-count">3 Visa Types</div>
+                            <div class="destination-feature">
+                                <i class="ri-plane-line"></i>
+                                <span>Tourist & Visitor Visas</span>
+                                <div class="feature-tooltip">eTA & TRV Available</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-parent-line"></i>
+                                <span>Super Visa for Parents</span>
+                                <div class="feature-tooltip">Up to 10 Years Multiple Entry</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-briefcase-4-line"></i>
+                                <span>Business Visitor Visas</span>
+                                <div class="feature-tooltip">Short-term Business Trips</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="destination-link">Apply Now <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <!-- UK Card -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="UK Landmarks">
+                        <div class="destination-flag">
+                            <img src="https://flagcdn.com/h120/gb.png" alt="UK Flag">
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-name">United Kingdom</h3>
+                        <div class="destination-info">
+                            <div class="feature-count">3 Visa Types</div>
+                            <div class="destination-feature">
+                                <i class="ri-government-line"></i>
+                                <span>Standard Visitor Visa</span>
+                                <div class="feature-tooltip">6 Months Stay Duration</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-team-line"></i>
+                                <span>Family Visitor Visa</span>
+                                <div class="feature-tooltip">Visit Relatives in UK</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-briefcase-4-line"></i>
+                                <span>Business & Tourism</span>
+                                <div class="feature-tooltip">Attend Meetings & Conferences</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="destination-link">Apply Now <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <!-- Australia Card -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Australia Landmarks">
+                        <div class="destination-flag">
+                            <img src="https://flagcdn.com/h120/au.png" alt="Australia Flag">
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-name">Australia</h3>
+                        <div class="destination-info">
+                            <div class="feature-count">3 Visa Types</div>
+                            <div class="destination-feature">
+                                <i class="ri-plane-line"></i>
+                                <span>Tourist Visa (Subclass 600)</span>
+                                <div class="feature-tooltip">Up to 12 Months Stay</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-smartphone-line"></i>
+                                <span>ETA (Electronic Travel Authority)</span>
+                                <div class="feature-tooltip">Quick Online Application</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-user-heart-line"></i>
+                                <span>Family Sponsored Visas</span>
+                                <div class="feature-tooltip">Extended Stay Options</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="destination-link">Apply Now <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <!-- Singapore Card -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Singapore Landmarks">
+                        <div class="destination-flag">
+                            <img src="https://flagcdn.com/h120/sg.png" alt="Singapore Flag">
+                        </div>
+                        <div class="destination-badge">
+                            <i class="ri-time-line"></i>
+                            <span>Fast Processing</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-name">Singapore</h3>
+                        <div class="destination-info">
+                            <div class="feature-count">3 Visa Types</div>
+                            <div class="destination-feature">
+                                <i class="ri-plane-line"></i>
+                                <span>Tourist Visas</span>
+                                <div class="feature-tooltip">30-90 Days Stay</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-briefcase-4-line"></i>
+                                <span>Business & MICE Visas</span>
+                                <div class="feature-tooltip">Meetings & Conferences</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-heart-pulse-line"></i>
+                                <span>Medical Tourism Visas</span>
+                                <div class="feature-tooltip">World-Class Healthcare</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="destination-link">Apply Now <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <!-- Schengen Card -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Europe Landmarks">
+                        <div class="destination-flag">
+                            <img src="https://flagcdn.com/h120/eu.png" alt="EU Flag">
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-name">Schengen Countries</h3>
+                        <div class="destination-info">
+                            <div class="feature-count">3 Visa Types</div>
+                            <div class="destination-feature">
+                                <i class="ri-plane-line"></i>
+                                <span>Short-stay Tourist Visas</span>
+                                <div class="feature-tooltip">90 Days in 180-Day Period</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-briefcase-4-line"></i>
+                                <span>Business & Conference Visas</span>
+                                <div class="feature-tooltip">26 Countries Access</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-repeat-line"></i>
+                                <span>Multiple Entry Visas</span>
+                                <div class="feature-tooltip">Valid for Up to 5 Years</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="destination-link">Apply Now <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <!-- UAE Card -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dubai Landmarks">
+                        <div class="destination-flag">
+                            <img src="https://flagcdn.com/h120/ae.png" alt="UAE Flag">
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-name">United Arab Emirates</h3>
+                        <div class="destination-info">
+                            <div class="feature-count">3 Visa Types</div>
+                            <div class="destination-feature">
+                                <i class="ri-plane-line"></i>
+                                <span>Tourist & Visit Visas</span>
+                                <div class="feature-tooltip">14-90 Days Duration</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-flight-takeoff-line"></i>
+                                <span>Transit & Stopover Visas</span>
+                                <div class="feature-tooltip">96 Hours Transit Period</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-heart-pulse-line"></i>
+                                <span>Medical Treatment Visas</span>
+                                <div class="feature-tooltip">Extended Stay Options</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="destination-link">Apply Now <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+                
+                <!-- New Zealand Card -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="New Zealand Landmarks">
+                        <div class="destination-flag">
+                            <img src="https://flagcdn.com/h120/nz.png" alt="New Zealand Flag">
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-name">New Zealand</h3>
+                        <div class="destination-info">
+                            <div class="feature-count">3 Visa Types</div>
+                            <div class="destination-feature">
+                                <i class="ri-plane-line"></i>
+                                <span>Visitor Visa</span>
+                                <div class="feature-tooltip">Up to 9 Months Stay</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-briefcase-4-line"></i>
+                                <span>Business Visitor Visa</span>
+                                <div class="feature-tooltip">Business Meetings & Events</div>
+                            </div>
+                            <div class="destination-feature">
+                                <i class="ri-team-line"></i>
+                                <span>Family Visit Visa</span>
+                                <div class="feature-tooltip">Visit Family & Friends</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="destination-link">Apply Now <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Process Section -->
+    <section class="process-enhanced">
+        <div class="process-container">
+            <div class="process-header">
+                <div class="codex-section-title" style="text-align: center;">
+                    <h6>How We Work</h6>
+                    <h2>Our Simple Visa Process</h2>
+                    <p style="max-width: 700px; margin: 15px auto 0;">We make your visa journey smooth and hassle-free with our streamlined application process</p>
+                </div>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-timeline"></div>
+                
+                <!-- Step 1: Free Consultation -->
+                <div class="process-step">
+                    <div class="process-step-icon">
+                        <div class="process-step-number">1</div>
+                        <div class="process-step-inner">
+                            <i class="ri-discuss-line"></i>
+                        </div>
+                    </div>
+                    <div class="process-step-content">
+                        <h4 class="process-step-title">Free Consultation</h4>
+                        <p class="process-step-description">Initial assessment of your visa requirements and eligibility.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2: Document Preparation -->
+                <div class="process-step">
+                    <div class="process-step-icon">
+                        <div class="process-step-number">2</div>
+                        <div class="process-step-inner">
+                            <i class="ri-file-list-3-line"></i>
+                        </div>
+                    </div>
+                    <div class="process-step-content">
+                        <h4 class="process-step-title">Document Preparation</h4>
+                        <p class="process-step-description">Guidance on collecting and organizing all required documents.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3: Application Filing -->
+                <div class="process-step">
+                    <div class="process-step-icon">
+                        <div class="process-step-number">3</div>
+                        <div class="process-step-inner">
+                            <i class="ri-folder-upload-line"></i>
+                        </div>
+                    </div>
+                    <div class="process-step-content">
+                        <h4 class="process-step-title">Application Filing</h4>
+                        <p class="process-step-description">Professional submission of your visa application.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4: Interview Preparation -->
+                <div class="process-step">
+                    <div class="process-step-icon">
+                        <div class="process-step-number">4</div>
+                        <div class="process-step-inner">
+                            <i class="ri-user-voice-line"></i>
+                        </div>
+                    </div>
+                    <div class="process-step-content">
+                        <h4 class="process-step-title">Interview Preparation</h4>
+                        <p class="process-step-description">Expert guidance and mock interviews for success.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5: Visa Approval -->
+                <div class="process-step">
+                    <div class="process-step-icon">
+                        <div class="process-step-number">5</div>
+                        <div class="process-step-inner">
+                            <i class="ri-passport-line"></i>
+                        </div>
+                    </div>
+                    <div class="process-step-content">
+                        <h4 class="process-step-title">Visa Approval</h4>
+                        <p class="process-step-description">Receive your visa and get pre-departure assistance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-action">
+                <a href="contact.html" class="process-btn">Start Your Visa Process <i class="ri-arrow-right-line"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section - Codex Style -->
+    <section class="codex-testimonials">
+        <div class="codex-container">
+            <div class="codex-testimonials-header">
+                <div class="codex-section-title" style="text-align: center;">
+                    <h6>Client Feedback</h6>
+                    <h2>What Our Clients Say</h2>
+                    <p style="max-width: 700px; margin: 15px auto 0;">Hear from travelers who successfully obtained their visit visas with our assistance</p>
+                </div>
+            </div>
+
+            <div class="codex-testimonials-grid">
+                <div class="yaxis-testimonial-card">
+                    <div class="yaxis-testimonial-content">
+                        <p>"White Wings made my USA tourist visa process incredibly smooth. Their documentation guidance and interview preparation were invaluable. Highly recommend their services!"</p>
+                    </div>
+                    <div class="yaxis-testimonial-author">
+                        <div class="yaxis-author-info">
+                            <h4>Rahul Sharma</h4>
+                            <p>USA Tourist Visa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="yaxis-testimonial-card">
+                    <div class="yaxis-testimonial-content">
+                        <p>"After a previous rejection, I approached White Wings for my UK visit visa. Their expert team identified the issues and helped me secure approval on my second attempt. Excellent service!"</p>
+                    </div>
+                    <div class="yaxis-testimonial-author">
+                        <div class="yaxis-author-info">
+                            <h4>Priya Patel</h4>
+                            <p>UK Family Visit Visa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="yaxis-testimonial-card">
+                    <div class="yaxis-testimonial-content">
+                        <p>"The business visa assistance for my Singapore trip was outstanding. White Wings handled all documentation professionally and secured my visa in just 5 days. Will definitely use their services again."</p>
+                    </div>
+                    <div class="yaxis-testimonial-author">
+                        <div class="yaxis-author-info">
+                            <h4>Vikram Mehta</h4>
+                            <p>Singapore Business Visa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section - Codex Style -->
+    <section class="codex-faq">
+        <div class="codex-container">
+            <div class="codex-faq-header">
+                <div class="codex-section-title" style="text-align: center;">
+                    <h6>Common Questions</h6>
+                    <h2>Frequently Asked Questions</h2>
+                    <p style="max-width: 700px; margin: 15px auto 0;">Find answers to common questions about visit visa applications and requirements</p>
+                </div>
+            </div>
+
+            <div class="codex-faq-wrapper">
+                <div class="codex-accordion-item">
+                    <div class="codex-accordion-header">
+                        <h5>What documents are required for a tourist visa application?</h5>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                    <div class="codex-accordion-body">
+                        <p>Common documents include a valid passport, completed visa application form, passport-sized photographs, proof of accommodation, travel itinerary, travel insurance, bank statements showing financial capability, and a letter explaining the purpose of your visit. Specific requirements may vary by country.</p>
+                    </div>
+                </div>
+
+                <div class="codex-accordion-item">
+                    <div class="codex-accordion-header">
+                        <h5>How long does it take to process a visit visa?</h5>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                    <div class="codex-accordion-body">
+                        <p>Processing times vary by country and visa type. Tourist visas typically take 5-15 business days, while business visas may take 7-20 business days. Some countries offer expedited processing for an additional fee. We provide estimated processing times during your consultation.</p>
+                    </div>
+                </div>
+
+                <div class="codex-accordion-item">
+                    <div class="codex-accordion-header">
+                        <h5>Can I extend my stay once I'm in the country?</h5>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                    <div class="codex-accordion-body">
+                        <p>Extension possibilities depend on the country's immigration policies. Some countries allow visitors to apply for extensions before their current visa expires, while others require you to exit and re-apply. We can advise on specific country regulations and help with extension applications where possible.</p>
+                    </div>
+                </div>
+
+                <div class="codex-accordion-item">
+                    <div class="codex-accordion-header">
+                        <h5>What happens if my visa application is rejected?</h5>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                    <div class="codex-accordion-body">
+                        <p>If your application is rejected, we'll analyze the reasons for rejection and advise on the best course of action. Options may include addressing the specific concerns and reapplying, appealing the decision if applicable, or considering alternative destinations. Our expertise helps minimize rejection risks through proper preparation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section - Codex Style -->
+    <section class="codex-cta">
+        <div class="codex-container">
+            <div class="codex-cta-content">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Get expert assistance for your visit visa application and travel with confidence</p>
+                <a href="contact.html" class="codex-btn-primary">Get Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section - Codex Style -->
+    <section class="codex-contact">
+        <div class="codex-container">
+            <div class="codex-section-title" style="text-align: center; margin-bottom: 40px;">
+                <h6>Get In Touch</h6>
+                <h2>Free Visa Assessment</h2>
+                <p style="max-width: 700px; margin: 15px auto 0;">Fill out the form and our visa experts will contact you shortly</p>
+            </div>
+            
+            <div class="codex-contact-content">
+                <div class="codex-contact-info">
+                    <div class="codex-contact-info-item">
+                        <div class="codex-contact-icon">
+                            <i class="ri-check-line"></i>
+                        </div>
+                        <div class="codex-contact-text">
+                            <h5>Expert Consultation</h5>
+                            <p>Get personalized advice from our experienced visa consultants</p>
+                        </div>
+                    </div>
+                    <div class="codex-contact-info-item">
+                        <div class="codex-contact-icon">
+                            <i class="ri-check-line"></i>
+                        </div>
+                        <div class="codex-contact-text">
+                            <h5>Document Checklist</h5>
+                            <p>Receive a customized list of required documents for your visa type</p>
+                        </div>
+                    </div>
+                    <div class="codex-contact-info-item">
+                        <div class="codex-contact-icon">
+                            <i class="ri-check-line"></i>
+                        </div>
+                        <div class="codex-contact-text">
+                            <h5>Success Rate Analysis</h5>
+                            <p>Get an assessment of your visa approval chances</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="codex-contact-form">
+                    <form>
+                        <div class="codex-form-row">
+                            <div class="codex-form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" class="codex-form-control" required>
+                            </div>
+                            <div class="codex-form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="codex-form-control" required>
+                            </div>
+                        </div>
+                        <div class="codex-form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="codex-form-control" required>
+                        </div>
+                        <div class="codex-form-row">
+                            <div class="codex-form-group">
+                                <label for="visa-type">Visa Type</label>
+                                <select id="visa-type" name="visa-type" class="codex-form-control" required>
+                                    <option value="">Select Visa Type</option>
+                                    <option value="tourist">Tourist Visa</option>
+                                    <option value="business">Business Visa</option>
+                                    <option value="family">Family Visit Visa</option>
+                                    <option value="medical">Medical Visa</option>
+                                    <option value="schengen">Schengen Visa</option>
+                                    <option value="dubai">Dubai Visa</option>
+                                </select>
+                            </div>
+                            <div class="codex-form-group">
+                                <label for="country">Destination Country</label>
+                                <select id="country" name="country" class="codex-form-control" required>
+                                    <option value="">Select Country</option>
+                                    <option value="usa">USA</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="uk">UK</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="france">France</option>
+                                    <option value="uae">UAE</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="codex-form-submit">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="main-footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="footer-logo">
+                        <p class="footer-tagline">Your trusted partner for international visa services</p>
+                        <p class="footer-slogan">Making Global Dreams Come True</p>
+                        <div class="social-links">
+                            <a href="#"><i class="ri-facebook-fill"></i></a>
+                            <a href="#"><i class="ri-instagram-fill"></i></a>
+                            <a href="#"><i class="ri-twitter-fill"></i></a>
+                            <a href="#"><i class="ri-linkedin-fill"></i></a>
+                            <a href="https://wa.me/919130448831"><i class="ri-whatsapp-fill"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-middle">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html">Apply Now</a></li>
+                            <li><a href="tel:+919130448831">Call Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-right">
+                        <h4>Get In Touch</h4>
+                        <div class="contact-details">
+                            <p>📞 +91 9130448831</p>
+                            <p><strong>✉ mrunal@whitewingsvisa.com</strong></p>
+                            <p>📍 Pune, Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <p>&copy; 2024 White Wings Visa Consultancy. All rights reserved.</p>
+                    <p>Best Visa Consultant in Pune, Maharashtra | Expert Immigration Services</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        // Professional JavaScript Enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Page Loader
+            const pageLoader = document.getElementById('pageLoader');
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    pageLoader.classList.add('hidden');
+                    setTimeout(() => {
+                        pageLoader.style.display = 'none';
+                    }, 500);
+                }, 1000);
+            });
+
+            // Scroll to Top Button
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuClose = document.getElementById('menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.add('active');
+                });
+            }
+            
+            if (menuClose) {
+                menuClose.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                });
+            }
+
+            // FAQ toggle with smooth animation
+            const accordionItems = document.querySelectorAll('.codex-accordion-item');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.codex-accordion-header');
+                
+                header.addEventListener('click', () => {
+                    // Close other accordion items
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            const animateElements = document.querySelectorAll('.process-step, .codex-testimonial-card, .destination-card, .service-card, .about-image, .about-text');
+            animateElements.forEach(el => {
+                el.classList.add('animate-on-scroll');
+                observer.observe(el);
+            });
+
+            // Form validation and enhancement
+            const form = document.querySelector('.yaxis-form-box form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Basic validation
+                    const requiredFields = form.querySelectorAll('[required]');
+                    let isValid = true;
+                    
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            isValid = false;
+                            field.style.borderColor = '#ef4444';
+                            field.addEventListener('input', function() {
+                                this.style.borderColor = '';
+                            }, { once: true });
+                        }
+                    });
+                    
+                    if (isValid) {
+                        // Show success message
+                        const submitBtn = form.querySelector('.yaxis-form-submit');
+                        const originalText = submitBtn.textContent;
+                        submitBtn.textContent = 'Submitted Successfully!';
+                        submitBtn.style.background = '#10b981';
+                        
+                        setTimeout(() => {
+                            submitBtn.textContent = originalText;
+                            submitBtn.style.background = '';
+                            form.reset();
+                        }, 3000);
+                    }
+                });
+            }
+
+            // Enhanced hover effects for cards
+            const cards = document.querySelectorAll('.visit-card, .yaxis-country-card, .yaxis-testimonial-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            anchorLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add loading states to buttons
+            const buttons = document.querySelectorAll('.visit-btn, .yaxis-hero-cta, .yaxis-cta-btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (!this.classList.contains('loading')) {
+                        this.classList.add('loading');
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="ri-loader-4-line"></i> Loading...';
+                        
+                        setTimeout(() => {
+                            this.classList.remove('loading');
+                            this.innerHTML = originalText;
+                        }, 2000);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

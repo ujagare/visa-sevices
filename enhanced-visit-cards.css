@@ -1,0 +1,353 @@
+/* Enhanced Visit Cards Styles */
+
+/* Work Visa Card Enhancements */
+.work-visa-card {
+    position: relative;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    overflow: hidden;
+}
+
+.work-visa-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+    z-index: 1;
+}
+
+.work-visa-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(59, 130, 246, 0.25);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Vertical Category Text */
+.vertical-category {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 2;
+}
+
+.category-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #3b82f6;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.category-text::before {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 2px;
+}
+
+/* Enhanced Work Icon */
+.work-icon {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+    position: relative;
+}
+
+.work-icon::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+    border-radius: 18px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.work-visa-card:hover .work-icon::after {
+    opacity: 1;
+}
+
+.work-visa-card:hover .work-icon {
+    transform: scale(1.15) rotate(15deg);
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+}
+
+/* Enhanced Features Section */
+.enhanced-features {
+    padding: 0;
+    margin: 25px 0;
+}
+
+.enhanced-features ul {
+    display: none; /* Hide old list */
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #f8fafc, #e0e7ff);
+    border-radius: 12px;
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover::before {
+    transform: scaleY(1);
+}
+
+.feature-item:hover {
+    background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+}
+
+.feature-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.feature-icon i {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.feature-item:hover .feature-icon {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.feature-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.feature-content p {
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Enhanced Button */
+.enhanced-btn {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+    padding: 15px 30px !important;
+    border-radius: 50px !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4) !important;
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.enhanced-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.enhanced-btn:hover::before {
+    left: 100%;
+}
+
+.enhanced-btn:hover {
+    background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5) !important;
+}
+
+.enhanced-btn i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.enhanced-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .vertical-category {
+        position: static;
+        writing-mode: horizontal-tb;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .category-text {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    
+    .category-text::before {
+        display: none;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 12px;
+    }
+    
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+    }
+    
+    .feature-icon i {
+        font-size: 1.1rem;
+    }
+    
+    .feature-content h4 {
+        font-size: 0.95rem;
+    }
+    
+    .feature-content p {
+        font-size: 0.8rem;
+    }
+    
+    .enhanced-btn {
+        padding: 12px 25px !important;
+        font-size: 0.95rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-visa-card {
+        margin: 0 10px;
+    }
+    
+    .category-text {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+    
+    .feature-item {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .feature-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .feature-icon i {
+        font-size: 1rem;
+    }
+    
+    .feature-content h4 {
+        font-size: 0.9rem;
+    }
+    
+    .feature-content p {
+        font-size: 0.75rem;
+    }
+    
+    .enhanced-btn {
+        padding: 10px 20px !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Animation Enhancements */
+.work-visa-card.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.work-visa-card.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.feature-item:nth-child(1) { animation-delay: 0.1s; }
+.feature-item:nth-child(2) { animation-delay: 0.2s; }
+.feature-item:nth-child(3) { animation-delay: 0.3s; }
+.feature-item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Pulse Animation for Category Text */
+.category-text {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}

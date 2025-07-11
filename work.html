@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Abroad - White Wings Visa Consultancy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-fix.css">
     <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="work-styles.css">
+    <link rel="stylesheet" href="work-destinations.css">
+    <link rel="stylesheet" href="work-process.css">
+    <link rel="stylesheet" href="work-cta-fixed.css">
+    <link rel="stylesheet" href="simple-mobile-navbar.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-
-    <!-- Locomotive Scroll CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css">
 </head>
-<body data-scroll-container>
+<body>
     <!-- Navigation -->
     <nav-div>
         <nav>
@@ -22,7 +26,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="dropdown">
-                        <a href="services.html">Services <i class="ri-arrow-down-s-line"></i></a>
+                        <a href="#" onclick="return false;">Services <i class="ri-arrow-down-s-line"></i></a>
                         <div class="dropdown-content">
                             <a href="study.html">
                                 <i class="ri-graduation-cap-line"></i>
@@ -75,8 +79,34 @@
                     </div>
                     <ul class="mobile-nav-links">
                         <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
+                        <li class="mobile-services-item">
+                            <div class="mobile-services-toggle">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <i class="ri-service-line"></i>
+                                    <span>Services</span>
+                                </div>
+                                <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                            </div>
+                            <div class="mobile-services-dropdown">
+                                <a href="study.html">
+                                    <i class="ri-graduation-cap-line"></i>
+                                    <span>Study Abroad</span>
+                                </a>
+                                <a href="migrate.html">
+                                    <i class="ri-home-heart-line"></i>
+                                    <span>Migrate</span>
+                                </a>
+                                <a href="work.html" class="active">
+                                    <i class="ri-briefcase-line"></i>
+                                    <span>Work Abroad</span>
+                                </a>
+                                <a href="visit.html">
+                                    <i class="ri-plane-line"></i>
+                                    <span>Visit</span>
+                                </a>
+                            </div>
+                        </li>
                         <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
-                        <li><a href="services.html"><i class="ri-service-line"></i> Services</a></li>
                         <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
                     </ul>
                     <button class="mobile-apply-btn">
@@ -88,81 +118,88 @@
     </nav-div>
 
     <!-- Work Hero Section -->
-    <section class="work-hero-section" data-scroll-section>
-        <!-- Background Elements -->
+    <section class="work-hero-section">
         <div class="hero-background">
-            <div class="hero-pattern"></div>
-            <div class="floating-elements">
-                <div class="floating-icon" style="top: 20%; left: 10%;">
-                    <i class="ri-briefcase-line"></i>
-                </div>
-                <div class="floating-icon" style="top: 60%; right: 15%;">
-                    <i class="ri-global-line"></i>
-                </div>
-                <div class="floating-icon" style="bottom: 30%; left: 20%;">
-                    <i class="ri-user-star-line"></i>
-                </div>
-                <div class="floating-icon" style="bottom: 15%; right: 10%;">
-                    <i class="ri-award-line"></i>
-                </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-shapes">
+                <div class="hero-shape hero-shape-1"></div>
+                <div class="hero-shape hero-shape-2"></div>
+                <div class="hero-shape hero-shape-3"></div>
             </div>
         </div>
-
         <div class="work-hero-container">
             <div class="work-hero-content">
-                <div class="hero-left">
+                <div class="hero-text-content">
                     <div class="hero-badge">
-                        <span class="badge-icon">
-                            <i class="ri-briefcase-line"></i>
-                        </span>
-                        <span class="badge-text">Work Abroad Excellence</span>
+                        <i class="ri-briefcase-line"></i>
+                        <span>WORK ABROAD</span>
                     </div>
-                    <h1>Work abroad with confidence</h1>
-                    <p class="hero-subtitle">Unlock international career opportunities with our comprehensive work visa assistance and job placement support worldwide.</p>
+                    <h1>Accelerate Your Global Career Journey</h1>
+                    <p class="hero-subtitle">Unlock international opportunities with expert guidance on work visas, job placements, and career advancement in top global destinations.</p>
 
-                    <!-- Quick Form -->
-                    <div class="hero-form">
-                        <h3>I want to work in</h3>
-                        <form class="work-form">
-                            <div class="form-row">
-                                <select class="form-select">
-                                    <option>Select Country</option>
-                                    <option>USA</option>
-                                    <option>Canada</option>
-                                    <option>Australia</option>
-                                    <option>UK</option>
-                                    <option>Germany</option>
-                                    <option>Singapore</option>
-                                </select>
-                            </div>
-                            <div class="form-row">
-                                <select class="form-select">
-                                    <option>Select Work Category</option>
-                                    <option>Skilled Worker</option>
-                                    <option>Intra-Company Transfer</option>
-                                    <option>Working Holiday</option>
-                                    <option>Entrepreneur</option>
-                                </select>
-                            </div>
-                            <div class="form-row">
-                                <input type="tel" placeholder="Phone Number" class="form-input">
-                            </div>
-                            <button type="submit" class="form-submit">Get Work Visa Help</button>
-                        </form>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn-primary">
+                            <i class="ri-phone-line"></i>
+                            Get Career Consultation
+                        </a>
+                        <a href="https://wa.me/919130448831" class="btn-secondary">
+                            <i class="ri-whatsapp-line"></i>
+                            WhatsApp Us
+                        </a>
+                    </div>
+                    
+                    <!-- Stats Bar -->
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="stat-value">15+</div>
+                            <div class="stat-label">Countries</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-value">5000+</div>
+                            <div class="stat-label">Successful Placements</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="hero-right">
-                    <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Work Abroad">
-                    </div>
-                    <div class="confused-card">
-                        <div class="confused-icon">
-                            <i class="ri-question-line"></i>
+                <div class="hero-visual">
+                    <div class="hero-form">
+                        <div class="form-decoration">
+                            <i class="ri-briefcase-4-line"></i>
                         </div>
-                        <h4>Don't know what to do?</h4>
-                        <p>Get Free Consultation</p>
-                        <a href="contact.html" class="consult-btn">Get Support</a>
+                        <h3>Find Work Opportunities</h3>
+                        <form class="work-form" action="https://formsubmit.co/mrunal@whitewingsvisa.com" method="POST">
+                            <input type="hidden" name="_subject" value="Work Abroad Form Submission">
+                            <input type="hidden" name="_next" value="https://whitewingsvisa.com/thank-you.html">
+                            <input type="hidden" name="_captcha" value="false">
+                            <div class="form-row">
+                                <select class="form-select" name="country" required>
+                                    <option value="">Select Country</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="UK">UK</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Singapore">Singapore</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <select class="form-select" name="work_category" required>
+                                    <option value="">Select Work Category</option>
+                                    <option value="Skilled Worker">Skilled Worker</option>
+                                    <option value="Intra-Company Transfer">Intra-Company Transfer</option>
+                                    <option value="Working Holiday">Working Holiday</option>
+                                    <option value="Entrepreneur">Entrepreneur</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <input type="tel" placeholder="Phone Number" name="phone" class="form-input" required>
+                            </div>
+                            <button type="submit" class="form-submit"><i class="ri-send-plane-line"></i> Get Free Assessment</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -173,93 +210,139 @@
     <section class="work-opportunity-section">
         <div class="work-opportunity-container">
             <div class="section-header">
+                <div class="section-badge">
+                    <i class="ri-briefcase-4-line"></i>
+                    <span>GLOBAL CAREERS</span>
+                </div>
                 <h2>Work Opportunity</h2>
                 <p>Explore top countries for international career opportunities</p>
             </div>
 
             <div class="work-destinations-grid">
                 <div class="work-destination-card">
+                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                        <div class="destination-icon">
+                            <i class="ri-briefcase-4-line"></i>
+                        </div>
+                        <h3>Jobs in USA</h3>
+                    </div>
                     <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="USA">
+                        <img src="https://flagcdn.com/w80/us.png" alt="USA Flag">
                     </div>
-                    <h3>Jobs in USA</h3>
-                    <div class="destination-features">
-                        <span class="feature-tag">H-1B</span>
-                        <span class="feature-tag">L-1 Visa</span>
-                        <span class="feature-tag">Green Card</span>
+                    <div class="destination-content">
+                        <div class="destination-features">
+                            <span class="feature-tag">H-1B</span>
+                            <span class="feature-tag">L-1 Visa</span>
+                            <span class="feature-tag">Green Card</span>
+                        </div>
+                        <p>8.8 million job opportunities with high salaries</p>
+                        <a href="#" class="destination-btn">Explore USA Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
-                    <p>8.8 million job opportunities with high salaries</p>
-                    <a href="#" class="destination-btn">Explore USA Jobs</a>
                 </div>
 
                 <div class="work-destination-card">
+                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                        <div class="destination-icon">
+                            <i class="ri-briefcase-4-line"></i>
+                        </div>
+                        <h3>Jobs in Germany</h3>
+                    </div>
                     <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Germany">
+                        <img src="https://flagcdn.com/w80/de.png" alt="Germany Flag">
                     </div>
-                    <h3>Jobs in Germany</h3>
-                    <div class="destination-features">
-                        <span class="feature-tag">Opportunity Card</span>
-                        <span class="feature-tag">EU Blue Card</span>
-                        <span class="feature-tag">Job Seeker</span>
+                    <div class="destination-content">
+                        <div class="destination-features">
+                            <span class="feature-tag">Opportunity Card</span>
+                            <span class="feature-tag">EU Blue Card</span>
+                            <span class="feature-tag">Job Seeker</span>
+                        </div>
+                        <p>2 million job opportunities with excellent work-life balance</p>
+                        <a href="#" class="destination-btn">Explore Germany Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
-                    <p>2 million job opportunities with excellent work-life balance</p>
-                    <a href="#" class="destination-btn">Explore Germany Jobs</a>
                 </div>
 
                 <div class="work-destination-card">
+                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                        <div class="destination-icon">
+                            <i class="ri-briefcase-4-line"></i>
+                        </div>
+                        <h3>Jobs in Canada</h3>
+                    </div>
                     <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Canada">
+                        <img src="https://flagcdn.com/w80/ca.png" alt="Canada Flag">
                     </div>
-                    <h3>Jobs in Canada</h3>
-                    <div class="destination-features">
-                        <span class="feature-tag">LMIA</span>
-                        <span class="feature-tag">Work Permit</span>
-                        <span class="feature-tag">Express Entry</span>
+                    <div class="destination-content">
+                        <div class="destination-features">
+                            <span class="feature-tag">LMIA</span>
+                            <span class="feature-tag">Work Permit</span>
+                            <span class="feature-tag">Express Entry</span>
+                        </div>
+                        <p>1.1 million job opportunities with pathway to PR</p>
+                        <a href="#" class="destination-btn">Explore Canada Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
-                    <p>1.1 million job opportunities with pathway to PR</p>
-                    <a href="#" class="destination-btn">Explore Canada Jobs</a>
                 </div>
 
                 <div class="work-destination-card">
+                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                        <div class="destination-icon">
+                            <i class="ri-briefcase-4-line"></i>
+                        </div>
+                        <h3>Jobs in Australia</h3>
+                    </div>
                     <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Australia">
+                        <img src="https://flagcdn.com/w80/au.png" alt="Australia Flag">
                     </div>
-                    <h3>Jobs in Australia</h3>
-                    <div class="destination-features">
-                        <span class="feature-tag">TSS Visa</span>
-                        <span class="feature-tag">Skilled Worker</span>
-                        <span class="feature-tag">Regional Visa</span>
+                    <div class="destination-content">
+                        <div class="destination-features">
+                            <span class="feature-tag">TSS Visa</span>
+                            <span class="feature-tag">Skilled Worker</span>
+                            <span class="feature-tag">Regional Visa</span>
+                        </div>
+                        <p>8 lakh job opportunities with high living standards</p>
+                        <a href="#" class="destination-btn">Explore Australia Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
-                    <p>8 lakh job opportunities with high living standards</p>
-                    <a href="#" class="destination-btn">Explore Australia Jobs</a>
                 </div>
 
                 <div class="work-destination-card">
+                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                        <div class="destination-icon">
+                            <i class="ri-briefcase-4-line"></i>
+                        </div>
+                        <h3>Jobs in UK</h3>
+                    </div>
                     <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="UK">
+                        <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag">
                     </div>
-                    <h3>Jobs in UK</h3>
-                    <div class="destination-features">
-                        <span class="feature-tag">Skilled Worker</span>
-                        <span class="feature-tag">Global Talent</span>
-                        <span class="feature-tag">Innovator</span>
+                    <div class="destination-content">
+                        <div class="destination-features">
+                            <span class="feature-tag">Skilled Worker</span>
+                            <span class="feature-tag">Global Talent</span>
+                            <span class="feature-tag">Innovator</span>
+                        </div>
+                        <p>13 million job opportunities with rich career prospects</p>
+                        <a href="#" class="destination-btn">Explore UK Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
-                    <p>13 million job opportunities with rich career prospects</p>
-                    <a href="#" class="destination-btn">Explore UK Jobs</a>
                 </div>
 
                 <div class="work-destination-card">
+                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                        <div class="destination-icon">
+                            <i class="ri-briefcase-4-line"></i>
+                        </div>
+                        <h3>Jobs in Dubai</h3>
+                    </div>
                     <div class="destination-flag">
-                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Dubai">
+                        <img src="https://flagcdn.com/w80/ae.png" alt="UAE Flag">
                     </div>
-                    <h3>Jobs in Dubai</h3>
-                    <div class="destination-features">
-                        <span class="feature-tag">Work Permit</span>
-                        <span class="feature-tag">Golden Visa</span>
-                        <span class="feature-tag">Freelance Visa</span>
+                    <div class="destination-content">
+                        <div class="destination-features">
+                            <span class="feature-tag">Work Permit</span>
+                            <span class="feature-tag">Golden Visa</span>
+                            <span class="feature-tag">Freelance Visa</span>
+                        </div>
+                        <p>418,500 job opportunities with tax-free income</p>
+                        <a href="#" class="destination-btn">Explore Dubai Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
-                    <p>418,500 job opportunities with tax-free income</p>
-                    <a href="#" class="destination-btn">Explore Dubai Jobs</a>
                 </div>
             </div>
         </div>
@@ -269,6 +352,10 @@
     <section class="work-process-section">
         <div class="work-process-container">
             <div class="section-header">
+                <div class="section-badge">
+                    <i class="ri-road-map-line"></i>
+                    <span>YOUR JOURNEY</span>
+                </div>
                 <h2>Your Work Abroad Journey</h2>
                 <p>Step-by-step guidance from job search to work permit</p>
             </div>
@@ -321,6 +408,10 @@
     <section class="work-destinations-section">
         <div class="work-destinations-container">
             <div class="section-header">
+                <div class="section-badge">
+                    <i class="ri-earth-line"></i>
+                    <span>GLOBAL HOTSPOTS</span>
+                </div>
                 <h2>Top Work Destinations</h2>
                 <p>Explore career opportunities in leading economies</p>
             </div>
@@ -328,7 +419,7 @@
             <div class="destinations-grid">
                 <div class="destination-card">
                     <div class="destination-flag">
-                        <img src="images/countries/usa.png" alt="USA">
+                        <img src="https://flagcdn.com/w80/us.png" alt="USA">
                     </div>
                     <h3>United States</h3>
                     <p>World's largest economy with diverse job opportunities</p>
@@ -341,7 +432,7 @@
                 
                 <div class="destination-card">
                     <div class="destination-flag">
-                        <img src="images/countries/canada.png" alt="Canada">
+                        <img src="https://flagcdn.com/w80/ca.png" alt="Canada">
                     </div>
                     <h3>Canada</h3>
                     <p>Immigrant-friendly policies with excellent work-life balance</p>
@@ -354,7 +445,7 @@
                 
                 <div class="destination-card">
                     <div class="destination-flag">
-                        <img src="images/countries/australia.png" alt="Australia">
+                        <img src="https://flagcdn.com/w80/au.png" alt="Australia">
                     </div>
                     <h3>Australia</h3>
                     <p>Strong economy with high demand for skilled workers</p>
@@ -367,7 +458,7 @@
                 
                 <div class="destination-card">
                     <div class="destination-flag">
-                        <img src="images/countries/uk.png" alt="UK">
+                        <img src="https://flagcdn.com/w80/gb.png" alt="UK">
                     </div>
                     <h3>United Kingdom</h3>
                     <p>Gateway to Europe with thriving financial sector</p>
@@ -381,26 +472,78 @@
         </div>
     </section>
 
-    <!-- Contact CTA -->
-    <section class="contact-cta-section">
-        <div class="contact-cta-container">
-            <h2>Ready to Advance Your Career Abroad?</h2>
-            <p>Get expert guidance for your international work journey</p>
-            <a href="contact.html" class="cta-button">Get Career Consultation</a>
+    <!-- Premium CTA Section -->
+    <section class="premium-cta-section">
+        <div class="premium-cta-container">
+            <div class="premium-cta-content">
+                <div class="section-badge">
+                    <i class="ri-rocket-line"></i>
+                    <span>TAKE THE NEXT STEP</span>
+                </div>
+                <h2>Ready to Advance Your Career Abroad?</h2>
+                <p>Join thousands of professionals who have successfully launched their international careers with our expert guidance and personalized support.</p>
+                
+                <div class="premium-cta-features">
+                    <div class="premium-feature">
+                        <i class="ri-check-double-line"></i>
+                        <span>Free Assessment</span>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="ri-shield-check-line"></i>
+                        <span>98% Success Rate</span>
+                    </div>
+                    <div class="premium-feature">
+                        <i class="ri-global-line"></i>
+                        <span>30+ Countries</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="premium-cta-form">
+                <h3>Get Your Free Assessment</h3>
+                <p>Take the first step towards your international career</p>
+                <form class="premium-form" action="https://formsubmit.co/mrunal@whitewingsvisa.com" method="POST">
+                    <input type="hidden" name="_subject" value="Premium Work Abroad Application">
+                    <input type="hidden" name="_next" value="https://whitewingsvisa.com/thank-you.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="premium-form-row">
+                        <i class="ri-user-line"></i>
+                        <input type="text" placeholder="Your Name" name="name" class="premium-input" required>
+                    </div>
+                    <div class="premium-form-row">
+                        <i class="ri-phone-line"></i>
+                        <input type="tel" placeholder="Phone Number" name="phone" class="premium-input" required>
+                    </div>
+                    <div class="premium-form-row">
+                        <i class="ri-mail-line"></i>
+                        <input type="email" placeholder="Email Address" name="email" class="premium-input" required>
+                    </div>
+                    <div class="premium-form-row">
+                        <i class="ri-map-pin-line"></i>
+                        <select class="premium-input" name="preferred_destination" required>
+                            <option value="" selected disabled>Preferred Destination</option>
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="australia">Australia</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="germany">Germany</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="premium-submit">
+                        <i class="ri-send-plane-line"></i> Submit Application
+                    </button>
+                </form>
+                <div class="premium-trust">
+                    <i class="ri-shield-check-line"></i>
+                    <span>Your information is secure and confidential</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer-section">
-        <div class="apply-visa-cta">
-            <div class="cta-container">
-                <h6>Ready to Apply?</h6>
-                <h2>Start Your Visa Application Today</h2>
-                <p>Get expert assistance for your visa application process. Our team is here to help you achieve your international goals.</p>
-                <a href="contact.html" class="apply-btn">Apply Now</a>
-                <h2 class="get-in-touch-heading">Get In Touch</h2>
-            </div>
-        </div>
 
         <div class="main-footer">
             <div class="footer-container">
@@ -451,11 +594,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- Locomotive Scroll -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
 
     <!-- Custom Scripts -->
+    <script src="universal-lenis.js"></script>
+    <script src="universal-mobile-menu.js"></script>
     <script src="script.js"></script>
-    <script src="smooth-scroll.js"></script>
+    <script src="enable-scroll.js"></script>
+
+
 </body>
 </html>

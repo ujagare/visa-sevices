@@ -1,0 +1,298 @@
+/* Elite Cards Styles */
+.elite-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc, #f0f9ff);
+    position: relative;
+}
+
+.elite-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000080' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.elite-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.elite-header {
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+.elite-header span {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(0, 0, 128, 0.1);
+    color: #000080;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 0, 128, 0.1);
+}
+
+.elite-header h2 {
+    font-size: 2.8rem;
+    color: #000080;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.elite-header h2::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #000080, #3b82f6);
+    border-radius: 3px;
+}
+
+.elite-header p {
+    font-size: 1.2rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 30px auto 0;
+}
+
+.elite-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.elite-card {
+    width: 270px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    transform: translateY(0);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.elite-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 0, 128, 0.3);
+}
+
+.elite-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #000080, #3b82f6);
+    z-index: 2;
+}
+
+.elite-image {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.elite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.7s ease;
+}
+
+.elite-card:hover .elite-image img {
+    transform: scale(1.1);
+}
+
+.elite-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 128, 0.2), rgba(0, 0, 128, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elite-icon {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+.elite-card:hover .elite-icon {
+    transform: translateY(-10px) scale(1.1);
+}
+
+.elite-icon i {
+    font-size: 2.2rem;
+    color: #000080;
+}
+
+.elite-content {
+    padding: 30px;
+    position: relative;
+}
+
+.elite-badge {
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    padding: 8px 15px;
+    background: #f59e0b;
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.elite-title {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.elite-title h3 {
+    font-size: 1.8rem;
+    color: #000080;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.elite-title p {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+.elite-features {
+    margin-bottom: 30px;
+}
+
+.elite-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.elite-features ul li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #334155;
+    display: flex;
+    align-items: center;
+}
+
+.elite-features ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 128, 0.1);
+    border-radius: 50%;
+}
+
+.elite-features ul li::after {
+    content: "✓";
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000080;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.elite-btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(to right, #000080, #3b82f6);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 128, 0.2);
+    text-align: center;
+}
+
+.elite-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 128, 0.3);
+}
+
+.elite-btn i {
+    margin-left: 8px;
+    transition: all 0.3s ease;
+}
+
+.elite-btn:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+    .elite-header h2 {
+        font-size: 2.4rem;
+    }
+    
+    .elite-cards {
+        justify-content: center;
+    }
+    
+    .elite-card {
+        width: 45%;
+        min-width: 270px;
+    }
+}
+
+@media (max-width: 768px) {
+    .elite-section {
+        padding: 70px 0;
+    }
+    
+    .elite-header h2 {
+        font-size: 2rem;
+    }
+    
+    .elite-card {
+        width: 100%;
+    }
+}

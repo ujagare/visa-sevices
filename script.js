@@ -1,3 +1,10 @@
+// Lenis is now initialized by universal-lenis.js
+// Wait for Lenis to be ready before using it
+window.addEventListener('lenisReady', function(event) {
+    console.log('Lenis ready for script.js functionality');
+});
+
+
 // Swiper initialization
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 0,
@@ -34,42 +41,171 @@ var swiper = new Swiper(".mySwiper", {
     }
   });
 
-// Mobile Menu Functionality
+// Enhanced Dropdown Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+        const dropdownLink = dropdown.querySelector('a');
+        let hoverTimeout;
+        let isDropdownOpen = false;
+
+        // Function to show dropdown
+        function showDropdown() {
+            clearTimeout(hoverTimeout);
+            if (dropdownContent) {
+                dropdown.classList.add('active');
+                dropdownContent.style.display = 'block';
+                setTimeout(() => {
+                    dropdownContent.style.opacity = '1';
+                    dropdownContent.style.transform = 'translateY(0)';
+                }, 10);
+                isDropdownOpen = true;
+            }
+        }
+
+        // Function to hide dropdown
+        function hideDropdown() {
+            hoverTimeout = setTimeout(() => {
+                if (dropdownContent) {
+                    dropdown.classList.remove('active');
+                    dropdownContent.style.opacity = '0';
+                    dropdownContent.style.transform = 'translateY(-15px)';
+                    setTimeout(() => {
+                        dropdownContent.style.display = 'none';
+                        isDropdownOpen = false;
+                    }, 300);
+                }
+            }, 100);
+        }
+
+        // Show dropdown on hover
+        dropdown.addEventListener('mouseenter', function() {
+            showDropdown();
+        });
+
+        // Show/hide dropdown on click
+        if (dropdownLink) {
+            dropdownLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (isDropdownOpen) {
+                    hideDropdown();
+                } else {
+                    showDropdown();
+                }
+            });
+        }
+
+        // Hide dropdown with delay on mouse leave
+        dropdown.addEventListener('mouseleave', function() {
+            hideDropdown();
+        });
+
+        // Keep dropdown open when hovering over content
+        if (dropdownContent) {
+            dropdownContent.addEventListener('mouseenter', function() {
+                clearTimeout(hoverTimeout);
+            });
+
+            dropdownContent.addEventListener('mouseleave', function() {
+                hideDropdown();
+            });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target)) {
+                if (isDropdownOpen) {
+                    hideDropdown();
+                }
+            }
+        });
+    });
+
+// Mobile Menu Functionality
+function initializeMobileMenu() {
     const menuToggle = document.getElementById('menu-toggle');
     const menuClose = document.getElementById('menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    console.log('Mobile menu elements:', { menuToggle, menuClose, mobileMenu });
+    console.log('Mobile menu elements found:', { menuToggle, menuClose, mobileMenu });
 
-    if (menuToggle && mobileMenu) {
+    // Function to open mobile menu
+    function openMobileMenu() {
+        if (mobileMenu) {
+            console.log('Opening mobile menu');
+            mobileMenu.classList.add('active');
+            mobileMenu.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+
+            // Force reflow and add smooth animation
+            mobileMenu.offsetHeight;
+            setTimeout(() => {
+                mobileMenu.style.top = '0';
+            }, 10);
+        }
+    }
+
+    // Function to close mobile menu
+    function closeMobileMenu() {
+        if (mobileMenu) {
+            console.log('Closing mobile menu');
+            mobileMenu.style.top = '-100%';
+            document.body.style.overflow = 'auto';
+
+            // Hide after animation completes
+            setTimeout(() => {
+                mobileMenu.classList.remove('active');
+                if (mobileMenu.style.display !== 'none') {
+                    mobileMenu.style.display = 'none';
+                }
+            }, 400);
+        }
+    }
+
+    if (menuToggle) {
         // Open mobile menu
         menuToggle.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             console.log('Menu toggle clicked');
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            openMobileMenu();
         });
     }
 
-    if (menuClose && mobileMenu) {
+    if (menuClose) {
         // Close mobile menu
         menuClose.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             console.log('Menu close clicked');
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = 'auto';
+            closeMobileMenu();
         });
     }
 
-    if (mobileMenu) {
-        // Close menu when clicking outside
-        mobileMenu.addEventListener('click', function(e) {
-            if (e.target === mobileMenu) {
+    // Enhanced outside click detection
+    document.addEventListener('click', function(e) {
+        if (mobileMenu && mobileMenu.classList.contains('active')) {
+            if (!mobileMenu.contains(e.target) && !menuToggle?.contains(e.target)) {
                 console.log('Clicked outside menu');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = 'auto';
+                closeMobileMenu();
             }
+        }
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('active')) {
+            console.log('Escape key pressed');
+            closeMobileMenu();
+        }
+    });
+
+    // Prevent menu from closing when clicking inside menu content
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
         });
 
         // Close menu when clicking on nav links
@@ -77,11 +213,22 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', function() {
                 console.log('Nav link clicked');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = 'auto';
+                closeMobileMenu();
             });
         });
     }
+}
+
+// Initialize mobile menu in multiple ways to ensure it works
+document.addEventListener('DOMContentLoaded', initializeMobileMenu);
+window.addEventListener('load', initializeMobileMenu);
+
+// Also try immediate initialization
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeMobileMenu);
+} else {
+    initializeMobileMenu();
+}
 
     // Testimonials Swiper (Slider Layout)
     const testimonialsSwiper = new Swiper('.testimonials-swiper', {

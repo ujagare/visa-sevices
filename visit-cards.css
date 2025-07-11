@@ -1,0 +1,440 @@
+/* Visit Page Professional Cards */
+.visit-services {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f7fa 50%, #f0f9ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.visit-services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23ffffff" opacity="0.1"/></svg>') repeat;
+    animation: float 25s ease-in-out infinite;
+}
+
+.visit-services::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(1deg); }
+}
+
+.visit-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.visit-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.visit-header h2 {
+    font-size: 3.2rem;
+    color: #000080;
+    margin-bottom: 25px;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    letter-spacing: -1px;
+}
+
+.visit-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #000080, #1e40af, #000080);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0,0,128,0.3);
+}
+
+.visit-header p {
+    font-size: 1.3rem;
+    color: #64748b;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.7;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+.visit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    position: relative;
+    z-index: 2;
+}
+
+.visit-card {
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 128, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.visit-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #000080, #1e40af, #3b82f6);
+    border-radius: 26px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.visit-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #000080, #1e40af);
+    border-radius: 24px 24px 0 0;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.visit-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 128, 0.1);
+}
+
+.visit-card:hover::before {
+    opacity: 1;
+}
+
+.visit-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.visit-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #000080, #1e40af);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    box-shadow: 0 12px 30px rgba(0, 0, 128, 0.25);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.visit-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent, rgba(255,255,255,0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.visit-card:hover .visit-icon {
+    transform: scale(1.15) rotate(8deg);
+    box-shadow: 0 20px 45px rgba(0, 0, 128, 0.4);
+}
+
+.visit-card:hover .visit-icon::before {
+    opacity: 1;
+}
+
+.visit-icon i {
+    font-size: 2.2rem;
+    color: white;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    z-index: 2;
+    position: relative;
+}
+
+.visit-card:hover .visit-icon i {
+    transform: scale(1.2);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.visit-title h3 {
+    font-size: 1.6rem;
+    color: #000080;
+    margin: 0 0 8px 0;
+    font-weight: 800;
+    transition: all 0.4s ease;
+    letter-spacing: -0.5px;
+}
+
+.visit-card:hover .visit-title h3 {
+    transform: translateX(8px) scale(1.05);
+    color: #1e40af;
+}
+
+.visit-title p {
+    font-size: 1rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.visit-card:hover .visit-title p {
+    color: #475569;
+}
+
+.visit-features {
+    margin-bottom: 30px;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.visit-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.visit-features li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.visit-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #000080, #1e40af);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 128, 0.2);
+    transition: all 0.3s ease;
+}
+
+.visit-features li::after {
+    content: '✓';
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+.visit-card:hover .visit-features li::before {
+    transform: scale(1.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 128, 0.3);
+}
+
+.visit-card:hover .visit-features li {
+    color: #1f2937;
+    transform: translateX(5px);
+}
+
+.visit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #000080, #1e40af);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.4s ease;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 128, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.visit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.visit-btn:hover {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 128, 0.4);
+}
+
+.visit-btn:hover::before {
+    left: 100%;
+}
+
+.visit-btn i {
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+}
+
+.visit-btn:hover i {
+    transform: translateX(5px) scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+@media (max-width: 992px) {
+    .visit-services {
+        padding: 80px 0;
+    }
+    
+    .visit-header h2 {
+        font-size: 2.3rem;
+    }
+    
+    .visit-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .visit-services {
+        padding: 60px 0;
+    }
+    
+    .visit-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .visit-header h2 {
+        font-size: 2rem;
+    }
+    
+    .visit-header p {
+        font-size: 1.1rem;
+    }
+    
+    .visit-card {
+        padding: 25px;
+    }
+    
+    .visit-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .visit-icon i {
+        font-size: 1.8rem;
+    }
+    
+    .visit-title h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .visit-services {
+        padding: 50px 0;
+    }
+    
+    .visit-container {
+        padding: 0 15px;
+    }
+    
+    .visit-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .visit-header p {
+        font-size: 1rem;
+    }
+    
+    .visit-card {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    .visit-card-header {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .visit-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .visit-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .visit-title h3 {
+        font-size: 1.2rem;
+    }
+    
+    .visit-btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}

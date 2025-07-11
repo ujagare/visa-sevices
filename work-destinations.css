@@ -1,0 +1,316 @@
+/* Work Destinations Styles */
+.work-opportunity-section {
+    padding: 80px 0;
+    background: #fff;
+    position: relative;
+    z-index: 3;
+}
+
+.work-opportunity-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0f9ff;
+    color: #3b82f6;
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.section-badge i {
+    font-size: 1.2rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #000080;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.work-destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.work-destination-card {
+    background: white;
+    border-radius: 15px;
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 128, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border: none;
+}
+
+.work-destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 128, 0.1);
+}
+
+.destination-header {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.destination-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+    z-index: 1;
+}
+
+.destination-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+    color: white;
+    font-size: 24px;
+}
+
+.destination-icon i {
+    font-size: 24px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.destination-flag {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    background: white;
+}
+
+.destination-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.destination-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: white;
+    position: relative;
+    z-index: 2;
+}
+
+.work-destination-card h3 {
+    font-size: 1.5rem;
+    color: #000080;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    margin: 0;
+    color: white;
+    z-index: 2;
+    font-weight: 600;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+
+.work-destination-card h3 i {
+    color: #3b82f6;
+}
+
+.destination-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.feature-tag {
+    background: #f0f9ff;
+    color: #3b82f6;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.work-destination-card:hover .feature-tag {
+    background: #e0f2fe;
+}
+
+.work-destination-card p {
+    color: #64748b;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.destination-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #f8fafc;
+    color: #000080;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.destination-btn i {
+    transition: all 0.3s ease;
+}
+
+.destination-btn:hover {
+    background: #000080;
+    color: white;
+    border-color: #000080;
+}
+
+.destination-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Work Destinations Section */
+.work-destinations-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+    position: relative;
+    z-index: 3;
+}
+
+.work-destinations-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 128, 0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 128, 0.1);
+}
+
+.destination-card .destination-flag {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    top: auto;
+    right: auto;
+}
+
+.destination-card h3 {
+    font-size: 1.3rem;
+    color: #000080;
+    margin-bottom: 10px;
+}
+
+.destination-card p {
+    color: #64748b;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.job-sectors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.job-sectors span {
+    background: #f0f9ff;
+    color: #3b82f6;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .work-destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .work-destinations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}

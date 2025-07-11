@@ -1,0 +1,323 @@
+/* Enhanced Contact Form Section Styles */
+.codex-contact {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f7fa 50%, #f0f9ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.codex-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="%23000080" stroke-width="1" opacity="0.05"/></svg>') repeat;
+}
+
+.codex-contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+/* Badge styling moved to badge-fix.css */
+
+.codex-section-title h2 {
+    font-size: 36px;
+    color: #000080;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.codex-section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #000080, #1e40af);
+    border-radius: 3px;
+}
+
+.codex-contact-content {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.codex-contact-info {
+    flex: 1;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 128, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 128, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.codex-contact-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #000080, #1e40af);
+}
+
+.codex-contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.codex-contact-info-item:last-child {
+    margin-bottom: 0;
+}
+
+.codex-contact-info-item:hover {
+    background: rgba(0, 0, 128, 0.03);
+    transform: translateX(5px);
+}
+
+.codex-contact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #000080, #1e40af);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 128, 0.2);
+    transition: all 0.3s ease;
+}
+
+.codex-contact-info-item:hover .codex-contact-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.codex-contact-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.codex-contact-text h5 {
+    font-size: 18px;
+    color: #000080;
+    margin: 0 0 8px;
+    font-weight: 600;
+}
+
+.codex-contact-text p {
+    font-size: 15px;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.codex-contact-form {
+    flex: 1;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 128, 0.1);
+    border: 1px solid rgba(0, 0, 128, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.codex-contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #1e40af, #000080);
+}
+
+.codex-form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.codex-form-group {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.codex-form-row .codex-form-group {
+    margin-bottom: 0;
+}
+
+.codex-form-group label {
+    display: block;
+    font-size: 14px;
+    color: #000080;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.codex-form-control {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #1e293b;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+.codex-form-control:hover {
+    border-color: rgba(0, 0, 128, 0.3);
+    background: white;
+}
+
+.codex-form-control:focus {
+    border-color: #000080;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 0, 128, 0.1);
+    background: white;
+    transform: translateY(-2px);
+}
+
+.codex-form-submit {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #000080, #1e40af);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 128, 0.2);
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.codex-form-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.codex-form-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 128, 0.3);
+    background: linear-gradient(135deg, #1e40af, #000080);
+}
+
+.codex-form-submit:hover::before {
+    left: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .codex-contact-content {
+        flex-direction: column;
+    }
+    
+    .codex-contact-info, 
+    .codex-contact-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .codex-contact {
+        padding: 70px 0;
+    }
+    
+    .codex-section-title h2 {
+        font-size: 28px;
+    }
+    
+    .codex-contact-info, 
+    .codex-contact-form {
+        padding: 30px;
+    }
+    
+    .codex-form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .codex-contact-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .codex-contact-icon i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .codex-contact {
+        padding: 50px 0;
+    }
+    
+    .codex-section-title h2 {
+        font-size: 24px;
+    }
+    
+    .codex-contact-info, 
+    .codex-contact-form {
+        padding: 25px;
+    }
+    
+    .codex-contact-info-item {
+        padding: 10px;
+        gap: 15px;
+    }
+    
+    .codex-contact-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .codex-contact-icon i {
+        font-size: 18px;
+    }
+    
+    .codex-contact-text h5 {
+        font-size: 16px;
+    }
+    
+    .codex-contact-text p {
+        font-size: 14px;
+    }
+    
+    .codex-form-control {
+        padding: 12px;
+    }
+    
+    .codex-form-submit {
+        padding: 14px;
+    }
+}

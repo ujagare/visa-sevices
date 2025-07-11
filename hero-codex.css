@@ -1,0 +1,261 @@
+/* Hero Section Styles - Based on Codex Template */
+.hero-codex {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--primary);
+    margin-top: -1px;
+}
+
+.hero-codex-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-codex-content {
+    display: flex;
+    align-items: center;
+    min-height: 650px;
+}
+
+.hero-codex-text {
+    flex: 1;
+    padding: 80px 0;
+    color: #fff;
+    max-width: 600px;
+}
+
+.hero-codex-subtitle {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-codex-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-codex-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-codex-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-codex-btn-primary {
+    display: inline-block;
+    background-color: #fff;
+    color: var(--primary);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero-codex-btn-primary:hover {
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+.hero-codex-btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.hero-codex-btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero-codex-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+}
+
+.hero-codex-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-codex-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary) 40%, rgba(0, 0, 128, 0.8) 100%);
+}
+
+.hero-codex-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.hero-codex-shape svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+}
+
+.hero-codex-shape .shape-fill {
+    fill: #FFFFFF;
+}
+
+.hero-codex-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.hero-codex-stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-codex-stat-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-codex-stat-icon i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.hero-codex-stat-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-codex-stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero-codex-stat-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .hero-codex-title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-codex-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-codex-text {
+        max-width: 100%;
+        padding: 80px 0 350px;
+    }
+    
+    .hero-codex-image {
+        position: absolute;
+        right: 0;
+        top: auto;
+        bottom: 0;
+        height: 320px;
+        width: 100%;
+    }
+    
+    .hero-codex-overlay {
+        background: linear-gradient(0deg, rgba(0, 0, 128, 0.7) 0%, var(--primary) 100%);
+    }
+    
+    .hero-codex-stats {
+        justify-content: center;
+    }
+    
+    .hero-codex-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-codex-title {
+        font-size: 36px;
+    }
+    
+    .hero-codex-text {
+        padding: 70px 0 320px;
+    }
+    
+    .hero-codex-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .hero-codex-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-codex-btn-primary, .hero-codex-btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-codex-title {
+        font-size: 30px;
+    }
+    
+    .hero-codex-text {
+        padding: 60px 0 280px;
+    }
+    
+    .hero-codex-image {
+        height: 270px;
+    }
+}

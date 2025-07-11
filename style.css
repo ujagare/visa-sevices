@@ -296,19 +296,25 @@ overflow-x: hidden;
         display: block;
     }
 
-    /* Mobile Menu Styles - Hidden by Default */
+    /* Professional Mobile Menu Styles - Hidden by Default */
     .mobile-menu-btn {
         display: none;
         cursor: pointer;
         font-size: 1.8rem;
-        color: navy;
-        padding: 0.5rem;
-        border-radius: 5px;
+        color: var(--primary);
+        padding: 10px;
+        border-radius: 12px;
         transition: all 0.3s ease;
+        background: rgba(0, 0, 128, 0.08);
+        border: 1px solid rgba(0, 0, 128, 0.15);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .mobile-menu-btn:hover {
-        background: rgba(0, 0, 139, 0.1);
+        background: var(--primary);
+        color: white;
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 128, 0.3);
     }
 
     .mobile-menu {
@@ -317,14 +323,15 @@ overflow-x: hidden;
         top: -100%;
         left: 0;
         width: 100%;
-        background-color:#BFECFF ;
+        background: #BFECFF;
         z-index: 10001;
         transition: top 0.4s ease-in-out;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(0, 0, 139, 0.2);
     }
-    #mobile-menu{
+
+    #mobile-menu {
         background-color: #BFECFF;
     }
 
@@ -345,7 +352,7 @@ overflow-x: hidden;
         justify-content: space-between;
         align-items: center;
         padding: 1.5rem 2rem;
-        background:#BFECFF;
+        background: #BFECFF;
         border-bottom: 1px solid rgba(0, 0, 139, 0.1);
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
@@ -364,7 +371,7 @@ overflow-x: hidden;
 
     #menu-close {
         font-size: 1.8rem;
-        color:navy;
+        color: navy;
         cursor: pointer;
         padding: 0.5rem;
         border-radius: 50%;
@@ -390,7 +397,7 @@ overflow-x: hidden;
         display: flex;
         flex-direction: column;
         gap: 0;
-        background:#BFECFF ;
+        background: #BFECFF;
     }
 
     .mobile-nav-links li {
@@ -405,8 +412,9 @@ overflow-x: hidden;
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent 0%, rgba(0, 212, 255, 0.1) 50%, transparent 100%);
-        transition: left 0.5s ease;
+        background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 128, 0.1) 50%, transparent 100%);
+        transition: left 0.6s ease;
+        z-index: 1;
     }
 
     .mobile-nav-links li:hover::before {
@@ -414,9 +422,8 @@ overflow-x: hidden;
     }
 
     .mobile-nav-links li:hover {
-        transform: translateY(-3px) scale(1.02);
-        box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
-        border-color: rgba(0, 212, 255, 0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 128, 0.15);
     }
 
     .mobile-nav-links li a {
@@ -426,7 +433,7 @@ overflow-x: hidden;
         padding: 1rem 1rem;
         text-decoration: none;
         color: white;
-        background-color:navy;
+        background-color: navy;
         margin-bottom: 1rem;
         border-radius: 10px;
         font-size: 1.2rem;
@@ -456,8 +463,9 @@ overflow-x: hidden;
     .mobile-nav-links li a:hover i {
         transform: scale(1.2) rotate(5deg);
         filter: drop-shadow(0 2px 8px rgba(0, 212, 255, 0.6));
-    }8px rgba(0, 212, 255, 0.6));
     }
+
+
 
     .mobile-apply-btn {
         display: flex;
@@ -918,27 +926,31 @@ overflow-x: hidden;
 
 .services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .service-item {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
-    padding: 20px 15px;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+    padding: 25px;
     background: #f8fafc;
     border-radius: 15px;
     transition: all 0.3s ease;
-    border-top: 4px solid transparent;
-    min-height: 180px;
+    border-left: 4px solid transparent;
+    min-height: 150px;
+    height: 150px;
+    overflow: hidden;
 }
 
 .service-item:hover {
     background: #e0e7ff;
-    border-top-color: navy;
+    border-left-color: navy;
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
@@ -965,20 +977,28 @@ overflow-x: hidden;
     color: white;
 }
 
+.service-content {
+    flex: 1;
+}
+
 .service-content h4 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: navy;
-    margin-bottom: 8px;
-    line-height: 1.2;
+    margin-bottom: 10px;
+    line-height: 1.3;
 }
 
 .service-content p {
     color: #6b7280;
     line-height: 1.4;
     margin: 0;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -1017,20 +1037,30 @@ overflow-x: hidden;
     
     .services-list {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 20px;
+        max-width: 100%;
     }
 
     .service-item {
         flex-direction: row;
         text-align: left;
         gap: 15px;
-        padding: 15px;
-        min-height: auto;
+        padding: 20px;
+        min-height: 120px;
+        height: 120px;
         align-items: flex-start;
+        overflow: hidden;
     }
 
     .service-content h4 {
         font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .service-content p {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        -webkit-line-clamp: 2;
     }
 
     .service-content p {
@@ -2384,7 +2414,7 @@ ul li a:hover {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(20px);
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .dropdown-content::before {
@@ -2402,11 +2432,28 @@ ul li a:hover {
     z-index: -1;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
     display: block;
     opacity: 1;
     transform: translateY(0);
     animation: dropdownFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure dropdown stays open when hovering over the gap */
+.dropdown {
+    position: relative;
+}
+
+.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: transparent;
+    z-index: 999;
 }
 
 @keyframes dropdownFadeIn {
@@ -2523,8 +2570,16 @@ ul li a:hover {
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.dropdown:hover > a i {
+.dropdown:hover > a i,
+.dropdown.active > a i {
     transform: rotate(180deg);
+}
+
+/* Active state for clicked dropdown */
+.dropdown.active .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Mobile Dropdown Styles */
