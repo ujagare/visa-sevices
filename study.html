@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Study Abroad Visa Services in Pune - Expert guidance for student visas to USA, UK, Canada, Australia. University admissions, scholarship assistance, and complete study visa support.">
+    <meta name="keywords" content="study abroad pune, student visa pune, university admission pune, study visa consultant pune, overseas education pune, student visa usa uk canada australia">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Study Abroad Visa Services - White Wings Pune">
+    <meta property="og:description" content="Expert study abroad visa services in Pune. University admissions, student visas for USA, UK, Canada, Australia with scholarship assistance.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://whitewingsvisa.com/study.html">
     <title>Study Abroad - White Wings Visa Consultancy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="professional-mobile-menu.css">
     <link rel="stylesheet" href="style-fix.css">
     <link rel="stylesheet" href="loader.css">
     <link rel="stylesheet" href="pages.css">
@@ -17,7 +25,8 @@
     <link rel="stylesheet" href="university-placements.css">
     <link rel="stylesheet" href="hero-buttons.css">
     <link rel="stylesheet" href="simple-form.css">
-    <link rel="stylesheet" href="simple-mobile-navbar.css">
+    <link rel="stylesheet" href="master-mobile-navbar.css">
+    <link rel="stylesheet" href="apply-now-button.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
@@ -67,62 +76,51 @@
                         </div>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
-                    <button>
-                        <a href="contact.html">Apply Now</a>
-                    </button>
                 </ul>
-            </div>
 
-            <!-- Mobile Menu Button -->
-            <div class="mobile-menu-btn">
-                <i class="ri-menu-line" id="menu-toggle"></i>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div class="mobile-menu" id="mobile-menu">
-                <div class="mobile-menu-content">
-                    <div class="mobile-menu-header">
-                        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-logo">
-                        <i class="ri-close-line" id="menu-close" title="Close Menu"></i>
-                    </div>
-                    <ul class="mobile-nav-links">
-                        <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
-                        <li class="mobile-services-item">
-                            <div class="mobile-services-toggle">
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <i class="ri-service-line"></i>
-                                    <span>Services</span>
-                                </div>
-                                <i class="ri-arrow-down-s-line dropdown-arrow"></i>
-                            </div>
-                            <div class="mobile-services-dropdown">
-                                <a href="study.html" class="active">
-                                    <i class="ri-graduation-cap-line"></i>
-                                    <span>Study Abroad</span>
-                                </a>
-                                <a href="migrate.html">
-                                    <i class="ri-home-heart-line"></i>
-                                    <span>Migrate</span>
-                                </a>
-                                <a href="work.html">
-                                    <i class="ri-briefcase-line"></i>
-                                    <span>Work Abroad</span>
-                                </a>
-                                <a href="visit.html">
-                                    <i class="ri-plane-line"></i>
-                                    <span>Visit</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
-                        <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
-                    </ul>
-                    <button class="mobile-apply-btn">
-                        <a href="contact.html"><i class="ri-send-plane-line"></i> Apply Now</a>
-                    </button>
+                <!-- Apply Now Button for Desktop -->
+                <div class="apply-now-btn">
+                    <a href="https://wa.me/919130448831" class="btn-apply">
+                        <i class="ri-whatsapp-line"></i>
+                        Apply Now
+                    </a>
                 </div>
             </div>
+
+            <!-- Professional Mobile Hamburger -->
+            <button class="simple-hamburger" onclick="openMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+
+        <!-- Professional Mobile Menu -->
+        <div class="mobile-menu-overlay"></div>
+        <div class="mobile-menu-sidebar">
+            <div class="mobile-menu-header">
+                <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-menu-logo">
+                <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
+            </div>
+
+            <ul class="mobile-menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="mobile-services-dropdown">
+                    <div class="mobile-services-toggle" onclick="toggleServices()">
+                        <span>Services</span>
+                        <i class="ri-arrow-down-s-line mobile-services-arrow"></i>
+                    </div>
+                    <div class="mobile-services-links">
+                        <a href="study.html" class="active">Study Abroad</a>
+                        <a href="migrate.html">Migrate</a>
+                        <a href="work.html">Work Abroad</a>
+                        <a href="visit.html">Visit</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav-div>
 
     <!-- PROFESSIONAL STUDY HERO SECTION -->
@@ -608,19 +606,19 @@
                     </h3>
                     <div class="university-logos">
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Harvard_shield_wreath.svg/150px-Harvard_shield_wreath.svg.png" alt="Harvard University">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/1200px-Harvard_University_coat_of_arms.svg.png" alt="Harvard University">
                             <span>Harvard University</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/150px-Stanford_Cardinal_logo.svg.png" alt="Stanford University">
+                            <img src="https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png" alt="Stanford University">
                             <span>Stanford University</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/150px-MIT_logo.svg.png" alt="MIT">
+                            <img src="https://brand.mit.edu/sites/default/files/styles/image_text_2x/public/2023-08/MIT-logo-red-textandimage.png?itok=RNoAwZvy" alt="MIT">
                             <span>MIT</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/150px-Seal_of_University_of_California%2C_Berkeley.svg.png" alt="UC Berkeley">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Seal_of_University_of_California%2C_Berkeley.svg" alt="UC Berkeley">
                             <span>UC Berkeley</span>
                         </div>
                     </div>
@@ -635,19 +633,19 @@
                     </h3>
                     <div class="university-logos">
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Oxford-University-Circlet.svg/150px-Oxford-University-Circlet.svg.png" alt="Oxford University">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Oxford-University-Circlet.svg/877px-Oxford-University-Circlet.svg.png" alt="Oxford University">
                             <span>Oxford University</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/University_of_Cambridge_coat_of_arms.svg/150px-University_of_Cambridge_coat_of_arms.svg.png" alt="Cambridge University">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR45z9HqW8uztmqZbWDFDH-hvNdX-q7-G9rUA&s" alt="Cambridge University">
                             <span>Cambridge University</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Imperial_College_London_crest.svg/150px-Imperial_College_London_crest.svg.png" alt="Imperial College">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX5Sqek7nJkxP3nW5RTuMSR6vheUv9n6m7eg&s" alt="Imperial College">
                             <span>Imperial College</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/University_of_Edinburgh_ceremonial_crest.svg/150px-University_of_Edinburgh_ceremonial_crest.svg.png" alt="University of Edinburgh">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/University_of_Edinburgh_ceremonial_roundel.svg/640px-University_of_Edinburgh_ceremonial_roundel.svg.png" alt="University of Edinburgh">
                             <span>University of Edinburgh</span>
                         </div>
                     </div>
@@ -662,19 +660,19 @@
                     </h3>
                     <div class="university-logos">
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/University_of_Toronto_coat_of_arms.svg/150px-University_of_Toronto_coat_of_arms.svg.png" alt="University of Toronto">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Utoronto_coa.svg/1200px-Utoronto_coa.svg.png" alt="University of Toronto">
                             <span>University of Toronto</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/University_of_British_Columbia_logo.svg/150px-University_of_British_Columbia_logo.svg.png" alt="UBC">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPm-4Re8SLPwVStKHCUkQONBgX8ALJyKqzg&s" alt="UBC">
                             <span>University of British Columbia</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/McGill_University_CoA.svg/150px-McGill_University_CoA.svg.png" alt="McGill University">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/McGill_University_CoA.svg/1200px-McGill_University_CoA.svg.png" alt="McGill University">
                             <span>McGill University</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/University_of_Waterloo_seal.svg/150px-University_of_Waterloo_seal.svg.png" alt="University of Waterloo">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/University_of_Waterloo_seal.svg/1200px-University_of_Waterloo_seal.svg.png" alt="University of Waterloo">
                             <span>University of Waterloo</span>
                         </div>
                     </div>
@@ -689,19 +687,19 @@
                     </h3>
                     <div class="university-logos">
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/10/University_of_Melbourne_coat_of_arms.svg/150px-University_of_Melbourne_coat_of_arms.svg.png" alt="University of Melbourne">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRva4akV56F6BIbTAjP6Etyjsu8fBMSynAT0TecrpFlwIFxYiWUhSuGgV2GSMLe5DocJ-4&usqp=CAU" alt="University of Melbourne">
                             <span>University of Melbourne</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/09/University_of_Sydney_coat_of_arms.svg/150px-University_of_Sydney_coat_of_arms.svg.png" alt="University of Sydney">
+                            <img src="https://pbs.twimg.com/profile_images/976976915931193344/pZ-zQ9z6_400x400.jpg" alt="University of Sydney">
                             <span>University of Sydney</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/Australian_National_University_coat_of_arms.svg/150px-Australian_National_University_coat_of_arms.svg.png" alt="ANU">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Australian_National_University_coat_of_arms.svg/1200px-Australian_National_University_coat_of_arms.svg.png" alt="ANU">
                             <span>Australian National University</span>
                         </div>
                         <div class="university-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/45/UNSW_coat_of_arms.svg/150px-UNSW_coat_of_arms.svg.png" alt="UNSW">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZIJo1uI0xFWca_xJaKnE51uxD46S0JA5yAdPtvAkrXs_T-bfLKKJ_KHxnjmAN0zEpz6c&usqp=CAU" alt="UNSW">
                             <span>UNSW Sydney</span>
                         </div>
                     </div>
@@ -775,33 +773,63 @@
 
     <!-- Custom Scripts -->
     <script src="universal-lenis.js"></script>
-    <script src="universal-mobile-menu.js"></script>
     <script src="script.js"></script>
-    <script src="enable-scroll.js"></script>
+
     <script>
-    // Simple script for study page without smooth scrolling
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile Menu Functionality
-        const menuToggle = document.getElementById('menu-toggle');
-        const menuClose = document.getElementById('menu-close');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (menuToggle && mobileMenu) {
-            menuToggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                mobileMenu.classList.add('active');
+        function openMobileMenu() {
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const sidebar = document.querySelector('.mobile-menu-sidebar');
+            if (overlay && sidebar) {
+                overlay.classList.add('show');
+                sidebar.classList.add('show');
                 document.body.style.overflow = 'hidden';
-            });
+            }
         }
 
-        if (menuClose && mobileMenu) {
-            menuClose.addEventListener('click', function(e) {
-                e.preventDefault();
-                mobileMenu.classList.remove('active');
+        function closeMobileMenu() {
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const sidebar = document.querySelector('.mobile-menu-sidebar');
+            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
+            if (overlay && sidebar) {
+                overlay.classList.remove('show');
+                sidebar.classList.remove('show');
                 document.body.style.overflow = 'auto';
-            });
+                if (servicesDropdown) {
+                    servicesDropdown.classList.remove('active');
+                }
+            }
         }
-    });
+
+        function toggleServices() {
+            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
+            if (servicesDropdown) {
+                servicesDropdown.classList.toggle('active');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            if (overlay) {
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === overlay) closeMobileMenu();
+                });
+            }
+
+            const menuLinks = document.querySelectorAll('.mobile-menu-links a:not(.mobile-services-toggle)');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            });
+
+            const serviceLinks = document.querySelectorAll('.mobile-services-links a');
+            serviceLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            });
+        });
     </script>
+
 </body>
 </html>

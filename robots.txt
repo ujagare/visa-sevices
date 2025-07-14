@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://whitewingsvisa.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Allow important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /study.html
+Allow: /migrate.html
+Allow: /work.html
+Allow: /visit.html
+Allow: /images/

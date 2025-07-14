@@ -1,0 +1,75 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🚀 White Wings Visa - Pre-push checks starting..."
+echo "=================================================="
+
+# Check if we're pushing to main branch
+branch=$(git rev-parse --abbrev-ref HEAD)
+echo "📍 Current branch: $branch"
+
+if [ "$branch" = "main" ]; then
+    echo "⚠️  Pushing to main branch - Running comprehensive checks..."
+    
+    # Check for production readiness
+    echo "🔍 Checking production readiness..."
+    
+    # Verify all forms have proper email configuration
+    if grep -r "formsubmit.co/mrunal@whitewingsvisa.com" *.html > /dev/null; then
+        echo "✅ Form email configuration verified"
+    else
+        echo "❌ Error: Form email configuration not found!"
+        exit 1
+    fi
+    
+    # Check for SEO essentials
+    if [ -f "robots.txt" ] && [ -f "sitemap.xml" ]; then
+        echo "✅ SEO files present"
+    else
+        echo "❌ Error: Missing SEO files (robots.txt or sitemap.xml)"
+        exit 1
+    fi
+    
+    # Check for security files
+    if [ -f ".htaccess" ]; then
+        echo "✅ Security configuration present"
+    else
+        echo "⚠️  Warning: .htaccess file not found"
+    fi
+    
+    # Verify enhanced form validation is included
+    if [ -f "enhanced-form-validation.js" ]; then
+        echo "✅ Enhanced form validation present"
+    else
+        echo "❌ Error: Enhanced form validation missing!"
+        exit 1
+    fi
+    
+    # Check for backup systems
+    if [ -f "backup-email-system.js" ]; then
+        echo "✅ Backup email system present"
+    else
+        echo "⚠️  Warning: Backup email system not found"
+    fi
+    
+    echo "🏗️  Running build process..."
+    npm run build
+    
+    echo "🧪 Running final tests..."
+    npm run test
+    
+    echo "=================================================="
+    echo "✅ Production readiness check completed!"
+    echo "🚀 Pushing to main branch - White Wings Visa"
+    echo "📧 Forms configured for: mrunal@whitewingsvisa.com"
+    echo "🌐 Repository: ujagare/visa-sevices"
+    echo "=================================================="
+else
+    echo "📝 Pushing to development branch: $branch"
+    echo "🧪 Running basic tests..."
+    npm run test
+    echo "✅ Development push approved"
+fi
+
+echo "🎉 All pre-push checks passed!"
+echo "🚀 Deploying White Wings Visa website..."

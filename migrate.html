@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Migrate - White Wings Visa Consultancy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="professional-mobile-menu.css">
     <link rel="stylesheet" href="style-fix.css">
     <link rel="stylesheet" href="pages.css">
     <link rel="stylesheet" href="migrate-styles.css">
@@ -12,7 +13,8 @@
     <link rel="stylesheet" href="migrate-process.css">
     <link rel="stylesheet" href="migrate-benefits.css">
     <link rel="stylesheet" href="migrate-sections.css">
-    <link rel="stylesheet" href="simple-mobile-navbar.css">
+    <link rel="stylesheet" href="master-mobile-navbar.css">
+    <link rel="stylesheet" href="apply-now-button.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
@@ -60,62 +62,51 @@
                         </div>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
-                    <button>
-                        <a href="contact.html">Apply Now</a>
-                    </button>
                 </ul>
-            </div>
 
-            <!-- Mobile Menu Button -->
-            <div class="mobile-menu-btn">
-                <i class="ri-menu-line" id="menu-toggle"></i>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div class="mobile-menu" id="mobile-menu">
-                <div class="mobile-menu-content">
-                    <div class="mobile-menu-header">
-                        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-logo">
-                        <i class="ri-close-line" id="menu-close" title="Close Menu"></i>
-                    </div>
-                    <ul class="mobile-nav-links">
-                        <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
-                        <li class="mobile-services-item">
-                            <div class="mobile-services-toggle">
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <i class="ri-service-line"></i>
-                                    <span>Services</span>
-                                </div>
-                                <i class="ri-arrow-down-s-line dropdown-arrow"></i>
-                            </div>
-                            <div class="mobile-services-dropdown">
-                                <a href="study.html">
-                                    <i class="ri-graduation-cap-line"></i>
-                                    <span>Study Abroad</span>
-                                </a>
-                                <a href="migrate.html" class="active">
-                                    <i class="ri-home-heart-line"></i>
-                                    <span>Migrate</span>
-                                </a>
-                                <a href="work.html">
-                                    <i class="ri-briefcase-line"></i>
-                                    <span>Work Abroad</span>
-                                </a>
-                                <a href="visit.html">
-                                    <i class="ri-plane-line"></i>
-                                    <span>Visit</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
-                        <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
-                    </ul>
-                    <button class="mobile-apply-btn">
-                        <a href="contact.html"><i class="ri-send-plane-line"></i> Apply Now</a>
-                    </button>
+                <!-- Apply Now Button for Desktop -->
+                <div class="apply-now-btn">
+                    <a href="https://wa.me/919130448831" class="btn-apply">
+                        <i class="ri-whatsapp-line"></i>
+                        Apply Now
+                    </a>
                 </div>
             </div>
+
+            <!-- Professional Mobile Hamburger -->
+            <button class="simple-hamburger" onclick="openMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+
+        <!-- Professional Mobile Menu -->
+        <div class="mobile-menu-overlay"></div>
+        <div class="mobile-menu-sidebar">
+            <div class="mobile-menu-header">
+                <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-menu-logo">
+                <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
+            </div>
+
+            <ul class="mobile-menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="mobile-services-dropdown">
+                    <div class="mobile-services-toggle" onclick="toggleServices()">
+                        <span>Services</span>
+                        <i class="ri-arrow-down-s-line mobile-services-arrow"></i>
+                    </div>
+                    <div class="mobile-services-links">
+                        <a href="study.html">Study Abroad</a>
+                        <a href="migrate.html" class="active">Migrate</a>
+                        <a href="work.html">Work Abroad</a>
+                        <a href="visit.html">Visit</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav-div>
 
     <!-- Migrate Hero Section -->
@@ -180,7 +171,7 @@
 
                 <div class="hero-right">
                     <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Family Migration">
+                        <img src="https://img.freepik.com/free-photo/passport-boarding-pass-tickets_23-2148786059.jpg" alt="Visa and Immigration Services">
                     </div>
                     <div class="confused-card">
                         <div class="confused-icon">
@@ -750,10 +741,66 @@
 
     <!-- Custom Scripts -->
     <script src="universal-lenis.js"></script>
-    <script src="universal-mobile-menu.js"></script>
+    <script src="new-mobile-navbar.js"></script>
     <script src="script.js"></script>
     <script src="migrate-stats.js"></script>
     <script src="enable-scroll.js"></script>
+
+    <script>
+        function openMobileMenu() {
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const sidebar = document.querySelector('.mobile-menu-sidebar');
+            if (overlay && sidebar) {
+                overlay.classList.add('show');
+                sidebar.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileMenu() {
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const sidebar = document.querySelector('.mobile-menu-sidebar');
+            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
+            if (overlay && sidebar) {
+                overlay.classList.remove('show');
+                sidebar.classList.remove('show');
+                document.body.style.overflow = 'auto';
+                if (servicesDropdown) {
+                    servicesDropdown.classList.remove('active');
+                }
+            }
+        }
+
+        function toggleServices() {
+            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
+            if (servicesDropdown) {
+                servicesDropdown.classList.toggle('active');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            if (overlay) {
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === overlay) closeMobileMenu();
+                });
+            }
+
+            const menuLinks = document.querySelectorAll('.mobile-menu-links a:not(.mobile-services-toggle)');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            });
+
+            const serviceLinks = document.querySelectorAll('.mobile-services-links a');
+            serviceLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

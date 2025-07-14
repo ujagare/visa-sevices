@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Delivery Monitor - White Wings Visa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .monitor-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .status-card {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #3b82f6;
+        }
+        
+        .status-card.success {
+            border-left-color: #10b981;
+            background: #f0fdf4;
+        }
+        
+        .status-card.warning {
+            border-left-color: #f59e0b;
+            background: #fffbeb;
+        }
+        
+        .status-card.error {
+            border-left-color: #ef4444;
+            background: #fef2f2;
+        }
+        
+        .status-card h3 {
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+        
+        .status-card p {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+        
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+        
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #10b981;
+            animation: pulse 2s infinite;
+        }
+        
+        .status-dot.warning {
+            background: #f59e0b;
+        }
+        
+        .status-dot.error {
+            background: #ef4444;
+        }
+        
+        .test-section {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .test-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .form-group input,
+        .form-group select {
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        
+        .test-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .test-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+        
+        .test-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .results {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .results.success {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #166534;
+        }
+        
+        .results.error {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+        }
+        
+        .backup-submissions {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .submission-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .submission-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .submission-time {
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        .submission-data {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .test-form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="monitor-container">
+        <div class="header">
+            <h1>📧 Email Delivery Monitor</h1>
+            <p>Monitor and test form email delivery for White Wings Visa</p>
+        </div>
+        
+        <div class="content">
+            <!-- Status Overview -->
+            <div class="status-grid">
+                <div class="status-card success">
+                    <h3>FormSubmit Status</h3>
+                    <p>Primary email delivery service</p>
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span id="formsubmit-status">Checking...</span>
+                    </div>
+                </div>
+                
+                <div class="status-card">
+                    <h3>Backup Systems</h3>
+                    <p>Alternative delivery methods</p>
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span id="backup-status">Active</span>
+                    </div>
+                </div>
+                
+                <div class="status-card">
+                    <h3>Local Storage</h3>
+                    <p>Backup form submissions</p>
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span id="storage-count">0 submissions</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Email Test Section -->
+            <div class="test-section">
+                <h2>🧪 Test Email Delivery</h2>
+                <p style="margin-bottom: 20px; color: #64748b;">Send a test email to verify the system is working correctly.</p>
+                
+                <form id="test-form" class="test-form">
+                    <div class="form-group">
+                        <label for="test-name">Test Name</label>
+                        <input type="text" id="test-name" value="Email Delivery Test" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="test-email">Test Email</label>
+                        <input type="email" id="test-email" value="mrunal@whitewingsvisa.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="test-phone">Test Phone</label>
+                        <input type="tel" id="test-phone" value="+91 9130448831" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="test-service">Service Type</label>
+                        <select id="test-service" required>
+                            <option value="email-test">Email Delivery Test</option>
+                            <option value="contact-form">Contact Form Test</option>
+                            <option value="study-form">Study Form Test</option>
+                            <option value="work-form">Work Form Test</option>
+                        </select>
+                    </div>
+                </form>
+                
+                <button type="button" class="test-button" onclick="sendTestEmail()">
+                    🚀 Send Test Email
+                </button>
+                
+                <div id="test-results" class="results"></div>
+            </div>
+            
+            <!-- Backup Submissions -->
+            <div class="backup-submissions">
+                <h2>💾 Backup Submissions</h2>
+                <p style="margin-bottom: 20px; color: #64748b;">Form submissions stored locally when email delivery fails.</p>
+                
+                <div style="margin-bottom: 20px;">
+                    <button type="button" class="test-button" onclick="loadBackupSubmissions()" style="margin-right: 10px;">
+                        🔄 Refresh
+                    </button>
+                    <button type="button" class="test-button" onclick="clearBackupSubmissions()" style="background: #ef4444;">
+                        🗑️ Clear All
+                    </button>
+                </div>
+                
+                <div id="backup-list">
+                    <p style="color: #64748b; text-align: center; padding: 40px;">No backup submissions found.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check FormSubmit status
+        async function checkFormSubmitStatus() {
+            try {
+                const response = await fetch('https://formsubmit.co/mrunal@whitewingsvisa.com', {
+                    method: 'HEAD',
+                    mode: 'no-cors'
+                });
+                document.getElementById('formsubmit-status').textContent = 'Online';
+                document.querySelector('#formsubmit-status').parentNode.querySelector('.status-dot').className = 'status-dot';
+            } catch (error) {
+                document.getElementById('formsubmit-status').textContent = 'Connection Issue';
+                document.querySelector('#formsubmit-status').parentNode.querySelector('.status-dot').className = 'status-dot warning';
+            }
+        }
+
+        // Send test email
+        async function sendTestEmail() {
+            const button = document.querySelector('.test-button');
+            const results = document.getElementById('test-results');
+            
+            button.disabled = true;
+            button.textContent = '⏳ Sending Test...';
+            
+            const formData = new FormData();
+            formData.append('name', document.getElementById('test-name').value);
+            formData.append('email', document.getElementById('test-email').value);
+            formData.append('phone', document.getElementById('test-phone').value);
+            formData.append('service', document.getElementById('test-service').value);
+            formData.append('message', `Email delivery test sent at ${new Date().toLocaleString()}`);
+            formData.append('_subject', '🧪 Email Delivery Test - White Wings Visa');
+            formData.append('_captcha', 'false');
+            
+            try {
+                const response = await fetch('https://formsubmit.co/mrunal@whitewingsvisa.com', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    results.className = 'results success';
+                    results.innerHTML = '✅ Test email sent successfully! Check mrunal@whitewingsvisa.com inbox.';
+                } else {
+                    throw new Error('Failed to send');
+                }
+            } catch (error) {
+                results.className = 'results error';
+                results.innerHTML = '❌ Test email failed. Check backup systems and try alternative contact methods.';
+            }
+            
+            results.style.display = 'block';
+            button.disabled = false;
+            button.textContent = '🚀 Send Test Email';
+        }
+
+        // Load backup submissions
+        function loadBackupSubmissions() {
+            const submissions = JSON.parse(localStorage.getItem('backup_submissions') || '[]');
+            const backupList = document.getElementById('backup-list');
+            const storageCount = document.getElementById('storage-count');
+            
+            storageCount.textContent = `${submissions.length} submissions`;
+            
+            if (submissions.length === 0) {
+                backupList.innerHTML = '<p style="color: #64748b; text-align: center; padding: 40px;">No backup submissions found.</p>';
+                return;
+            }
+            
+            backupList.innerHTML = submissions.map((submission, index) => `
+                <div class="submission-item">
+                    <div class="submission-header">
+                        <strong>Submission #${index + 1}</strong>
+                        <span class="submission-time">${new Date(submission.timestamp).toLocaleString()}</span>
+                    </div>
+                    <div class="submission-data">${JSON.stringify(submission.data, null, 2)}</div>
+                </div>
+            `).join('');
+        }
+
+        // Clear backup submissions
+        function clearBackupSubmissions() {
+            if (confirm('Are you sure you want to clear all backup submissions?')) {
+                localStorage.removeItem('backup_submissions');
+                loadBackupSubmissions();
+                alert('Backup submissions cleared successfully.');
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            checkFormSubmitStatus();
+            loadBackupSubmissions();
+            
+            // Auto-refresh every 30 seconds
+            setInterval(() => {
+                checkFormSubmitStatus();
+                loadBackupSubmissions();
+            }, 30000);
+        });
+    </script>
+</body>
+</html>

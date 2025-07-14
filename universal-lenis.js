@@ -17,7 +17,7 @@
             window.lenis.destroy();
         }
 
-        // Create new Lenis instance with optimal settings
+        // Create new Lenis instance with mobile-optimized settings
         const lenis = new Lenis({
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -25,12 +25,14 @@
             gestureDirection: 'vertical',
             smooth: true,
             mouseMultiplier: 1,
-            smoothTouch: false,
-            touchMultiplier: 2,
+            smoothTouch: true,
+            touchMultiplier: 1.5,
             infinite: false,
             normalizeWheel: true,
             wheelEventsTarget: document.documentElement,
-            autoResize: true
+            autoResize: true,
+            syncTouch: true,
+            touchInertiaMultiplier: 35
         });
 
         // Make globally accessible

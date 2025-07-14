@@ -7,10 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="yaxis-replica.css">
+    <link rel="stylesheet" href="professional-mobile-menu.css">
+    <link rel="stylesheet" href="style-fix.css">
+    <link rel="stylesheet" href="pages.css">
     <link rel="stylesheet" href="visit-codex.css">
     <link rel="stylesheet" href="destinations.css">
-    <link rel="stylesheet" href="services-enhanced.css">
     <link rel="stylesheet" href="destination-features.css">
     <link rel="stylesheet" href="process-enhanced.css">
     <link rel="stylesheet" href="hero-codex.css">
@@ -21,6 +22,9 @@
     <link rel="stylesheet" href="cta-enhanced.css">
     <link rel="stylesheet" href="badge-fix.css">
     <link rel="stylesheet" href="simple-mobile-navbar.css">
+    <link rel="stylesheet" href="apply-now-button.css">
+    <link rel="stylesheet" href="about-enhanced.css">
+    <link rel="stylesheet" href="services-enhanced.css">
     <style>
         /* Navbar Fix for Visit Page */
         nav {
@@ -72,6 +76,42 @@
         .desktop-menu ul button a {
             text-decoration: none !important;
             color: white !important;
+        }
+
+        /* Apply Now Button Consistent Styling */
+        .desktop-menu {
+            display: flex !important;
+            align-items: center !important;
+            gap: 20px !important;
+        }
+
+        .apply-now-btn {
+            margin-left: 0 !important;
+        }
+
+        .btn-apply {
+            padding: 0.7rem 1.5rem !important;
+            border-radius: 20px !important;
+            background-color: navy !important;
+            color: white !important;
+            cursor: pointer !important;
+            font-size: 1rem !important;
+            font-weight: 500 !important;
+            transition: all 0.3s ease !important;
+            border: none !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+        }
+
+        .btn-apply:hover {
+            background-color: #1e3a8a !important;
+            transform: translateY(-1px) !important;
+        }
+
+        .btn-apply i {
+            font-size: 1.1rem !important;
         }
 
         /* Mobile responsive navbar */
@@ -218,8 +258,227 @@
             height: 70px;
             width: auto;
         }
+
+        /* Fix for hero section responsive issues */
+        .hero-codex {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-codex-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Mobile responsive fixes */
+        @media (max-width: 768px) {
+            .hero-codex {
+                min-height: 80vh;
+                padding: 100px 0 50px;
+            }
+
+            .hero-codex-container {
+                padding: 0 15px;
+            }
+
+            .hero-codex-content {
+                text-align: center;
+            }
+
+            .hero-codex-title {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .hero-codex-description {
+                font-size: 1.1rem !important;
+                line-height: 1.5 !important;
+                margin-bottom: 2rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-codex {
+                min-height: 70vh;
+                padding: 80px 0 40px;
+            }
+
+            .hero-codex-title {
+                font-size: 2rem !important;
+                line-height: 1.1 !important;
+            }
+
+            .hero-codex-description {
+                font-size: 1rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+        }
+
+        /* Complete hero section redesign for mobile */
+        @media (max-width: 992px) {
+            .hero-codex {
+                background: #fff !important;
+                padding: 20px 0 !important;
+                min-height: auto !important;
+            }
+
+            .hero-codex-overlay {
+                display: none !important;
+            }
+
+            .hero-codex-content {
+                flex-direction: column !important;
+                min-height: auto !important;
+                gap: 0 !important;
+            }
+
+            .hero-codex-text {
+                background: linear-gradient(135deg, #687FE5, #5a6fd8) !important;
+                color: #fff !important;
+                padding: 40px 30px !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                order: 1 !important;
+                position: relative !important;
+                z-index: 2 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .hero-codex-image {
+                position: relative !important;
+                width: calc(100% - 40px) !important;
+                height: 300px !important;
+                margin: 0 20px !important;
+                border-radius: 20px !important;
+                overflow: hidden !important;
+                order: 2 !important;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+            }
+
+            .hero-codex-img {
+                border-radius: 20px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-codex-text {
+                padding: 35px 25px !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
+                width: 100% !important;
+            }
+
+            .hero-codex-image {
+                width: calc(100% - 30px) !important;
+                height: 250px !important;
+                margin: 0 15px !important;
+                border-radius: 15px !important;
+            }
+
+            .hero-codex-title {
+                font-size: 2.2rem !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-codex-text {
+                padding: 30px 20px !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
+                width: 100% !important;
+            }
+
+            .hero-codex-image {
+                width: calc(100% - 20px) !important;
+                height: 200px !important;
+                margin: 0 10px !important;
+                border-radius: 15px !important;
+            }
+
+            .hero-codex-title {
+                font-size: 1.8rem !important;
+            }
+
+            .hero-codex-buttons {
+                flex-direction: column !important;
+                gap: 10px !important;
+            }
+
+            .hero-codex-btn-primary,
+            .hero-codex-btn-secondary {
+                width: 100% !important;
+                text-align: center !important;
+            }
+        }
+
+        /* Fix for services section spacing */
+        .services-enhanced {
+            margin-top: 0 !important;
+            clear: both !important;
+        }
+
+        /* Ensure proper spacing between hero and services */
+        @media (max-width: 768px) {
+            .services-enhanced {
+                padding-top: 80px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-enhanced {
+                padding-top: 60px !important;
+            }
+        }
+
+        /* Mobile only changes - keep desktop original */
+        @media (max-width: 992px) {
+
+
+            .hero-codex-image {
+                display: none !important;
+            }
+
+            .hero-codex-container {
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            .hero-codex-text {
+                margin: 0 !important;
+                border-radius: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-shadow: none !important;
+                background: linear-gradient(135deg, #687FE5, #5a6fd8) !important;
+            }
+
+            .hero-codex-content {
+                min-height: auto !important;
+                flex-direction: column !important;
+            }
+
+            .hero-codex {
+                background: #fff !important;
+                padding: 20px 0 !important;
+            }
+
+            .hero-codex-overlay {
+                display: none !important;
+            }
+        }
     </style>
-    <link rel="stylesheet" href="about-enhanced.css">
+
     <!-- Swiper JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -228,8 +487,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- Lenis Smooth Scroll - Disabled for Visit Page -->
-    <!-- <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script> -->
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
 
 
 </head>
@@ -280,63 +539,51 @@
                         </div>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
-                    <button>
-                        <a href="contact.html">Apply Now</a>
-                    </button>
                 </ul>
-            </div>
 
-            <!-- Mobile Menu Button -->
-            <div class="mobile-menu-btn">
-                <i class="ri-menu-line" id="menu-toggle"></i>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div class="mobile-menu" id="mobile-menu">
-                <div class="mobile-menu-content">
-                    <div class="mobile-menu-header">
-                        <img src="images/logo/WING LOGO.png" class="mobile-logo" alt="White Wings Logo">
-                        <i class="ri-close-line" id="menu-close" title="Close Menu"></i>
-                    </div>
-                    <ul class="mobile-nav-links">
-                        <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
-                        <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
-                        <li class="mobile-services-item">
-                            <div class="mobile-services-toggle">
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <i class="ri-service-line"></i>
-                                    <span>Services</span>
-                                </div>
-                                <i class="ri-arrow-down-s-line dropdown-arrow"></i>
-                            </div>
-                            <div class="mobile-services-dropdown">
-                                <a href="study.html">
-                                    <i class="ri-graduation-cap-line"></i>
-                                    <span>Study Abroad</span>
-                                </a>
-                                <a href="migrate.html">
-                                    <i class="ri-home-heart-line"></i>
-                                    <span>Migrate</span>
-                                </a>
-                                <a href="work.html">
-                                    <i class="ri-briefcase-line"></i>
-                                    <span>Work Abroad</span>
-                                </a>
-                                <a href="visit.html" class="active">
-                                    <i class="ri-plane-line"></i>
-                                    <span>Visit</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
-                        <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
-                    </ul>
-                    <button class="mobile-apply-btn">
-                        <a href="contact.html"><i class="ri-send-plane-line"></i> Apply Now</a>
-                    </button>
+                <!-- Apply Now Button for Desktop -->
+                <div class="apply-now-btn">
+                    <a href="https://wa.me/919130448831" class="btn-apply">
+                        <i class="ri-whatsapp-line"></i>
+                        Apply Now
+                    </a>
                 </div>
             </div>
+
+            <!-- Professional Mobile Hamburger -->
+            <button class="simple-hamburger" onclick="openMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+
+        <!-- Professional Mobile Menu -->
+        <div class="mobile-menu-overlay"></div>
+        <div class="mobile-menu-sidebar">
+            <div class="mobile-menu-header">
+                <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-menu-logo">
+                <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
+            </div>
+
+            <ul class="mobile-menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="mobile-services-dropdown">
+                    <div class="mobile-services-toggle" onclick="toggleServices()">
+                        <span>Services</span>
+                        <i class="ri-arrow-down-s-line mobile-services-arrow"></i>
+                    </div>
+                    <div class="mobile-services-links">
+                        <a href="study.html">Study Abroad</a>
+                        <a href="migrate.html">Migrate</a>
+                        <a href="work.html">Work Abroad</a>
+                        <a href="visit.html" class="active">Visit</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav-div>
 
     <!-- Codex Hero Section -->
@@ -1525,22 +1772,7 @@
                 });
             });
 
-            // Mobile menu toggle
-            const menuToggle = document.getElementById('menu-toggle');
-            const menuClose = document.getElementById('menu-close');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (menuToggle) {
-                menuToggle.addEventListener('click', function() {
-                    mobileMenu.classList.add('active');
-                });
-            }
-            
-            if (menuClose) {
-                menuClose.addEventListener('click', function() {
-                    mobileMenu.classList.remove('active');
-                });
-            }
+
 
             // FAQ toggle with smooth animation
             const accordionItems = document.querySelectorAll('.codex-accordion-item');
@@ -1708,25 +1940,67 @@
             console.log('Lenis ready for visit page functionality');
         });
 
-        // Enable native scrolling for visit page
+
+    </script>
+    <script src="universal-lenis.js"></script>
+    <script src="new-mobile-navbar.js"></script>
+
+
+    <script>
+        function openMobileMenu() {
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const sidebar = document.querySelector('.mobile-menu-sidebar');
+            if (overlay && sidebar) {
+                overlay.classList.add('show');
+                sidebar.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileMenu() {
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const sidebar = document.querySelector('.mobile-menu-sidebar');
+            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
+            if (overlay && sidebar) {
+                overlay.classList.remove('show');
+                sidebar.classList.remove('show');
+                document.body.style.overflow = 'auto';
+                if (servicesDropdown) {
+                    servicesDropdown.classList.remove('active');
+                }
+            }
+        }
+
+        function toggleServices() {
+            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
+            if (servicesDropdown) {
+                servicesDropdown.classList.toggle('active');
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
-            // Ensure body and html can scroll
-            document.body.style.overflow = 'auto';
-            document.documentElement.style.overflow = 'auto';
-            document.body.style.height = 'auto';
-            document.documentElement.style.height = 'auto';
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            if (overlay) {
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === overlay) closeMobileMenu();
+                });
+            }
 
-            // Remove any scroll blocking
-            document.body.style.position = 'static';
-            document.documentElement.style.position = 'static';
+            const menuLinks = document.querySelectorAll('.mobile-menu-links a:not(.mobile-services-toggle)');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            });
 
-            console.log('Native scrolling enabled for visit page');
+            const serviceLinks = document.querySelectorAll('.mobile-services-links a');
+            serviceLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            });
         });
     </script>
-    <!-- <script src="universal-lenis.js"></script> -->
-    <script src="universal-mobile-menu.js"></script>
-    <script src="enable-scroll.js"></script>
-
 
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">

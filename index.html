@@ -12,6 +12,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://whitewingsvisa.com">
     <link rel="canonical" href="https://whitewingsvisa.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="professional-mobile-menu.css">
 
     <!-- Local Business Schema Markup -->
     <script type="application/ld+json">
@@ -46,8 +48,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-fix.css">
     <link rel="stylesheet" href="loader.css">
-    <link rel="stylesheet" href="mobile-button-fix.css">
     <link rel="stylesheet" href="simple-mobile-navbar.css">
+    <link rel="stylesheet" href="apply-now-button.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
@@ -110,62 +112,51 @@
                                 </div>
                             </li>
                             <li><a href="contact.html">Contact</a></li>
-                            <button>
-                                <a href="contact.html">Apply Now</a>
-                            </button>
                         </ul>
-                    </div>
 
-                    <!-- Simple Mobile Menu Button -->
-                    <div class="mobile-menu-btn">
-                        <i class="ri-menu-line" id="menu-toggle"></i>
-                    </div>
-
-                    <!-- Simple Mobile Menu -->
-                    <div class="mobile-menu" id="mobile-menu">
-                        <div class="mobile-menu-content">
-                            <div class="mobile-menu-header">
-                                <img src="images/logo/WING LOGO.png" class="mobile-logo" alt="White Wings Logo">
-                                <i class="ri-close-line" id="menu-close" title="Close Menu"></i>
-                            </div>
-                            <ul class="mobile-nav-links">
-                                <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
-                                <li class="mobile-services-item">
-                                    <div class="mobile-services-toggle">
-                                        <div style="display: flex; align-items: center; gap: 12px;">
-                                            <i class="ri-service-line"></i>
-                                            <span>Services</span>
-                                        </div>
-                                        <i class="ri-arrow-down-s-line dropdown-arrow"></i>
-                                    </div>
-                                    <div class="mobile-services-dropdown">
-                                        <a href="study.html">
-                                            <i class="ri-graduation-cap-line"></i>
-                                            <span>Study Abroad</span>
-                                        </a>
-                                        <a href="migrate.html">
-                                            <i class="ri-home-heart-line"></i>
-                                            <span>Migrate</span>
-                                        </a>
-                                        <a href="work.html">
-                                            <i class="ri-briefcase-line"></i>
-                                            <span>Work Abroad</span>
-                                        </a>
-                                        <a href="visit.html">
-                                            <i class="ri-plane-line"></i>
-                                            <span>Visit</span>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
-                                <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
-                            </ul>
-                            <button class="mobile-apply-btn">
-                                <a href="contact.html"><i class="ri-send-plane-line"></i> Apply Now</a>
-                            </button>
+                        <!-- Apply Now Button for Desktop -->
+                        <div class="apply-now-btn">
+                            <a href="https://wa.me/919130448831" class="btn-apply">
+                                <i class="ri-whatsapp-line"></i>
+                                Apply Now
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Simple Mobile Hamburger -->
+                    <button class="simple-hamburger" id="simple-hamburger" type="button" onclick="openMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </nav>
+
+                <!-- Professional Mobile Menu -->
+                <div class="mobile-menu-overlay"></div>
+                <div class="mobile-menu-sidebar">
+                    <div class="mobile-menu-header">
+                        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-menu-logo">
+                        <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
+                    </div>
+
+                    <ul class="mobile-menu-links">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="mobile-services-dropdown">
+                            <div class="mobile-services-toggle" onclick="toggleServices()">
+                                <span>Services</span>
+                                <i class="ri-arrow-down-s-line mobile-services-arrow"></i>
+                            </div>
+                            <div class="mobile-services-links">
+                                <a href="study.html">Study Abroad</a>
+                                <a href="migrate.html">Migrate</a>
+                                <a href="work.html">Work Abroad</a>
+                                <a href="visit.html">Visit</a>
+                            </div>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </nav-div>
 
 
@@ -1225,14 +1216,86 @@
     <!-- Custom Scripts -->
     <script src="loader.js"></script>
     <script src="universal-lenis.js"></script>
-    <script src="universal-mobile-menu.js"></script>
     <script src="script.js"></script>
+
+    <!-- Professional Mobile Menu Script -->
     <script>
+        function openMobileMenu() {
+            console.log('Opening mobile menu...');
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const sidebar = document.querySelector('.mobile-menu-sidebar');
+
+            if (overlay && sidebar) {
+                overlay.classList.add('show');
+                sidebar.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                console.log('Menu opened!');
+            } else {
+                console.log('Menu elements not found!');
+            }
+        }
+
+        function closeMobileMenu() {
+            console.log('Closing mobile menu...');
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const sidebar = document.querySelector('.mobile-menu-sidebar');
+            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
+
+            if (overlay && sidebar) {
+                overlay.classList.remove('show');
+                sidebar.classList.remove('show');
+                document.body.style.overflow = 'auto';
+
+                // Close services dropdown when menu closes
+                if (servicesDropdown) {
+                    servicesDropdown.classList.remove('active');
+                }
+
+                console.log('Menu closed!');
+            }
+        }
+
+        function toggleServices() {
+            console.log('Toggling services dropdown...');
+            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
+            if (servicesDropdown) {
+                servicesDropdown.classList.toggle('active');
+                console.log('Services dropdown toggled!');
+            }
+        }
+
+        // Close menu when clicking overlay
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            if (overlay) {
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === overlay) {
+                        closeMobileMenu();
+                    }
+                });
+            }
+
+            // Close menu when clicking navigation links (not services toggle)
+            const menuLinks = document.querySelectorAll('.mobile-menu-links a:not(.mobile-services-toggle)');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            });
+
+            // Close menu when clicking services dropdown links
+            const serviceLinks = document.querySelectorAll('.mobile-services-links a');
+            serviceLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            });
+        });
+
         // Immediate scroll fix
         document.body.style.overflow = 'auto';
         document.documentElement.style.overflow = 'auto';
         document.body.style.height = 'auto';
-        document.documentElement.style.height = 'auto';
     </script>
     </body>
 </html>

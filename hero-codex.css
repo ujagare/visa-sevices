@@ -3,7 +3,7 @@
     position: relative;
     padding: 0;
     overflow: hidden;
-    background-color: var(--primary);
+    background-color: #687FE5;
     margin-top: -1px;
 }
 
@@ -23,20 +23,26 @@
 
 .hero-codex-text {
     flex: 1;
-    padding: 80px 0;
+    padding: 80px 40px;
     color: #fff;
     max-width: 600px;
+    background-color: rgba(104, 127, 229, 0.9);
+    border-radius: 20px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-codex-subtitle {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 5px 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
     border-radius: 30px;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 20px;
     color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hero-codex-title {
@@ -45,13 +51,14 @@
     line-height: 1.2;
     margin-bottom: 20px;
     color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-codex-description {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 30px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
 }
 
 .hero-codex-buttons {
@@ -63,17 +70,20 @@
 .hero-codex-btn-primary {
     display: inline-block;
     background-color: #fff;
-    color: var(--primary);
+    color: #687FE5;
     padding: 15px 30px;
-    border-radius: 5px;
+    border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
 .hero-codex-btn-primary:hover {
-    background-color: var(--secondary);
-    color: #fff;
+    background-color: #f8f9ff;
+    color: #687FE5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 .hero-codex-btn-secondary {
@@ -81,15 +91,17 @@
     background-color: transparent;
     color: #fff;
     padding: 15px 30px;
-    border-radius: 5px;
+    border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.4);
     transition: all 0.3s ease;
 }
 
 .hero-codex-btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
 }
 
 .hero-codex-image {
@@ -113,7 +125,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, var(--primary) 0%, var(--primary) 40%, rgba(0, 0, 128, 0.8) 100%);
+    background: linear-gradient(90deg, #687FE5 0%, #687FE5 40%, rgba(104, 127, 229, 0.8) 100%);
 }
 
 .hero-codex-shape {
@@ -152,11 +164,12 @@
 .hero-codex-stat-icon {
     width: 50px;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hero-codex-stat-icon i {
@@ -192,10 +205,11 @@
         flex-direction: column;
         text-align: center;
     }
-    
+
     .hero-codex-text {
         max-width: 100%;
-        padding: 80px 0 350px;
+        padding: 60px 30px 350px;
+        margin: 20px;
     }
     
     .hero-codex-image {
@@ -208,7 +222,7 @@
     }
     
     .hero-codex-overlay {
-        background: linear-gradient(0deg, rgba(0, 0, 128, 0.7) 0%, var(--primary) 100%);
+        background: linear-gradient(0deg, rgba(104, 127, 229, 0.7) 0%, #687FE5 100%);
     }
     
     .hero-codex-stats {
@@ -224,9 +238,10 @@
     .hero-codex-title {
         font-size: 36px;
     }
-    
+
     .hero-codex-text {
-        padding: 70px 0 320px;
+        padding: 50px 25px 320px;
+        margin: 15px;
     }
     
     .hero-codex-stats {
@@ -250,9 +265,11 @@
     .hero-codex-title {
         font-size: 30px;
     }
-    
+
     .hero-codex-text {
-        padding: 60px 0 280px;
+        padding: 40px 20px 280px;
+        margin: 10px;
+        border-radius: 15px;
     }
     
     .hero-codex-image {

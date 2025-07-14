@@ -1,0 +1,50 @@
+/* Universal Apply Now Button Styles for All Pages */
+
+/* Desktop Menu Layout */
+.desktop-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+/* Apply Now Button Container */
+.apply-now-btn {
+    margin-left: 0 !important;
+}
+
+/* Apply Now Button Styling - Consistent Across All Pages */
+.btn-apply {
+    padding: 0.7rem 1.5rem !important;
+    border-radius: 20px !important;
+    background-color: navy !important;
+    color: white !important;
+    cursor: pointer !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    box-shadow: none !important;
+}
+
+/* Apply Now Button Hover Effect */
+.btn-apply:hover {
+    background-color: #1e3a8a !important;
+    transform: translateY(-1px) !important;
+    box-shadow: none !important;
+}
+
+/* Apply Now Button Icon */
+.btn-apply i {
+    font-size: 1.1rem !important;
+}
+
+/* Mobile Responsive - Hide on Mobile */
+@media (max-width: 768px) {
+    .apply-now-btn {
+        display: none !important;
+    }
+}

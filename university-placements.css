@@ -1,139 +1,184 @@
+/* ENHANCED UNIVERSITY PLACEMENTS SECTION WITH GRADUATION IMAGE */
 .university-placements-section {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+    padding: 80px 0;
+    background: url('images/hero/group-diverse-grads-throwing-caps-up-sky.jpg') center/cover no-repeat;
     position: relative;
-    z-index: auto;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .university-placements-section::before {
-    content: "";
+    content: '';
     position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: rgba(0, 0, 128, 0.03);
-    z-index: 1;
-}
-
-.university-placements-section::after {
-    content: "";
-    position: absolute;
-    bottom: -150px;
-    left: -150px;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: rgba(59, 130, 246, 0.03);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
     z-index: 1;
 }
 
 .placements-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
     position: relative;
+    z-index: 2;
 }
 
 .placements-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     position: relative;
+    z-index: 2;
 }
 
 .placements-header .section-badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: #f0f9ff;
-    color: #3b82f6;
-    padding: 8px 16px;
+    gap: 12px;
+    background: rgba(59, 130, 246, 0.15);
+    backdrop-filter: blur(20px);
+    color: #60a5fa;
+    padding: 12px 24px;
     border-radius: 50px;
-    margin-bottom: 20px;
-    font-weight: 600;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .placements-header .section-badge i {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    color: #3b82f6;
 }
 
 .placements-header h2 {
-    font-size: 2.5rem;
-    color: #000080;
-    margin-bottom: 15px;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .placements-header p {
-    color: #64748b;
-    font-size: 1.1rem;
-    max-width: 700px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+    max-width: 800px;
     margin: 0 auto;
+    line-height: 1.6;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 .universities-by-country {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 25px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .country-universities {
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 128, 0.05);
-    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.3),
+        0 10px 25px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    animation: slideInUp 0.8s ease-out both;
 }
 
 .country-universities::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, #000080, #3b82f6);
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.8) 100%);
+}
+
+.country-universities::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.05) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .country-universities:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 128, 0.1);
+    transform: translateY(-12px) scale(1.02);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        0 15px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.country-universities:hover::after {
+    opacity: 1;
 }
 
 .country-universities h3 {
-    color: #000080;
-    font-size: 1.5rem;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     position: relative;
     display: flex;
     align-items: center;
     gap: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .country-universities h3::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -2px;
     left: 0;
     width: 60px;
     height: 2px;
-    background: #3b82f6;
+    background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+    border-radius: 1px;
 }
 
 .country-flag {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid #e2e8f0;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     display: inline-block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.country-flag:hover {
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .country-flag img {
@@ -145,60 +190,235 @@
 .university-logos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 20px;
 }
 
 .university-logo {
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 12px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    background: #f8fafc;
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.university-logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.university-logo:hover::before {
+    left: 100%;
 }
 
 .university-logo:hover {
-    background: #f0f9ff;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 128, 0.05);
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .university-logo img {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 12px;
     object-fit: contain;
-    border: 2px solid #e2e8f0;
-    background: white;
-    padding: 5px;
-    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .university-logo:hover img {
-    border-color: #3b82f6;
-    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: white;
 }
 
 .university-logo span {
     font-weight: 600;
-    color: #334155;
-    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
     transition: all 0.3s ease;
+    line-height: 1.4;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .university-logo:hover span {
-    color: #000080;
+    color: white;
+    transform: translateX(3px);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* STAGGERED ANIMATIONS */
+.country-universities:nth-child(1) { animation-delay: 0.1s; }
+.country-universities:nth-child(2) { animation-delay: 0.2s; }
+.country-universities:nth-child(3) { animation-delay: 0.3s; }
+.country-universities:nth-child(4) { animation-delay: 0.4s; }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1200px) {
+    .placements-container {
+        max-width: 1000px;
+    }
+
+    .placements-header h2 {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 992px) {
+    .university-placements-section {
+        padding: 60px 0;
+    }
+
     .universities-by-country {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .placements-header {
+        margin-bottom: 40px;
+    }
+
+    .placements-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .country-universities {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .university-placements-section {
+        padding: 50px 0;
+    }
+
+    .placements-header h2 {
+        font-size: 2rem;
+    }
+
+    .placements-header p {
+        font-size: 1.1rem;
+    }
+
+    .country-universities h3 {
+        font-size: 1.4rem;
+        gap: 15px;
+    }
+
+    .country-flag {
+        width: 35px;
+        height: 35px;
+    }
+
+    .university-logos {
+        gap: 15px;
+    }
+
+    .university-logo {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .university-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .university-logo span {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 576px) {
+    .placements-container {
+        padding: 0 15px;
+    }
+
+    .placements-header .section-badge {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .placements-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .placements-header p {
+        font-size: 1rem;
+    }
+
+    .country-universities {
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .country-universities h3 {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+
+    .country-flag {
+        width: 30px;
+        height: 30px;
+    }
+
     .university-logos {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .university-logo {
+        padding: 12px;
+        gap: 12px;
+        border-radius: 15px;
+    }
+
+    .university-logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .university-logo span {
+        font-size: 0.85rem;
     }
 }
