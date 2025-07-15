@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator - White Wings Visa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .logo-preview {
+            width: 64px;
+            height: 64px;
+            margin: 20px auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+        .logo-preview img {
+            max-width: 48px;
+            max-height: 48px;
+        }
+        .instructions {
+            background: #e7f3ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .download-btn {
+            background: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .download-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Favicon Generator</h1>
+        <p>Generate favicon.ico for White Wings Visa website</p>
+        
+        <div class="logo-preview">
+            <img src="images/logo/WING LOGO.png" alt="White Wings Logo" id="logo-img">
+        </div>
+        
+        <div class="instructions">
+            <h3>📋 Instructions:</h3>
+            <ol>
+                <li><strong>Automatic Generation:</strong> Click "Generate Favicon" below</li>
+                <li><strong>Manual Method:</strong> 
+                    <ul>
+                        <li>Go to <a href="https://favicon.io/favicon-converter/" target="_blank">favicon.io</a></li>
+                        <li>Upload your logo: <code>images/logo/WING LOGO.png</code></li>
+                        <li>Download the generated favicon.ico</li>
+                        <li>Place it in your website root directory</li>
+                    </ul>
+                </li>
+                <li><strong>Alternative:</strong> Use the canvas method below</li>
+            </ol>
+        </div>
+        
+        <button class="download-btn" onclick="generateFavicon()">🚀 Generate Favicon</button>
+        <button class="download-btn" onclick="openFaviconGenerator()">🌐 Open Online Generator</button>
+        
+        <canvas id="favicon-canvas" width="32" height="32" style="display: none;"></canvas>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #fff3cd; border-radius: 8px;">
+            <h4>🔧 Quick Fix for Current Error:</h4>
+            <p>The favicon error is now fixed by adding proper favicon links in index.html:</p>
+            <code style="background: #f8f9fa; padding: 10px; display: block; margin: 10px 0;">
+                &lt;link rel="icon" type="image/x-icon" href="images/logo/WING LOGO.png"&gt;<br>
+                &lt;link rel="shortcut icon" type="image/x-icon" href="images/logo/WING LOGO.png"&gt;<br>
+                &lt;link rel="apple-touch-icon" href="images/logo/WING LOGO.png"&gt;
+            </code>
+        </div>
+    </div>
+
+    <script>
+        function generateFavicon() {
+            const canvas = document.getElementById('favicon-canvas');
+            const ctx = canvas.getContext('2d');
+            const img = document.getElementById('logo-img');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, 32, 32);
+            
+            // Draw logo on canvas
+            ctx.drawImage(img, 0, 0, 32, 32);
+            
+            // Convert to blob and download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'favicon.ico';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                alert('✅ Favicon generated! Place the downloaded file in your website root directory.');
+            }, 'image/x-icon');
+        }
+        
+        function openFaviconGenerator() {
+            window.open('https://favicon.io/favicon-converter/', '_blank');
+        }
+        
+        // Load logo when page loads
+        window.addEventListener('load', function() {
+            const img = document.getElementById('logo-img');
+            img.onload = function() {
+                console.log('✅ Logo loaded successfully');
+            };
+            img.onerror = function() {
+                console.error('❌ Logo failed to load');
+                img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iOCIgZmlsbD0iIzFFNDBBRiIvPgo8cGF0aCBkPSJNMTIgMTZIMzZWMzJIMTJWMTZaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K';
+            };
+        });
+    </script>
+</body>
+</html>

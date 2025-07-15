@@ -1,0 +1,266 @@
+/* Simple Mobile Navbar CSS for White Wings Visa */
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    z-index: 9999;
+    transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    top: 0;
+    display: block;
+}
+
+.mobile-menu-content {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-logo {
+    height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+#menu-close {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+#menu-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.mobile-nav-links li {
+    margin-bottom: 15px;
+}
+
+.mobile-nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+}
+
+.mobile-nav-links i {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+}
+
+/* Mobile Services Dropdown */
+.mobile-services-dropdown {
+    margin-bottom: 15px;
+}
+
+.mobile-services-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-services-header:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.mobile-dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.mobile-services-dropdown.active .mobile-dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-services-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-top: 10px;
+}
+
+.mobile-services-dropdown.active .mobile-services-content {
+    max-height: 400px;
+}
+
+.mobile-services-content a {
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.mobile-services-content a:hover {
+    border-left-color: white;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.mobile-services-content div {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-services-content strong {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.mobile-services-content span {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Mobile Apply Button */
+.mobile-apply-btn {
+    margin-top: auto;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.mobile-apply-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    color: #1e40af;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 18px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.mobile-apply-btn a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.mobile-menu-btn i {
+    font-size: 24px;
+    color: #1e40af;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-menu-content {
+        padding: 15px;
+    }
+    
+    .mobile-nav-links a {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+    
+    .mobile-services-header {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+    
+    .mobile-apply-btn a {
+        font-size: 16px;
+        padding: 15px 25px;
+    }
+}
+
+/* Animation for smooth transitions */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-nav-links li {
+    animation: slideDown 0.3s ease forwards;
+}
+
+.mobile-nav-links li:nth-child(1) { animation-delay: 0.1s; }
+.mobile-nav-links li:nth-child(2) { animation-delay: 0.2s; }
+.mobile-nav-links li:nth-child(3) { animation-delay: 0.3s; }
+.mobile-nav-links li:nth-child(4) { animation-delay: 0.4s; }
+.mobile-nav-links li:nth-child(5) { animation-delay: 0.5s; }
