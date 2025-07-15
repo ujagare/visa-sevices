@@ -15,12 +15,19 @@
     --ww-primary-100: #D9EAFD;
     --ww-primary-200: #BCCCDC;
     --ww-primary-300: #9AA6B2;
-    
+
+    /* Button & Icon Colors */
+    --ww-button-bg: #0369A1;
+    --ww-button-text: #FFFFFF;
+    --ww-icon-bg: #0369A1;
+    --ww-icon-text: #FFFFFF;
+
     /* Text Colors */
     --ww-text-primary: #1a1a1a;
     --ww-text-secondary: #2d2d2d;
     --ww-text-tertiary: #404040;
     --ww-text-contrast: #000000;
+    --ww-text-on-image: #FFFFFF;
     
     /* Typography Scale */
     --ww-font-family-primary: 'Gilroy', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -219,33 +226,36 @@ body, html {
 }
 
 /* Primary CTA Button */
-.ww-btn-primary, .btn-primary, .btn-apply-now, .apply-btn {
+.ww-btn-primary, .btn-primary, .btn-apply-now, .apply-btn,
+.btn, button[type="submit"], input[type="submit"], .submit-btn, .assessment-submit {
     font-size: var(--ww-text-base) !important;
     padding: var(--ww-space-4) var(--ww-space-8) !important;
-    background: linear-gradient(135deg, var(--ww-primary-100) 0%, var(--ww-primary-200) 100%) !important;
-    color: var(--ww-text-contrast) !important;
+    background: var(--ww-button-bg) !important;
+    color: var(--ww-button-text) !important;
     box-shadow: var(--ww-shadow-md) !important;
 }
 
-.ww-btn-primary:hover, .btn-primary:hover, .btn-apply-now:hover, .apply-btn:hover {
-    background: linear-gradient(135deg, var(--ww-primary-200) 0%, var(--ww-primary-300) 100%) !important;
+.ww-btn-primary:hover, .btn-primary:hover, .btn-apply-now:hover, .apply-btn:hover,
+.btn:hover, button[type="submit"]:hover, input[type="submit"]:hover, .submit-btn:hover, .assessment-submit:hover {
+    background: #0284c7 !important; /* Slightly lighter blue on hover */
     box-shadow: var(--ww-shadow-lg) !important;
     transform: translateY(-2px) !important;
+    color: var(--ww-button-text) !important;
 }
 
 /* Secondary Button */
 .ww-btn-secondary, .btn-secondary {
     font-size: var(--ww-text-base) !important;
     padding: var(--ww-space-4) var(--ww-space-8) !important;
-    background: var(--ww-primary-50) !important;
-    color: var(--ww-text-primary) !important;
-    border: 2px solid var(--ww-primary-200) !important;
+    background: transparent !important;
+    color: var(--ww-button-bg) !important;
+    border: 2px solid var(--ww-button-bg) !important;
     box-shadow: var(--ww-shadow-sm) !important;
 }
 
 .ww-btn-secondary:hover, .btn-secondary:hover {
-    background: var(--ww-primary-100) !important;
-    border-color: var(--ww-primary-300) !important;
+    background: rgba(3, 105, 161, 0.1) !important;
+    border-color: var(--ww-button-bg) !important;
     box-shadow: var(--ww-shadow-md) !important;
 }
 
@@ -261,15 +271,7 @@ body, html {
     padding: var(--ww-space-2) var(--ww-space-6) !important;
 }
 
-/* Submit/Form Buttons */
-.ww-btn-submit, .submit-btn, .assessment-submit, button[type="submit"] {
-    font-size: var(--ww-text-base) !important;
-    padding: var(--ww-space-4) var(--ww-space-10) !important;
-    background: linear-gradient(135deg, var(--ww-primary-100) 0%, var(--ww-primary-200) 100%) !important;
-    color: var(--ww-text-contrast) !important;
-    box-shadow: var(--ww-shadow-md) !important;
-    border-radius: var(--ww-radius-lg) !important;
-}
+/* Submit/Form Buttons - Already covered in Primary CTA section above */
 
 /* ========================================
    CARD SYSTEM
@@ -322,9 +324,19 @@ body, html {
 ======================================== */
 
 /* Base Icon Styles */
-.ww-icon {
-    color: var(--ww-primary-300) !important;
-    transition: color var(--ww-transition-fast) !important;
+.ww-icon, .card i, .service-card i, .feature-card i, .benefit-card i,
+.testimonial-card i, .contact-card i, .about-card i, .study-card i,
+.work-card i, .migrate-card i, .visit-card i, .country-universities i,
+.card .icon, .service-card .icon, .feature-card .icon, .benefit-card .icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background-color: var(--ww-icon-bg) !important;
+    color: var(--ww-icon-text) !important;
+    transition: all var(--ww-transition-fast) !important;
 }
 
 /* Icon Sizes */
@@ -347,16 +359,19 @@ body, html {
 }
 
 /* Icon Variants */
-.ww-icon-primary {
-    color: var(--ww-primary-300) !important;
+.ww-icon-primary, .card i, .service-card i, .feature-card i, .benefit-card i {
+    background-color: var(--ww-icon-bg) !important;
+    color: var(--ww-icon-text) !important;
 }
 
 .ww-icon-secondary {
-    color: var(--ww-text-secondary) !important;
+    background-color: var(--ww-text-secondary) !important;
+    color: var(--ww-icon-text) !important;
 }
 
 .ww-icon-accent {
-    color: var(--ww-primary-200) !important;
+    background-color: var(--ww-primary-200) !important;
+    color: var(--ww-text-contrast) !important;
 }
 
 /* ========================================
@@ -523,6 +538,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
+   TEXT ON IMAGES
+======================================== */
+
+/* Text on hero images and backgrounds */
+.hero h1, .hero h2, .hero h3, .hero p, .hero span,
+.hero-section h1, .hero-section h2, .hero-section h3, .hero-section p, .hero-section span,
+.contact-hero-section h1, .contact-hero-section h2, .contact-hero-section h3, .contact-hero-section p,
+.about-hero-section h1, .about-hero-section h2, .about-hero-section h3, .about-hero-section p,
+.study-hero-section h1, .study-hero-section h2, .study-hero-section h3, .study-hero-section p,
+.work-hero-section h1, .work-hero-section h2, .work-hero-section h3, .work-hero-section p,
+.migrate-hero-section h1, .migrate-hero-section h2, .migrate-hero-section h3, .migrate-hero-section p,
+.visit-hero-section h1, .visit-hero-section h2, .visit-hero-section h3, .visit-hero-section p,
+.banner h1, .banner h2, .banner h3, .banner p, .banner span,
+.slider h1, .slider h2, .slider h3, .slider p, .slider span,
+.swiper-slide h1, .swiper-slide h2, .swiper-slide h3, .swiper-slide p, .swiper-slide span,
+[style*="background-image"] h1, [style*="background-image"] h2, [style*="background-image"] h3, [style*="background-image"] p {
+    color: var(--ww-text-on-image) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ========================================
    DESIGN SYSTEM ENFORCEMENT
 ======================================== */
 
@@ -535,4 +571,10 @@ h1, h2, h3, h4, h5, h6 {
 body, html {
     background-color: var(--ww-primary-50) !important;
     color: var(--ww-text-primary) !important;
+}
+
+/* Force all buttons to use the button color */
+button, .btn, [class*="btn-"], input[type="submit"] {
+    background-color: var(--ww-button-bg) !important;
+    color: var(--ww-button-text) !important;
 }

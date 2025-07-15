@@ -1,0 +1,176 @@
+/*
+ * BUTTON & ICON OVERRIDES
+ * Force all buttons to have #0369A1 background and white text
+ * Force all card icons to have #0369A1 background and white text
+ * Force all text on images to be white
+ */
+
+/* ========================================
+   BUTTON OVERRIDES
+======================================== */
+
+/* All buttons - force blue background and white text */
+button,
+.btn,
+.button,
+input[type="submit"],
+input[type="button"],
+a[class*="btn"],
+[class*="button"],
+.btn-primary,
+.btn-secondary,
+.btn-apply-now,
+.apply-btn,
+.submit-btn,
+.assessment-submit,
+.ww-btn-primary,
+.ww-btn-secondary,
+.ww-btn-submit,
+.ww-btn-large,
+.ww-btn-small,
+.cta-button,
+.action-button,
+.hero-button,
+.nav-button,
+.form-button {
+    background-color: #0369A1 !important;
+    color: #FFFFFF !important;
+    border-color: #0369A1 !important;
+}
+
+/* Button hover states */
+button:hover,
+.btn:hover,
+.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+a[class*="btn"]:hover,
+[class*="button"]:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-apply-now:hover,
+.apply-btn:hover,
+.submit-btn:hover,
+.assessment-submit:hover,
+.ww-btn-primary:hover,
+.ww-btn-secondary:hover,
+.ww-btn-submit:hover,
+.ww-btn-large:hover,
+.ww-btn-small:hover,
+.cta-button:hover,
+.action-button:hover,
+.hero-button:hover,
+.nav-button:hover,
+.form-button:hover {
+    background-color: #0284c7 !important; /* Slightly lighter blue on hover */
+    color: #FFFFFF !important;
+    border-color: #0284c7 !important;
+}
+
+/* ========================================
+   ICON OVERRIDES
+======================================== */
+
+/* All card icons - force blue background and white text */
+.card i,
+.service-card i,
+.feature-card i,
+.benefit-card i,
+.testimonial-card i,
+.contact-card i,
+.about-card i,
+.study-card i,
+.work-card i,
+.migrate-card i,
+.visit-card i,
+.country-universities i,
+.university-logo i,
+.card .icon,
+.service-card .icon,
+.feature-card .icon,
+.benefit-card .icon,
+.testimonial-card .icon,
+.contact-card .icon,
+.about-card .icon,
+.study-card .icon,
+.work-card .icon,
+.migrate-card .icon,
+.visit-card .icon,
+.country-universities .icon,
+.university-logo .icon,
+[class*="card"] i,
+[class*="card"] .icon,
+.icon-container,
+.icon-circle,
+.icon-wrapper {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background-color: #0369A1 !important;
+    color: #FFFFFF !important;
+}
+
+/* Icon hover states */
+.card i:hover,
+.service-card i:hover,
+.feature-card i:hover,
+.benefit-card i:hover,
+[class*="card"] i:hover,
+[class*="card"] .icon:hover,
+.icon-container:hover,
+.icon-circle:hover,
+.icon-wrapper:hover {
+    background-color: #0284c7 !important; /* Slightly lighter blue on hover */
+}
+
+/* ========================================
+   TEXT ON IMAGES
+======================================== */
+
+/* All text on hero sections, banners, and image backgrounds */
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6, .hero p, .hero span,
+.hero-section h1, .hero-section h2, .hero-section h3, .hero-section h4, .hero-section h5, .hero-section h6, .hero-section p, .hero-section span,
+.contact-hero-section h1, .contact-hero-section h2, .contact-hero-section h3, .contact-hero-section p,
+.about-hero-section h1, .about-hero-section h2, .about-hero-section h3, .about-hero-section p,
+.study-hero-section h1, .study-hero-section h2, .study-hero-section h3, .study-hero-section p,
+.work-hero-section h1, .work-hero-section h2, .work-hero-section h3, .work-hero-section p,
+.migrate-hero-section h1, .migrate-hero-section h2, .migrate-hero-section h3, .migrate-hero-section p,
+.visit-hero-section h1, .visit-hero-section h2, .visit-hero-section h3, .visit-hero-section p,
+.banner h1, .banner h2, .banner h3, .banner p, .banner span,
+.slider h1, .slider h2, .slider h3, .slider p, .slider span,
+.swiper-slide h1, .swiper-slide h2, .swiper-slide h3, .swiper-slide p, .swiper-slide span,
+[style*="background-image"] h1, [style*="background-image"] h2, [style*="background-image"] h3, [style*="background-image"] p,
+[style*="background-image"] span, [style*="background-image"] div,
+.bg-image h1, .bg-image h2, .bg-image h3, .bg-image p, .bg-image span,
+.bg-overlay h1, .bg-overlay h2, .bg-overlay h3, .bg-overlay p, .bg-overlay span,
+.image-section h1, .image-section h2, .image-section h3, .image-section p, .image-section span,
+.cta-section h1, .cta-section h2, .cta-section h3, .cta-section p, .cta-section span,
+.apply-visa-cta h1, .apply-visa-cta h2, .apply-visa-cta h3, .apply-visa-cta p, .apply-visa-cta span,
+.testimonials h1, .testimonials h2, .testimonials h3, .testimonials p, .testimonials span {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ========================================
+   SPECIFIC OVERRIDES
+======================================== */
+
+/* Apply Now buttons - ensure they're blue */
+.btn-apply-now, .apply-btn, a[href*="apply"], [class*="apply"] {
+    background-color: #0369A1 !important;
+    color: #FFFFFF !important;
+}
+
+/* Mobile menu buttons */
+.mobile-menu-btn, #menu-open, #menu-close {
+    background-color: transparent !important;
+}
+
+/* Ensure all buttons have proper text contrast */
+button, .btn, [class*="btn-"], input[type="submit"] {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
