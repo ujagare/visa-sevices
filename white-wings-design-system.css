@@ -1,0 +1,538 @@
+/*
+ * WHITE WINGS VISA - DESIGN SYSTEM
+ * Professional design system with typography hierarchy, components, and consistency
+ * Font Family: Gilroy (Primary)
+ * Color Palette: #F8FAFC, #D9EAFD, #BCCCDC, #9AA6B2
+ */
+
+/* ========================================
+   DESIGN TOKENS & VARIABLES
+======================================== */
+
+:root {
+    /* Color System */
+    --ww-primary-50: #F8FAFC;
+    --ww-primary-100: #D9EAFD;
+    --ww-primary-200: #BCCCDC;
+    --ww-primary-300: #9AA6B2;
+    
+    /* Text Colors */
+    --ww-text-primary: #1a1a1a;
+    --ww-text-secondary: #2d2d2d;
+    --ww-text-tertiary: #404040;
+    --ww-text-contrast: #000000;
+    
+    /* Typography Scale */
+    --ww-font-family-primary: 'Gilroy', -apple-system, BlinkMacSystemFont, sans-serif;
+    --ww-font-family-secondary: 'Gilroy', system-ui, sans-serif;
+    
+    /* Font Weights */
+    --ww-font-weight-light: 300;
+    --ww-font-weight-regular: 400;
+    --ww-font-weight-medium: 500;
+    --ww-font-weight-semibold: 600;
+    --ww-font-weight-bold: 700;
+    --ww-font-weight-extrabold: 800;
+    
+    /* Font Sizes - Type Scale */
+    --ww-text-xs: 0.75rem;      /* 12px */
+    --ww-text-sm: 0.875rem;     /* 14px */
+    --ww-text-base: 1rem;       /* 16px */
+    --ww-text-lg: 1.125rem;     /* 18px */
+    --ww-text-xl: 1.25rem;      /* 20px */
+    --ww-text-2xl: 1.5rem;      /* 24px */
+    --ww-text-3xl: 1.875rem;    /* 30px */
+    --ww-text-4xl: 2.25rem;     /* 36px */
+    --ww-text-5xl: 3rem;        /* 48px */
+    --ww-text-6xl: 3.75rem;     /* 60px */
+    
+    /* Line Heights */
+    --ww-leading-tight: 1.25;
+    --ww-leading-snug: 1.375;
+    --ww-leading-normal: 1.5;
+    --ww-leading-relaxed: 1.625;
+    --ww-leading-loose: 2;
+    
+    /* Spacing Scale */
+    --ww-space-1: 0.25rem;      /* 4px */
+    --ww-space-2: 0.5rem;       /* 8px */
+    --ww-space-3: 0.75rem;      /* 12px */
+    --ww-space-4: 1rem;         /* 16px */
+    --ww-space-5: 1.25rem;      /* 20px */
+    --ww-space-6: 1.5rem;       /* 24px */
+    --ww-space-8: 2rem;         /* 32px */
+    --ww-space-10: 2.5rem;      /* 40px */
+    --ww-space-12: 3rem;        /* 48px */
+    --ww-space-16: 4rem;        /* 64px */
+    --ww-space-20: 5rem;        /* 80px */
+    
+    /* Border Radius */
+    --ww-radius-sm: 0.375rem;   /* 6px */
+    --ww-radius-md: 0.5rem;     /* 8px */
+    --ww-radius-lg: 0.75rem;    /* 12px */
+    --ww-radius-xl: 1rem;       /* 16px */
+    --ww-radius-2xl: 1.5rem;    /* 24px */
+    --ww-radius-full: 9999px;
+    
+    /* Shadows */
+    --ww-shadow-sm: 0 1px 2px 0 rgba(154, 166, 178, 0.05);
+    --ww-shadow-md: 0 4px 6px -1px rgba(154, 166, 178, 0.1), 0 2px 4px -1px rgba(154, 166, 178, 0.06);
+    --ww-shadow-lg: 0 10px 15px -3px rgba(154, 166, 178, 0.1), 0 4px 6px -2px rgba(154, 166, 178, 0.05);
+    --ww-shadow-xl: 0 20px 25px -5px rgba(154, 166, 178, 0.1), 0 10px 10px -5px rgba(154, 166, 178, 0.04);
+    --ww-shadow-2xl: 0 25px 50px -12px rgba(154, 166, 178, 0.25);
+    
+    /* Transitions */
+    --ww-transition-fast: 150ms ease-in-out;
+    --ww-transition-normal: 300ms ease-in-out;
+    --ww-transition-slow: 500ms ease-in-out;
+}
+
+/* ========================================
+   TYPOGRAPHY HIERARCHY
+======================================== */
+
+/* Base Typography */
+body, html {
+    font-family: var(--ww-font-family-primary) !important;
+    font-size: var(--ww-text-base);
+    line-height: var(--ww-leading-normal);
+    color: var(--ww-text-primary) !important;
+    font-weight: var(--ww-font-weight-regular);
+}
+
+/* Heading Hierarchy */
+.ww-heading-1, h1 {
+    font-family: var(--ww-font-family-primary) !important;
+    font-size: var(--ww-text-5xl) !important;
+    font-weight: var(--ww-font-weight-bold) !important;
+    line-height: var(--ww-leading-tight) !important;
+    color: var(--ww-text-contrast) !important;
+    margin-bottom: var(--ww-space-6);
+}
+
+.ww-heading-2, h2 {
+    font-family: var(--ww-font-family-primary) !important;
+    font-size: var(--ww-text-4xl) !important;
+    font-weight: var(--ww-font-weight-semibold) !important;
+    line-height: var(--ww-leading-tight) !important;
+    color: var(--ww-text-contrast) !important;
+    margin-bottom: var(--ww-space-5);
+}
+
+.ww-heading-3, h3 {
+    font-family: var(--ww-font-family-primary) !important;
+    font-size: var(--ww-text-3xl) !important;
+    font-weight: var(--ww-font-weight-semibold) !important;
+    line-height: var(--ww-leading-snug) !important;
+    color: var(--ww-text-contrast) !important;
+    margin-bottom: var(--ww-space-4);
+}
+
+.ww-heading-4, h4 {
+    font-family: var(--ww-font-family-primary) !important;
+    font-size: var(--ww-text-2xl) !important;
+    font-weight: var(--ww-font-weight-medium) !important;
+    line-height: var(--ww-leading-snug) !important;
+    color: var(--ww-text-primary) !important;
+    margin-bottom: var(--ww-space-4);
+}
+
+.ww-heading-5, h5 {
+    font-family: var(--ww-font-family-primary) !important;
+    font-size: var(--ww-text-xl) !important;
+    font-weight: var(--ww-font-weight-medium) !important;
+    line-height: var(--ww-leading-normal) !important;
+    color: var(--ww-text-primary) !important;
+    margin-bottom: var(--ww-space-3);
+}
+
+.ww-heading-6, h6 {
+    font-family: var(--ww-font-family-primary) !important;
+    font-size: var(--ww-text-lg) !important;
+    font-weight: var(--ww-font-weight-medium) !important;
+    line-height: var(--ww-leading-normal) !important;
+    color: var(--ww-text-secondary) !important;
+    margin-bottom: var(--ww-space-3);
+}
+
+/* Body Text Variants */
+.ww-text-large, .ww-lead {
+    font-size: var(--ww-text-xl) !important;
+    font-weight: var(--ww-font-weight-regular) !important;
+    line-height: var(--ww-leading-relaxed) !important;
+    color: var(--ww-text-primary) !important;
+}
+
+.ww-text-body, p {
+    font-size: var(--ww-text-base) !important;
+    font-weight: var(--ww-font-weight-regular) !important;
+    line-height: var(--ww-leading-relaxed) !important;
+    color: var(--ww-text-primary) !important;
+    margin-bottom: var(--ww-space-4);
+}
+
+.ww-text-small {
+    font-size: var(--ww-text-sm) !important;
+    font-weight: var(--ww-font-weight-regular) !important;
+    line-height: var(--ww-leading-normal) !important;
+    color: var(--ww-text-secondary) !important;
+}
+
+.ww-text-caption {
+    font-size: var(--ww-text-xs) !important;
+    font-weight: var(--ww-font-weight-regular) !important;
+    line-height: var(--ww-leading-normal) !important;
+    color: var(--ww-text-tertiary) !important;
+}
+
+/* Text Emphasis */
+.ww-text-bold, strong, b {
+    font-weight: var(--ww-font-weight-bold) !important;
+    color: var(--ww-text-contrast) !important;
+}
+
+.ww-text-semibold {
+    font-weight: var(--ww-font-weight-semibold) !important;
+}
+
+.ww-text-medium {
+    font-weight: var(--ww-font-weight-medium) !important;
+}
+
+/* ========================================
+   BUTTON SYSTEM
+======================================== */
+
+/* Base Button Styles */
+.ww-btn-base {
+    font-family: var(--ww-font-family-primary) !important;
+    font-weight: var(--ww-font-weight-semibold) !important;
+    border-radius: var(--ww-radius-lg) !important;
+    transition: all var(--ww-transition-normal) !important;
+    cursor: pointer !important;
+    border: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: var(--ww-space-2) !important;
+    text-decoration: none !important;
+}
+
+/* Primary CTA Button */
+.ww-btn-primary, .btn-primary, .btn-apply-now, .apply-btn {
+    font-size: var(--ww-text-base) !important;
+    padding: var(--ww-space-4) var(--ww-space-8) !important;
+    background: linear-gradient(135deg, var(--ww-primary-100) 0%, var(--ww-primary-200) 100%) !important;
+    color: var(--ww-text-contrast) !important;
+    box-shadow: var(--ww-shadow-md) !important;
+}
+
+.ww-btn-primary:hover, .btn-primary:hover, .btn-apply-now:hover, .apply-btn:hover {
+    background: linear-gradient(135deg, var(--ww-primary-200) 0%, var(--ww-primary-300) 100%) !important;
+    box-shadow: var(--ww-shadow-lg) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Secondary Button */
+.ww-btn-secondary, .btn-secondary {
+    font-size: var(--ww-text-base) !important;
+    padding: var(--ww-space-4) var(--ww-space-8) !important;
+    background: var(--ww-primary-50) !important;
+    color: var(--ww-text-primary) !important;
+    border: 2px solid var(--ww-primary-200) !important;
+    box-shadow: var(--ww-shadow-sm) !important;
+}
+
+.ww-btn-secondary:hover, .btn-secondary:hover {
+    background: var(--ww-primary-100) !important;
+    border-color: var(--ww-primary-300) !important;
+    box-shadow: var(--ww-shadow-md) !important;
+}
+
+/* Large Button */
+.ww-btn-large {
+    font-size: var(--ww-text-lg) !important;
+    padding: var(--ww-space-5) var(--ww-space-12) !important;
+}
+
+/* Small Button */
+.ww-btn-small {
+    font-size: var(--ww-text-sm) !important;
+    padding: var(--ww-space-2) var(--ww-space-6) !important;
+}
+
+/* Submit/Form Buttons */
+.ww-btn-submit, .submit-btn, .assessment-submit, button[type="submit"] {
+    font-size: var(--ww-text-base) !important;
+    padding: var(--ww-space-4) var(--ww-space-10) !important;
+    background: linear-gradient(135deg, var(--ww-primary-100) 0%, var(--ww-primary-200) 100%) !important;
+    color: var(--ww-text-contrast) !important;
+    box-shadow: var(--ww-shadow-md) !important;
+    border-radius: var(--ww-radius-lg) !important;
+}
+
+/* ========================================
+   CARD SYSTEM
+======================================== */
+
+/* Base Card */
+.ww-card-base {
+    background: #ffffff !important;
+    border-radius: var(--ww-radius-xl) !important;
+    box-shadow: var(--ww-shadow-lg) !important;
+    border: 1px solid var(--ww-primary-200) !important;
+    transition: all var(--ww-transition-normal) !important;
+    overflow: hidden !important;
+}
+
+.ww-card-base:hover {
+    box-shadow: var(--ww-shadow-xl) !important;
+    transform: translateY(-4px) !important;
+    border-color: var(--ww-primary-300) !important;
+}
+
+/* Standard Card */
+.ww-card, .card, .service-card, .feature-card, .benefit-card {
+    padding: var(--ww-space-8) !important;
+    background: #ffffff !important;
+    border-radius: var(--ww-radius-xl) !important;
+    box-shadow: var(--ww-shadow-lg) !important;
+    border: 1px solid var(--ww-primary-200) !important;
+    transition: all var(--ww-transition-normal) !important;
+}
+
+.ww-card:hover, .card:hover, .service-card:hover, .feature-card:hover, .benefit-card:hover {
+    box-shadow: var(--ww-shadow-xl) !important;
+    transform: translateY(-4px) !important;
+    border-color: var(--ww-primary-300) !important;
+}
+
+/* Compact Card */
+.ww-card-compact {
+    padding: var(--ww-space-6) !important;
+}
+
+/* Large Card */
+.ww-card-large {
+    padding: var(--ww-space-12) !important;
+}
+
+/* ========================================
+   ICON SYSTEM
+======================================== */
+
+/* Base Icon Styles */
+.ww-icon {
+    color: var(--ww-primary-300) !important;
+    transition: color var(--ww-transition-fast) !important;
+}
+
+/* Icon Sizes */
+.ww-icon-sm {
+    font-size: var(--ww-text-base) !important;
+    width: var(--ww-space-4) !important;
+    height: var(--ww-space-4) !important;
+}
+
+.ww-icon-md {
+    font-size: var(--ww-text-xl) !important;
+    width: var(--ww-space-6) !important;
+    height: var(--ww-space-6) !important;
+}
+
+.ww-icon-lg {
+    font-size: var(--ww-text-3xl) !important;
+    width: var(--ww-space-12) !important;
+    height: var(--ww-space-12) !important;
+}
+
+/* Icon Variants */
+.ww-icon-primary {
+    color: var(--ww-primary-300) !important;
+}
+
+.ww-icon-secondary {
+    color: var(--ww-text-secondary) !important;
+}
+
+.ww-icon-accent {
+    color: var(--ww-primary-200) !important;
+}
+
+/* ========================================
+   FORM SYSTEM
+======================================== */
+
+/* Form Elements */
+.ww-input, input, textarea, select {
+    font-family: var(--ww-font-family-primary) !important;
+    font-size: var(--ww-text-base) !important;
+    font-weight: var(--ww-font-weight-regular) !important;
+    padding: var(--ww-space-4) !important;
+    border: 2px solid var(--ww-primary-200) !important;
+    border-radius: var(--ww-radius-lg) !important;
+    background: var(--ww-primary-50) !important;
+    color: var(--ww-text-primary) !important;
+    transition: all var(--ww-transition-fast) !important;
+}
+
+.ww-input:focus, input:focus, textarea:focus, select:focus {
+    border-color: var(--ww-primary-300) !important;
+    box-shadow: 0 0 0 3px rgba(154, 166, 178, 0.1) !important;
+    outline: none !important;
+}
+
+.ww-label, label {
+    font-family: var(--ww-font-family-primary) !important;
+    font-size: var(--ww-text-sm) !important;
+    font-weight: var(--ww-font-weight-medium) !important;
+    color: var(--ww-text-secondary) !important;
+    margin-bottom: var(--ww-space-2) !important;
+    display: block !important;
+}
+
+/* ========================================
+   NAVIGATION SYSTEM
+======================================== */
+
+/* Navigation Links */
+.ww-nav-link, nav a, .navbar a {
+    font-family: var(--ww-font-family-primary) !important;
+    font-size: var(--ww-text-base) !important;
+    font-weight: var(--ww-font-weight-medium) !important;
+    color: var(--ww-text-primary) !important;
+    text-decoration: none !important;
+    transition: color var(--ww-transition-fast) !important;
+}
+
+.ww-nav-link:hover, nav a:hover, .navbar a:hover {
+    color: var(--ww-text-secondary) !important;
+}
+
+/* ========================================
+   UTILITY CLASSES
+======================================== */
+
+/* Spacing Utilities */
+.ww-mb-1 { margin-bottom: var(--ww-space-1) !important; }
+.ww-mb-2 { margin-bottom: var(--ww-space-2) !important; }
+.ww-mb-3 { margin-bottom: var(--ww-space-3) !important; }
+.ww-mb-4 { margin-bottom: var(--ww-space-4) !important; }
+.ww-mb-5 { margin-bottom: var(--ww-space-5) !important; }
+.ww-mb-6 { margin-bottom: var(--ww-space-6) !important; }
+.ww-mb-8 { margin-bottom: var(--ww-space-8) !important; }
+
+.ww-mt-1 { margin-top: var(--ww-space-1) !important; }
+.ww-mt-2 { margin-top: var(--ww-space-2) !important; }
+.ww-mt-3 { margin-top: var(--ww-space-3) !important; }
+.ww-mt-4 { margin-top: var(--ww-space-4) !important; }
+.ww-mt-5 { margin-top: var(--ww-space-5) !important; }
+.ww-mt-6 { margin-top: var(--ww-space-6) !important; }
+.ww-mt-8 { margin-top: var(--ww-space-8) !important; }
+
+.ww-p-1 { padding: var(--ww-space-1) !important; }
+.ww-p-2 { padding: var(--ww-space-2) !important; }
+.ww-p-3 { padding: var(--ww-space-3) !important; }
+.ww-p-4 { padding: var(--ww-space-4) !important; }
+.ww-p-5 { padding: var(--ww-space-5) !important; }
+.ww-p-6 { padding: var(--ww-space-6) !important; }
+.ww-p-8 { padding: var(--ww-space-8) !important; }
+
+/* Text Utilities */
+.ww-text-center { text-align: center !important; }
+.ww-text-left { text-align: left !important; }
+.ww-text-right { text-align: right !important; }
+
+/* ========================================
+   COMPONENT OVERRIDES
+======================================== */
+
+/* Apply Design System to Existing Components */
+
+/* All Buttons */
+button, .btn, [class*="btn-"], input[type="submit"] {
+    font-family: var(--ww-font-family-primary) !important;
+    font-weight: var(--ww-font-weight-semibold) !important;
+    border-radius: var(--ww-radius-lg) !important;
+    transition: all var(--ww-transition-normal) !important;
+    border: none !important;
+}
+
+/* All Cards */
+.card, .service-card, .feature-card, .benefit-card, .destination-card,
+.testimonial-card, .contact-card, .about-card, .study-card,
+.work-card, .migrate-card, .visit-card, .country-universities, .university-logo {
+    border-radius: var(--ww-radius-xl) !important;
+    box-shadow: var(--ww-shadow-lg) !important;
+    border: 1px solid var(--ww-primary-200) !important;
+    transition: all var(--ww-transition-normal) !important;
+}
+
+.card:hover, .service-card:hover, .feature-card:hover, .benefit-card:hover, .destination-card:hover,
+.testimonial-card:hover, .contact-card:hover, .about-card:hover, .study-card:hover,
+.work-card:hover, .migrate-card:hover, .visit-card:hover, .country-universities:hover, .university-logo:hover {
+    box-shadow: var(--ww-shadow-xl) !important;
+    transform: translateY(-4px) !important;
+    border-color: var(--ww-primary-300) !important;
+}
+
+/* All Icons */
+i[class*="ri-"], .icon, [class*="icon-"] {
+    color: var(--ww-primary-300) !important;
+    transition: color var(--ww-transition-fast) !important;
+}
+
+/* All Text Elements */
+p, span, div, li, td, th {
+    font-family: var(--ww-font-family-primary) !important;
+    color: var(--ww-text-primary) !important;
+}
+
+/* All Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ww-font-family-primary) !important;
+    color: var(--ww-text-contrast) !important;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN SYSTEM
+======================================== */
+
+/* Mobile Typography Adjustments */
+@media (max-width: 768px) {
+    .ww-heading-1, h1 {
+        font-size: var(--ww-text-4xl) !important;
+    }
+
+    .ww-heading-2, h2 {
+        font-size: var(--ww-text-3xl) !important;
+    }
+
+    .ww-heading-3, h3 {
+        font-size: var(--ww-text-2xl) !important;
+    }
+
+    .ww-btn-primary, .btn-primary, .btn-apply-now, .apply-btn {
+        padding: var(--ww-space-3) var(--ww-space-6) !important;
+        font-size: var(--ww-text-sm) !important;
+    }
+
+    .ww-card, .card, .service-card {
+        padding: var(--ww-space-6) !important;
+    }
+}
+
+/* ========================================
+   DESIGN SYSTEM ENFORCEMENT
+======================================== */
+
+/* Ensure all elements follow the design system */
+* {
+    font-family: var(--ww-font-family-primary) !important;
+}
+
+/* Force design system colors */
+body, html {
+    background-color: var(--ww-primary-50) !important;
+    color: var(--ww-text-primary) !important;
+}
