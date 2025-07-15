@@ -31,6 +31,8 @@
 
 
 
+    <!-- Universal Hero Dimensions -->
+    <link rel="stylesheet" href="universal-hero-dimensions.css">
 
 
     <!-- Gilroy Font -->
@@ -245,25 +247,25 @@
             display: block !important;
             visibility: visible !important;
         }
-        
+
         /* Fix for z-index issues */
         .services-enhanced, .destinations-section, .process-enhanced, .codex-testimonials, .codex-faq, .codex-cta, .codex-contact {
             position: relative;
             z-index: 1;
         }
-        
+
         /* Fix for navbar height */
         nav {
             height: auto !important;
             min-height: 100px;
             padding: 15px 0;
         }
-        
+
         nav ul li a {
             padding: 15px 20px;
             display: inline-block;
         }
-        
+
         nav .logo {
             height: 70px;
             width: auto;
@@ -608,7 +610,7 @@
                     <div class="hero-codex-subtitle">Professional Visa Services</div>
                     <h1 class="hero-codex-title">Expert Visit Visa Services for Your Global Travel Needs</h1>
                     <p class="hero-codex-description">Get professional assistance for tourist, business, family, and medical visit visas with our experienced consultants. We ensure a smooth and hassle-free visa application process.</p>
-                    
+
                     <div class="hero-codex-stats">
                         <div class="hero-codex-stat">
                             <div class="hero-codex-stat-icon">
@@ -629,7 +631,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="hero-codex-buttons">
                         <a href="contact.html" class="hero-codex-btn-primary">Get Free Consultation</a>
                         <a href="#services" class="hero-codex-btn-secondary">Explore Services</a>
@@ -721,7 +723,7 @@
                 </div>
                 <p style="text-align: center !important;">Comprehensive visa assistance for all your international travel needs with expert guidance</p>
             </div>
-            
+
             <div class="services-grid">
                 <!-- Tourist Visa Card -->
                 <div class="service-card">
@@ -1242,7 +1244,7 @@
                         <a href="contact.html" class="destination-link">Apply Now <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
-                
+
                 <!-- New Zealand Card -->
                 <div class="destination-card">
                     <div class="destination-image">
@@ -1290,7 +1292,7 @@
 
             <div class="process-steps">
                 <div class="process-timeline"></div>
-                
+
                 <!-- Step 1: Free Consultation -->
                 <div class="process-step">
                     <div class="process-step-icon">
@@ -1374,7 +1376,7 @@
                 <h6 style="text-align: center !important; display: block !important; margin: 0 auto 15px auto !important;">GOOGLE REVIEWS</h6>
                 <h2 style="text-align: center !important; margin: 0 auto !important;">What Our Happy Clients Say About Us</h2>
             </div>
-    
+
             <div class="testimonials-slider">
                 <div class="swiper testimonials-swiper">
                     <div class="swiper-wrapper">
@@ -1401,7 +1403,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <!-- Sayali Kanade Review -->
                         <div class="swiper-slide">
                             <div class="testimonial-card">
@@ -1433,7 +1435,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <!-- Rima Wandhekar Review -->
                         <div class="swiper-slide">
                             <div class="testimonial-card">
@@ -1458,7 +1460,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <!-- Shikha Upadhyay Review -->
                         <div class="swiper-slide">
                             <div class="testimonial-card">
@@ -1483,7 +1485,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <!-- Jenny Muntode Review -->
                         <div class="swiper-slide">
                             <div class="testimonial-card">
@@ -1507,7 +1509,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <!-- Sacheen Bhandari Review -->
                         <div class="swiper-slide">
                             <div class="testimonial-card">
@@ -1534,8 +1536,8 @@
                             </div>
                         </div>
                     </div>
-    
-    
+
+
                 </div>
             </div>
         </div>
@@ -1617,7 +1619,7 @@
                     <p style="max-width: 700px; margin: 15px auto 0; text-align: center !important;">Fill out the form and our visa experts will contact you shortly</p>
                 </div>
             </div>
-            
+
             <div class="codex-contact-content">
                 <div class="codex-contact-info">
                     <div class="codex-contact-info-item">
@@ -1648,7 +1650,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="codex-contact-form">
                     <form action="https://formsubmit.co/mrunal@whitewingsvisa.com" method="POST">
                         <input type="hidden" name="_subject" value="Visit Visa Assessment Request">
@@ -1751,7 +1753,7 @@
 
     <!-- Script -->
     <script>
-        
+
         // Professional JavaScript Enhancements
         document.addEventListener('DOMContentLoaded', function() {
             // Page Loader
@@ -1788,7 +1790,7 @@
             const accordionItems = document.querySelectorAll('.codex-accordion-item');
             accordionItems.forEach(item => {
                 const header = item.querySelector('.codex-accordion-header');
-                
+
                 header.addEventListener('click', () => {
                     // Close other accordion items
                     accordionItems.forEach(otherItem => {
@@ -1796,7 +1798,7 @@
                             otherItem.classList.remove('active');
                         }
                     });
-                    
+
                     // Toggle current item
                     item.classList.toggle('active');
                 });
@@ -1828,11 +1830,11 @@
             if (form) {
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    
+
                     // Basic validation
                     const requiredFields = form.querySelectorAll('[required]');
                     let isValid = true;
-                    
+
                     requiredFields.forEach(field => {
                         if (!field.value.trim()) {
                             isValid = false;
@@ -1842,14 +1844,14 @@
                             }, { once: true });
                         }
                     });
-                    
+
                     if (isValid) {
                         // Show success message
                         const submitBtn = form.querySelector('.yaxis-form-submit');
                         const originalText = submitBtn.textContent;
                         submitBtn.textContent = 'Submitted Successfully!';
                         submitBtn.style.background = '#10b981';
-                        
+
                         setTimeout(() => {
                             submitBtn.textContent = originalText;
                             submitBtn.style.background = '';
@@ -1865,7 +1867,7 @@
                 card.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-10px) scale(1.02)';
                 });
-                
+
                 card.addEventListener('mouseleave', function() {
                     this.style.transform = '';
                 });
@@ -1878,7 +1880,7 @@
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
-                    
+
                     if (targetElement) {
                         targetElement.scrollIntoView({
                             behavior: 'smooth',
@@ -1896,7 +1898,7 @@
                         this.classList.add('loading');
                         const originalText = this.innerHTML;
                         this.innerHTML = '<i class="ri-loader-4-line"></i> Loading...';
-                        
+
                         setTimeout(() => {
                             this.classList.remove('loading');
                             this.innerHTML = originalText;
@@ -1904,7 +1906,7 @@
                     }
                 });
             });
-            
+
             // Initialize Swiper for testimonials
             const swiper = new Swiper('.testimonials-swiper', {
                 slidesPerView: 1,
@@ -1933,7 +1935,7 @@
                     },
                 },
             });
-            
+
             // Read more functionality for testimonials
             const readMoreButtons = document.querySelectorAll('.read-more-btn');
             readMoreButtons.forEach(button => {

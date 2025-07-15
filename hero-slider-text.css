@@ -3,26 +3,68 @@
  * Only for hero page slider images text - make it white
  */
 
-/* Hero slider text - WHITE on images for better visibility */
-.swiper-slide h1, .swiper-slide h2, .swiper-slide h3, .swiper-slide h4, .swiper-slide h5, .swiper-slide h6,
-.swiper-slide p, .swiper-slide span, .swiper-slide div, .swiper-slide a {
+/* Hero slider text - WHITE on images for better visibility - OVERRIDE white-wings-colors.css */
+.slider .swiper-slide h1, .slider .swiper-slide h2, .slider .swiper-slide h3, .slider .swiper-slide h4, .slider .swiper-slide h5, .slider .swiper-slide h6,
+.slider .swiper-slide p, .slider .swiper-slide span, .slider .swiper-slide div, .slider .swiper-slide a,
+.slider .slide-content h1, .slider .slide-content h2, .slider .slide-content h3, .slider .slide-content h4, .slider .slide-content h5, .slider .slide-content h6,
+.slider .slide-content p, .slider .slide-content span, .slider .slide-content div, .slider .slide-content a,
+.image-marquee-container .marquee-overlay h1, .image-marquee-container .marquee-overlay h2, .image-marquee-container .marquee-overlay h3, .image-marquee-container .marquee-overlay h4, .image-marquee-container .marquee-overlay h5, .image-marquee-container .marquee-overlay h6,
+.image-marquee-container .marquee-overlay p, .image-marquee-container .marquee-overlay span, .image-marquee-container .marquee-overlay div, .image-marquee-container .marquee-overlay a {
     color: #FFFFFF !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7) !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.8) !important;
     font-weight: 600 !important;
     z-index: 10 !important;
     position: relative !important;
 }
 
-/* Hero slider buttons */
-.swiper-slide button, .swiper-slide .btn, .swiper-slide [class*="btn"] {
+/* Additional specific overrides for higher specificity */
+.hero .slider .swiper-slide h3,
+.hero .slider .slide-content h3,
+.hero .slider .slide-content p,
+.image-marquee-container .marquee-overlay h4,
+.image-marquee-container .marquee-overlay p {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Hero slider buttons - Higher specificity */
+.hero .slider .swiper-slide button, .hero .slider .swiper-slide .btn, .hero .slider .swiper-slide [class*="btn"] {
     color: #FFFFFF !important;
     background-color: rgba(3, 105, 161, 0.9) !important;
     border: 2px solid #FFFFFF !important;
     text-shadow: none !important;
 }
 
-.swiper-slide button:hover, .swiper-slide .btn:hover, .swiper-slide [class*="btn"]:hover {
+.hero .slider .swiper-slide button:hover, .hero .slider .swiper-slide .btn:hover, .hero .slider .swiper-slide [class*="btn"]:hover {
     background-color: #0369A1 !important;
     color: #FFFFFF !important;
     transform: translateY(-2px) !important;
+}
+
+/* Ensure slider content is visible and positioned correctly - Higher specificity */
+.hero .slider .swiper-slide {
+    position: relative !important;
+}
+
+.hero .slider .slide-content {
+    position: absolute !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    right: 20px !important;
+    z-index: 10 !important;
+    background: transparent !important;
+    padding: 15px 20px !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+}
+
+/* Marquee overlay text - Higher specificity */
+.image-marquee-container .marquee-overlay {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 10 !important;
+    background: transparent !important;
+    padding: 15px !important;
 }

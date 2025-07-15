@@ -1,0 +1,261 @@
+/*
+ * UNIVERSAL HERO SECTION DIMENSIONS
+ * Standardize all hero sections to match home page dimensions
+ * Height: 100vh, Width: 100%
+ */
+
+/* ========================================
+   UNIVERSAL HERO SECTION STYLING
+======================================== */
+
+/* All hero sections - Same dimensions as home page */
+.hero,
+.about-hero-section,
+.contact-hero-section,
+.study-hero-section,
+.work-hero-section,
+.migrate-hero-section,
+.visit-hero-section,
+.services-hero-section {
+    height: 100vh !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    position: relative !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Hero containers - Centered content */
+.hero-container,
+.about-hero-container,
+.contact-hero-container,
+.study-hero-container,
+.work-hero-container,
+.migrate-hero-container,
+.visit-hero-container,
+.services-hero-container {
+    width: 90% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 2rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    z-index: 2 !important;
+    position: relative !important;
+}
+
+/* Hero content - Properly fitted */
+.hero-content,
+.about-hero-content,
+.contact-hero-content,
+.study-hero-content,
+.work-hero-content,
+.migrate-hero-content,
+.visit-hero-content,
+.services-hero-content {
+    width: 100% !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+/* Hero headings - Consistent sizing */
+.hero h1, .hero h2,
+.about-hero-section h1, .about-hero-section h2,
+.contact-hero-section h1, .contact-hero-section h2,
+.study-hero-section h1, .study-hero-section h2,
+.work-hero-section h1, .work-hero-section h2,
+.migrate-hero-section h1, .migrate-hero-section h2,
+.visit-hero-section h1, .visit-hero-section h2,
+.services-hero-section h1, .services-hero-section h2 {
+    font-size: 3.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1.5rem !important;
+    line-height: 1.2 !important;
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Hero paragraphs - Consistent styling */
+.hero p,
+.about-hero-section p,
+.contact-hero-section p,
+.study-hero-section p,
+.work-hero-section p,
+.migrate-hero-section p,
+.visit-hero-section p,
+.services-hero-section p {
+    font-size: 1.3rem !important;
+    font-weight: 400 !important;
+    margin-bottom: 2rem !important;
+    line-height: 1.6 !important;
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Hero buttons - Consistent styling */
+.hero button, .hero .btn, .hero [class*="btn"],
+.about-hero-section button, .about-hero-section .btn, .about-hero-section [class*="btn"],
+.contact-hero-section button, .contact-hero-section .btn, .contact-hero-section [class*="btn"],
+.study-hero-section button, .study-hero-section .btn, .study-hero-section [class*="btn"],
+.work-hero-section button, .work-hero-section .btn, .work-hero-section [class*="btn"],
+.migrate-hero-section button, .migrate-hero-section .btn, .migrate-hero-section [class*="btn"],
+.visit-hero-section button, .visit-hero-section .btn, .visit-hero-section [class*="btn"],
+.services-hero-section button, .services-hero-section .btn, .services-hero-section [class*="btn"] {
+    background-color: #0369A1 !important;
+    color: #FFFFFF !important;
+    padding: 15px 30px !important;
+    border: 2px solid #FFFFFF !important;
+    border-radius: 50px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 10px !important;
+}
+
+.hero button:hover, .hero .btn:hover, .hero [class*="btn"]:hover,
+.about-hero-section button:hover, .about-hero-section .btn:hover, .about-hero-section [class*="btn"]:hover,
+.contact-hero-section button:hover, .contact-hero-section .btn:hover, .contact-hero-section [class*="btn"]:hover,
+.study-hero-section button:hover, .study-hero-section .btn:hover, .study-hero-section [class*="btn"]:hover,
+.work-hero-section button:hover, .work-hero-section .btn:hover, .work-hero-section [class*="btn"]:hover,
+.migrate-hero-section button:hover, .migrate-hero-section .btn:hover, .migrate-hero-section [class*="btn"]:hover,
+.visit-hero-section button:hover, .visit-hero-section .btn:hover, .visit-hero-section [class*="btn"]:hover,
+.services-hero-section button:hover, .services-hero-section .btn:hover, .services-hero-section [class*="btn"]:hover {
+    background-color: #FFFFFF !important;
+    color: #0369A1 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(3, 105, 161, 0.3) !important;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero,
+    .about-hero-section,
+    .contact-hero-section,
+    .study-hero-section,
+    .work-hero-section,
+    .migrate-hero-section,
+    .visit-hero-section,
+    .services-hero-section {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        padding: 1rem !important;
+    }
+
+    .hero-container,
+    .about-hero-container,
+    .contact-hero-container,
+    .study-hero-container,
+    .work-hero-container,
+    .migrate-hero-container,
+    .visit-hero-container,
+    .services-hero-container {
+        width: 95% !important;
+        padding: 1.5rem !important;
+    }
+
+    .hero h1, .hero h2,
+    .about-hero-section h1, .about-hero-section h2,
+    .contact-hero-section h1, .contact-hero-section h2,
+    .study-hero-section h1, .study-hero-section h2,
+    .work-hero-section h1, .work-hero-section h2,
+    .migrate-hero-section h1, .migrate-hero-section h2,
+    .visit-hero-section h1, .visit-hero-section h2,
+    .services-hero-section h1, .services-hero-section h2 {
+        font-size: 2.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .hero p,
+    .about-hero-section p,
+    .contact-hero-section p,
+    .study-hero-section p,
+    .work-hero-section p,
+    .migrate-hero-section p,
+    .visit-hero-section p,
+    .services-hero-section p {
+        font-size: 1.1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero,
+    .about-hero-section,
+    .contact-hero-section,
+    .study-hero-section,
+    .work-hero-section,
+    .migrate-hero-section,
+    .visit-hero-section,
+    .services-hero-section {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        padding: 0.5rem !important;
+    }
+
+    .hero-container,
+    .about-hero-container,
+    .contact-hero-container,
+    .study-hero-container,
+    .work-hero-container,
+    .migrate-hero-container,
+    .visit-hero-container,
+    .services-hero-container {
+        width: 95% !important;
+        padding: 1rem !important;
+    }
+
+    .hero h1, .hero h2,
+    .about-hero-section h1, .about-hero-section h2,
+    .contact-hero-section h1, .contact-hero-section h2,
+    .study-hero-section h1, .study-hero-section h2,
+    .work-hero-section h1, .work-hero-section h2,
+    .migrate-hero-section h1, .migrate-hero-section h2,
+    .visit-hero-section h1, .visit-hero-section h2,
+    .services-hero-section h1, .services-hero-section h2 {
+        font-size: 2rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .hero p,
+    .about-hero-section p,
+    .contact-hero-section p,
+    .study-hero-section p,
+    .work-hero-section p,
+    .migrate-hero-section p,
+    .visit-hero-section p,
+    .services-hero-section p {
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .hero button, .hero .btn, .hero [class*="btn"],
+    .about-hero-section button, .about-hero-section .btn, .about-hero-section [class*="btn"],
+    .contact-hero-section button, .contact-hero-section .btn, .contact-hero-section [class*="btn"],
+    .study-hero-section button, .study-hero-section .btn, .study-hero-section [class*="btn"],
+    .work-hero-section button, .work-hero-section .btn, .work-hero-section [class*="btn"],
+    .migrate-hero-section button, .migrate-hero-section .btn, .migrate-hero-section [class*="btn"],
+    .visit-hero-section button, .visit-hero-section .btn, .visit-hero-section [class*="btn"],
+    .services-hero-section button, .services-hero-section .btn, .services-hero-section [class*="btn"] {
+        padding: 12px 24px !important;
+        font-size: 1rem !important;
+        margin: 5px !important;
+    }
+}
