@@ -1161,11 +1161,31 @@
     <section class="contact-card-section">
         <div class="card-wrapper">
             <h2>Start Your Visa Journey Today</h2>
-            <div class="contact-card">
+            <div class="contact-layout">
+                <!-- Left Side - Contact Image -->
+                <div class="contact-image-section">
+                    <img src="images/hero/contact.jpg" alt="Contact White Wings Visa Consultancy">
+                    <div class="contact-image-overlay">
+                        <h3>Ready to Begin Your Journey?</h3>
+                        <p>Our expert visa consultants are here to guide you through every step of your visa application process.</p>
+                        <ul class="contact-features">
+                            <li><i class="ri-check-line"></i> Free Initial Consultation</li>
+                            <li><i class="ri-check-line"></i> Expert Visa Guidance</li>
+                            <li><i class="ri-check-line"></i> Document Preparation</li>
+                            <li><i class="ri-check-line"></i> Application Tracking</li>
+                            <li><i class="ri-check-line"></i> 24/7 Support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Side - Contact Form -->
+                <div class="contact-card">
                 <form id="visaContact" action="https://formsubmit.co/mrunal@whitewingsvisa.com" method="POST" enctype="multipart/form-data" novalidate>
                     <input type="hidden" name="_subject" value="New Visa Application Request">
                     <input type="hidden" name="_next" value="https://whitewingsvisa.com/thank-you.html">
                     <input type="hidden" name="_captcha" value="false">
+
+                    <div class="contact-form-grid">
                     <div class="field">
                         <label for="name">Full Legal Name</label>
                         <div class="input-container">
@@ -1347,6 +1367,8 @@
                         <div class="error-message"></div>
                     </div>
 
+                    </div> <!-- Close contact-form-grid -->
+
                     <button type="submit" class="btn-submit">
                         <i class="ri-rocket-line"></i>
                         Start My Visa Journey
@@ -1362,8 +1384,9 @@
                     <p>Thank you for choosing White Wings Visa Consultancy. Our expert team will review your application and contact you within 2-4 hours with a personalized consultation plan.</p>
                     <button class="btn-new-request" onclick="showForm()">Submit Another Application</button>
                 </div>
-            </div>
-        </div>
+                </div> <!-- Close contact-card -->
+            </div> <!-- Close contact-layout -->
+        </div> <!-- Close card-wrapper -->
     </section>
 
     <!-- MAP SECTION -->
@@ -1509,6 +1532,9 @@
             });
         });
     </script>
+
+    <!-- Contact Form Functionality -->
+    <script src="contact-form-functionality.js"></script>
 
 </body>
 </html>
