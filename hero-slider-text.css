@@ -1,0 +1,28 @@
+/*
+ * HERO SLIDER TEXT FIX
+ * Only for hero page slider images text - make it white
+ */
+
+/* Hero slider text - WHITE on images for better visibility */
+.swiper-slide h1, .swiper-slide h2, .swiper-slide h3, .swiper-slide h4, .swiper-slide h5, .swiper-slide h6,
+.swiper-slide p, .swiper-slide span, .swiper-slide div, .swiper-slide a {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7) !important;
+    font-weight: 600 !important;
+    z-index: 10 !important;
+    position: relative !important;
+}
+
+/* Hero slider buttons */
+.swiper-slide button, .swiper-slide .btn, .swiper-slide [class*="btn"] {
+    color: #FFFFFF !important;
+    background-color: rgba(3, 105, 161, 0.9) !important;
+    border: 2px solid #FFFFFF !important;
+    text-shadow: none !important;
+}
+
+.swiper-slide button:hover, .swiper-slide .btn:hover, .swiper-slide [class*="btn"]:hover {
+    background-color: #0369A1 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px) !important;
+}
