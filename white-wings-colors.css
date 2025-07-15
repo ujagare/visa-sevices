@@ -1,0 +1,265 @@
+/* 
+ * White Wings Visa - Custom Color Scheme
+ * Colors: #F8FAFC, #D9EAFD, #BCCCDC, #9AA6B2
+ * Font: Gilroy
+ */
+
+/* Import Gilroy font */
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff2'),
+         url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff2'),
+         url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff2'),
+         url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff2'),
+         url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff2'),
+         url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Base font for entire website */
+body, html, * {
+    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Color Variables */
+:root {
+    --primary-light: #F8FAFC;
+    --primary-medium: #D9EAFD;
+    --primary-dark: #BCCCDC;
+    --primary-darker: #9AA6B2;
+    
+    --text-dark: #333333;
+    --text-medium: #555555;
+    --text-light: #777777;
+    
+    --white: #FFFFFF;
+    --black: #000000;
+    
+    --shadow-light: rgba(154, 166, 178, 0.1);
+    --shadow-medium: rgba(154, 166, 178, 0.2);
+    --shadow-dark: rgba(154, 166, 178, 0.3);
+}
+
+/* Background Colors */
+body {
+    background-color: var(--primary-light) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Navigation */
+nav, .navbar, .nav-div, nav-div {
+    background-color: var(--white) !important;
+    border-bottom: 1px solid var(--primary-dark) !important;
+}
+
+/* Hero Sections */
+.hero, .hero-section, .contact-hero-section, .about-hero-section,
+.study-hero-section, .work-hero-section, .migrate-hero-section, .visit-hero-section {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-medium) 100%) !important;
+}
+
+/* Sections with darker backgrounds */
+.sets-apart, .testimonials, .contact-card-section, .about-journey, 
+.study-opportunity-section, .work-benefits, .migrate-benefits {
+    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%) !important;
+}
+
+/* Cards and containers */
+.card, .service-card, .country-universities, .university-logo, 
+.testimonial-card, .contact-card, .about-card, .study-card, 
+.work-card, .migrate-card, .visit-card {
+    background-color: var(--white) !important;
+    border: 1px solid var(--primary-dark) !important;
+    box-shadow: 0 10px 30px var(--shadow-light) !important;
+}
+
+/* Card hover effects */
+.card:hover, .service-card:hover, .country-universities:hover, 
+.university-logo:hover, .testimonial-card:hover, .contact-card:hover, 
+.about-card:hover, .study-card:hover, .work-card:hover, 
+.migrate-card:hover, .visit-card:hover {
+    box-shadow: 0 15px 40px var(--shadow-medium) !important;
+    border-color: var(--primary-medium) !important;
+}
+
+/* Buttons */
+.btn, button, .btn-primary, .btn-secondary, .btn-apply-now, 
+.submit-btn, .assessment-submit, .apply-btn {
+    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%) !important;
+    color: var(--text-dark) !important;
+    border: none !important;
+    box-shadow: 0 5px 15px var(--shadow-light) !important;
+}
+
+.btn:hover, button:hover, .btn-primary:hover, .btn-secondary:hover, 
+.btn-apply-now:hover, .submit-btn:hover, .assessment-submit:hover, .apply-btn:hover {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%) !important;
+    box-shadow: 0 8px 20px var(--shadow-medium) !important;
+}
+
+/* Form elements */
+input, textarea, select, .form-control {
+    background-color: var(--primary-light) !important;
+    border: 1px solid var(--primary-dark) !important;
+    color: var(--text-dark) !important;
+}
+
+input:focus, textarea:focus, select:focus, .form-control:focus {
+    border-color: var(--primary-medium) !important;
+    box-shadow: 0 0 0 3px var(--shadow-light) !important;
+}
+
+/* Footer */
+footer, .footer-section, .main-footer, .footer-container {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%) !important;
+    color: var(--text-dark) !important;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    background-color: transparent !important;
+}
+
+.footer-left p, .footer-middle p, .footer-right p,
+.footer-left a, .footer-middle a, .footer-right a,
+.footer-left h4, .footer-middle h4, .footer-right h4,
+.footer-tagline, .footer-slogan, .copyright p,
+.contact-details p, .social-links a {
+    color: var(--text-dark) !important;
+}
+
+.footer-logo {
+    filter: none !important;
+}
+
+/* Apply for Visa CTA Section */
+.apply-visa-cta {
+    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%) !important;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%) !important;
+}
+
+.mobile-nav-links a, .mobile-services-header {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark) !important;
+}
+
+/* Links */
+a {
+    color: var(--text-dark) !important;
+}
+
+a:hover {
+    color: var(--text-medium) !important;
+}
+
+/* Dropdown menus */
+.dropdown-content {
+    background-color: var(--white) !important;
+    border: 1px solid var(--primary-dark) !important;
+    box-shadow: 0 10px 30px var(--shadow-light) !important;
+}
+
+/* Swiper and sliders */
+.swiper-pagination-bullet {
+    background-color: var(--primary-darker) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-dark) !important;
+}
+
+/* Badges and tags */
+.badge, .tag, .section-badge {
+    background-color: var(--primary-medium) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Icons */
+i[class*="ri-"], .icon {
+    color: var(--primary-darker) !important;
+}
+
+/* Borders */
+.border, [class*="border-"] {
+    border-color: var(--primary-dark) !important;
+}
+
+/* Shadows */
+.shadow, [class*="shadow-"] {
+    box-shadow: 0 10px 30px var(--shadow-light) !important;
+}
+
+/* Ensure text visibility */
+p, span, li, td, th, label, input, textarea, select, button {
+    color: var(--text-dark) !important;
+}
+
+/* Remove background images */
+[style*="background-image"] {
+    background-image: none !important;
+}
+
+/* Override any !important styles */
+[style*="!important"] {
+    color: var(--text-dark) !important;
+    background-color: var(--primary-light) !important;
+}
+
+/* Ensure buttons are visible */
+button, .btn, [class*="btn-"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+}
+
+/* Fix for any dark backgrounds with dark text */
+[style*="background-color: #"] {
+    color: var(--text-dark) !important;
+}
+
+/* Fix for any light text on light backgrounds */
+[style*="color: #fff"], [style*="color: white"], [style*="color: #ffffff"] {
+    color: var(--text-dark) !important;
+}
+
+/* Ensure all elements use the Gilroy font */
+* {
+    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}

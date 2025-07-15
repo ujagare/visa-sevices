@@ -1889,7 +1889,7 @@ overflow-x: hidden;
 
 /* Footer Section - Professional Design */
 .footer-section {
-    background: url('images/hero/Footer.jpg') center center / cover no-repeat;
+    background: linear-gradient(135deg, #BCCCDC 0%, #9AA6B2 100%) !important;
     position: relative;
     width: 100%;
     height: auto;
@@ -1898,10 +1898,10 @@ overflow-x: hidden;
 
 /* Apply Visa CTA Section - Professional */
 .apply-visa-cta {
-    background: #1E3A79;
+    background: linear-gradient(135deg, #D9EAFD 0%, #BCCCDC 100%) !important;
     padding: 100px 0;
     text-align: center;
-    color: white;
+    color: #333333 !important;
     position: relative;
 }
 
@@ -1918,7 +1918,7 @@ overflow-x: hidden;
     letter-spacing: 3px;
     text-transform: uppercase;
     opacity: 0.95;
-    color: #e0e7ff;
+    color: #333333 !important;
 }
 
 .apply-visa-cta h2 {
@@ -1926,8 +1926,8 @@ overflow-x: hidden;
     font-weight: 700;
     margin-bottom: 30px;
     line-height: 1.2;
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #333333 !important;
+    text-shadow: none;
 }
 
 .apply-visa-cta p {
@@ -1936,6 +1936,7 @@ overflow-x: hidden;
     margin-bottom: 50px;
     opacity: 0.95;
     max-width: 700px;
+    color: #333333 !important;
     margin-left: auto;
     margin-right: auto;
     font-weight: 400;
@@ -1977,11 +1978,7 @@ overflow-x: hidden;
 
 /* Main Footer - Professional */
 .main-footer {
-    background: url('images/hero/Footer.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+    background: linear-gradient(135deg, #BCCCDC 0%, #9AA6B2 100%) !important;
     padding: 80px 0 40px;
     position: relative;
     color: white;
