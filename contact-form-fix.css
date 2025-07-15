@@ -1,0 +1,339 @@
+/*
+ * CONTACT FORM FIX
+ * Fix "Start Your Visa Journey Today" form styling and background
+ */
+
+/* ========================================
+   CONTACT FORM SECTION STYLING
+======================================== */
+
+/* Contact form section background */
+.contact-card-section {
+    background: linear-gradient(135deg, #F8FAFC 0%, #E0F2FE 50%, #F0F9FF 100%) !important;
+    padding: 80px 0 !important;
+    position: relative !important;
+    min-height: auto !important;
+}
+
+.contact-card-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23BCCCDC" opacity="0.3"/><circle cx="80" cy="40" r="1.5" fill="%239AA6B2" opacity="0.4"/><circle cx="40" cy="80" r="1" fill="%23BCCCDC" opacity="0.3"/></svg>') repeat;
+    z-index: 1;
+}
+
+/* Card wrapper */
+.card-wrapper {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Form heading */
+.card-wrapper h2 {
+    text-align: center !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #0369A1 !important;
+    margin-bottom: 2rem !important;
+    text-shadow: none !important;
+}
+
+/* Contact card */
+.contact-card {
+    background: #FFFFFF !important;
+    border-radius: 20px !important;
+    padding: 40px !important;
+    box-shadow: 0 20px 40px rgba(3, 105, 161, 0.1) !important;
+    border: 1px solid rgba(3, 105, 161, 0.1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0369A1 0%, #0284c7 50%, #0ea5e9 100%);
+}
+
+/* Form fields */
+.field {
+    margin-bottom: 25px !important;
+    position: relative !important;
+}
+
+.field.full {
+    grid-column: 1 / -1 !important;
+}
+
+/* Labels */
+.field label {
+    display: block !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    margin-bottom: 8px !important;
+    font-size: 0.95rem !important;
+}
+
+/* Input containers */
+.input-container {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    background: #F8FAFC !important;
+    border: 2px solid #E5E7EB !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+    overflow: hidden !important;
+}
+
+.input-container:focus-within {
+    border-color: #0369A1 !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.1) !important;
+}
+
+/* Input icons */
+.input-icon {
+    padding: 0 15px !important;
+    color: #6B7280 !important;
+    font-size: 1.1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    background: rgba(3, 105, 161, 0.05) !important;
+    height: 100% !important;
+    min-height: 50px !important;
+}
+
+.input-container:focus-within .input-icon {
+    color: #0369A1 !important;
+    background: rgba(3, 105, 161, 0.1) !important;
+}
+
+/* Input fields */
+.field input,
+.field select,
+.field textarea {
+    flex: 1 !important;
+    padding: 15px 20px !important;
+    border: none !important;
+    background: transparent !important;
+    font-size: 1rem !important;
+    color: #1a1a1a !important;
+    outline: none !important;
+    min-height: 50px !important;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: #9CA3AF !important;
+    font-style: italic !important;
+}
+
+.field select {
+    cursor: pointer !important;
+}
+
+.field textarea {
+    resize: vertical !important;
+    min-height: 100px !important;
+    padding-top: 15px !important;
+}
+
+/* File input styling */
+.file-input {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 20px !important;
+    text-align: center !important;
+    border: 2px dashed #D1D5DB !important;
+    background: #F9FAFB !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.file-input:hover {
+    border-color: #0369A1 !important;
+    background: rgba(3, 105, 161, 0.05) !important;
+}
+
+.file-input input[type="file"] {
+    position: absolute !important;
+    opacity: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    cursor: pointer !important;
+}
+
+.file-text {
+    color: #6B7280 !important;
+    font-size: 0.95rem !important;
+    margin-top: 10px !important;
+}
+
+/* Submit button */
+.btn-submit {
+    width: 100% !important;
+    background: linear-gradient(135deg, #0369A1 0%, #0284c7 100%) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    padding: 18px 30px !important;
+    border-radius: 12px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    margin-top: 30px !important;
+    text-transform: none !important;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #0284c7 0%, #0369A1 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 25px rgba(3, 105, 161, 0.3) !important;
+}
+
+.btn-submit:active {
+    transform: translateY(0) !important;
+}
+
+/* Error messages */
+.error-message {
+    color: #EF4444 !important;
+    font-size: 0.85rem !important;
+    margin-top: 5px !important;
+    display: none !important;
+}
+
+.field.error .input-container {
+    border-color: #EF4444 !important;
+    background: #FEF2F2 !important;
+}
+
+.field.error .error-message {
+    display: block !important;
+}
+
+/* Success card */
+.success-card {
+    text-align: center !important;
+    padding: 40px !important;
+    background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%) !important;
+    border-radius: 20px !important;
+    border: 2px solid #22C55E !important;
+}
+
+.success-icon {
+    font-size: 3rem !important;
+    color: #22C55E !important;
+    margin-bottom: 20px !important;
+}
+
+.success-card h3 {
+    color: #166534 !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 15px !important;
+}
+
+.success-card p {
+    color: #15803D !important;
+    margin-bottom: 25px !important;
+    line-height: 1.6 !important;
+}
+
+.btn-new-request {
+    background: #22C55E !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-new-request:hover {
+    background: #16A34A !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Small text */
+.field small {
+    color: #6B7280 !important;
+    font-size: 0.8rem !important;
+    margin-top: 5px !important;
+    display: block !important;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+    .contact-card-section {
+        padding: 60px 0 !important;
+    }
+    
+    .card-wrapper {
+        padding: 0 15px !important;
+    }
+    
+    .card-wrapper h2 {
+        font-size: 2rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .contact-card {
+        padding: 30px 20px !important;
+        border-radius: 15px !important;
+    }
+    
+    .field input,
+    .field select,
+    .field textarea {
+        padding: 12px 15px !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .input-icon {
+        padding: 0 12px !important;
+        min-height: 45px !important;
+    }
+    
+    .btn-submit {
+        padding: 15px 25px !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card-section {
+        padding: 40px 0 !important;
+    }
+    
+    .card-wrapper h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .contact-card {
+        padding: 25px 15px !important;
+    }
+    
+    .field {
+        margin-bottom: 20px !important;
+    }
+}
