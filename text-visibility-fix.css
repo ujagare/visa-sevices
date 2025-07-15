@@ -1,0 +1,239 @@
+/* 
+ * Text Visibility Fix for White Wings Visa Website
+ * Ensures all text is visible across all pages and sections
+ */
+
+/* UNIVERSAL TEXT VISIBILITY FIXES */
+
+/* Force all text to be dark and visible */
+body, html {
+    color: #1a1a1a !important;
+}
+
+/* All text elements */
+p, span, div, li, ul, ol, td, th, label, input, textarea, select, button, a, strong, b, em, i {
+    color: #1a1a1a !important;
+}
+
+/* All headings - Extra dark for emphasis */
+h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    font-weight: 600 !important;
+}
+
+/* Navigation elements */
+nav, .navbar, .nav-div, .navigation {
+    color: #1a1a1a !important;
+}
+
+nav a, .navbar a, .nav-link, .menu-item, .dropdown-item {
+    color: #1a1a1a !important;
+}
+
+nav a:hover, .navbar a:hover, .nav-link:hover, .menu-item:hover {
+    color: #2d2d2d !important;
+}
+
+/* Hero sections - All pages */
+.hero, .hero-section, .hero-content, .hero-text,
+.contact-hero-section, .about-hero-section, .study-hero-section, 
+.work-hero-section, .migrate-hero-section, .visit-hero-section {
+    color: #000000 !important;
+}
+
+.hero *, .hero-section *, .hero-content *, .hero-text *,
+.contact-hero-section *, .about-hero-section *, .study-hero-section *, 
+.work-hero-section *, .migrate-hero-section *, .visit-hero-section * {
+    color: #000000 !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Card elements */
+.card, .service-card, .feature-card, .benefit-card, .destination-card,
+.testimonial-card, .contact-card, .about-card, .study-card, 
+.work-card, .migrate-card, .visit-card {
+    color: #1a1a1a !important;
+}
+
+.card *, .service-card *, .feature-card *, .benefit-card *, .destination-card *,
+.testimonial-card *, .contact-card *, .about-card *, .study-card *, 
+.work-card *, .migrate-card *, .visit-card * {
+    color: #1a1a1a !important;
+}
+
+/* Section content */
+.section, .container, .content, .main-content, .page-content {
+    color: #1a1a1a !important;
+}
+
+.section *, .container *, .content *, .main-content *, .page-content * {
+    color: #1a1a1a !important;
+}
+
+/* Specific sections */
+.services-section, .about-section, .process-section, .faq-section,
+.cta-section, .stats-section, .features-section, .benefits-section,
+.destinations-section, .timeline, .assessment-section, .university-placements,
+.contact-form, .thank-you-section, .error-section {
+    color: #1a1a1a !important;
+}
+
+.services-section *, .about-section *, .process-section *, .faq-section *,
+.cta-section *, .stats-section *, .features-section *, .benefits-section *,
+.destinations-section *, .timeline *, .assessment-section *, .university-placements *,
+.contact-form *, .thank-you-section *, .error-section * {
+    color: #1a1a1a !important;
+}
+
+/* Button text */
+.btn, button, .btn-primary, .btn-secondary, .btn-apply-now, 
+.submit-btn, .assessment-submit, .apply-btn, input[type="submit"] {
+    color: #000000 !important;
+    font-weight: 600 !important;
+}
+
+/* Form elements */
+input, textarea, select, .form-control, .form-group label {
+    color: #1a1a1a !important;
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
+    color: #404040 !important;
+}
+
+/* Footer elements */
+footer, .footer-section, .main-footer, .footer-container {
+    color: #000000 !important;
+}
+
+footer *, .footer-section *, .main-footer *, .footer-container * {
+    color: #000000 !important;
+    font-weight: 500 !important;
+}
+
+/* Mobile menu */
+.mobile-menu, .mobile-nav-links, .mobile-services-dropdown {
+    color: #000000 !important;
+}
+
+.mobile-menu *, .mobile-nav-links *, .mobile-services-dropdown * {
+    color: #000000 !important;
+}
+
+/* Dropdown menus */
+.dropdown-content, .dropdown-menu {
+    color: #1a1a1a !important;
+}
+
+.dropdown-content *, .dropdown-menu * {
+    color: #1a1a1a !important;
+}
+
+/* Swiper/Slider content */
+.swiper-slide, .slider-content, .carousel-item {
+    color: #000000 !important;
+}
+
+.swiper-slide *, .slider-content *, .carousel-item * {
+    color: #000000 !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Lists */
+ul, ol, li {
+    color: #1a1a1a !important;
+}
+
+ul *, ol *, li * {
+    color: #1a1a1a !important;
+}
+
+/* Tables */
+table, th, td, thead, tbody, tfoot {
+    color: #1a1a1a !important;
+}
+
+/* Badges and tags */
+.badge, .tag, .section-badge, .label {
+    color: #000000 !important;
+    font-weight: 600 !important;
+}
+
+/* Icons with text */
+i[class*="ri-"], .icon {
+    color: #1a1a1a !important;
+}
+
+/* Override any white or light text */
+.text-white, .text-light, .text-muted, .text-secondary {
+    color: #1a1a1a !important;
+}
+
+/* Override inline styles */
+[style*="color: white"], [style*="color: #fff"], [style*="color: #ffffff"],
+[style*="color: rgba(255,255,255"], [style*="color: rgb(255,255,255"] {
+    color: #1a1a1a !important;
+}
+
+/* Ensure visibility on all backgrounds */
+[class*="bg-"], [style*="background-color"], [style*="background:"] {
+    color: #1a1a1a !important;
+}
+
+[class*="bg-"] *, [style*="background-color"] *, [style*="background:"] * {
+    color: #1a1a1a !important;
+}
+
+/* Special emphasis */
+strong, b, .font-weight-bold, .fw-bold, .bold {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+/* Links */
+a {
+    color: #1a1a1a !important;
+}
+
+a:hover, a:focus, a:active {
+    color: #2d2d2d !important;
+}
+
+/* Ensure all content is readable */
+.content-wrapper, .page-wrapper, .main-wrapper {
+    color: #1a1a1a !important;
+}
+
+.content-wrapper *, .page-wrapper *, .main-wrapper * {
+    color: #1a1a1a !important;
+}
+
+/* Fix any remaining issues */
+* {
+    color: #1a1a1a !important;
+}
+
+/* Override for headings to be extra dark */
+h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+}
+
+/* Override for buttons to be visible */
+button, .btn, [class*="btn-"] {
+    color: #000000 !important;
+}
+
+/* Ensure text is never transparent */
+* {
+    opacity: 1 !important;
+}
+
+/* Remove any text shadows that might hide text */
+* {
+    text-shadow: none !important;
+}
+
+/* Add text shadow only for hero sections */
+.hero *, .hero-section *, .swiper-slide * {
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
+}

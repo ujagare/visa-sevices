@@ -56,14 +56,15 @@ body, html, * {
     --primary-medium: #D9EAFD;
     --primary-dark: #BCCCDC;
     --primary-darker: #9AA6B2;
-    
-    --text-dark: #333333;
-    --text-medium: #555555;
-    --text-light: #777777;
-    
+
+    --text-dark: #1a1a1a;
+    --text-medium: #2d2d2d;
+    --text-light: #404040;
+    --text-contrast: #000000;
+
     --white: #FFFFFF;
     --black: #000000;
-    
+
     --shadow-light: rgba(154, 166, 178, 0.1);
     --shadow-medium: rgba(154, 166, 178, 0.2);
     --shadow-dark: rgba(154, 166, 178, 0.3);
@@ -262,4 +263,280 @@ button, .btn, [class*="btn-"] {
 /* Ensure all elements use the Gilroy font */
 * {
     font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* COMPREHENSIVE TEXT VISIBILITY FIXES */
+
+/* All text elements - Force dark color for visibility */
+p, span, div, li, td, th, label, input, textarea, select, button, a {
+    color: var(--text-dark) !important;
+}
+
+/* Headings - Strong contrast */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-contrast) !important;
+    font-weight: 600 !important;
+}
+
+/* Navigation text */
+nav a, .navbar a, .nav-link, .menu-item {
+    color: var(--text-dark) !important;
+}
+
+nav a:hover, .navbar a:hover, .nav-link:hover {
+    color: var(--text-medium) !important;
+}
+
+/* Hero section text */
+.hero h1, .hero h2, .hero p, .hero span,
+.hero-section h1, .hero-section h2, .hero-section p, .hero-section span,
+.contact-hero-section h1, .contact-hero-section h2, .contact-hero-section p, .contact-hero-section span,
+.about-hero-section h1, .about-hero-section h2, .about-hero-section p, .about-hero-section span,
+.study-hero-section h1, .study-hero-section h2, .study-hero-section p, .study-hero-section span,
+.work-hero-section h1, .work-hero-section h2, .work-hero-section p, .work-hero-section span,
+.migrate-hero-section h1, .migrate-hero-section h2, .migrate-hero-section p, .migrate-hero-section span,
+.visit-hero-section h1, .visit-hero-section h2, .visit-hero-section p, .visit-hero-section span {
+    color: var(--text-contrast) !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Card text */
+.card p, .card h1, .card h2, .card h3, .card h4, .card h5, .card h6, .card span, .card a,
+.service-card p, .service-card h1, .service-card h2, .service-card h3, .service-card h4, .service-card h5, .service-card h6, .service-card span, .service-card a,
+.country-universities p, .country-universities h1, .country-universities h2, .country-universities h3, .country-universities h4, .country-universities h5, .country-universities h6, .country-universities span, .country-universities a,
+.university-logo p, .university-logo h1, .university-logo h2, .university-logo h3, .university-logo h4, .university-logo h5, .university-logo h6, .university-logo span, .university-logo a,
+.testimonial-card p, .testimonial-card h1, .testimonial-card h2, .testimonial-card h3, .testimonial-card h4, .testimonial-card h5, .testimonial-card h6, .testimonial-card span, .testimonial-card a,
+.contact-card p, .contact-card h1, .contact-card h2, .contact-card h3, .contact-card h4, .contact-card h5, .contact-card h6, .contact-card span, .contact-card a,
+.about-card p, .about-card h1, .about-card h2, .about-card h3, .about-card h4, .about-card h5, .about-card h6, .about-card span, .about-card a,
+.study-card p, .study-card h1, .study-card h2, .study-card h3, .study-card h4, .study-card h5, .study-card h6, .study-card span, .study-card a,
+.work-card p, .work-card h1, .work-card h2, .work-card h3, .work-card h4, .work-card h5, .work-card h6, .work-card span, .work-card a,
+.migrate-card p, .migrate-card h1, .migrate-card h2, .migrate-card h3, .migrate-card h4, .migrate-card h5, .migrate-card h6, .migrate-card span, .migrate-card a,
+.visit-card p, .visit-card h1, .visit-card h2, .visit-card h3, .visit-card h4, .visit-card h5, .visit-card h6, .visit-card span, .visit-card a {
+    color: var(--text-dark) !important;
+}
+
+/* Section text */
+.section p, .section h1, .section h2, .section h3, .section h4, .section h5, .section h6, .section span, .section a,
+.sets-apart p, .sets-apart h1, .sets-apart h2, .sets-apart h3, .sets-apart h4, .sets-apart h5, .sets-apart h6, .sets-apart span, .sets-apart a,
+.testimonials p, .testimonials h1, .testimonials h2, .testimonials h3, .testimonials h4, .testimonials h5, .testimonials h6, .testimonials span, .testimonials a,
+.contact-card-section p, .contact-card-section h1, .contact-card-section h2, .contact-card-section h3, .contact-card-section h4, .contact-card-section h5, .contact-card-section h6, .contact-card-section span, .contact-card-section a,
+.about-journey p, .about-journey h1, .about-journey h2, .about-journey h3, .about-journey h4, .about-journey h5, .about-journey h6, .about-journey span, .about-journey a,
+.study-opportunity-section p, .study-opportunity-section h1, .study-opportunity-section h2, .study-opportunity-section h3, .study-opportunity-section h4, .study-opportunity-section h5, .study-opportunity-section h6, .study-opportunity-section span, .study-opportunity-section a,
+.work-benefits p, .work-benefits h1, .work-benefits h2, .work-benefits h3, .work-benefits h4, .work-benefits h5, .work-benefits h6, .work-benefits span, .work-benefits a,
+.migrate-benefits p, .migrate-benefits h1, .migrate-benefits h2, .migrate-benefits h3, .migrate-benefits h4, .migrate-benefits h5, .migrate-benefits h6, .migrate-benefits span, .migrate-benefits a {
+    color: var(--text-dark) !important;
+}
+
+/* Button text */
+.btn, button, .btn-primary, .btn-secondary, .btn-apply-now,
+.submit-btn, .assessment-submit, .apply-btn {
+    color: var(--text-contrast) !important;
+    font-weight: 600 !important;
+}
+
+/* Form text */
+input, textarea, select, .form-control {
+    color: var(--text-dark) !important;
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
+    color: var(--text-medium) !important;
+}
+
+/* Footer text - Enhanced visibility */
+.footer-left p, .footer-middle p, .footer-right p,
+.footer-left a, .footer-middle a, .footer-right a,
+.footer-left h4, .footer-middle h4, .footer-right h4,
+.footer-tagline, .footer-slogan, .copyright p,
+.contact-details p, .social-links a {
+    color: var(--text-contrast) !important;
+    font-weight: 500 !important;
+}
+
+/* Mobile menu text */
+.mobile-nav-links a, .mobile-services-header {
+    color: var(--text-contrast) !important;
+    font-weight: 500 !important;
+}
+
+/* Dropdown text */
+.dropdown-content a {
+    color: var(--text-dark) !important;
+}
+
+/* Badge and tag text */
+.badge, .tag, .section-badge {
+    color: var(--text-contrast) !important;
+    font-weight: 600 !important;
+}
+
+/* List items */
+ul li, ol li {
+    color: var(--text-dark) !important;
+}
+
+/* Table text */
+table, th, td {
+    color: var(--text-dark) !important;
+}
+
+/* Specific fixes for light backgrounds */
+[style*="background-color: #F8FAFC"] *,
+[style*="background-color: #D9EAFD"] *,
+[style*="background: #F8FAFC"] *,
+[style*="background: #D9EAFD"] * {
+    color: var(--text-contrast) !important;
+}
+
+/* Override any white or light text */
+[style*="color: #fff"], [style*="color: white"], [style*="color: #ffffff"],
+[style*="color: #f8f9fa"], [style*="color: #e9ecef"], [style*="color: #dee2e6"] {
+    color: var(--text-contrast) !important;
+}
+
+/* Ensure visibility on all backgrounds */
+.text-white, .text-light, .text-muted {
+    color: var(--text-contrast) !important;
+}
+
+/* Strong emphasis for important text */
+strong, b, .font-weight-bold, .fw-bold {
+    color: var(--text-contrast) !important;
+    font-weight: 700 !important;
+}
+
+/* SPECIFIC PROBLEM AREA FIXES */
+
+/* Swiper slider text */
+.swiper-slide h1, .swiper-slide h2, .swiper-slide h3, .swiper-slide h4, .swiper-slide h5, .swiper-slide h6,
+.swiper-slide p, .swiper-slide span, .swiper-slide a {
+    color: var(--text-contrast) !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Service section text */
+.services-section h1, .services-section h2, .services-section h3, .services-section h4, .services-section h5, .services-section h6,
+.services-section p, .services-section span, .services-section a {
+    color: var(--text-dark) !important;
+}
+
+/* About section text */
+.about-section h1, .about-section h2, .about-section h3, .about-section h4, .about-section h5, .about-section h6,
+.about-section p, .about-section span, .about-section a {
+    color: var(--text-dark) !important;
+}
+
+/* Process section text */
+.process-section h1, .process-section h2, .process-section h3, .process-section h4, .process-section h5, .process-section h6,
+.process-section p, .process-section span, .process-section a {
+    color: var(--text-dark) !important;
+}
+
+/* FAQ section text */
+.faq-section h1, .faq-section h2, .faq-section h3, .faq-section h4, .faq-section h5, .faq-section h6,
+.faq-section p, .faq-section span, .faq-section a {
+    color: var(--text-dark) !important;
+}
+
+/* CTA section text */
+.cta-section h1, .cta-section h2, .cta-section h3, .cta-section h4, .cta-section h5, .cta-section h6,
+.cta-section p, .cta-section span, .cta-section a {
+    color: var(--text-contrast) !important;
+}
+
+/* Stats section text */
+.stats-section h1, .stats-section h2, .stats-section h3, .stats-section h4, .stats-section h5, .stats-section h6,
+.stats-section p, .stats-section span, .stats-section a {
+    color: var(--text-dark) !important;
+}
+
+/* Features section text */
+.features-section h1, .features-section h2, .features-section h3, .features-section h4, .features-section h5, .features-section h6,
+.features-section p, .features-section span, .features-section a {
+    color: var(--text-dark) !important;
+}
+
+/* Benefits section text */
+.benefits-section h1, .benefits-section h2, .benefits-section h3, .benefits-section h4, .benefits-section h5, .benefits-section h6,
+.benefits-section p, .benefits-section span, .benefits-section a {
+    color: var(--text-dark) !important;
+}
+
+/* Destinations section text */
+.destinations-section h1, .destinations-section h2, .destinations-section h3, .destinations-section h4, .destinations-section h5, .destinations-section h6,
+.destinations-section p, .destinations-section span, .destinations-section a {
+    color: var(--text-dark) !important;
+}
+
+/* Timeline text */
+.timeline h1, .timeline h2, .timeline h3, .timeline h4, .timeline h5, .timeline h6,
+.timeline p, .timeline span, .timeline a {
+    color: var(--text-dark) !important;
+}
+
+/* Assessment form text */
+.assessment-section h1, .assessment-section h2, .assessment-section h3, .assessment-section h4, .assessment-section h5, .assessment-section h6,
+.assessment-section p, .assessment-section span, .assessment-section a {
+    color: var(--text-dark) !important;
+}
+
+/* University placements text */
+.university-placements h1, .university-placements h2, .university-placements h3, .university-placements h4, .university-placements h5, .university-placements h6,
+.university-placements p, .university-placements span, .university-placements a {
+    color: var(--text-contrast) !important;
+}
+
+/* Contact form text */
+.contact-form h1, .contact-form h2, .contact-form h3, .contact-form h4, .contact-form h5, .contact-form h6,
+.contact-form p, .contact-form span, .contact-form a, .contact-form label {
+    color: var(--text-dark) !important;
+}
+
+/* Thank you page text */
+.thank-you-section h1, .thank-you-section h2, .thank-you-section h3, .thank-you-section h4, .thank-you-section h5, .thank-you-section h6,
+.thank-you-section p, .thank-you-section span, .thank-you-section a {
+    color: var(--text-dark) !important;
+}
+
+/* Error page text */
+.error-section h1, .error-section h2, .error-section h3, .error-section h4, .error-section h5, .error-section h6,
+.error-section p, .error-section span, .error-section a {
+    color: var(--text-dark) !important;
+}
+
+/* Override any problematic inline styles */
+[style*="color: rgba(255,255,255"] {
+    color: var(--text-contrast) !important;
+}
+
+[style*="color: rgba(0,0,0,0"] {
+    color: var(--text-contrast) !important;
+}
+
+/* Ensure all content is visible */
+.content, .main-content, .page-content {
+    color: var(--text-dark) !important;
+}
+
+/* Fix any remaining visibility issues */
+.invisible-text, .hidden-text, .fade-text {
+    color: var(--text-contrast) !important;
+    opacity: 1 !important;
+}
+
+/* Force visibility for all text elements */
+* {
+    color: var(--text-dark) !important;
+}
+
+/* Override for headings to be darker */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-contrast) !important;
+}
+
+/* Override for buttons to be visible */
+button, .btn, [class*="btn-"] {
+    color: var(--text-contrast) !important;
+    background-color: var(--primary-medium) !important;
+    border: 1px solid var(--primary-dark) !important;
 }
