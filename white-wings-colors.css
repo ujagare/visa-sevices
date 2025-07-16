@@ -1,4 +1,4 @@
-/* 
+
  * White Wings Visa - Custom Color Scheme
  * Colors: #F8FAFC, #D9EAFD, #BCCCDC, #9AA6B2
  * Font: Gilroy
@@ -60,7 +60,7 @@ body, html, * {
     --text-dark: #1a1a1a;
     --text-medium: #2d2d2d;
     --text-light: #404040;
-    --text-contrast: #000000;
+
 
     --white: #FFFFFF;
     --black: #000000;
@@ -112,20 +112,7 @@ nav, .navbar, .nav-div, nav-div {
     border-color: var(--primary-medium) !important;
 }
 
-/* Buttons */
-.btn, button, .btn-primary, .btn-secondary, .btn-apply-now, 
-.submit-btn, .assessment-submit, .apply-btn {
-    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%) !important;
-    color: var(--text-dark) !important;
-    border: none !important;
-    box-shadow: 0 5px 15px var(--shadow-light) !important;
-}
 
-.btn:hover, button:hover, .btn-primary:hover, .btn-secondary:hover, 
-.btn-apply-now:hover, .submit-btn:hover, .assessment-submit:hover, .apply-btn:hover {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%) !important;
-    box-shadow: 0 8px 20px var(--shadow-medium) !important;
-}
 
 /* Form elements */
 input, textarea, select, .form-control {
@@ -195,6 +182,7 @@ a:hover {
     background-color: var(--white) !important;
     border: 1px solid var(--primary-dark) !important;
     box-shadow: 0 10px 30px var(--shadow-light) !important;
+    color:(var(--text-light))
 }
 
 /* Swiper and sliders */
@@ -212,11 +200,11 @@ a:hover {
     color: var(--text-dark) !important;
 }
 
-/* Icons */
-i[class*="ri-"], .icon {
-    color: var(--primary-darker) !important;
-}
 
+i[class*=".stars"],
+.stars {
+    color: var(--yellow) !important;
+}
 /* Borders */
 .border, [class*="border-"] {
     border-color: var(--primary-dark) !important;
@@ -227,10 +215,7 @@ i[class*="ri-"], .icon {
     box-shadow: 0 10px 30px var(--shadow-light) !important;
 }
 
-/* Ensure text visibility */
-p, span, li, td, th, label, input, textarea, select, button {
-    color: var(--text-dark) !important;
-}
+
 
 /* Remove background images */
 [style*="background-image"] {
@@ -243,12 +228,7 @@ p, span, li, td, th, label, input, textarea, select, button {
     background-color: var(--primary-light) !important;
 }
 
-/* Ensure buttons are visible */
-button, .btn, [class*="btn-"] {
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: inline-block !important;
-}
+
 
 /* Fix for any dark backgrounds with dark text */
 [style*="background-color: #"] {
@@ -267,16 +247,9 @@ button, .btn, [class*="btn-"] {
 
 /* COMPREHENSIVE TEXT VISIBILITY FIXES */
 
-/* All text elements - Force dark color for visibility */
-p, span, div, li, td, th, label, input, textarea, select, button, a {
-    color: var(--text-dark) !important;
-}
 
-/* Headings - Strong contrast */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--text-contrast) !important;
-    font-weight: 600 !important;
-}
+
+
 
 /* Navigation text */
 nav a, .navbar a, .nav-link, .menu-item {
@@ -287,18 +260,7 @@ nav a:hover, .navbar a:hover, .nav-link:hover {
     color: var(--text-medium) !important;
 }
 
-/* Hero section text */
-.hero h1, .hero h2, .hero p, .hero span,
-.hero-section h1, .hero-section h2, .hero-section p, .hero-section span,
-.contact-hero-section h1, .contact-hero-section h2, .contact-hero-section p, .contact-hero-section span,
-.about-hero-section h1, .about-hero-section h2, .about-hero-section p, .about-hero-section span,
-.study-hero-section h1, .study-hero-section h2, .study-hero-section p, .study-hero-section span,
-.work-hero-section h1, .work-hero-section h2, .work-hero-section p, .work-hero-section span,
-.migrate-hero-section h1, .migrate-hero-section h2, .migrate-hero-section p, .migrate-hero-section span,
-.visit-hero-section h1, .visit-hero-section h2, .visit-hero-section p, .visit-hero-section span {
-    color: var(--text-contrast) !important;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5) !important;
-}
+
 
 /* Card text */
 .card p, .card h1, .card h2, .card h3, .card h4, .card h5, .card h6, .card span, .card a,
@@ -327,12 +289,7 @@ nav a:hover, .navbar a:hover, .nav-link:hover {
     color: var(--text-dark) !important;
 }
 
-/* Button text */
-.btn, button, .btn-primary, .btn-secondary, .btn-apply-now,
-.submit-btn, .assessment-submit, .apply-btn {
-    color: var(--text-contrast) !important;
-    font-weight: 600 !important;
-}
+
 
 /* Form text */
 input, textarea, select, .form-control {
@@ -343,32 +300,16 @@ input::placeholder, textarea::placeholder, select::placeholder {
     color: var(--text-medium) !important;
 }
 
-/* Footer text - Enhanced visibility */
-.footer-left p, .footer-middle p, .footer-right p,
-.footer-left a, .footer-middle a, .footer-right a,
-.footer-left h4, .footer-middle h4, .footer-right h4,
-.footer-tagline, .footer-slogan, .copyright p,
-.contact-details p, .social-links a {
-    color: var(--text-contrast) !important;
-    font-weight: 500 !important;
-}
 
-/* Mobile menu text */
-.mobile-nav-links a, .mobile-services-header {
-    color: var(--text-contrast) !important;
-    font-weight: 500 !important;
-}
+
+
 
 /* Dropdown text */
 .dropdown-content a {
     color: var(--text-dark) !important;
 }
 
-/* Badge and tag text */
-.badge, .tag, .section-badge {
-    color: var(--text-contrast) !important;
-    font-weight: 600 !important;
-}
+
 
 /* List items */
 ul li, ol li {
@@ -380,39 +321,13 @@ table, th, td {
     color: var(--text-dark) !important;
 }
 
-/* Specific fixes for light backgrounds */
-[style*="background-color: #F8FAFC"] *,
-[style*="background-color: #D9EAFD"] *,
-[style*="background: #F8FAFC"] *,
-[style*="background: #D9EAFD"] * {
-    color: var(--text-contrast) !important;
-}
 
-/* Override any white or light text */
-[style*="color: #fff"], [style*="color: white"], [style*="color: #ffffff"],
-[style*="color: #f8f9fa"], [style*="color: #e9ecef"], [style*="color: #dee2e6"] {
-    color: var(--text-contrast) !important;
-}
 
-/* Ensure visibility on all backgrounds */
-.text-white, .text-light, .text-muted {
-    color: var(--text-contrast) !important;
-}
 
-/* Strong emphasis for important text */
-strong, b, .font-weight-bold, .fw-bold {
-    color: var(--text-contrast) !important;
-    font-weight: 700 !important;
-}
 
 /* SPECIFIC PROBLEM AREA FIXES */
 
-/* Swiper slider text */
-.swiper-slide h1, .swiper-slide h2, .swiper-slide h3, .swiper-slide h4, .swiper-slide h5, .swiper-slide h6,
-.swiper-slide p, .swiper-slide span, .swiper-slide a {
-    color: var(--text-contrast) !important;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5) !important;
-}
+
 
 /* Service section text */
 .services-section h1, .services-section h2, .services-section h3, .services-section h4, .services-section h5, .services-section h6,
@@ -438,11 +353,7 @@ strong, b, .font-weight-bold, .fw-bold {
     color: var(--text-dark) !important;
 }
 
-/* CTA section text */
-.cta-section h1, .cta-section h2, .cta-section h3, .cta-section h4, .cta-section h5, .cta-section h6,
-.cta-section p, .cta-section span, .cta-section a {
-    color: var(--text-contrast) !important;
-}
+
 
 /* Stats section text */
 .stats-section h1, .stats-section h2, .stats-section h3, .stats-section h4, .stats-section h5, .stats-section h6,
@@ -480,11 +391,7 @@ strong, b, .font-weight-bold, .fw-bold {
     color: var(--text-dark) !important;
 }
 
-/* University placements text */
-.university-placements h1, .university-placements h2, .university-placements h3, .university-placements h4, .university-placements h5, .university-placements h6,
-.university-placements p, .university-placements span, .university-placements a {
-    color: var(--text-contrast) !important;
-}
+
 
 /* Contact form text */
 .contact-form h1, .contact-form h2, .contact-form h3, .contact-form h4, .contact-form h5, .contact-form h6,
@@ -505,38 +412,39 @@ strong, b, .font-weight-bold, .fw-bold {
 }
 
 /* Override any problematic inline styles */
-[style*="color: rgba(255,255,255"] {
+/* [style*="color: rgba(255,255,255"] {
     color: var(--text-contrast) !important;
-}
+} */
 
-[style*="color: rgba(0,0,0,0"] {
+/* [style*="color: rgba(0,0,0,0"] {
     color: var(--text-contrast) !important;
-}
+} */
 
 /* Ensure all content is visible */
-.content, .main-content, .page-content {
+/* .content, .main-content, .page-content {
     color: var(--text-dark) !important;
-}
+} */
 
 /* Fix any remaining visibility issues */
-.invisible-text, .hidden-text, .fade-text {
+/* .invisible-text, .hidden-text, .fade-text {
     color: var(--text-contrast) !important;
     opacity: 1 !important;
-}
+} */
 
 /* Force visibility for all text elements */
-* {
+/* * {
     color: var(--text-dark) !important;
-}
+} */
 
 /* Override for headings to be darker */
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
     color: var(--text-contrast) !important;
-}
+} */
 
 /* Override for buttons to be visible */
-button, .btn, [class*="btn-"] {
+/* button, .btn, [class*="btn-"] {
     color: var(--text-contrast) !important;
     background-color: var(--primary-medium) !important;
     border: 1px solid var(--primary-dark) !important;
+ 
 }
