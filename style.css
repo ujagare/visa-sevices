@@ -2246,7 +2246,7 @@ ul li a:hover {
 }
 
 .dropdown-content a {
-    color: #1e3a8a !important;
+    color: #0369A1 !important;
     padding: 18px 25px;
     text-decoration: none;
     display: flex;
@@ -2332,7 +2332,7 @@ ul li a:hover {
 }
 
 .dropdown-content a:hover strong {
-    color: ;
+    color: #222;
     transform: translateX(2px);
 }
 
