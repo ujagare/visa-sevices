@@ -83,18 +83,47 @@
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Override any conflicting styles */
-.premium-cta-section h1,
-.premium-cta-section h2,
-.premium-cta-section h3,
-.premium-cta-section h4,
-.premium-cta-section h5,
-.premium-cta-section h6,
-.premium-cta-section p,
-.premium-cta-section span,
-.premium-cta-section div,
-.premium-cta-section a {
+/* Override any conflicting styles - ONLY for left side content */
+.premium-cta-content h1,
+.premium-cta-content h2,
+.premium-cta-content h3,
+.premium-cta-content h4,
+.premium-cta-content h5,
+.premium-cta-content h6,
+.premium-cta-content p,
+.premium-cta-content span,
+.premium-cta-content div,
+.premium-cta-content a {
     color: #FFFFFF !important;
+}
+
+/* Form text visibility - RIGHT SIDE FORM */
+.premium-cta-form h3 {
+    color: #111827 !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+}
+
+.premium-cta-form p {
+    color: #4b5563 !important;
+    text-align: center !important;
+    margin-bottom: 25px !important;
+    font-size: 1rem !important;
+}
+
+.premium-cta-form * {
+    color: #111827 !important;
+}
+
+.premium-cta-form input,
+.premium-cta-form button {
+    color: #111827 !important;
+}
+
+.premium-cta-form button {
+    color: #FFFFFF !important;
+    background: #0369A1 !important;
 }
 
 /* Specific text elements */
@@ -105,6 +134,19 @@
 /* Ensure all text in premium features is white */
 .premium-feature * {
     color: #FFFFFF !important;
+}
+
+/* Form heading and description - Make sure they are visible */
+.premium-cta-form h3 {
+    color: #111827 !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+}
+
+.premium-cta-form > p {
+    color: #4b5563 !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
 }
 
 /* Mobile responsiveness */
