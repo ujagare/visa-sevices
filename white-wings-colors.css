@@ -91,7 +91,6 @@ nav, .navbar, .nav-div, nav-div {
 /* Sections with darker backgrounds */
 .sets-apart, .testimonials, .contact-card-section, .about-journey, 
 .study-opportunity-section, .work-benefits, .migrate-benefits {
-    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%) !important;
 }
 
 /* Cards and containers */
@@ -224,7 +223,6 @@ i[class*=".stars"],
 /* Override any !important styles */
 [style*="!important"] {
     color: var(--text-dark) !important;
-    background-color: var(--primary-light) !important;
 }
 
 
@@ -282,7 +280,7 @@ nav a:hover, .navbar a:hover, .nav-link:hover {
 }
 
 /* Section text */
-.section p, .section h1, .section h2, .section h3, .section h4, .section h5, .section h6, .section span, .section a,
+.section p, .section h1,  .section h3, .section h4, .section h5, .section h6, .section span, .section a,
 .sets-apart p, .sets-apart h1, .sets-apart h2, .sets-apart h3, .sets-apart h4, .sets-apart h5, .sets-apart h6, .sets-apart span, .sets-apart a,
 .testimonials p, .testimonials h1, .testimonials h2, .testimonials h3, .testimonials h4, .testimonials h5, .testimonials h6, .testimonials span, .testimonials a,
 .contact-card-section p, .contact-card-section h1, .contact-card-section h2, .contact-card-section h3, .contact-card-section h4, .contact-card-section h5, .contact-card-section h6, .contact-card-section span, .contact-card-section a,

@@ -49,7 +49,8 @@
 
 /* All icons use navy blue color */
 .destination-feature i {
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    background: #A1AEBB;
+    color: #222;
 }
 
 /* Feature count badge */

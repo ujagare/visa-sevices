@@ -134,7 +134,7 @@
 .service-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    background:#A1AEBB;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -260,7 +260,7 @@
 
 .service-btn:hover {
     gap: 12px;
-    background: var(--primary);
+    background: var(--primary-light);
     color: #fff;
     transform: translateY(-2px);
     box-shadow: var(--shadow-sm);

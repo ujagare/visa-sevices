@@ -38,7 +38,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary));
+    background:#A1AEBB;
     background-size: 200% 100%;
     border-radius: 3px;
     animation: gradientMove 3s infinite linear;
@@ -60,7 +60,7 @@
     transform: translateX(-50%);
     width: 80%;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    background: #A1AEBB;
     border-radius: 4px;
     z-index: 1;
 }
@@ -145,8 +145,8 @@
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    color: #fff;
+    background: #A1AEBB;
+    color: #222;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -176,7 +176,7 @@
 
 .process-step-icon i {
     font-size: 36px;
-    color: var(--primary);
+    color: #222;
     transition: all 0.4s ease;
 }
 
@@ -238,7 +238,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    background: #A1AEBB;
     color: #fff;
     padding: 15px 30px;
     border-radius: 50px;

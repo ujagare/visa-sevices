@@ -2,27 +2,27 @@
 
 /* Company Introduction Section */
 .intro-text h2 {
-    color: navy;
+    color: #222;
 }
 
 /* Mission & Vision Section */
 .section-header h2 {
-    color: navy;
+    color: #222;
 }
 
 /* Core Values Section */
 .values-container .section-header h2 {
-    color: navy;
+    color: #222;
 }
 
 /* Timeline Section */
 .timeline-container .section-header h2 {
-    color: navy;
+    color: #222;
 }
 
 /* Team Section */
 .team-container .section-header h2 {
-    color: navy;
+    color: #222;
 }
 
 /* Make all h3 headings navy too */
@@ -30,5 +30,5 @@
 .value-card h4,
 .timeline-content h4,
 .member-info h4 {
-    color: navy;
+    color: #222;
 }

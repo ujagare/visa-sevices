@@ -1,0 +1,206 @@
+/*
+ * WORK OPPORTUNITY CARDS - ENHANCED IMAGES
+ * Better image styling and visual enhancements for work opportunity cards
+ */
+
+/* Enhanced Work Destination Cards - Image Focus Only */
+.work-destination-card {
+    border-radius: 20px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.4s ease !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.work-destination-card:hover {
+    transform: translateY(-15px) !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Enhanced Destination Header with Better Images */
+.work-destination-card .destination-header {
+    height: 200px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    padding: 25px !important;
+    border-radius: 20px 20px 0 0 !important;
+}
+
+.work-destination-card .destination-header::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)) !important;
+    z-index: 1 !important;
+}
+
+/* Enhanced Destination Icon - Keep Original Colors */
+.work-destination-card .destination-icon {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 3 !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.work-destination-card .destination-icon i {
+    font-size: 1.5rem !important;
+}
+
+/* Enhanced Country Title in Header - Keep Original Colors */
+.work-destination-card .destination-header h3 {
+    font-size: 1.8rem !important;
+    margin: 0 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+    z-index: 2 !important;
+    position: relative !important;
+}
+
+/* Enhanced Flag Positioning */
+.work-destination-card .destination-flag {
+    position: absolute !important;
+    top: -15px !important;
+    left: 25px !important;
+    background: white !important;
+    padding: 8px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+    z-index: 4 !important;
+    width: 60px !important;
+    height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.work-destination-card .destination-flag img {
+    width: 35px !important;
+    height: auto !important;
+    border-radius: 3px !important;
+}
+
+/* Enhanced Content Area */
+.work-destination-card .destination-content {
+    padding: 30px 25px 25px !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Enhanced Feature Tags - Keep Original Colors */
+.work-destination-card .destination-features {
+    margin-top: 10px !important;
+}
+
+.work-destination-card .feature-tag {
+    border-radius: 15px !important;
+    transition: all 0.3s ease !important;
+}
+
+.work-destination-card:hover .feature-tag {
+    transform: translateY(-2px) !important;
+}
+
+/* Enhanced Description - Keep Original Colors */
+.work-destination-card p {
+    line-height: 1.6 !important;
+    font-size: 0.95rem !important;
+}
+
+/* Enhanced Button - Keep Original Colors */
+.work-destination-card .destination-btn {
+    border-radius: 25px !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.work-destination-card .destination-btn:hover {
+    transform: translateY(-2px) !important;
+}
+
+.work-destination-card .destination-btn i {
+    font-size: 1rem !important;
+    transition: transform 0.3s ease !important;
+}
+
+.work-destination-card .destination-btn:hover i {
+    transform: translateX(3px) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .work-destinations-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 25px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-destinations-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    .work-destination-card .destination-header {
+        height: 180px !important;
+        padding: 20px !important;
+    }
+    
+    .work-destination-card .destination-header h3 {
+        font-size: 1.5rem !important;
+    }
+    
+    .work-destination-card .destination-content {
+        padding: 25px 20px 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-destination-card .destination-header {
+        height: 160px !important;
+        padding: 15px !important;
+    }
+    
+    .work-destination-card .destination-header h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    .work-destination-card .destination-flag {
+        width: 50px !important;
+        height: 50px !important;
+        top: -12px !important;
+        left: 20px !important;
+    }
+    
+    .work-destination-card .destination-flag img {
+        width: 28px !important;
+    }
+    
+    .work-destination-card .destination-icon {
+        width: 40px !important;
+        height: 40px !important;
+        top: 15px !important;
+        right: 15px !important;
+    }
+    
+    .work-destination-card .destination-icon i {
+        font-size: 1.2rem !important;
+    }
+}

@@ -122,8 +122,8 @@
 }
 
 .premium-cta-form button {
-    color: #FFFFFF !important;
-    background: #0369A1 !important;
+    color: #222 !important;
+    background: #A9B6C4 !important;
 }
 
 /* Specific text elements */
@@ -149,40 +149,144 @@
     opacity: 1 !important;
 }
 
-/* Mobile responsiveness */
+/* Mobile responsiveness - Maintain all changes */
 @media (max-width: 768px) {
+    .premium-cta-section {
+        padding: 80px 0 !important;
+        min-height: auto !important;
+    }
+
+    .premium-cta-container {
+        flex-direction: column !important;
+        gap: 40px !important;
+        padding: 0 15px !important;
+    }
+
+    .premium-cta-content {
+        padding-right: 0 !important;
+        text-align: center !important;
+        margin-bottom: 0 !important;
+    }
+
     .premium-cta-section h2 {
         font-size: 2.5rem !important;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+        margin-bottom: 15px !important;
     }
-    
+
     .premium-cta-section p {
         font-size: 1.1rem !important;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+        margin-bottom: 25px !important;
     }
-    
+
     .premium-feature span {
         font-size: 0.9rem !important;
+    }
+
+    .premium-cta-features {
+        justify-content: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Form maintains your changes and full visibility */
+    .premium-cta-form {
+        width: 100% !important;
+        height: 100%;
+        max-width: 500px !important;
+        margin: 0 auto !important;
+        padding: 30px 20px !important;
+        border-radius: 15px !important;
+        position: relative !important;
+        z-index: 10 !important;
+    }
+
+    .premium-cta-form h3 {
+        color: #111827 !important;
+        font-size: 1.6rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .premium-cta-form p {
+        color: #4b5563 !important;
+        font-size: 0.95rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    .premium-cta-form button {
+        color: #222 !important;
+        background: #A9B6C4 !important;
+        width: 100% !important;
+        padding: 15px !important;
+        font-size: 1rem !important;
+        border-radius: 8px !important;
+    }
+
+    /* Ensure form inputs are visible */
+    .premium-form-row {
+        margin-bottom: 15px !important;
+    }
+
+    .premium-input {
+        width: 100% !important;
+        padding: 12px 15px !important;
+        font-size: 1rem !important;
     }
 }
 
 @media (max-width: 480px) {
+    .premium-cta-section {
+        padding: 60px 0 !important;
+    }
+
+    .premium-cta-container {
+        padding: 0 10px !important;
+    }
+
     .premium-cta-section h2 {
         font-size: 2rem !important;
+        line-height: 1.2 !important;
     }
-    
+
     .premium-cta-section p {
         font-size: 1rem !important;
+        line-height: 1.5 !important;
     }
-    
+
     .premium-cta-features {
         flex-direction: column !important;
         align-items: center !important;
+        gap: 10px !important;
     }
-    
+
     .premium-feature {
         width: 100% !important;
         max-width: 250px !important;
         justify-content: center !important;
+        padding: 8px 15px !important;
+    }
+
+    /* Form full visibility on small screens */
+    .premium-cta-form {
+        padding: 25px 15px !important;
+        margin: 0 5px !important;
+    }
+
+    .premium-cta-form h3 {
+        font-size: 1.4rem !important;
+    }
+
+    .premium-cta-form p {
+        font-size: 0.9rem !important;
+    }
+
+    .premium-cta-form button {
+        padding: 12px !important;
+        font-size: 0.95rem !important;
+    }
+
+    .premium-input {
+        padding: 10px 12px !important;
+        font-size: 0.95rem !important;
     }
 }

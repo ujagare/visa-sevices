@@ -16,8 +16,8 @@
 .btn-apply {
     padding: 0.7rem 1.5rem !important;
     border-radius: 20px !important;
-    background-color: navy !important;
-    color: white !important;
+    background-color:#A9B6C4 !important;
+    color: #222 !important;
     cursor: pointer !important;
     font-size: 1rem !important;
     font-weight: 500 !important;
@@ -28,11 +28,12 @@
     align-items: center !important;
     gap: 8px !important;
     box-shadow: none !important;
+    font-weight: 600;
 }
 
 /* Apply Now Button Hover Effect */
 .btn-apply:hover {
-    background-color: #1e3a8a !important;
+    background-color: #396bf1 !important;
     transform: translateY(-1px) !important;
     box-shadow: none !important;
 }

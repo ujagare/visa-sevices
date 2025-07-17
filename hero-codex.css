@@ -26,7 +26,7 @@
     padding: 80px 40px;
     color: #fff;
     max-width: 600px;
-    background-color: rgba(104, 127, 229, 0.9);
+    background-color: #A1AEBB;
     border-radius: 20px;
     margin: 40px 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -125,7 +125,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, #687FE5 0%, #687FE5 40%, rgba(104, 127, 229, 0.8) 100%);
+    background: #E7EEFA ;
 }
 
 .hero-codex-shape {
