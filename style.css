@@ -6216,15 +6216,7 @@ ul li a:hover {
     overflow: hidden;
 }
 
-.work-destination-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(135deg, #dc2626, #ef4444);
-}
+/* Removed conflicting overlay CSS */
 
 .work-destination-card:hover {
     transform: translateY(-10px);

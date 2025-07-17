@@ -97,25 +97,25 @@
 
 .card-wrapper h2 {
     text-align: center;
-    color: white;
+    color: white !important;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 50px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
     letter-spacing: -0.5px;
     animation: fadeInUp 1s ease-out;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Gilroy', 'Inter', sans-serif;
 }
 
 /* Modern Contact Card */
 .contact-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(20px);
-    border-radius: 25px;
-    padding: 50px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15),
-                0 10px 25px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 45px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12),
+                0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     position: relative;
     overflow: hidden;
     animation: slideInUp 1.2s ease-out 0.3s both;
@@ -128,15 +128,16 @@
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #687FE5 0%, #5a6fd8 100%);
+    background: linear-gradient(90deg, #0369A1 0%, #0284c7 100%);
 }
 
 /* Form Layout */
 #visaContact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 25px 30px;
     align-items: start;
+    margin-top: 10px;
 }
 
 /* Field Styling with Animations */
@@ -178,18 +179,19 @@
 .field label {
     font-size: 14px;
     font-weight: 600;
-    color: #374151;
-    margin-bottom: 8px;
+    color: #1f2937;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
+    font-family: 'Gilroy', 'Inter', sans-serif;
 }
 
 .field label::before {
     content: '';
     width: 4px;
     height: 4px;
-    background: #687FE5;
+    background: #0369A1;
     border-radius: 50%;
     animation: pulse 2s infinite;
 }
@@ -201,9 +203,10 @@
     align-items: center;
     background: #f8fafc;
     border: 2px solid #e2e8f0;
-    border-radius: 15px;
+    border-radius: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    min-height: 52px;
 }
 
 .input-container:hover {
@@ -212,28 +215,29 @@
 }
 
 .input-container:focus-within {
-    border-color: #687FE5;
+    border-color: #0369A1;
     background: white;
-    box-shadow: 0 0 0 4px rgba(104, 127, 229, 0.1);
+    box-shadow: 0 0 0 4px rgba(3, 105, 161, 0.1);
     transform: translateY(-2px);
 }
 
 /* Input Icon */
 .input-icon {
-    padding: 0 15px;
+    padding: 0 16px;
     color: #64748b;
     font-size: 18px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     background: #e2e8f0;
     height: 100%;
     display: flex;
     align-items: center;
-    border-radius: 13px 0 0 13px;
+    border-radius: 10px 0 0 10px;
+    min-width: 50px;
+    justify-content: center;
 }
 
 .input-container:focus-within .input-icon {
-    color: #687FE5;
-    background: #687FE5;
+    background: #0369A1;
     color: white;
 }
 
@@ -244,10 +248,11 @@
     flex: 1;
     border: none;
     outline: none;
-    padding: 16px 20px;
-    font-size: 16px;
+    padding: 15px 18px;
+    font-size: 15px;
     background: transparent;
     color: #374151;
+    font-family: 'Gilroy', 'Inter', sans-serif;
     font-family: inherit;
 }
 
@@ -306,7 +311,7 @@
 /* Submit Button with Visit Page Colors */
 .btn-submit {
     grid-column: 1 / -1;
-    background: linear-gradient(135deg, #687FE5 0%, #5a6fd8 100%);
+    background: linear-gradient(135deg, #0369A1 0%, #0284c7 100%);
     color: white;
     border: none;
     padding: 18px 40px;
@@ -320,11 +325,11 @@
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
-    box-shadow: 0 10px 25px rgba(104, 127, 229, 0.3);
+    box-shadow: 0 10px 25px rgba(3, 105, 161, 0.3);
     position: relative;
     overflow: hidden;
     animation: fadeInUp 1s ease-out 1.5s both;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Gilroy', 'Inter', sans-serif;
 }
 
 .btn-submit::before {
@@ -344,8 +349,8 @@
 
 .btn-submit:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(104, 127, 229, 0.4);
-    background: linear-gradient(135deg, #5a6fd8 0%, #4f63d2 100%);
+    box-shadow: 0 15px 35px rgba(3, 105, 161, 0.4);
+    background: linear-gradient(135deg, #0284c7 0%, #0369A1 100%);
 }
 
 .btn-submit:active {
@@ -387,6 +392,8 @@ small {
     .card-wrapper h2 {
         font-size: 2rem;
         margin-bottom: 30px;
+        color: white !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
     }
     
     .contact-card {
@@ -396,14 +403,23 @@ small {
     
     #visaContact {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 22px;
     }
-    
+
+    .input-container {
+        min-height: 48px;
+    }
+
     .input-container input,
     .input-container select,
     .input-container textarea {
-        padding: 14px 16px;
+        padding: 13px 16px;
         font-size: 15px;
+    }
+
+    .input-icon {
+        padding: 0 14px;
+        min-width: 46px;
     }
     
     .btn-submit {

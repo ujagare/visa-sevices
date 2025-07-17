@@ -53,83 +53,111 @@
 }
 
 .work-destination-card {
-    background: white;
-    border-radius: 15px;
-    padding: 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 128, 0.05);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    border: none;
+    background: white !important;
+    border-radius: 20px !important;
+    padding: 0 !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    position: relative !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    text-align: left !important;
 }
 
 .work-destination-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 128, 0.1);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15), 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-color: rgba(3, 105, 161, 0.2);
 }
 
 .destination-header {
-    height: 160px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 20px;
+    height: 200px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    padding: 25px !important;
+    overflow: hidden !important;
+    background-attachment: scroll !important;
+    width: 100% !important;
 }
 
-.destination-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
-    z-index: 1;
+/* FORCE REMOVE ALL OVERLAYS - CLEAN IMAGES ONLY */
+.destination-header::before,
+.destination-header::after {
+    display: none !important;
+    content: none !important;
+}
+
+.work-destination-card::before,
+.work-destination-card::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* FORCE BACKGROUND IMAGES TO SHOW */
+.work-destination-card .destination-header {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    height: 200px !important;
+    display: block !important;
+    position: relative !important;
 }
 
 .destination-icon {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 3;
-    color: white;
-    font-size: 24px;
+    top: 25px;
+    left: 25px;
+    z-index: 10;
+    color: white !important;
+    font-size: 28px;
 }
 
 .destination-icon i {
-    font-size: 24px;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 28px;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.8) !important;
 }
 
 .destination-flag {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
+    top: 25px;
+    right: 25px;
+    z-index: 3;
     background: white;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-destination-card:hover .destination-flag {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .destination-flag img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
 }
 
 .destination-content {
-    padding: 25px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -139,9 +167,9 @@
 }
 
 .work-destination-card h3 {
-    font-size: 1.5rem;
-    color: #000080;
-    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: white !important;
+    margin: 0;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -149,12 +177,11 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 15px 20px;
-    margin: 0;
-    color: white;
-    z-index: 2;
-    font-weight: 600;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    padding: 20px 25px;
+    z-index: 10;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.8) !important;
+    background: none !important;
 }
 
 .work-destination-card h3 i {
@@ -164,58 +191,86 @@
 .destination-features {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 15px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .feature-tag {
     background: #becbda;
     color: #222;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.85rem;
     font-weight: 600;
     transition: all 0.3s ease;
+    border: 1px solid rgba(190, 203, 218, 0.3);
+    box-shadow: 0 2px 4px rgba(190, 203, 218, 0.2);
 }
 
 .work-destination-card:hover .feature-tag {
     background: #e0f2fe;
+    color: #222;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(224, 242, 254, 0.3);
 }
 
 .work-destination-card p {
     color: #64748b;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     flex-grow: 1;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 0.95rem;
 }
 
 .destination-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 12px 24px;
-    background:#A4B1BE;
+    gap: 10px;
+    padding: 14px 28px;
+    background: #A4B1BE;
     color: #222;
-    border-radius: 8px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(164, 177, 190, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.destination-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.destination-btn:hover::before {
+    left: 100%;
 }
 
 .destination-btn i {
     transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
 .destination-btn:hover {
     background: #4646ff;
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(70, 70, 255, 0.4);
 }
 
 .destination-btn:hover i {
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
 /* Work Destinations Section */
