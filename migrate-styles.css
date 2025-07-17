@@ -159,8 +159,8 @@ body {
 .form-submit {
     width: 100%;
     padding: 15px;
-    background: #000080;
-    color: white;
+    background: #C4D4E5;
+    color: #222;
     border: none;
     border-radius: 8px;
     font-weight: 600;
@@ -240,7 +240,7 @@ body {
 .consult-btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #000080;
+    background: #A4B1BE;
     color: white;
     border-radius: 50px;
     text-decoration: none;

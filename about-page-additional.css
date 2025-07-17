@@ -151,7 +151,7 @@
 }
 
 .value-card {
-    background: #f8fafc;
+    background: #C5D5E6;
     border-radius: 20px;
     padding: 30px;
     text-align: center;
@@ -275,8 +275,8 @@
 
 .timeline-year {
     display: inline-block;
-    background: #f0f9ff;
-    color: #3b82f6;
+    background: #C5D5E6;
+    color: #111;
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -408,7 +408,7 @@
 }
 
 .member-role {
-    color: #3b82f6;
+    color: #666666;
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -427,7 +427,7 @@
 
 .expertise-tag {
     background: #f0f9ff;
-    color: #3b82f6;
+    color: #666666;
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.8rem;

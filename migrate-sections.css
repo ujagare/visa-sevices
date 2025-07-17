@@ -171,7 +171,7 @@
     align-items: center;
     gap: 10px;
     padding: 15px 30px;
-    background: #0369a1;
+    background: #A5B3C0;
     color: white;
     border-radius: 50px;
     text-decoration: none;
@@ -220,7 +220,7 @@
 
 .evaluated-left h2 {
     font-size: 2.5rem;
-    color: #000080;
+    color: #222;
     margin-bottom: 20px;
 }
 
@@ -247,7 +247,7 @@
 .eval-icon {
     width: 50px;
     height: 50px;
-    background: #f0f9ff;
+    background:#A5B3C0;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -256,7 +256,7 @@
 
 .eval-icon i {
     font-size: 24px;
-    color: #3b82f6;
+    color: #222;
 }
 
 .eval-feature span {
@@ -269,7 +269,7 @@
     align-items: center;
     gap: 10px;
     padding: 15px 30px;
-    background: #000080;
+    background: #A5B3C0;
     color: white;
     border-radius: 50px;
     text-decoration: none;
@@ -383,7 +383,6 @@
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 25px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -396,8 +395,9 @@
     margin-bottom: 40px;
     opacity: 0.95;
     line-height: 1.6;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 0.8s ease-out 0.2s both;
+    color:#fff;
+
 }
 
 .cta-button {

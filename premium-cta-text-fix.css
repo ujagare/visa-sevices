@@ -1,0 +1,146 @@
+/*
+ * PREMIUM CTA TEXT VISIBILITY FIX
+ * Fix for "TAKE THE NEXT STEP" section text visibility
+ */
+
+/* Premium CTA Section - Force white text visibility */
+.premium-cta-section {
+    position: relative !important;
+}
+
+.premium-cta-section .section-badge {
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.premium-cta-section .section-badge span {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+.premium-cta-section .section-badge i {
+    color: #FFFFFF !important;
+}
+
+.premium-cta-section h2 {
+    color: #FFFFFF !important;
+    font-size: 3rem !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+.premium-cta-section p {
+    color: #FFFFFF !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 30px !important;
+    opacity: 0.95 !important;
+    line-height: 1.6 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.premium-cta-content {
+    color: #FFFFFF !important;
+}
+
+.premium-cta-content * {
+    color: #FFFFFF !important;
+}
+
+/* Premium features - White text */
+.premium-cta-features {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+    margin-bottom: 30px !important;
+}
+
+.premium-feature {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    padding: 10px 20px !important;
+    border-radius: 25px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.premium-feature:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-3px) !important;
+}
+
+.premium-feature i {
+    color: #FFFFFF !important;
+    font-size: 1.2rem !important;
+}
+
+.premium-feature span {
+    color: #FFFFFF !important;
+    font-weight: 500 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Override any conflicting styles */
+.premium-cta-section h1,
+.premium-cta-section h2,
+.premium-cta-section h3,
+.premium-cta-section h4,
+.premium-cta-section h5,
+.premium-cta-section h6,
+.premium-cta-section p,
+.premium-cta-section span,
+.premium-cta-section div,
+.premium-cta-section a {
+    color: #FFFFFF !important;
+}
+
+/* Specific text elements */
+.premium-cta-section .section-badge span {
+    color: #FFFFFF !important;
+}
+
+/* Ensure all text in premium features is white */
+.premium-feature * {
+    color: #FFFFFF !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .premium-cta-section h2 {
+        font-size: 2.5rem !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+    }
+    
+    .premium-cta-section p {
+        font-size: 1.1rem !important;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+    }
+    
+    .premium-feature span {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .premium-cta-section h2 {
+        font-size: 2rem !important;
+    }
+    
+    .premium-cta-section p {
+        font-size: 1rem !important;
+    }
+    
+    .premium-cta-features {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .premium-feature {
+        width: 100% !important;
+        max-width: 250px !important;
+        justify-content: center !important;
+    }
+}

@@ -128,7 +128,6 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
 
 /* Footer */
 footer, .footer-section, .main-footer, .footer-container {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%) !important;
     color: var(--text-dark) !important;
 }
 
@@ -164,7 +163,7 @@ footer, .footer-section, .main-footer, .footer-container {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,  h3, h4, h5, h6 {
     color: var(--text-dark) !important;
 }
 
@@ -243,8 +242,13 @@ i[class*=".stars"],
 /* Ensure all elements use the Gilroy font */
 * {
     font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    color:var(--primary-light);
 }
 
+* {
+    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    color: var(--text-dark);
+}
 /* COMPREHENSIVE TEXT VISIBILITY FIXES */
 
 

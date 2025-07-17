@@ -149,7 +149,6 @@
     gap: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .country-universities h3::after {
@@ -255,7 +254,6 @@
     font-size: 0.9rem;
     transition: all 0.3s ease;
     line-height: 1.4;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .university-logo:hover span {

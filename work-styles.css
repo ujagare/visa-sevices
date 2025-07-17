@@ -136,7 +136,7 @@ body {
     align-items: center;
     gap: 10px;
     padding: 15px 30px;
-    background: #000080;
+        background:#A4B1BE;
     color: white;
     border-radius: 50px;
     text-decoration: none;
@@ -159,7 +159,7 @@ body {
     padding: 15px 30px;
     background: transparent;
     color: #000080;
-    border: 2px solid #000080;
+    border: 2px solid #A4B1BE;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
@@ -184,13 +184,13 @@ body {
 .stat-value {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #000080;
+    color: #000000;
     margin-bottom: 3px;
 }
 
 .stat-label {
     font-size: 0.9rem;
-    color: #64748b;
+    color: #222;
     font-weight: 500;
 }
 
@@ -259,7 +259,7 @@ body {
 .form-decoration {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #000080, #3b82f6);
+    background:#A4B1BE;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -327,8 +327,8 @@ body {
 .form-submit {
     width: 100%;
     padding: 15px;
-    background: #000080;
-    color: white;
+    background: #A4B1BE;
+    color: #222;
     border: none;
     border-radius: 8px;
     font-weight: 600;

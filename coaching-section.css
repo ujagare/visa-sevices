@@ -34,7 +34,7 @@
 
 .coaching-header h2 {
     font-size: 2.5rem;
-    color: #000080;
+    color: #222;
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
@@ -141,7 +141,7 @@
 
 .coaching-btn {
     display: inline-block;
-    background: #000080;
+    background:#9FACB9;
     color: white;
     padding: 12px 24px;
     border-radius: 50px;

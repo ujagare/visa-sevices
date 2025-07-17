@@ -38,7 +38,7 @@
 
 .compact-journey-header h2 {
     font-size: 2.5rem;
-    color: #000080;
+    color: #222;
     margin-bottom: 15px;
 }
 
@@ -96,7 +96,7 @@
 .step-number {
     width: 40px;
     height: 40px;
-    background: #000080;
+    background: #9FACB9;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -111,7 +111,7 @@
 .step-icon {
     width: 60px;
     height: 60px;
-    background: #f0f9ff;
+    background: #9FACB9;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -121,7 +121,7 @@
 
 .step-icon i {
     font-size: 1.8rem;
-    color: #000080;
+    color: #222;
 }
 
 .journey-step h3 {

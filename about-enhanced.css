@@ -214,7 +214,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    background-color: #C5D5E6;
     color: #fff;
     padding: 15px 30px;
     border-radius: 50px;
