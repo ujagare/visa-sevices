@@ -1,0 +1,22 @@
+/* Direct fix for services dropdown */
+.mobile-services-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.mobile-services-dropdown.active .mobile-services-links {
+    max-height: 250px;
+}
+
+.mobile-services-toggle {
+    cursor: pointer;
+}
+
+.mobile-services-arrow {
+    transition: transform 0.3s ease;
+}
+
+.mobile-services-dropdown.active .mobile-services-arrow {
+    transform: rotate(180deg);
+}

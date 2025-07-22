@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Wings Visa - Image Downloader</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #0369A1, #0284c7);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #0369A1;
+            border-bottom: 3px solid #0369A1;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .image-item {
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+        .image-item:hover {
+            border-color: #0369A1;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(3, 105, 161, 0.2);
+        }
+        .image-preview {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .download-btn {
+            background: #0369A1;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 5px 0;
+            transition: background 0.3s ease;
+        }
+        .download-btn:hover {
+            background: #0284c7;
+        }
+        .filename {
+            font-family: 'Courier New', monospace;
+            background: #f1f5f9;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            color: #64748b;
+        }
+        .instructions {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .instructions h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+        .step {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #0369A1;
+        }
+        .converter-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .converter-btn {
+            background: #10b981;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        .converter-btn:hover {
+            background: #059669;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🖼️ White Wings Visa - Image Downloader</h1>
+        <p>Download all external images and convert to WebP for faster website loading</p>
+    </div>
+
+    <div class="instructions">
+        <h3>📋 Instructions:</h3>
+        <div class="step">1. Right-click on each "Download Image" button below</div>
+        <div class="step">2. Select "Save link as..." and save to the specified folder</div>
+        <div class="step">3. Use the WebP converters below to convert all images</div>
+        <div class="step">4. Update HTML files with local image paths</div>
+    </div>
+
+    <div class="section">
+        <h2>🏢 Work Page Images (work.html)</h2>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Canada" class="image-preview">
+                <h4>Canada Work Opportunities</h4>
+                <a href="https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="download-btn" download="canada-work.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/work/canada-work.jpg</div>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Australia" class="image-preview">
+                <h4>Australia Work Opportunities</h4>
+                <a href="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="download-btn" download="australia-work.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/work/australia-work.jpg</div>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="New Zealand" class="image-preview">
+                <h4>New Zealand Work Opportunities</h4>
+                <a href="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="download-btn" download="newzealand-work.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/work/newzealand-work.jpg</div>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dubai" class="image-preview">
+                <h4>Dubai Work Opportunities</h4>
+                <a href="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="download-btn" download="dubai-work.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/work/dubai-work.jpg</div>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Europe" class="image-preview">
+                <h4>Europe Work Opportunities</h4>
+                <a href="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="download-btn" download="europe-work.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/work/europe-work.jpg</div>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1508964942454-1a56651d54ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Singapore" class="image-preview">
+                <h4>Singapore Work Opportunities</h4>
+                <a href="https://images.unsplash.com/photo-1508964942454-1a56651d54ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="download-btn" download="singapore-work.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/work/singapore-work.jpg</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>✈️ Visit Page Images (visit.html)</h2>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="USA" class="image-preview">
+                <h4>USA Visit Tourism</h4>
+                <a href="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="download-btn" download="usa-visit.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/visit/usa-visit.jpg</div>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Australia" class="image-preview">
+                <h4>Australia Visit Tourism</h4>
+                <a href="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="download-btn" download="australia-visit.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/visit/australia-visit.jpg</div>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Europe" class="image-preview">
+                <h4>Europe Visit Tourism</h4>
+                <a href="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="download-btn" download="europe-visit.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/visit/europe-visit.jpg</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎓 Study Page Images (study.html)</h2>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Canada" class="image-preview">
+                <h4>Canada Study Abroad</h4>
+                <a href="https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="download-btn" download="canada-study.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/study/canada-study.jpg</div>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="USA" class="image-preview">
+                <h4>USA Study Abroad</h4>
+                <a href="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="download-btn" download="usa-study.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/study/usa-study.jpg</div>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Europe" class="image-preview">
+                <h4>Europe Study Abroad</h4>
+                <a href="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="download-btn" download="europe-study.jpg">Download Image</a>
+                <div class="filename">Save as: images/countries/study/europe-study.jpg</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🏳️ Flag Images (flagcdn.com)</h2>
+        <p>Download all country flag images used across the website:</p>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="https://flagcdn.com/w80/us.png" alt="USA Flag" class="image-preview">
+                <h4>USA Flag</h4>
+                <a href="https://flagcdn.com/w80/us.png" class="download-btn" download="usa-flag-w80.png">Download w80</a>
+                <a href="https://flagcdn.com/h120/us.png" class="download-btn" download="usa-flag-h120.png">Download h120</a>
+                <a href="https://flagcdn.com/w40/us.png" class="download-btn" download="usa-flag-w40.png">Download w40</a>
+                <div class="filename">Save as: images/flags/usa-flag-[size].png</div>
+            </div>
+
+            <div class="image-item">
+                <img src="https://flagcdn.com/w80/ca.png" alt="Canada Flag" class="image-preview">
+                <h4>Canada Flag</h4>
+                <a href="https://flagcdn.com/w80/ca.png" class="download-btn" download="canada-flag.png">Download Flag</a>
+                <div class="filename">Save as: images/flags/canada-flag.png</div>
+            </div>
+
+            <div class="image-item">
+                <img src="https://flagcdn.com/w80/au.png" alt="Australia Flag" class="image-preview">
+                <h4>Australia Flag</h4>
+                <a href="https://flagcdn.com/w80/au.png" class="download-btn" download="australia-flag.png">Download Flag</a>
+                <div class="filename">Save as: images/flags/australia-flag.png</div>
+            </div>
+
+            <div class="image-item">
+                <img src="https://flagcdn.com/w80/nz.png" alt="New Zealand Flag" class="image-preview">
+                <h4>New Zealand Flag</h4>
+                <a href="https://flagcdn.com/w80/nz.png" class="download-btn" download="newzealand-flag.png">Download Flag</a>
+                <div class="filename">Save as: images/flags/newzealand-flag.png</div>
+            </div>
+
+            <div class="image-item">
+                <img src="https://flagcdn.com/w80/ae.png" alt="UAE Flag" class="image-preview">
+                <h4>UAE Flag (Dubai)</h4>
+                <a href="https://flagcdn.com/w80/ae.png" class="download-btn" download="uae-flag.png">Download Flag</a>
+                <div class="filename">Save as: images/flags/uae-flag.png</div>
+            </div>
+
+            <div class="image-item">
+                <img src="https://flagcdn.com/w80/eu.png" alt="EU Flag" class="image-preview">
+                <h4>EU Flag (Europe)</h4>
+                <a href="https://flagcdn.com/w80/eu.png" class="download-btn" download="eu-flag.png">Download Flag</a>
+                <div class="filename">Save as: images/flags/eu-flag.png</div>
+            </div>
+
+            <div class="image-item">
+                <img src="https://flagcdn.com/w80/sg.png" alt="Singapore Flag" class="image-preview">
+                <h4>Singapore Flag</h4>
+                <a href="https://flagcdn.com/w80/sg.png" class="download-btn" download="singapore-flag.png">Download Flag</a>
+                <div class="filename">Save as: images/flags/singapore-flag.png</div>
+            </div>
+
+            <div class="image-item">
+                <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" class="image-preview">
+                <h4>UK Flag</h4>
+                <a href="https://flagcdn.com/w80/gb.png" class="download-btn" download="uk-flag.png">Download Flag</a>
+                <div class="filename">Save as: images/flags/uk-flag.png</div>
+            </div>
+
+            <div class="image-item">
+                <img src="https://flagcdn.com/w80/de.png" alt="Germany Flag" class="image-preview">
+                <h4>Germany Flag</h4>
+                <a href="https://flagcdn.com/w80/de.png" class="download-btn" download="germany-flag.png">Download Flag</a>
+                <div class="filename">Save as: images/flags/germany-flag.png</div>
+            </div>
+        </div>
+        <p><strong>Note:</strong> Flag images are already optimized PNG files. You can use them as-is or convert to WebP for even smaller sizes.</p>
+    </div>
+
+    <div class="section">
+        <h2>🔄 WebP Conversion Tools</h2>
+        <p>After downloading all images, use these tools to convert them to WebP format:</p>
+        <div class="converter-links">
+            <a href="https://convertio.co/jpg-webp/" target="_blank" class="converter-btn">Convertio (Batch)</a>
+            <a href="https://squoosh.app/" target="_blank" class="converter-btn">Squoosh (Google)</a>
+            <a href="https://tinypng.com/" target="_blank" class="converter-btn">TinyPNG</a>
+            <a href="https://www.freeconvert.com/jpg-to-webp" target="_blank" class="converter-btn">FreeConvert</a>
+        </div>
+        <p><strong>Recommended Settings:</strong> Quality 80%, WebP format, Keep original dimensions</p>
+    </div>
+
+    <div class="section">
+        <h2>📊 Expected Results</h2>
+        <ul>
+            <li>✅ <strong>File Size Reduction:</strong> 50-60% smaller files</li>
+            <li>✅ <strong>Loading Speed:</strong> 2-3x faster page loads</li>
+            <li>✅ <strong>SEO Improvement:</strong> Better Core Web Vitals scores</li>
+            <li>✅ <strong>User Experience:</strong> No external dependency issues</li>
+            <li>✅ <strong>Bandwidth Savings:</strong> Reduced server costs</li>
+        </ul>
+    </div>
+</body>
+</html>

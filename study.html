@@ -12,7 +12,6 @@
     <link rel="canonical" href="https://whitewingsvisa.com/study.html">
     <title>Study Abroad - White Wings Visa Consultancy</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="professional-mobile-menu.css">
     <link rel="stylesheet" href="style-fix.css">
     <link rel="stylesheet" href="loader.css">
     <link rel="stylesheet" href="pages.css">
@@ -21,12 +20,21 @@
     <link rel="stylesheet" href="education-services.css">
     <link rel="stylesheet" href="compact-journey.css">
     <link rel="stylesheet" href="coaching-section.css">
+    <link rel="stylesheet" href="exam-cards-fix.css">
     <link rel="stylesheet" href="study-opportunity-cards.css">
     <link rel="stylesheet" href="university-placements.css">
     <link rel="stylesheet" href="hero-buttons.css">
     <link rel="stylesheet" href="simple-form.css">
-    <link rel="stylesheet" href="master-mobile-navbar.css">
+    <link rel="stylesheet" href="cta-section-fix.css">
     <link rel="stylesheet" href="apply-now-button.css">
+    <link rel="stylesheet" href="navbar-fix.css">
+    <link rel="stylesheet" href="professional-mobile-navbar.css">
+    <link rel="stylesheet" href="page-mobile-fix.css">
+    <link rel="stylesheet" href="mobile-menu-overlay.css">
+    <link rel="stylesheet" href="mobile-menu-animations.css">
+    <link rel="stylesheet" href="mobile-navbar-zindex-fix.css">
+    <link rel="stylesheet" href="mobile-navbar-vertical.css">
+    <link rel="stylesheet" href="improved-dropdown-menu.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
@@ -38,8 +46,14 @@
 
 
 
-    <!-- Gilroy Font -->
-    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <!-- Font blocker script to prevent font loading errors - must be at the top -->
+    <script src="font-blocker.js"></script>
+    
+    <!-- Google Fonts (more reliable than cdnfonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Fix for MIME type errors and font loading issues -->
+    <script src="fix-mime.js"></script>
 
 </head>
 <body>
@@ -60,28 +74,24 @@
                                 <i class="ri-graduation-cap-line"></i>
                                 <div>
                                     <strong>Study Abroad</strong>
-                                    <span>Student visa & education guidance</span>
                                 </div>
                             </a>
                             <a href="migrate.html">
                                 <i class="ri-home-heart-line"></i>
                                 <div>
                                     <strong>Migrate</strong>
-                                    <span>Permanent residency & immigration</span>
                                 </div>
                             </a>
                             <a href="work.html">
                                 <i class="ri-briefcase-line"></i>
                                 <div>
                                     <strong>Work Abroad</strong>
-                                    <span>Work visa & job opportunities</span>
                                 </div>
                             </a>
                             <a href="visit.html">
                                 <i class="ri-plane-line"></i>
                                 <div>
                                     <strong>Visit</strong>
-                                    <span>Tourist & business visa</span>
                                 </div>
                             </a>
                         </div>
@@ -98,40 +108,7 @@
                 </div>
             </div>
 
-            <!-- Professional Mobile Hamburger -->
-            <button class="simple-hamburger" onclick="openMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </nav>
-
-        <!-- Professional Mobile Menu -->
-        <div class="mobile-menu-overlay"></div>
-        <div class="mobile-menu-sidebar">
-            <div class="mobile-menu-header">
-                <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-menu-logo">
-                <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
-            </div>
-
-            <ul class="mobile-menu-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="mobile-services-dropdown">
-                    <div class="mobile-services-toggle" onclick="toggleServices()">
-                        <span>Services</span>
-                        <i class="ri-arrow-down-s-line mobile-services-arrow"></i>
-                    </div>
-                    <div class="mobile-services-links">
-                        <a href="study.html" class="active">Study Abroad</a>
-                        <a href="migrate.html">Migrate</a>
-                        <a href="work.html">Work Abroad</a>
-                        <a href="visit.html">Visit</a>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
     </nav-div>
 
     <!-- PROFESSIONAL STUDY HERO SECTION -->
@@ -168,7 +145,7 @@
 
                 <div class="hero-visual">
                     <div class="hero-image-container">
-                        <img src="images/hero/i-am-here-help-you-with-your-booking-travel-questions-female-sales-agent-holding-plane-tickets-while-smiling-making-eye-contact-travel-agency.jpg" alt="Study Abroad Success" class="hero-image">
+                        <img src="images/hero/webp/study_batcheditor_fotor.webp" alt="Study Abroad Success" class="hero-image">
                         <div class="image-overlay">
                             <div class="overlay-content">
                                 <div class="overlay-badge">
@@ -250,7 +227,7 @@
             <div class="study-destinations-grid">
                 <div class="destination-card">
                     <div class="destination-header">
-                        <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Canada">
+                        <img src="images/countries/study/study webp/photo-1517935706615-2717063c2225.webp" alt="Canada">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/w40/ca.png" alt="Canada Flag">
                         </div>
@@ -269,7 +246,7 @@
 
                 <div class="destination-card">
                     <div class="destination-header">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Australia">
+                        <img src="images/hero/webp/Asutrlia-ezgif.com-jpg-to-webp-converter.webp" alt="Australia">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/w40/au.png" alt="Australia Flag">
                         </div>
@@ -288,26 +265,26 @@
 
                 <div class="destination-card">
                     <div class="destination-header">
-                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Germany">
+                        <img src="images/hero/webp/NewZealand-ezgif.com-jpg-to-webp-converter.webp" alt="New Zealand">
                         <div class="destination-flag">
-                            <img src="https://flagcdn.com/w40/de.png" alt="Germany Flag">
+                            <img src="https://flagcdn.com/w40/nz.png" alt="New Zealand Flag">
                         </div>
                     </div>
                     <div class="destination-content">
-                        <h3>Study in Germany</h3>
+                        <h3>Study in New Zealand</h3>
                         <div class="destination-features">
-                            <span class="feature-tag">B.TECH</span>
+                            <span class="feature-tag">Bachelors</span>
                             <span class="feature-tag">Masters</span>
-                            <span class="feature-tag">Engineering</span>
+                            <span class="feature-tag">Research</span>
                         </div>
-                        <p>Affordable education with strong engineering programs and no tuition fees at public universities</p>
-                        <a href="#" class="destination-btn">Explore Germany <i class="ri-arrow-right-line"></i></a>
+                        <p>World-class education with stunning natural landscapes and excellent quality of life</p>
+                        <a href="#" class="destination-btn">Explore New Zealand <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
 
                 <div class="destination-card">
                     <div class="destination-header">
-                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="UK">
+                        <img src="images/hero/webp/United Kingdom_batcheditor_fotor.webp" alt="UK">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag">
                         </div>
@@ -326,7 +303,7 @@
 
                 <div class="destination-card">
                     <div class="destination-header">
-                        <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="USA">
+                        <img src="images/countries/study/study webp/photo-1485738422979-f5c462d49f74.webp" alt="USA">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/w40/us.png" alt="USA Flag">
                         </div>
@@ -345,7 +322,7 @@
 
                 <div class="destination-card">
                     <div class="destination-header">
-                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Europe">
+                        <img src="images/countries/study/study webp/photo-1551632811-561732d1e306.webp" alt="Europe">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/w40/eu.png" alt="Europe Flag">
                         </div>
@@ -542,53 +519,74 @@
                 <p>Comprehensive coaching for international standardized tests required for study abroad admissions</p>
             </div>
 
-            <div class="coaching-grid">
-                <div class="coaching-card">
-                    <div class="coaching-image">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="IELTS Coaching">
-                        <div class="coaching-badge">Most Popular</div>
-                    </div>
-                    <div class="coaching-content">
-                        <h3>IELTS Preparation</h3>
-                        <p>Comprehensive coaching for all modules: Reading, Writing, Listening and Speaking</p>
-                        <div class="coaching-features">
-                            <div class="coaching-feature"><i class="ri-check-line"></i> Expert trainers</div>
-                            <div class="coaching-feature"><i class="ri-check-line"></i> Practice tests</div>
-                            <div class="coaching-feature"><i class="ri-check-line"></i> Study materials</div>
+            <div class="coaching-grid-wrapper">
+                <div class="scroll-indicator scroll-left" onclick="scrollCoachingCards('left')"><i class="ri-arrow-left-s-line"></i></div>
+                <div class="scroll-indicator scroll-right" onclick="scrollCoachingCards('right')"><i class="ri-arrow-right-s-line"></i></div>
+                <div class="coaching-grid-wrapper">
+                <div class="coaching-grid">
+                    <div class="coaching-card">
+                        <div class="coaching-image">
+                            <img src="images/countries/study/study webp/pen.webp" alt="IELTS Coaching">
+                            <div class="coaching-badge">Most Popular</div>
                         </div>
-                        <a href="contact.html" class="coaching-btn">Enroll Now</a>
+                        <div class="coaching-content">
+                            <h3>IELTS Preparation</h3>
+                            <p>Comprehensive coaching for all modules: Reading, Writing, Listening and Speaking</p>
+                            <div class="coaching-features">
+                                <div class="coaching-feature"><i class="ri-check-line"></i> Expert trainers</div>
+                                <div class="coaching-feature"><i class="ri-check-line"></i> Practice tests</div>
+                                <div class="coaching-feature"><i class="ri-check-line"></i> Study materials</div>
+                            </div>
+                            <a href="contact.html" class="coaching-btn">Enroll Now</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="coaching-card">
-                    <div class="coaching-image">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="TOEFL Coaching">
-                    </div>
-                    <div class="coaching-content">
-                        <h3>TOEFL Preparation</h3>
-                        <p>Specialized training for TOEFL iBT with focus on academic English proficiency</p>
-                        <div class="coaching-features">
-                            <div class="coaching-feature"><i class="ri-check-line"></i> Computer-based practice</div>
-                            <div class="coaching-feature"><i class="ri-check-line"></i> Speaking assessments</div>
-                            <div class="coaching-feature"><i class="ri-check-line"></i> Essay writing skills</div>
+                    <div class="coaching-card">
+                        <div class="coaching-image">
+                            <img src="images/countries/study/study webp/laptop-finger.webp" alt="TOEFL Coaching">
                         </div>
-                        <a href="contact.html" class="coaching-btn">Enroll Now</a>
+                        <div class="coaching-content">
+                            <h3>TOEFL Preparation</h3>
+                            <p>Specialized training for TOEFL iBT with focus on academic English proficiency</p>
+                            <div class="coaching-features">
+                                <div class="coaching-feature"><i class="ri-check-line"></i> Computer-based practice</div>
+                                <div class="coaching-feature"><i class="ri-check-line"></i> Speaking assessments</div>
+                                <div class="coaching-feature"><i class="ri-check-line"></i> Essay writing skills</div>
+                            </div>
+                            <a href="contact.html" class="coaching-btn">Enroll Now</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="coaching-card">
-                    <div class="coaching-image">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="GRE Coaching">
-                    </div>
-                    <div class="coaching-content">
-                        <h3>GRE/GMAT Preparation</h3>
-                        <p>Strategic coaching for graduate school entrance exams with proven score improvement</p>
-                        <div class="coaching-features">
-                            <div class="coaching-feature"><i class="ri-check-line"></i> Quantitative reasoning</div>
-                            <div class="coaching-feature"><i class="ri-check-line"></i> Verbal reasoning</div>
-                            <div class="coaching-feature"><i class="ri-check-line"></i> Analytical writing</div>
+                    <div class="coaching-card">
+                        <div class="coaching-image">
+                            <img src="images/countries/study/study webp/pet prepration.webp" alt="PTE Coaching">
                         </div>
-                        <a href="contact.html" class="coaching-btn">Enroll Now</a>
+                        <div class="coaching-content">
+                            <h3>PTE Preparation</h3>
+                            <p>Comprehensive training for Pearson Test of English with focus on computer-based assessment</p>
+                            <div class="coaching-features">
+                                <div class="coaching-feature"><i class="ri-check-line"></i> AI scoring practice</div>
+                                <div class="coaching-feature"><i class="ri-check-line"></i> Time management skills</div>
+                                <div class="coaching-feature"><i class="ri-check-line"></i> Mock tests</div>
+                            </div>
+                            <a href="contact.html" class="coaching-btn">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <div class="coaching-card">
+                        <div class="coaching-image">
+                            <img src="images/countries/study/study webp/lapto.webp" alt="GRE Coaching">
+                        </div>
+                        <div class="coaching-content">
+                            <h3>GRE/GMAT Preparation</h3>
+                            <p>Strategic coaching for graduate school entrance exams with proven score improvement</p>
+                            <div class="coaching-features">
+                                <div class="coaching-feature"><i class="ri-check-line"></i> Quantitative reasoning</div>
+                                <div class="coaching-feature"><i class="ri-check-line"></i> Verbal reasoning</div>
+                                <div class="coaching-feature"><i class="ri-check-line"></i> Analytical writing</div>
+                            </div>
+                            <a href="contact.html" class="coaching-btn">Enroll Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -720,8 +718,17 @@
     </section>
 
 
-    <!-- Footer - Same as About Page -->
+    <!-- Footer Section - Exact Copy from Home Page -->
     <footer class="footer-section">
+        <!-- Apply for Visa CTA Section -->
+        <div class="apply-visa-cta">
+            <div class="cta-container">
+                <h6>APPLY FOR A VISA</h6>
+                <h2>You Focus on Flying, We'll Handle the Paperwork!</h2>
+                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and guaranteed success.</p>
+                <a href="https://wa.me/919130448831" class="apply-btn">APPLY NOW</a>
+            </div>
+        </div>
 
         <!-- Main Footer -->
         <div class="main-footer">
@@ -745,7 +752,6 @@
                         <h4>Quick Links</h4>
                         <ul>
                             <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="contact.html">Apply Now</a></li>
                             <li><a href="tel:+919130448831">Call Us</a></li>
@@ -784,63 +790,10 @@
 
     <!-- Custom Scripts -->
     <script src="universal-lenis.js"></script>
+    <script src="professional-mobile-navbar.js"></script>
     <script src="script.js"></script>
 
-    <script>
-        function openMobileMenu() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
-            if (overlay && sidebar) {
-                overlay.classList.add('show');
-                sidebar.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeMobileMenu() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-            if (overlay && sidebar) {
-                overlay.classList.remove('show');
-                sidebar.classList.remove('show');
-                document.body.style.overflow = 'auto';
-                if (servicesDropdown) {
-                    servicesDropdown.classList.remove('active');
-                }
-            }
-        }
-
-        function toggleServices() {
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-            if (servicesDropdown) {
-                servicesDropdown.classList.toggle('active');
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            if (overlay) {
-                overlay.addEventListener('click', function(e) {
-                    if (e.target === overlay) closeMobileMenu();
-                });
-            }
-
-            const menuLinks = document.querySelectorAll('.mobile-menu-links a:not(.mobile-services-toggle)');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-
-            const serviceLinks = document.querySelectorAll('.mobile-services-links a');
-            serviceLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-        });
-    </script>
+    <!-- Mobile menu functions are now handled by universal-mobile-navbar.js -->
 
 </body>
 </html>

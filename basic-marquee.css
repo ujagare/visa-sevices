@@ -1,0 +1,38 @@
+/* Basic marquee animations */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.image-marquee-content {
+  display: flex;
+  animation: scroll-left 15s linear infinite;
+}
+
+.choice-marquee-right .choice-marquee-content {
+  display: flex;
+  animation: scroll-left 15s linear infinite;
+}
+
+.choice-marquee-left .choice-marquee-content {
+  display: flex;
+  animation: scroll-right 15s linear infinite;
+}
+
+/* Marquee text color fix */
+.marquee-country-card .marquee-overlay h4,
+.marquee-country-card .marquee-overlay p {
+  color: white !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Country choice text color */
+.country-choice-item span {
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
+}

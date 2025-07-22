@@ -17,56 +17,53 @@
             window.lenis.destroy();
         }
 
-        // Create new Lenis instance with mobile-optimized settings
-        const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            direction: 'vertical',
-            gestureDirection: 'vertical',
-            smooth: true,
-            mouseMultiplier: 1,
-            smoothTouch: true,
-            touchMultiplier: 1.5,
-            infinite: false,
-            normalizeWheel: true,
-            wheelEventsTarget: document.documentElement,
-            autoResize: true,
-            syncTouch: true,
-            touchInertiaMultiplier: 35
-        });
+        try {
+            // Create new Lenis instance with mobile-optimized settings
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                mouseMultiplier: 1,
+                smoothTouch: true,
+                touchMultiplier: 1.5,
+                infinite: false,
+                normalizeWheel: true,
+                wheelEventsTarget: document.documentElement,
+                autoResize: true,
+                syncTouch: true,
+                touchInertiaMultiplier: 35
+            });
 
-        // Make globally accessible
-        window.lenis = lenis;
+            // Make globally accessible
+            window.lenis = lenis;
 
-        // GSAP ScrollTrigger integration
-        if (typeof ScrollTrigger !== 'undefined') {
-            lenis.on('scroll', ScrollTrigger.update);
-            
-            if (typeof gsap !== 'undefined') {
-                gsap.ticker.add((time) => {
-                    lenis.raf(time * 1000);
-                });
-                gsap.ticker.lagSmoothing(0);
+            // GSAP ScrollTrigger integration
+            if (typeof ScrollTrigger !== 'undefined') {
+                lenis.on('scroll', ScrollTrigger.update);
+                
+                if (typeof gsap !== 'undefined') {
+                    gsap.ticker.add((time) => {
+                        lenis.raf(time * 1000);
+                    });
+                    gsap.ticker.lagSmoothing(0);
+                }
             }
-        }
 
-        // Animation frame loop
-        function raf(time) {
-            lenis.raf(time);
+            // Animation frame loop
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
             requestAnimationFrame(raf);
+
+            
+            // Dispatch custom event
+            window.dispatchEvent(new CustomEvent('lenisReady', { detail: lenis }));
+        } catch (error) {
+            console.error('Error initializing Lenis:', error);
         }
-        requestAnimationFrame(raf);
-
-        // Debug logging
-        lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-            // Uncomment for debugging
-            // console.log('Lenis scroll:', { scroll, velocity, direction });
-        });
-
-        console.log('Universal Lenis initialized successfully');
-        
-        // Dispatch custom event
-        window.dispatchEvent(new CustomEvent('lenisReady', { detail: lenis }));
     }
 
     // Initialize when DOM is ready
@@ -87,8 +84,12 @@
     document.addEventListener('click', function(e) {
         const target = e.target.closest('a[href^="#"]');
         if (target && window.lenis) {
+            const href = target.getAttribute('href');
+            // Skip empty href="#" links
+            if (href === '#') return;
+            
             e.preventDefault();
-            const targetElement = document.querySelector(target.getAttribute('href'));
+            const targetElement = document.querySelector(href);
             if (targetElement) {
                 window.lenis.scrollTo(targetElement, {
                     offset: -100,

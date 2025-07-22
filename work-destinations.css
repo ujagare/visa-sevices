@@ -64,6 +64,7 @@
     overflow: hidden;
     position: relative;
     border: none;
+    min-height: 450px;
 }
 
 .work-destination-card:hover {
@@ -290,6 +291,7 @@
 }
 
 /* Responsive styles */
+
 @media (max-width: 992px) {
     .work-destinations-grid {
         grid-template-columns: repeat(2, 1fr);

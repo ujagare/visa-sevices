@@ -185,11 +185,10 @@
 
 /* Footer Styles */
 .footer-section {
-    background: url(images/hero/Footer.jpg);
+    background: url(images/hero/webp/travel-again-concept-arrangement-with-copy-space_batcheditor_fotor.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
     position: relative;
 }
 

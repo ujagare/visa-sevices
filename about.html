@@ -18,8 +18,16 @@
 
     <title>About Us - White Wings Visa Consultancy Pune</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="professional-mobile-menu.css">
     <link rel="stylesheet" href="style-fix.css">
+    <link rel="stylesheet" href="navbar-fix.css">
+    <link rel="stylesheet" href="professional-mobile-navbar.css">
+    <link rel="stylesheet" href="about-mobile-navbar.css">
+    <link rel="stylesheet" href="mobile-menu-overlay.css">
+    <link rel="stylesheet" href="mobile-menu-animations.css">
+    <link rel="stylesheet" href="mobile-navbar-zindex-fix.css">
+    <link rel="stylesheet" href="mobile-navbar-vertical.css">
+    <link rel="stylesheet" href="improved-dropdown-menu.css">
+    <link rel="stylesheet" href="chrome-devtools-fix.css">
 
     <!-- White Wings Custom Color Scheme -->
     <link rel="stylesheet" href="white-wings-colors.css">
@@ -39,11 +47,12 @@
     <link rel="stylesheet" href="about-page-additional.css">
     <link rel="stylesheet" href="about-section-headings.css">
     <link rel="stylesheet" href="about-hero-enhanced.css">
-    <link rel="stylesheet" href="universal-mobile-fix.css">
     <link rel="stylesheet" href="apply-now-button.css">
+    <link rel="stylesheet" href="footer-fix-updated.css">
+    <link rel="stylesheet" href="apply-btn-fix.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
-<body>
+<body class="about-page">
     <!-- Navigation - Same as Home Page -->
     <nav-div>
         <nav>
@@ -61,28 +70,24 @@
                                 <i class="ri-graduation-cap-line"></i>
                                 <div>
                                     <strong>Study Abroad</strong>
-                                    <span>Student visa & education guidance</span>
                                 </div>
                             </a>
                             <a href="migrate.html">
                                 <i class="ri-home-heart-line"></i>
                                 <div>
                                     <strong>Migrate</strong>
-                                    <span>Permanent residency & immigration</span>
                                 </div>
                             </a>
                             <a href="work.html">
                                 <i class="ri-briefcase-line"></i>
                                 <div>
                                     <strong>Work Abroad</strong>
-                                    <span>Work visa & job opportunities</span>
                                 </div>
                             </a>
                             <a href="visit.html">
                                 <i class="ri-plane-line"></i>
                                 <div>
                                     <strong>Visit</strong>
-                                    <span>Tourist & business visa</span>
                                 </div>
                             </a>
                         </div>
@@ -99,40 +104,10 @@
                 </div>
             </div>
 
-            <!-- Simple Mobile Hamburger -->
-            <button class="simple-hamburger" id="simple-hamburger" type="button" onclick="openMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            
         </nav>
 
-        <!-- Professional Mobile Menu -->
-        <div class="mobile-menu-overlay"></div>
-        <div class="mobile-menu-sidebar">
-            <div class="mobile-menu-header">
-                <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-menu-logo">
-                <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
-            </div>
 
-            <ul class="mobile-menu-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li class="mobile-services-dropdown">
-                    <div class="mobile-services-toggle" onclick="toggleServices()">
-                        <span>Services</span>
-                        <i class="ri-arrow-down-s-line mobile-services-arrow"></i>
-                    </div>
-                    <div class="mobile-services-links">
-                        <a href="study.html">Study Abroad</a>
-                        <a href="migrate.html">Migrate</a>
-                        <a href="work.html">Work Abroad</a>
-                        <a href="visit.html">Visit</a>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
     </nav-div>
 
 
@@ -171,7 +146,7 @@
 
                 <div class="hero-visual">
                     <div class="hero-image-container">
-                        <img src="images/hero/top-view-tickets-little-plane.jpg" alt="White Wings Team" class="hero-image">
+                        <img src="images/hero/webp/top-view-tickets-little-plane_batcheditor_fotor.webp" alt="White Wings Team" class="hero-image">
                         <div class="image-overlay">
                             <div class="overlay-content">
                                 <div class="overlay-badge">
@@ -447,84 +422,7 @@
         </div>
     </section>
 
-    <!-- MODERN TEAM -->
-    <section class="modern-team-section">
-        <div class="team-container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="ri-team-line"></i>
-                    <span>OUR TEAM</span>
-                </div>
-                <h2>Meet the Experts Behind Your Success</h2>
-                <p>Our dedicated team of visa specialists, immigration lawyers, and customer success managers work tirelessly to ensure your visa journey is smooth and successful.</p>
-            </div>
-
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" alt="Mrunal Joshi">
-                        <div class="member-overlay">
-                            <div class="social-links">
-                                <a href="#"><i class="ri-linkedin-fill"></i></a>
-                                <a href="#"><i class="ri-mail-fill"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Mrunal Joshi</h4>
-                        <p class="member-role">CEO & Founder</p>
-                        <p class="member-description">Visionary leader with 15+ years in immigration law, dedicated to making global mobility accessible for everyone.</p>
-                        <div class="member-expertise">
-                            <span class="expertise-tag">Immigration Law</span>
-                            <span class="expertise-tag">Business Strategy</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" alt="Rajesh Kumar">
-                        <div class="member-overlay">
-                            <div class="social-links">
-                                <a href="#"><i class="ri-linkedin-fill"></i></a>
-                                <a href="#"><i class="ri-mail-fill"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Rajesh Kumar</h4>
-                        <p class="member-role">Head of Operations</p>
-                        <p class="member-description">Operations expert ensuring seamless processes and exceptional client experiences across all service touchpoints.</p>
-                        <div class="member-expertise">
-                            <span class="expertise-tag">Operations</span>
-                            <span class="expertise-tag">Process Optimization</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" alt="Priya Sharma">
-                        <div class="member-overlay">
-                            <div class="social-links">
-                                <a href="#"><i class="ri-linkedin-fill"></i></a>
-                                <a href="#"><i class="ri-mail-fill"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Priya Sharma</h4>
-                        <p class="member-role">Chief Visa Consultant</p>
-                        <p class="member-description">Senior consultant specializing in complex visa cases with expertise in 50+ countries' immigration policies.</p>
-                        <div class="member-expertise">
-                            <span class="expertise-tag">Visa Consulting</span>
-                            <span class="expertise-tag">Immigration Policy</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- ENHANCED ACHIEVEMENTS SECTION -->
     <section class="enhanced-achievements-section">
@@ -690,7 +588,6 @@
                         <h4>Quick Links</h4>
                         <ul>
                             <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="contact.html">Apply Now</a></li>
                             <li><a href="tel:+919130448831">Call Us</a></li>
@@ -727,8 +624,8 @@
     <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
 
     <!-- Scripts -->
-    <script src="universal-mobile-fix.js"></script>
     <script src="universal-lenis.js"></script>
+    <script src="professional-mobile-navbar.js"></script>
     <script src="script.js"></script>
 
     <script>
@@ -791,61 +688,7 @@
             console.log('Lenis ready for about page functionality');
         });
 
-        // Professional Mobile Menu Functions
-        function openMobileMenu() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
-            if (overlay && sidebar) {
-                overlay.classList.add('show');
-                sidebar.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeMobileMenu() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-            if (overlay && sidebar) {
-                overlay.classList.remove('show');
-                sidebar.classList.remove('show');
-                document.body.style.overflow = 'auto';
-                if (servicesDropdown) {
-                    servicesDropdown.classList.remove('active');
-                }
-            }
-        }
-
-        function toggleServices() {
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-            if (servicesDropdown) {
-                servicesDropdown.classList.toggle('active');
-            }
-        }
-
-        // Close menu events
-        document.addEventListener('DOMContentLoaded', function() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            if (overlay) {
-                overlay.addEventListener('click', function(e) {
-                    if (e.target === overlay) closeMobileMenu();
-                });
-            }
-
-            const menuLinks = document.querySelectorAll('.mobile-menu-links a:not(.mobile-services-toggle)');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-
-            const serviceLinks = document.querySelectorAll('.mobile-services-links a');
-            serviceLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-        });
+        // Mobile menu functions are now handled by universal-mobile-navbar.js
     </script>
 </body>
 </html>

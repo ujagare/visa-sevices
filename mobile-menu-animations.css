@@ -1,0 +1,48 @@
+/* Mobile Menu Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-menu.active ul li {
+    animation: fadeInDown 0.4s ease forwards;
+    opacity: 0;
+}
+
+.mobile-menu.active ul li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.mobile-menu.active ul li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.mobile-menu.active ul li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.mobile-menu.active ul li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.mobile-menu.active .mobile-apply-btn {
+    animation: fadeInUp 0.5s ease forwards 0.5s;
+    opacity: 0;
+}

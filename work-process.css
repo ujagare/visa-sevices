@@ -106,16 +106,20 @@
     
     .work-step {
         flex-direction: row !important;
+        margin-bottom: 50px;
     }
     
     .step-number {
         left: 30px;
         transform: none;
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
     }
     
     .step-content {
-        width: calc(100% - 60px);
-        margin-left: 60px !important;
+        width: calc(100% - 90px);
+        margin-left: 90px !important;
     }
 }
 
@@ -126,13 +130,60 @@
     
     .work-process-steps {
         margin: 40px 0;
+        padding: 0 10px 0 20px;
+    }
+    
+    .work-step {
+        margin-bottom: 40px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        left: 20px;
+        border-width: 3px;
+    }
+    
+    .work-process-steps::before {
+        left: 20px;
     }
     
     .step-content {
-        padding: 20px;
+        padding: 15px;
+        margin-left: 70px !important;
+        width: calc(100% - 70px);
     }
     
     .step-content h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .step-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-process-steps {
+        padding: 0 5px 0 15px;
+    }
+    
+    .step-number {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+        left: 15px;
+    }
+    
+    .work-process-steps::before {
+        left: 15px;
+    }
+    
+    .step-content {
+        padding: 12px;
+        margin-left: 55px !important;
+        width: calc(100% - 55px);
     }
 }

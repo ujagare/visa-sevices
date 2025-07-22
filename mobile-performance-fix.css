@@ -1,0 +1,252 @@
+/* Mobile Performance Optimization - Conservative Approach */
+
+/* Image Optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Lazy loading optimization */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+    /* Reduce animations on mobile for better performance */
+    * {
+        animation-duration: 0.3s !important;
+        transition-duration: 0.3s !important;
+    }
+    
+    /* Optimize slider for mobile */
+    .swiper-slide img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Optimize mobile menu */
+    .mobile-menu-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .mobile-menu-sidebar.active {
+        transform: translateX(0);
+    }
+    
+    /* Optimize testimonials for mobile */
+    .testimonial-card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Reduce shadow complexity on mobile */
+    .card, .testimonial-card, .service-card {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    }
+    
+    /* Optimize fonts for mobile */
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.1rem; }
+    
+    /* Optimize spacing for mobile */
+    .section {
+        padding: 2rem 0;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Performance optimizations for all devices */
+.hero-section {
+    will-change: transform;
+}
+
+.swiper-slide {
+    will-change: transform;
+}
+
+/* Optimize background images */
+.hero-section,
+.section-bg {
+    background-attachment: scroll; /* Better performance than fixed */
+}
+
+/* Optimize transforms */
+.card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+/* Reduce repaints */
+.navbar {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Optimize loader */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #E8F2FD;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+.loader-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Optimize form elements */
+input, select, textarea {
+    will-change: border-color;
+}
+
+input:focus, select:focus, textarea:focus {
+    transition: border-color 0.2s ease;
+}
+
+/* Optimize button interactions */
+button, .btn {
+    will-change: background-color, transform;
+    transition: all 0.2s ease;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Critical CSS for above-the-fold content */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Optimize slider performance */
+.swiper {
+    overflow: hidden;
+}
+
+.swiper-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Optimize testimonials */
+.testimonial-section {
+    overflow: hidden;
+}
+
+.testimonial-card {
+    transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Optimize mobile menu */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Optimize scrolling performance */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Optimize images for different screen sizes */
+@media (max-width: 480px) {
+    .hero img,
+    .slider img,
+    .testimonial img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print optimizations */
+@media print {
+    .navbar,
+    .mobile-menu,
+    .loader-container,
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+    }
+}

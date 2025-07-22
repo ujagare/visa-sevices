@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Migrate - White Wings Visa Consultancy</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="professional-mobile-menu.css">
     <link rel="stylesheet" href="style-fix.css">
     <link rel="stylesheet" href="pages.css">
     <link rel="stylesheet" href="migrate-styles.css">
@@ -13,8 +12,15 @@
     <link rel="stylesheet" href="migrate-process.css">
     <link rel="stylesheet" href="migrate-benefits.css">
     <link rel="stylesheet" href="migrate-sections.css">
-    <link rel="stylesheet" href="master-mobile-navbar.css">
     <link rel="stylesheet" href="apply-now-button.css">
+    <link rel="stylesheet" href="navbar-fix.css">
+    <link rel="stylesheet" href="professional-mobile-navbar.css">
+    <link rel="stylesheet" href="mobile-menu-overlay.css">
+    <link rel="stylesheet" href="mobile-menu-animations.css">
+    <link rel="stylesheet" href="migrate-mobile-navbar.css">
+    <link rel="stylesheet" href="mobile-navbar-zindex-fix.css">
+    <link rel="stylesheet" href="mobile-navbar-vertical.css">
+    <link rel="stylesheet" href="improved-dropdown-menu.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
     <!-- White Wings Custom Color Scheme -->
@@ -46,28 +52,24 @@
                                 <i class="ri-graduation-cap-line"></i>
                                 <div>
                                     <strong>Study Abroad</strong>
-                                    <span>Student visa & education guidance</span>
                                 </div>
                             </a>
                             <a href="migrate.html">
                                 <i class="ri-home-heart-line"></i>
                                 <div>
                                     <strong>Migrate</strong>
-                                    <span>Permanent residency & immigration</span>
                                 </div>
                             </a>
                             <a href="work.html">
                                 <i class="ri-briefcase-line"></i>
                                 <div>
                                     <strong>Work Abroad</strong>
-                                    <span>Work visa & job opportunities</span>
                                 </div>
                             </a>
                             <a href="visit.html">
                                 <i class="ri-plane-line"></i>
                                 <div>
                                     <strong>Visit</strong>
-                                    <span>Tourist & business visa</span>
                                 </div>
                             </a>
                         </div>
@@ -84,40 +86,7 @@
                 </div>
             </div>
 
-            <!-- Professional Mobile Hamburger -->
-            <button class="simple-hamburger" onclick="openMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </nav>
-
-        <!-- Professional Mobile Menu -->
-        <div class="mobile-menu-overlay"></div>
-        <div class="mobile-menu-sidebar">
-            <div class="mobile-menu-header">
-                <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-menu-logo">
-                <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
-            </div>
-
-            <ul class="mobile-menu-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="mobile-services-dropdown">
-                    <div class="mobile-services-toggle" onclick="toggleServices()">
-                        <span>Services</span>
-                        <i class="ri-arrow-down-s-line mobile-services-arrow"></i>
-                    </div>
-                    <div class="mobile-services-links">
-                        <a href="study.html">Study Abroad</a>
-                        <a href="migrate.html" class="active">Migrate</a>
-                        <a href="work.html">Work Abroad</a>
-                        <a href="visit.html">Visit</a>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
     </nav-div>
 
     <!-- Migrate Hero Section -->
@@ -182,7 +151,7 @@
 
                 <div class="hero-right">
                     <div class="hero-image">
-                        <img src="https://img.freepik.com/free-photo/passport-boarding-pass-tickets_23-2148786059.jpg" alt="Visa and Immigration Services">
+                        <img src="images/hero/webp/passport-boarding-pass-tickets_23-2148786059.webp" alt="Visa and Immigration Services">
                     </div>
                     <div class="confused-card">
                         <div class="confused-icon">
@@ -217,7 +186,7 @@
                         </div>
                     </div>
                     <div class="destination-flag">
-                        <img src="https://flagcdn.com/w80/au.png" alt="Australia Flag">
+                        <img src="images/flags/flag webp/au_batcheditor_fotor.webp" alt="Australia Flag">
                     </div>
                     <div class="destination-content">
                     <h3><i class="ri-map-pin-2-fill"></i> Australia</h3>
@@ -238,7 +207,7 @@
                         </div>
                     </div>
                     <div class="destination-flag">
-                        <img src="https://flagcdn.com/w80/ca.png" alt="Canada Flag">
+                        <img src="images/flags/flag webp/ca_batcheditor_fotor.webp" alt="Canada Flag">
                     </div>
                     <div class="destination-content">
                     <h3><i class="ri-map-pin-2-fill"></i> Canada</h3>
@@ -259,7 +228,7 @@
                         </div>
                     </div>
                     <div class="destination-flag">
-                        <img src="https://flagcdn.com/w80/de.png" alt="Germany Flag">
+                        <img src="images/flags/flag webp/de_batcheditor_fotor.webp" alt="Germany Flag">
                     </div>
                     <div class="destination-content">
                     <h3><i class="ri-map-pin-2-fill"></i> Germany</h3>
@@ -280,7 +249,7 @@
                         </div>
                     </div>
                     <div class="destination-flag">
-                        <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag">
+                        <img src="images/flags/flag webp/gb_batcheditor_fotor.webp" alt="UK Flag">
                     </div>
                     <div class="destination-content">
                     <h3><i class="ri-map-pin-2-fill"></i> United Kingdom</h3>
@@ -301,7 +270,7 @@
                         </div>
                     </div>
                     <div class="destination-flag">
-                        <img src="https://flagcdn.com/w80/us.png" alt="USA Flag">
+                        <img src="images/flags/flag webp/us_batcheditor_fotor.webp" alt="USA Flag">
                     </div>
                     <div class="destination-content">
                     <h3><i class="ri-map-pin-2-fill"></i> United States</h3>
@@ -322,7 +291,7 @@
                         </div>
                     </div>
                     <div class="destination-flag">
-                        <img src="https://flagcdn.com/w80/nz.png" alt="New Zealand Flag">
+                        <img src="images/flags/flag webp/nz_batcheditor_fotor.webp" alt="New Zealand Flag">
                     </div>
                     <div class="destination-content">
                     <h3><i class="ri-map-pin-2-fill"></i> New Zealand</h3>
@@ -345,7 +314,7 @@
             <div class="eligibility-content">
                 <div class="eligibility-left">
                     <div class="eligibility-image-container">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Check Your Eligibility">
+                        <img src="images/hero/webp/female-tourists-hand-have-happy-travel-map_batcheditor_fotor.webp" alt="Check Your Eligibility">
                         <div class="eligibility-badge">
                             <div class="badge-icon">
                                 <i class="ri-check-double-line"></i>
@@ -695,36 +664,47 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section - Exact Copy from Home Page -->
     <footer class="footer-section">
+        <!-- Apply for Visa CTA Section -->
+        <div class="apply-visa-cta">
+            <div class="cta-container">
+                <h6>APPLY FOR A VISA</h6>
+                <h2>You Focus on Flying, We'll Handle the Paperwork!</h2>
+                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and guaranteed success.</p>
+                <a href="https://wa.me/919130448831" class="apply-btn">APPLY NOW</a>
+            </div>
+        </div>
 
+        <!-- Main Footer -->
         <div class="main-footer">
             <div class="footer-container">
                 <div class="footer-content">
+                    <!-- Left Column - Logo and Social -->
                     <div class="footer-left">
                         <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="footer-logo">
-                        <p class="footer-tagline">Your trusted partner for international visa services</p>
-                        <p class="footer-slogan">Making Global Dreams Come True</p>
+                        <p class="footer-tagline">Hassle-free travel shouldn't just be a dream.</p>
+                        <p class="footer-slogan">White Wings - Visa Simplified.</p>
                         <div class="social-links">
-                            <a href="#"><i class="ri-facebook-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-fill"></i></a>
-                            <a href="#"><i class="ri-twitter-fill"></i></a>
-                            <a href="#"><i class="ri-linkedin-fill"></i></a>
                             <a href="https://wa.me/919130448831"><i class="ri-whatsapp-fill"></i></a>
+                            <a href="mailto:mrunal@whitewingsvisa.com"><i class="ri-mail-fill"></i></a>
+                            <a href="#"><i class="ri-instagram-fill"></i></a>
+                            <a href="#"><i class="ri-facebook-fill"></i></a>
                         </div>
                     </div>
 
+                    <!-- Middle Column - Quick Links -->
                     <div class="footer-middle">
                         <h4>Quick Links</h4>
                         <ul>
                             <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="contact.html">Apply Now</a></li>
                             <li><a href="tel:+919130448831">Call Us</a></li>
                         </ul>
                     </div>
 
+                    <!-- Right Column - Contact Info -->
                     <div class="footer-right">
                         <h4>Get In Touch</h4>
                         <div class="contact-details">
@@ -735,9 +715,10 @@
                     </div>
                 </div>
 
+                <!-- Copyright -->
                 <div class="copyright">
-                    <p>&copy; 2024 White Wings Visa Consultancy. All rights reserved.</p>
-                    <p>Best Visa Consultant in Pune, Maharashtra | Expert Immigration Services</p>
+                    <p>Copyright © 2025 White Wings. All Rights Reserved.</p>
+                    <p>Powered by White Wings</p>
                 </div>
             </div>
         </div>
@@ -752,66 +733,12 @@
 
     <!-- Custom Scripts -->
     <script src="universal-lenis.js"></script>
-    <script src="new-mobile-navbar.js"></script>
+    <script src="professional-mobile-navbar.js"></script>
     <script src="script.js"></script>
     <script src="migrate-stats.js"></script>
     <script src="enable-scroll.js"></script>
 
-    <script>
-        function openMobileMenu() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
-            if (overlay && sidebar) {
-                overlay.classList.add('show');
-                sidebar.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeMobileMenu() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-            if (overlay && sidebar) {
-                overlay.classList.remove('show');
-                sidebar.classList.remove('show');
-                document.body.style.overflow = 'auto';
-                if (servicesDropdown) {
-                    servicesDropdown.classList.remove('active');
-                }
-            }
-        }
-
-        function toggleServices() {
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-            if (servicesDropdown) {
-                servicesDropdown.classList.toggle('active');
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            if (overlay) {
-                overlay.addEventListener('click', function(e) {
-                    if (e.target === overlay) closeMobileMenu();
-                });
-            }
-
-            const menuLinks = document.querySelectorAll('.mobile-menu-links a:not(.mobile-services-toggle)');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-
-            const serviceLinks = document.querySelectorAll('.mobile-services-links a');
-            serviceLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-        });
-    </script>
+    <!-- Mobile menu functionality is now handled by disable-mobile-navbar.js -->
 
 </body>
 </html>

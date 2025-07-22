@@ -1,0 +1,64 @@
+/* Simple Barba.js Transition Styles for White Wings Visa Website */
+
+/* Base container styles */
+[data-barba="wrapper"] {
+    position: relative;
+    overflow-x: hidden;
+}
+
+[data-barba="container"] {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Ensure smooth transitions */
+body {
+    overflow-x: hidden;
+}
+
+/* Simple fade transition classes */
+.barba-fade-enter {
+    opacity: 0;
+}
+
+.barba-fade-enter-active {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.barba-fade-exit {
+    opacity: 1;
+}
+
+.barba-fade-exit-active {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Prevent layout shifts during transitions */
+.barba-transitioning {
+    overflow: hidden;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    [data-barba="container"] {
+        transition: opacity 0.2s ease;
+    }
+    
+    .barba-fade-enter-active,
+    .barba-fade-exit-active {
+        transition: opacity 0.2s ease;
+    }
+}
+
+/* Accessibility - respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    [data-barba="container"],
+    .barba-fade-enter-active,
+    .barba-fade-exit-active {
+        transition: none;
+    }
+}

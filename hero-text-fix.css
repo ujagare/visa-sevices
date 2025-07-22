@@ -1,0 +1,31 @@
+/* 
+ * Hero Text Fix CSS
+ * This file fixes the text color in slider and marquee to be white
+ */
+
+/* Hero slider text color fix - ONLY for slider content */
+.slider .swiper-slide .slide-content h3,
+.slider .swiper-slide .slide-content p {
+    color: white !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.8) !important;
+    font-weight: 600 !important;
+}
+
+/* Marquee text color fix */
+.marquee-overlay h4,
+.marquee-overlay p {
+    color: white !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Fix for slider navigation */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+    opacity: 0.8;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 1;
+}

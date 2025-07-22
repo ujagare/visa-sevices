@@ -1,0 +1,244 @@
+/* Mobile Navbar Perfect - Based on the screenshot */
+
+/* Mobile menu container */
+.mobile-menu-sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: -100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    z-index: 9999 !important;
+    position: fixed !important;
+    overflow-y: auto !important;
+    max-height: 100vh !important;
+    background: white !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Mobile menu header */
+.mobile-menu-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px 20px !important;
+    background: white !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Logo in mobile menu */
+.mobile-menu-logo {
+    height: 40px !important;
+    width: auto !important;
+}
+
+/* Close button */
+.mobile-menu-close {
+    font-size: 24px !important;
+    background: transparent !important;
+    border: none !important;
+    color: #334155 !important;
+    cursor: pointer !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Mobile menu links container */
+.mobile-menu-links {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+/* Mobile menu list items */
+.mobile-menu-links li {
+    border-bottom: 1px solid #f1f5f9 !important;
+    width: 100% !important;
+}
+
+/* Mobile menu links */
+.mobile-menu-links a {
+    display: block !important;
+    padding: 15px 20px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Services dropdown toggle */
+.mobile-services-toggle {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    background: white !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #333 !important;
+    text-align: left !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Services dropdown links container */
+.mobile-services-links {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease !important;
+    background: #f8fafc !important;
+}
+
+/* Services dropdown links when active */
+.mobile-services-dropdown.active .mobile-services-links {
+    max-height: 250px !important;
+}
+
+/* Services dropdown links */
+.mobile-services-links a {
+    padding: 12px 20px 12px 40px !important;
+    font-size: 15px !important;
+    color: #475569 !important;
+    background: #f8fafc !important;
+}
+
+/* Overlay background */
+.mobile-menu-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 9998 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+}
+
+/* Overlay when shown */
+.mobile-menu-overlay.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Mobile menu when shown */
+.mobile-menu-sidebar.show {
+    top: 0 !important;
+    visibility: visible !important;
+}
+
+/* Hamburger button */
+.simple-hamburger {
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Hamburger button lines */
+.simple-hamburger span {
+    width: 20px !important;
+    height: 2px !important;
+    background: #333 !important;
+    border-radius: 1px !important;
+}
+
+/* Active menu item */
+.mobile-menu-links a.active {
+    color: #333 !important;
+    font-weight: 600 !important;
+    background: #f8fafc !important;
+}
+
+/* Arrow icon in services dropdown */
+.mobile-services-arrow {
+    transition: transform 0.3s ease !important;
+    font-size: 18px !important;
+    color: #333 !important;
+    display: inline-block !important;
+    width: 24px !important;
+    height: 24px !important;
+    text-align: center !important;
+    line-height: 24px !important;
+}
+
+/* Arrow icon when dropdown is active */
+.mobile-services-dropdown.active .mobile-services-arrow {
+    transform: rotate(180deg) !important;
+}
+
+/* Fix for services dropdown arrow positioning */
+@media (max-width: 768px) {
+    /* Fix for services dropdown */
+    .mobile-services-dropdown {
+        position: relative !important;
+    }
+    
+    .mobile-services-toggle span {
+        display: inline-block !important;
+        vertical-align: middle !important;
+    }
+    
+    .mobile-services-arrow {
+        position: absolute !important;
+        right: 20px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+    
+    .mobile-services-dropdown.active .mobile-services-arrow {
+        transform: translateY(-50%) rotate(180deg) !important;
+    }
+    
+    /* Fix for logo */
+    .logo {
+        height: 40px !important;
+    }
+    
+    /* Fix for navbar */
+    nav {
+        padding: 10px 15px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
+    /* Fix for Services text */
+    .mobile-services-toggle {
+        position: relative !important;
+        padding-right: 40px !important;
+    }
+    
+    /* Fix for dropdown arrow appearance */
+    .ri-arrow-down-s-line {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 24px !important;
+        height: 24px !important;
+    }
+}

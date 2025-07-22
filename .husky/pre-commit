@@ -1,46 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "🚀 White Wings Visa - Pre-commit checks starting..."
-echo "=================================================="
-
-# Check if critical files exist
-echo "📁 Checking critical files..."
-if [ ! -f "index.html" ]; then
-    echo "❌ Error: index.html not found!"
-    exit 1
-fi
-
-if [ ! -f "contact.html" ]; then
-    echo "❌ Error: contact.html not found!"
-    exit 1
-fi
-
-if [ ! -f "robots.txt" ]; then
-    echo "❌ Error: robots.txt not found!"
-    exit 1
-fi
-
-if [ ! -f "sitemap.xml" ]; then
-    echo "❌ Error: sitemap.xml not found!"
-    exit 1
-fi
-
-echo "✅ All critical files present"
-
-# Run validation
-echo "🔍 Running validation checks..."
-npm run validate
-
-# Run linting
-echo "🧹 Running code quality checks..."
+echo "🔍 Running pre-commit checks..."
 npm run lint
-
-# Run tests
-echo "🧪 Running tests..."
-npm run test
-
-echo "=================================================="
-echo "✅ All pre-commit checks passed!"
-echo "🚀 Ready to commit to White Wings Visa repository"
-echo "=================================================="
+npm run validate

@@ -1,0 +1,15 @@
+/* Navbar Fix - Remove dropdown arrow and ensure equal spacing */
+.desktop-menu ul li.dropdown a i.ri-arrow-down-s-line {
+    display: none !important;
+}
+
+.desktop-menu ul {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 3rem !important;
+}
+
+.desktop-menu ul li a {
+    padding: 15px 20px !important;
+}

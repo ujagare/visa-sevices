@@ -1,0 +1,57 @@
+/* Exam Cards Single Line Fix */
+.coaching-section {
+    overflow: hidden;
+}
+
+.coaching-container {
+    overflow: visible;
+}
+
+.coaching-grid-wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.coaching-grid {
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+/* Make sure all cards have equal height */
+.coaching-card {
+    height: 100%;
+    min-height: 500px; /* Set a minimum height for all cards */
+}
+
+/* Equal height for content areas */
+.coaching-content {
+    justify-content: space-between;
+}
+
+.coaching-content h3 {
+    height: 40px; /* Fixed height for titles */
+    display: flex;
+    align-items: center;
+}
+
+.coaching-content p {
+    height: 80px; /* Fixed height for descriptions */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .coaching-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .coaching-card {
+        margin-bottom: 20px;
+    }
+}

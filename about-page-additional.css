@@ -381,7 +381,7 @@
 .social-links a {
     width: 40px;
     height: 40px;
-    background: white;
+    background:transparent;
     color: #3b82f6;
     border-radius: 50%;
     display: flex;
@@ -392,9 +392,13 @@
 }
 
 .social-links a:hover {
-    background: #3b82f6;
-    color: white;
+    background: white !important;
+    color: #000 !important;
     transform: translateY(-3px);
+}
+
+.social-links a:hover i {
+    color: #000 !important;
 }
 
 .member-info {

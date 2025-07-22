@@ -1,0 +1,33 @@
+/* Fix for Work Opportunity cards on mobile */
+@media (max-width: 768px) {
+  .work-destination-card p {
+    min-height: 0 !important;
+    margin-bottom: 10px !important;
+    margin-top: 5px !important;
+    height: auto !important;
+    -webkit-line-clamp: 3 !important;
+  }
+  
+  .destination-features {
+    min-height: 0 !important;
+    margin-bottom: 5px !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .work-destination-card .destination-content {
+    padding: 20px 15px 15px !important;
+    gap: 0 !important;
+  }
+  
+  .destination-btn {
+    margin-top: 5px !important;
+  }
+  
+  .work-destination-card {
+    height: auto !important;
+  }
+  
+  .feature-tag {
+    margin-bottom: 5px !important;
+  }
+}

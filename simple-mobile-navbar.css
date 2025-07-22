@@ -1,266 +1,148 @@
-/* Simple Mobile Navbar CSS for White Wings Visa */
+/* Simple Mobile Navbar CSS - Based on the screenshot */
 
-/* Mobile Menu Styles */
+/* Mobile menu container */
 .mobile-menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-    z-index: 9999;
-    transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    display: none;
-    overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 9999;
+  transition: left 0.3s ease;
+  overflow-y: auto;
 }
 
 .mobile-menu.active {
-    top: 0;
-    display: block;
+  left: 0;
 }
 
-.mobile-menu-content {
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile-menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+/* Mobile menu header */
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  background-color: white;
 }
 
 .mobile-logo {
-    height: 50px;
-    width: auto;
-    filter: brightness(0) invert(1);
+  height: 40px;
 }
 
-#menu-close {
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
+.mobile-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
 }
 
-#menu-close:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: rotate(90deg);
+/* Mobile menu links */
+.mobile-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.mobile-nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex: 1;
+.mobile-nav li {
+  border-bottom: 1px solid #f1f5f9;
 }
 
-.mobile-nav-links li {
-    margin-bottom: 15px;
+.mobile-nav a {
+  display: block;
+  padding: 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.mobile-nav-links a {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 15px 20px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+/* Services dropdown */
+.mobile-dropdown {
+  position: relative;
 }
 
-.mobile-nav-links a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateX(10px);
+.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #333;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
 }
 
-.mobile-nav-links i {
-    font-size: 20px;
-    width: 24px;
-    text-align: center;
+.dropdown-content {
+  display: none;
+  background-color: #f8fafc;
 }
 
-/* Mobile Services Dropdown */
-.mobile-services-dropdown {
-    margin-bottom: 15px;
+.mobile-dropdown.active .dropdown-content {
+  display: block;
 }
 
-.mobile-services-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 15px 20px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    transition: all 0.3s ease;
+.dropdown-content a {
+  padding: 15px 20px 15px 40px;
+  background-color: #f8fafc;
 }
 
-.mobile-services-header:hover {
-    background: rgba(255, 255, 255, 0.2);
+/* Hamburger button */
+.hamburger {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
-.mobile-dropdown-arrow {
-    transition: transform 0.3s ease;
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 1px;
+  margin: 2px 0;
 }
 
-.mobile-services-dropdown.active .mobile-dropdown-arrow {
-    transform: rotate(180deg);
+/* Overlay */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  display: none;
 }
 
-.mobile-services-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    margin-top: 10px;
+.mobile-overlay.active {
+  display: block;
 }
 
-.mobile-services-dropdown.active .mobile-services-content {
-    max-height: 400px;
-}
-
-.mobile-services-content a {
-    margin-bottom: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    border-left: 3px solid rgba(255, 255, 255, 0.3);
-}
-
-.mobile-services-content a:hover {
-    border-left-color: white;
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.mobile-services-content div {
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile-services-content strong {
-    font-size: 16px;
-    margin-bottom: 2px;
-}
-
-.mobile-services-content span {
-    font-size: 13px;
-    opacity: 0.8;
-}
-
-/* Mobile Apply Button */
-.mobile-apply-btn {
-    margin-top: auto;
-    padding: 0;
-    border: none;
-    background: none;
-}
-
-.mobile-apply-btn a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-    color: #1e40af;
-    font-weight: 700;
-    font-size: 18px;
-    padding: 18px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-}
-
-.mobile-apply-btn a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
-
-/* Mobile Menu Button */
-.mobile-menu-btn {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.mobile-menu-btn:hover {
-    background: rgba(59, 130, 246, 0.1);
-}
-
-.mobile-menu-btn i {
-    font-size: 24px;
-    color: #1e40af;
-}
-
-/* Responsive Styles */
+/* Media queries */
 @media (max-width: 768px) {
-    .desktop-menu {
-        display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
+  .hamburger {
+    display: flex;
+  }
+  
+  #links, .desktop-menu {
+    display: none !important;
+  }
+  
+  .apply-now-btn {
+    display: none !important;
+  }
 }
-
-@media (max-width: 480px) {
-    .mobile-menu-content {
-        padding: 15px;
-    }
-    
-    .mobile-nav-links a {
-        font-size: 16px;
-        padding: 12px 15px;
-    }
-    
-    .mobile-services-header {
-        font-size: 16px;
-        padding: 12px 15px;
-    }
-    
-    .mobile-apply-btn a {
-        font-size: 16px;
-        padding: 15px 25px;
-    }
-}
-
-/* Animation for smooth transitions */
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.mobile-nav-links li {
-    animation: slideDown 0.3s ease forwards;
-}
-
-.mobile-nav-links li:nth-child(1) { animation-delay: 0.1s; }
-.mobile-nav-links li:nth-child(2) { animation-delay: 0.2s; }
-.mobile-nav-links li:nth-child(3) { animation-delay: 0.3s; }
-.mobile-nav-links li:nth-child(4) { animation-delay: 0.4s; }
-.mobile-nav-links li:nth-child(5) { animation-delay: 0.5s; }

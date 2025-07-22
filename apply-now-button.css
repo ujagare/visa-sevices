@@ -28,7 +28,7 @@
     align-items: center !important;
     gap: 8px !important;
     box-shadow: none !important;
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 /* Apply Now Button Hover Effect */
@@ -41,6 +41,11 @@
 /* Apply Now Button Icon */
 .btn-apply i {
     font-size: 1.1rem !important;
+    color: #222 !important;
+}
+.btn-apply i:hover {
+    font-size: 1.1rem !important;
+    color: #666 !important;
 }
 
 /* Mobile Responsive - Hide on Mobile */

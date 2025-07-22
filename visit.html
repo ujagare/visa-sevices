@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="White Wings Visa Consultancy in Pune, Maharashtra - Expert visit visa services for USA, Canada, UK, Australia, Schengen. Best visa consultant in Pune with 100% success rate.">
+    <meta name="keywords" content="visit visa consultant pune, tourist visa services pune, business visa consultant pune, usa visit visa pune, canada visit visa pune, uk visit visa pune, australia visit visa pune, schengen visit visa pune, visa consultancy maharashtra, best visa consultant pune">
+    <meta name="author" content="White Wings Visa Consultancy">
+    <meta name="robots" content="index, follow">
     <title>Visit Visa Services - White Wings Visa Consultancy</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo/WING LOGO.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/WING LOGO.png">
+    <link rel="apple-touch-icon" href="images/logo/WING LOGO.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Gilroy Font -->
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="professional-mobile-menu.css">
     <link rel="stylesheet" href="style-fix.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="apply-now-button.css">
+    <link rel="stylesheet" href="navbar-fix.css">
+    <link rel="stylesheet" href="professional-mobile-navbar.css">
+    <link rel="stylesheet" href="mobile-menu-overlay.css">
+    <link rel="stylesheet" href="mobile-menu-animations.css">
+    <link rel="stylesheet" href="mobile-navbar-zindex-fix.css">
+    <link rel="stylesheet" href="mobile-navbar-vertical.css">
     <link rel="stylesheet" href="pages.css">
     <link rel="stylesheet" href="visit-codex.css">
     <link rel="stylesheet" href="visit-cta-text-fix.css">
@@ -22,13 +41,14 @@
     <link rel="stylesheet" href="contact-enhanced.css">
     <link rel="stylesheet" href="cta-enhanced.css">
     <link rel="stylesheet" href="badge-fix.css">
-    <link rel="stylesheet" href="simple-mobile-navbar.css">
-    <link rel="stylesheet" href="apply-now-button.css">
     <link rel="stylesheet" href="about-enhanced.css">
     <link rel="stylesheet" href="services-enhanced.css">
 
     <!-- White Wings Custom Color Scheme -->
     <link rel="stylesheet" href="white-wings-colors.css">
+    
+    <!-- Mobile Hero Fix - Must be last to override all other styles -->
+    <link rel="stylesheet" href="visit-mobile-hero-fix.css">
 
 
 
@@ -38,115 +58,6 @@
     <!-- Gilroy Font -->
     <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
     <style>
-        /* Navbar Fix for Visit Page */
-        nav {
-            height: 12vh !important;
-            width: 100% !important;
-            background: none !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            padding: 0 2% !important;
-            position: relative !important;
-            z-index: 1000 !important;
-            border-bottom: 0.5px solid rgba(0, 0, 170, 0.329) !important;
-        }
-
-        nav-div {
-            width: 100% !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-        }
-
-        nav img {
-            height: 80px !important;
-            filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 0.8)) !important;
-        }
-
-        .desktop-menu ul {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            list-style: none !important;
-            gap: 3rem !important;
-        }
-
-        .desktop-menu ul button {
-            padding: 0.7rem 1.5rem !important;
-            border-radius: 20px !important;
-            background-color: navy !important;
-            color: white !important;
-            cursor: pointer !important;
-            font-size: 1rem !important;
-            font-weight: 500 !important;
-            transition: all 0.3s ease !important;
-            border: none !important;
-            text-decoration: none !important;
-        }
-
-        .desktop-menu ul button a {
-            text-decoration: none !important;
-            color: white !important;
-        }
-
-        /* Apply Now Button Consistent Styling */
-        .desktop-menu {
-            display: flex !important;
-            align-items: center !important;
-            gap: 20px !important;
-        }
-
-        .apply-now-btn {
-            margin-left: 0 !important;
-        }
-
-        .btn-apply {
-            padding: 0.7rem 1.5rem !important;
-            border-radius: 20px !important;
-            background-color: navy !important;
-            color: white !important;
-            cursor: pointer !important;
-            font-size: 1rem !important;
-            font-weight: 500 !important;
-            transition: all 0.3s ease !important;
-            border: none !important;
-            text-decoration: none !important;
-            display: inline-flex !important;
-            align-items: center !important;
-            gap: 8px !important;
-        }
-
-        .btn-apply:hover {
-            background-color: #1e3a8a !important;
-            transform: translateY(-1px) !important;
-        }
-
-        .btn-apply i {
-            font-size: 1.1rem !important;
-        }
-
-        /* Mobile responsive navbar */
-        @media screen and (max-width: 768px) {
-            nav {
-                height: 8vh !important;
-                padding: 0 4% !important;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            nav {
-                height: 7vh !important;
-                padding: 0 3% !important;
-            }
-        }
-
-        @media screen and (max-width: 360px) {
-            nav {
-                height: 6vh !important;
-                padding: 0 2% !important;
-            }
-        }
 
         /* Fix for section headings alignment - STRONG OVERRIDE */
         .codex-section-title,
@@ -255,22 +166,7 @@
             z-index: 1;
         }
 
-        /* Fix for navbar height */
-        nav {
-            height: auto !important;
-            min-height: 100px;
-            padding: 15px 0;
-        }
 
-        nav ul li a {
-            padding: 15px 20px;
-            display: inline-block;
-        }
-
-        nav .logo {
-            height: 70px;
-            width: auto;
-        }
 
         /* Fix for hero section responsive issues */
         .hero-codex {
@@ -355,8 +251,6 @@
             }
 
             .hero-codex-text {
-                background: linear-gradient(135deg, #687FE5, #5a6fd8) !important;
-                color: #fff !important;
                 padding: 40px 30px !important;
                 margin: 0 !important;
                 border-radius: 0 !important;
@@ -473,7 +367,6 @@
                 width: 100% !important;
                 max-width: 100% !important;
                 box-shadow: none !important;
-                background: linear-gradient(135deg, #687FE5, #5a6fd8) !important;
             }
 
             .hero-codex-content {
@@ -503,9 +396,212 @@
     <!-- Lenis Smooth Scroll -->
     <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
 
+    <!-- Critical Hero Mobile Fix - Highest Priority Styles -->
+    <style>
+        @media (max-width: 992px) {
+            .hero-codex,
+            .hero-codex-content,
+            .hero-codex-text {
+                background: #A1AEBB !important;
+                background-image: none !important;
+                background-color: #A1AEBB !important;
+            }
+            
+            .hero-codex-title,
+            .hero-codex-description,
+            .hero-codex-subtitle,
+            .hero-codex-stat-value,
+            .hero-codex-stat-label,
+            .hero-codex-stat-icon i {
+                color: #222 !important;
+            }
+        }
+    </style>
+    
+    <!-- Professional Card Styles -->
+    <style>
+        /* Professional Card Styles */
+        .professional-card {
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          transition: all 0.3s ease;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+        }
+        
+        .professional-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .professional-card-header {
+          background: #C5D5E6;
+          padding: 25px;
+          position: relative;
+          color: #222;
+        }
+        
+        .professional-card-icon {
+          width: 60px;
+          height: 60px;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 15px;
+        }
+        
+        .professional-card-icon i {
+          font-size: 28px;
+          color: #222;
+        }
+        
+        .professional-card-title {
+          margin-bottom: 5px;
+        }
+        
+        .professional-card-subtitle {
+          opacity: 0.8;
+          font-size: 14px;
+        }
+        
+        .professional-card-body {
+          padding: 25px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+        
+        .professional-card-description {
+          margin-bottom: 20px;
+          color: #555;
+          line-height: 1.6;
+        }
+        
+        .professional-card-features {
+          margin-bottom: 25px;
+        }
+        
+        .professional-card-feature {
+          display: flex;
+          align-items: center;
+          margin-bottom: 12px;
+        }
+        
+        .professional-card-feature-icon {
+          width: 24px;
+          height: 24px;
+          background: rgba(197, 213, 230, 0.3);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 12px;
+          flex-shrink: 0;
+        }
+        
+        .professional-card-feature-icon i {
+          font-size: 12px;
+          color: #6b88a7;
+        }
+        
+        .professional-card-feature-text {
+          font-size: 14px;
+          color: #444;
+        }
+        
+        .professional-card-action {
+          margin-top: auto;
+        }
+        
+        .professional-card-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 12px 20px;
+          background: #C5D5E6;
+          color: #222;
+          border-radius: 8px;
+          font-size: 16px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+        
+        .professional-card-btn:hover {
+          background: #a7bfd6;
+          transform: translateY(-3px);
+        }
+        
+        .professional-card-btn i {
+          margin-left: 8px;
+          font-size: 18px;
+        }
+        
+        .professional-card-badge {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+        }
+        
+        .professional-card-badge i {
+          font-size: 14px;
+          color: #222;
+        }
+        
+        /* All cards use the same color now */
+        .professional-card.purple .professional-card-header,
+        .professional-card.green .professional-card-header,
+        .professional-card.orange .professional-card-header,
+        .professional-card.red .professional-card-header {
+          background: #C5D5E6;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 1024px) {
+          .services-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .professional-card-header {
+            padding: 20px;
+          }
+          
+          .professional-card-body {
+            padding: 20px;
+          }
+        }
+        
+        @media (max-width: 640px) {
+          .services-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+    </style>
 
 </head>
 <body>
+    <!-- Loader with Lottie Animation -->
+    <div id="loader" class="loader-container lottie-loader">
+        <div class="loader-content">
+            <div class="lottie-animation" id="lottie-loader"></div>
+        </div>
+    </div>
 
 
     <!-- Navigation -->
@@ -525,28 +621,24 @@
                                 <i class="ri-graduation-cap-line"></i>
                                 <div>
                                     <strong>Study Abroad</strong>
-                                    <span>Student visa & education guidance</span>
                                 </div>
                             </a>
                             <a href="migrate.html">
                                 <i class="ri-home-heart-line"></i>
                                 <div>
                                     <strong>Migrate</strong>
-                                    <span>Permanent residency & immigration</span>
                                 </div>
                             </a>
                             <a href="work.html">
                                 <i class="ri-briefcase-line"></i>
                                 <div>
                                     <strong>Work Abroad</strong>
-                                    <span>Work visa & job opportunities</span>
                                 </div>
                             </a>
                             <a href="visit.html">
                                 <i class="ri-plane-line"></i>
                                 <div>
                                     <strong>Visit</strong>
-                                    <span>Tourist & business visa</span>
                                 </div>
                             </a>
                         </div>
@@ -563,47 +655,14 @@
                 </div>
             </div>
 
-            <!-- Professional Mobile Hamburger -->
-            <button class="simple-hamburger" onclick="openMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </nav>
-
-        <!-- Professional Mobile Menu -->
-        <div class="mobile-menu-overlay"></div>
-        <div class="mobile-menu-sidebar">
-            <div class="mobile-menu-header">
-                <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-menu-logo">
-                <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
-            </div>
-
-            <ul class="mobile-menu-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="mobile-services-dropdown">
-                    <div class="mobile-services-toggle" onclick="toggleServices()">
-                        <span>Services</span>
-                        <i class="ri-arrow-down-s-line mobile-services-arrow"></i>
-                    </div>
-                    <div class="mobile-services-links">
-                        <a href="study.html">Study Abroad</a>
-                        <a href="migrate.html">Migrate</a>
-                        <a href="work.html">Work Abroad</a>
-                        <a href="visit.html" class="active">Visit</a>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
     </nav-div>
 
     <!-- Codex Hero Section -->
     <section class="hero-codex">
         <div class="hero-codex-overlay"></div>
         <div class="hero-codex-image">
-            <img src="images/hero/high-angle-passport-tickets-arrangement.jpg" alt="Visit Visa Services - Passport and Tickets" class="hero-codex-img">
+            <img src="images/hero/webp/conatat-pass.webp" alt="Visit Visa Services - Passport and Tickets" class="hero-codex-img">
         </div>
         <div class="hero-codex-container">
             <div class="hero-codex-content">
@@ -655,7 +714,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="about-img-container">
-                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="About Visit Visa Services" class="about-img">
+                        <img src="images/hero/webp/travel-again-concept-arrangement-with-copy-space_batcheditor_fotor.webp" alt="About Visit Visa Services" class="about-img">
                     </div>
                     <div class="about-badge">
                         <i class="ri-award-line"></i>
@@ -725,285 +784,273 @@
                 <p style="text-align: center !important;">Comprehensive visa assistance for all your international travel needs with expert guidance</p>
             </div>
 
-            <div class="services-grid">
+            <div class="services-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;">
                 <!-- Tourist Visa Card -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
+                <div class="professional-card">
+                    <div class="professional-card-header">
+                        <div class="professional-card-icon">
                             <i class="ri-earth-line"></i>
                         </div>
-                        <div class="service-title">
-                            <h3>Tourist Visa</h3>
-                            <p>For leisure travel and sightseeing</p>
-                        </div>
-                        <div class="service-badge">
+                        <h3 class="professional-card-title">Tourist Visa</h3>
+                        <p class="professional-card-subtitle">For leisure travel and sightseeing</p>
+                        <div class="professional-card-badge">
                             <i class="ri-star-fill"></i>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <p class="service-description">Our expert consultants provide comprehensive assistance for your tourist visa applications to destinations worldwide, ensuring a smooth and hassle-free process.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                    <div class="professional-card-body">
+                        <p class="professional-card-description">Our expert consultants provide comprehensive assistance for your tourist visa applications to destinations worldwide, ensuring a smooth and hassle-free process.</p>
+                        <div class="professional-card-features">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Complete documentation support</span>
+                                <span class="professional-card-feature-text">Complete documentation support</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Itinerary planning assistance</span>
+                                <span class="professional-card-feature-text">Itinerary planning assistance</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Travel insurance guidance</span>
+                                <span class="professional-card-feature-text">Travel insurance guidance</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Embassy appointment booking</span>
+                                <span class="professional-card-feature-text">Embassy appointment booking</span>
                             </div>
                         </div>
-                        <div class="service-action">
-                            <a href="contact.html" class="service-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
+                        <div class="professional-card-action">
+                            <a href="contact.html" class="professional-card-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Business Visa Card -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
+                <div class="professional-card orange">
+                    <div class="professional-card-header">
+                        <div class="professional-card-icon">
                             <i class="ri-briefcase-4-line"></i>
                         </div>
-                        <div class="service-title">
-                            <h3>Business Visa</h3>
-                            <p>For meetings and business opportunities</p>
-                        </div>
+                        <h3 class="professional-card-title">Business Visa</h3>
+                        <p class="professional-card-subtitle">For meetings and business opportunities</p>
                     </div>
-                    <div class="service-content">
-                        <p class="service-description">We help professionals secure business visas with our specialized services, ensuring you can attend meetings, conferences, and explore business opportunities abroad.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                    <div class="professional-card-body">
+                        <p class="professional-card-description">We help professionals secure business visas with our specialized services, ensuring you can attend meetings, conferences, and explore business opportunities abroad.</p>
+                        <div class="professional-card-features">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Business invitation letters</span>
+                                <span class="professional-card-feature-text">Business invitation letters</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Company documentation</span>
+                                <span class="professional-card-feature-text">Company documentation</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Meeting arrangements</span>
+                                <span class="professional-card-feature-text">Meeting arrangements</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Multiple entry options</span>
+                                <span class="professional-card-feature-text">Multiple entry options</span>
                             </div>
                         </div>
-                        <div class="service-action">
-                            <a href="contact.html" class="service-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
+                        <div class="professional-card-action">
+                            <a href="contact.html" class="professional-card-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Student Visa Card -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
+                <div class="professional-card purple">
+                    <div class="professional-card-header">
+                        <div class="professional-card-icon">
                             <i class="ri-graduation-cap-line"></i>
                         </div>
-                        <div class="service-title">
-                            <h3>Student Visa</h3>
-                            <p>For international education abroad</p>
-                        </div>
-                        <div class="service-badge" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                        <h3 class="professional-card-title">Student Visa</h3>
+                        <p class="professional-card-subtitle">For international education abroad</p>
+                        <div class="professional-card-badge">
                             <i class="ri-book-open-line"></i>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <p class="service-description">We guide students through the entire visa process for their academic pursuits abroad, from university applications to pre-departure orientation.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                    <div class="professional-card-body">
+                        <p class="professional-card-description">We guide students through the entire visa process for their academic pursuits abroad, from university applications to pre-departure orientation.</p>
+                        <div class="professional-card-features">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">University application assistance</span>
+                                <span class="professional-card-feature-text">University application assistance</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Education loan guidance</span>
+                                <span class="professional-card-feature-text">Education loan guidance</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Admission documentation</span>
+                                <span class="professional-card-feature-text">Admission documentation</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Pre-departure orientation</span>
+                                <span class="professional-card-feature-text">Pre-departure orientation</span>
                             </div>
                         </div>
-                        <div class="service-action">
-                            <a href="study.html" class="service-btn">Learn More <i class="ri-arrow-right-line"></i></a>
+                        <div class="professional-card-action">
+                            <a href="study.html" class="professional-card-btn">Learn More <i class="ri-arrow-right-line"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Work Visa Card -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
+                <div class="professional-card green">
+                    <div class="professional-card-header">
+                        <div class="professional-card-icon">
                             <i class="ri-suitcase-line"></i>
                         </div>
-                        <div class="service-title">
-                            <h3>Work Visa</h3>
-                            <p>For employment opportunities abroad</p>
-                        </div>
-                        <div class="service-badge" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <h3 class="professional-card-title">Work Visa</h3>
+                        <p class="professional-card-subtitle">For employment opportunities abroad</p>
+                        <div class="professional-card-badge">
                             <i class="ri-user-search-line"></i>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <p class="service-description">Our experts help you navigate the complex process of securing work visas worldwide, with additional support for job search and skill assessment.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                    <div class="professional-card-body">
+                        <p class="professional-card-description">Our experts help you navigate the complex process of securing work visas worldwide, with additional support for job search and skill assessment.</p>
+                        <div class="professional-card-features">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Job search assistance</span>
+                                <span class="professional-card-feature-text">Job search assistance</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Employment documentation</span>
+                                <span class="professional-card-feature-text">Employment documentation</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Skill assessment guidance</span>
+                                <span class="professional-card-feature-text">Skill assessment guidance</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Work permit processing</span>
+                                <span class="professional-card-feature-text">Work permit processing</span>
                             </div>
                         </div>
-                        <div class="service-action">
-                            <a href="work.html" class="service-btn">Learn More <i class="ri-arrow-right-line"></i></a>
+                        <div class="professional-card-action">
+                            <a href="work.html" class="professional-card-btn">Learn More <i class="ri-arrow-right-line"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Family Visit Visa Card -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
+                <div class="professional-card">
+                    <div class="professional-card-header">
+                        <div class="professional-card-icon">
                             <i class="ri-home-heart-line"></i>
                         </div>
-                        <div class="service-title">
-                            <h3>Family Visit Visa</h3>
-                            <p>For visiting relatives abroad</p>
-                        </div>
+                        <h3 class="professional-card-title">Family Visit Visa</h3>
+                        <p class="professional-card-subtitle">For visiting relatives abroad</p>
                     </div>
-                    <div class="service-content">
-                        <p class="service-description">We provide specialized assistance for family visit visas, helping you reunite with your loved ones abroad for special occasions or extended stays.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                    <div class="professional-card-body">
+                        <p class="professional-card-description">We provide specialized assistance for family visit visas, helping you reunite with your loved ones abroad for special occasions or extended stays.</p>
+                        <div class="professional-card-features">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Sponsorship documentation</span>
+                                <span class="professional-card-feature-text">Sponsorship documentation</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Relationship proof assistance</span>
+                                <span class="professional-card-feature-text">Relationship proof assistance</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Financial documentation</span>
+                                <span class="professional-card-feature-text">Financial documentation</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Extended stay applications</span>
+                                <span class="professional-card-feature-text">Extended stay applications</span>
                             </div>
                         </div>
-                        <div class="service-action">
-                            <a href="contact.html" class="service-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
+                        <div class="professional-card-action">
+                            <a href="contact.html" class="professional-card-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Medical Visa Card -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
+                <div class="professional-card red">
+                    <div class="professional-card-header">
+                        <div class="professional-card-icon">
                             <i class="ri-heart-pulse-line"></i>
                         </div>
-                        <div class="service-title">
-                            <h3>Medical Visa</h3>
-                            <p>For treatment and healthcare abroad</p>
-                        </div>
-                        <div class="service-badge">
+                        <h3 class="professional-card-title">Medical Visa</h3>
+                        <p class="professional-card-subtitle">For treatment and healthcare abroad</p>
+                        <div class="professional-card-badge">
                             <i class="ri-time-line"></i>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <p class="service-description">We offer specialized medical visa services for those seeking treatment abroad, with expedited processing and comprehensive support throughout your healthcare journey.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                    <div class="professional-card-body">
+                        <p class="professional-card-description">We offer specialized medical visa services for those seeking treatment abroad, with expedited processing and comprehensive support throughout your healthcare journey.</p>
+                        <div class="professional-card-features">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Hospital appointment letters</span>
+                                <span class="professional-card-feature-text">Hospital appointment letters</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Medical documentation</span>
+                                <span class="professional-card-feature-text">Medical documentation</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Expedited processing</span>
+                                <span class="professional-card-feature-text">Expedited processing</span>
                             </div>
-                            <div class="service-feature">
-                                <div class="service-feature-icon">
+                            <div class="professional-card-feature">
+                                <div class="professional-card-feature-icon">
                                     <i class="ri-check-line"></i>
                                 </div>
-                                <span class="service-feature-text">Attendant visa assistance</span>
+                                <span class="professional-card-feature-text">Attendant visa assistance</span>
                             </div>
                         </div>
-                        <div class="service-action">
-                            <a href="contact.html" class="service-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
+                        <div class="professional-card-action">
+                            <a href="contact.html" class="professional-card-btn">Apply Now <i class="ri-arrow-right-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1024,7 +1071,7 @@
                 <!-- USA Card -->
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="USA Landmarks">
+                        <img src="images/countries/visit/visit webp/usa.webp" alt="USA Landmarks">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/h120/us.png" alt="USA Flag">
                         </div>
@@ -1059,7 +1106,7 @@
                 <!-- Canada Card -->
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Canada Landmarks">
+                        <img src="images/countries/visit/visit webp/canada.webp" alt="Canada Landmarks">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/h120/ca.png" alt="Canada Flag">
                         </div>
@@ -1090,7 +1137,7 @@
                 <!-- UK Card -->
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="UK Landmarks">
+                        <img src="images/countries/visit/visit webp/united-kingdom.webp" alt="UK Landmarks">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/h120/gb.png" alt="UK Flag">
                         </div>
@@ -1121,7 +1168,7 @@
                 <!-- Australia Card -->
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Australia Landmarks">
+                        <img src="images/countries/visit/visit webp/australia.webp" alt="Australia Landmarks">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/h120/au.png" alt="Australia Flag">
                         </div>
@@ -1152,7 +1199,7 @@
                 <!-- Singapore Card -->
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Singapore Landmarks">
+                        <img src="images/countries/visit/visit webp/singapur.webp" alt="Singapore Landmarks">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/h120/sg.png" alt="Singapore Flag">
                         </div>
@@ -1187,7 +1234,7 @@
                 <!-- Schengen Card -->
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Europe Landmarks">
+                        <img src="images/countries/visit/visit webp/photo-1519677100203-a0e668c92439.webp" alt="Europe Landmarks">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/h120/eu.png" alt="EU Flag">
                         </div>
@@ -1218,7 +1265,7 @@
                 <!-- UAE Card -->
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dubai Landmarks">
+                        <img src="images/countries/visit/visit webp/dubai.webp" alt="Dubai Landmarks">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/h120/ae.png" alt="UAE Flag">
                         </div>
@@ -1249,7 +1296,7 @@
                 <!-- New Zealand Card -->
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="New Zealand Landmarks">
+                        <img src="images/countries/visit/visit webp/new.webp" alt="New Zealand Landmarks">
                         <div class="destination-flag">
                             <img src="https://flagcdn.com/h120/nz.png" alt="New Zealand Flag">
                         </div>
@@ -1705,35 +1752,47 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section - Exact Copy from Home Page -->
     <footer class="footer-section">
+        <!-- Apply for Visa CTA Section -->
+        <div class="apply-visa-cta">
+            <div class="cta-container">
+                <h6>APPLY FOR A VISA</h6>
+                <h2>You Focus on Flying, We'll Handle the Paperwork!</h2>
+                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and guaranteed success.</p>
+                <a href="https://wa.me/919130448831" class="apply-btn">APPLY NOW</a>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
         <div class="main-footer">
             <div class="footer-container">
                 <div class="footer-content">
+                    <!-- Left Column - Logo and Social -->
                     <div class="footer-left">
                         <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="footer-logo">
-                        <p class="footer-tagline">Your trusted partner for international visa services</p>
-                        <p class="footer-slogan">Making Global Dreams Come True</p>
+                        <p class="footer-tagline">Hassle-free travel shouldn't just be a dream.</p>
+                        <p class="footer-slogan">White Wings - Visa Simplified.</p>
                         <div class="social-links">
-                            <a href="#"><i class="ri-facebook-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-fill"></i></a>
-                            <a href="#"><i class="ri-twitter-fill"></i></a>
-                            <a href="#"><i class="ri-linkedin-fill"></i></a>
                             <a href="https://wa.me/919130448831"><i class="ri-whatsapp-fill"></i></a>
+                            <a href="mailto:mrunal@whitewingsvisa.com"><i class="ri-mail-fill"></i></a>
+                            <a href="#"><i class="ri-instagram-fill"></i></a>
+                            <a href="#"><i class="ri-facebook-fill"></i></a>
                         </div>
                     </div>
 
+                    <!-- Middle Column - Quick Links -->
                     <div class="footer-middle">
                         <h4>Quick Links</h4>
                         <ul>
                             <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="contact.html">Apply Now</a></li>
                             <li><a href="tel:+919130448831">Call Us</a></li>
                         </ul>
                     </div>
 
+                    <!-- Right Column - Contact Info -->
                     <div class="footer-right">
                         <h4>Get In Touch</h4>
                         <div class="contact-details">
@@ -1744,9 +1803,10 @@
                     </div>
                 </div>
 
+                <!-- Copyright -->
                 <div class="copyright">
-                    <p>&copy; 2024 White Wings Visa Consultancy. All rights reserved.</p>
-                    <p>Best Visa Consultant in Pune, Maharashtra | Expert Immigration Services</p>
+                    <p>Copyright © 2025 White Wings. All Rights Reserved.</p>
+                    <p>Powered by White Wings</p>
                 </div>
             </div>
         </div>
@@ -1759,14 +1819,16 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Page Loader
             const pageLoader = document.getElementById('pageLoader');
-            window.addEventListener('load', function() {
-                setTimeout(() => {
-                    pageLoader.classList.add('hidden');
+            if (pageLoader) {
+                window.addEventListener('load', function() {
                     setTimeout(() => {
-                        pageLoader.style.display = 'none';
-                    }, 500);
-                }, 1000);
-            });
+                        pageLoader.classList.add('hidden');
+                        setTimeout(() => {
+                            pageLoader.style.display = 'none';
+                        }, 500);
+                    }, 1000);
+                });
+            }
 
             // Scroll to Top Button
             const scrollToTopBtn = document.getElementById('scrollToTop');
@@ -1878,8 +1940,11 @@
             const anchorLinks = document.querySelectorAll('a[href^="#"]');
             anchorLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
-                    e.preventDefault();
                     const targetId = this.getAttribute('href');
+                    // Skip empty href="#" links
+                    if (targetId === '#') return;
+                    
+                    e.preventDefault();
                     const targetElement = document.querySelector(targetId);
 
                     if (targetElement) {
@@ -1955,65 +2020,28 @@
 
 
     </script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+
+    <!-- Lottie Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+    <!-- Animation Data -->
+    <script src="animation-data.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="fix-mime.js"></script>
+    <script src="loader.js"></script>
     <script src="universal-lenis.js"></script>
-    <script src="new-mobile-navbar.js"></script>
+    <script src="script.js"></script>
+    <script src="professional-mobile-navbar.js"></script>
 
 
-    <script>
-        function openMobileMenu() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
-            if (overlay && sidebar) {
-                overlay.classList.add('show');
-                sidebar.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeMobileMenu() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-            if (overlay && sidebar) {
-                overlay.classList.remove('show');
-                sidebar.classList.remove('show');
-                document.body.style.overflow = 'auto';
-                if (servicesDropdown) {
-                    servicesDropdown.classList.remove('active');
-                }
-            }
-        }
-
-        function toggleServices() {
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-            if (servicesDropdown) {
-                servicesDropdown.classList.toggle('active');
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            if (overlay) {
-                overlay.addEventListener('click', function(e) {
-                    if (e.target === overlay) closeMobileMenu();
-                });
-            }
-
-            const menuLinks = document.querySelectorAll('.mobile-menu-links a:not(.mobile-services-toggle)');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-
-            const serviceLinks = document.querySelectorAll('.mobile-services-links a');
-            serviceLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-        });
-    </script>
+    <!-- Mobile menu functionality is now handled by disable-mobile-navbar.js -->
 
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">

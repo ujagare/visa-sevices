@@ -1,0 +1,24 @@
+/* Migrate page mobile navbar styles */
+@media screen and (max-width: 768px) {
+    /* Style the mobile logo */
+    .mobile-logo img {
+        height: 80px;
+        filter: drop-shadow(2px 2px 8px rgba(0, 102, 204, 0.2));
+        transition: transform 0.3s ease;
+    }
+    
+    /* Adjust body padding for the taller navbar */
+    body {
+        padding-top: 90px !important;
+    }
+    
+    /* Ensure the mobile navbar is visible */
+    .mobile-navbar {
+        display: block !important;
+    }
+    
+    /* Hide the original nav */
+    nav {
+        display: none !important;
+    }
+}

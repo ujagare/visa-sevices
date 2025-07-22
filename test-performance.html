@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Test - White Wings Visa</title>
+    <style>
+        body {
+            font-family: 'Gilroy', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #0369A1;
+            margin-bottom: 10px;
+        }
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .metric-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0369A1;
+        }
+        .metric-card h3 {
+            margin: 0 0 10px 0;
+            color: #1e293b;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0369A1;
+        }
+        .metric-status {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .status-good { color: #10b981; }
+        .status-warning { color: #f59e0b; }
+        .status-poor { color: #ef4444; }
+        .test-button {
+            background: #0369A1;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: background 0.3s ease;
+        }
+        .test-button:hover {
+            background: #0284c7;
+        }
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        .log {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 White Wings Visa - Performance Test</h1>
+            <p>Mobile Performance Optimization Results</p>
+        </div>
+
+        <div class="metrics" id="metrics">
+            <div class="metric-card">
+                <h3>First Contentful Paint</h3>
+                <div class="metric-value" id="fcp">--</div>
+                <div class="metric-status" id="fcp-status">Measuring...</div>
+            </div>
+            <div class="metric-card">
+                <h3>Largest Contentful Paint</h3>
+                <div class="metric-value" id="lcp">--</div>
+                <div class="metric-status" id="lcp-status">Measuring...</div>
+            </div>
+            <div class="metric-card">
+                <h3>Cumulative Layout Shift</h3>
+                <div class="metric-value" id="cls">--</div>
+                <div class="metric-status" id="cls-status">Measuring...</div>
+            </div>
+            <div class="metric-card">
+                <h3>First Input Delay</h3>
+                <div class="metric-value" id="fid">--</div>
+                <div class="metric-status" id="fid-status">Waiting for interaction...</div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button class="test-button" onclick="runPerformanceTest()">Run Performance Test</button>
+            <button class="test-button" onclick="testAccessibility()">Test Accessibility</button>
+            <button class="test-button" onclick="testServiceWorker()">Test Service Worker</button>
+            <button class="test-button" onclick="clearResults()">Clear Results</button>
+        </div>
+
+        <div class="results" id="results" style="display: none;">
+            <h3>Test Results</h3>
+            <div id="test-output"></div>
+            <div class="log" id="console-log"></div>
+        </div>
+    </div>
+
+    <script>
+        let performanceData = {};
+        let consoleLog = [];
+
+        // Override console.log to capture output
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            consoleLog.push(args.join(' '));
+            updateConsoleDisplay();
+        };
+
+        // Monitor Core Web Vitals
+        function monitorWebVitals() {
+            // First Contentful Paint
+            new PerformanceObserver((entryList) => {
+                for (const entry of entryList.getEntries()) {
+                    if (entry.name === 'first-contentful-paint') {
+                        updateMetric('fcp', entry.startTime);
+                    }
+                }
+            }).observe({ entryTypes: ['paint'] });
+
+            // Largest Contentful Paint
+            new PerformanceObserver((entryList) => {
+                const entries = entryList.getEntries();
+                const lastEntry = entries[entries.length - 1];
+                updateMetric('lcp', lastEntry.startTime);
+            }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+            // Cumulative Layout Shift
+            let clsValue = 0;
+            new PerformanceObserver((entryList) => {
+                for (const entry of entryList.getEntries()) {
+                    if (!entry.hadRecentInput) {
+                        clsValue += entry.value;
+                    }
+                }
+                updateMetric('cls', clsValue);
+            }).observe({ entryTypes: ['layout-shift'] });
+
+            // First Input Delay
+            new PerformanceObserver((entryList) => {
+                for (const entry of entryList.getEntries()) {
+                    updateMetric('fid', entry.processingStart - entry.startTime);
+                }
+            }).observe({ entryTypes: ['first-input'] });
+        }
+
+        function updateMetric(metric, value) {
+            performanceData[metric] = value;
+            const element = document.getElementById(metric);
+            const statusElement = document.getElementById(metric + '-status');
+            
+            let displayValue, status, statusClass;
+            
+            switch(metric) {
+                case 'fcp':
+                    displayValue = Math.round(value) + 'ms';
+                    status = value < 1800 ? 'Good' : value < 3000 ? 'Needs Improvement' : 'Poor';
+                    statusClass = value < 1800 ? 'status-good' : value < 3000 ? 'status-warning' : 'status-poor';
+                    break;
+                case 'lcp':
+                    displayValue = Math.round(value) + 'ms';
+                    status = value < 2500 ? 'Good' : value < 4000 ? 'Needs Improvement' : 'Poor';
+                    statusClass = value < 2500 ? 'status-good' : value < 4000 ? 'status-warning' : 'status-poor';
+                    break;
+                case 'cls':
+                    displayValue = value.toFixed(3);
+                    status = value < 0.1 ? 'Good' : value < 0.25 ? 'Needs Improvement' : 'Poor';
+                    statusClass = value < 0.1 ? 'status-good' : value < 0.25 ? 'status-warning' : 'status-poor';
+                    break;
+                case 'fid':
+                    displayValue = Math.round(value) + 'ms';
+                    status = value < 100 ? 'Good' : value < 300 ? 'Needs Improvement' : 'Poor';
+                    statusClass = value < 100 ? 'status-good' : value < 300 ? 'status-warning' : 'status-poor';
+                    break;
+            }
+            
+            element.textContent = displayValue;
+            statusElement.textContent = status;
+            statusElement.className = 'metric-status ' + statusClass;
+        }
+
+        function runPerformanceTest() {
+            showResults();
+            console.log('🚀 Running Performance Test...');
+            
+            const navigation = performance.getEntriesByType('navigation')[0];
+            const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+            
+            console.log(`Page Load Time: ${Math.round(loadTime)}ms`);
+            console.log(`DOM Content Loaded: ${Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart)}ms`);
+            
+            // Test resource loading
+            const resources = performance.getEntriesByType('resource');
+            console.log(`Total Resources Loaded: ${resources.length}`);
+            
+            const slowResources = resources.filter(r => r.duration > 1000);
+            if (slowResources.length > 0) {
+                console.log(`⚠️ Slow Resources (>1s):`);
+                slowResources.forEach(r => console.log(`  - ${r.name}: ${Math.round(r.duration)}ms`));
+            }
+            
+            updateTestOutput('Performance test completed. Check console for details.');
+        }
+
+        function testAccessibility() {
+            showResults();
+            console.log('♿ Testing Accessibility...');
+            
+            // Test for missing alt attributes
+            const imagesWithoutAlt = document.querySelectorAll('img:not([alt])');
+            console.log(`Images without alt text: ${imagesWithoutAlt.length}`);
+            
+            // Test for form labels
+            const inputsWithoutLabels = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+            const inputsWithLabels = document.querySelectorAll('input[id]');
+            console.log(`Form inputs with proper labels: ${inputsWithLabels.length}`);
+            
+            // Test for button accessibility
+            const buttonsWithoutLabels = document.querySelectorAll('button:not([aria-label]):not([title])');
+            console.log(`Buttons without accessibility labels: ${buttonsWithoutLabels.length}`);
+            
+            updateTestOutput('Accessibility test completed. Check console for details.');
+        }
+
+        function testServiceWorker() {
+            showResults();
+            console.log('🔧 Testing Service Worker...');
+            
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(registrations => {
+                    console.log(`Service Workers registered: ${registrations.length}`);
+                    registrations.forEach((registration, index) => {
+                        console.log(`SW ${index + 1}: ${registration.scope}`);
+                    });
+                });
+                
+                // Test caching
+                if ('caches' in window) {
+                    caches.keys().then(cacheNames => {
+                        console.log(`Cache storages: ${cacheNames.length}`);
+                        cacheNames.forEach(name => console.log(`  - ${name}`));
+                    });
+                }
+            } else {
+                console.log('❌ Service Worker not supported');
+            }
+            
+            updateTestOutput('Service Worker test completed. Check console for details.');
+        }
+
+        function showResults() {
+            document.getElementById('results').style.display = 'block';
+        }
+
+        function updateTestOutput(message) {
+            document.getElementById('test-output').innerHTML += `<p>${message}</p>`;
+        }
+
+        function updateConsoleDisplay() {
+            const logElement = document.getElementById('console-log');
+            logElement.innerHTML = consoleLog.slice(-50).join('\n');
+            logElement.scrollTop = logElement.scrollHeight;
+        }
+
+        function clearResults() {
+            consoleLog = [];
+            document.getElementById('test-output').innerHTML = '';
+            document.getElementById('console-log').innerHTML = '';
+            document.getElementById('results').style.display = 'none';
+        }
+
+        // Initialize monitoring
+        monitorWebVitals();
+        console.log('✅ Performance monitoring initialized');
+    </script>
+</body>
+</html>

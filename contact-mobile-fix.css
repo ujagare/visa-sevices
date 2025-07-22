@@ -1,0 +1,297 @@
+/* Contact Page Mobile Responsive Fix */
+/* Comprehensive mobile optimization for contact.html */
+
+/* Mobile First Approach - 768px and below */
+@media (max-width: 768px) {
+    /* Hero Section Mobile */
+    .contact-hero-section {
+        min-height: auto !important;
+        padding: 20px 0 !important;
+        background-attachment: scroll !important;
+    }
+
+    .contact-hero-container {
+        padding: 0 15px !important;
+        max-width: 100% !important;
+    }
+
+    .contact-hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        gap: 20px !important;
+        text-align: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    /* Mobile Layout Order */
+    .contact-hero-text {
+        order: 1 !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .contact-hero-badge {
+        order: 1 !important;
+        font-size: 0.75rem !important;
+        padding: 6px 12px !important;
+        margin-bottom: 10px !important;
+        background: rgba(30, 41, 59, 0.1) !important;
+        border: 1px solid rgba(30, 41, 59, 0.2) !important;
+        color: #1e293b !important;
+        display: inline-block !important;
+    }
+
+    .contact-hero-text h1 {
+        order: 2 !important;
+        font-size: 1.4rem !important;
+        line-height: 1.3 !important;
+        margin: 10px 0 !important;
+        font-weight: 700 !important;
+        color: #1e293b !important;
+        width: 100% !important;
+        max-width: 350px !important;
+        text-align: center !important;
+    }
+
+    .contact-hero-visual {
+        order: 3 !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 15px auto !important;
+    }
+
+    .contact-hero-image-container {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+    }
+
+    .contact-hero-image {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 180px !important;
+        object-fit: cover !important;
+        border-radius: 12px !important;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4) !important;
+    }
+
+    .contact-hero-description {
+        order: 4 !important;
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 15px auto !important;
+    }
+
+    .contact-hero-description p {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        color: #1e293b !important;
+        margin: 0 0 10px 0 !important;
+        text-align: center !important;
+    }
+
+    .contact-hero-actions {
+        order: 5 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 20px auto 0 !important;
+    }
+
+    .contact-btn-primary,
+    .contact-btn-secondary {
+        width: 100% !important;
+        padding: 14px 20px !important;
+        font-size: 0.9rem !important;
+        border-radius: 25px !important;
+        justify-content: center !important;
+        text-align: center !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* Features Section Mobile */
+    .features-grid-enhanced {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 0 15px !important;
+    }
+
+    .feature-card-enhanced {
+        padding: 20px !important;
+        text-align: center !important;
+    }
+
+    /* Contact Form Section Mobile */
+    .contact-card-section {
+        padding: 40px 15px !important;
+    }
+
+    .contact-card {
+        padding: 30px 20px !important;
+        margin: 0 !important;
+    }
+
+    #visaContact {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+    }
+
+    /* Navigation Mobile */
+    nav {
+        padding: 10px 15px !important;
+    }
+
+    .logo {
+        height: 50px !important;
+    }
+}
+
+/* Small Mobile - 480px and below */
+@media (max-width: 480px) {
+    .contact-hero-section {
+        padding: 15px 0 !important;
+    }
+
+    .contact-hero-container {
+        padding: 0 10px !important;
+    }
+
+    .contact-hero-content {
+        gap: 15px !important;
+    }
+
+    .contact-hero-text h1 {
+        font-size: 1.2rem !important;
+        line-height: 1.2 !important;
+        max-width: 300px !important;
+    }
+
+    .contact-hero-description p {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .contact-hero-image {
+        max-height: 150px !important;
+    }
+
+    .contact-hero-actions {
+        max-width: 250px !important;
+        gap: 10px !important;
+    }
+
+    .contact-btn-primary,
+    .contact-btn-secondary {
+        padding: 12px 18px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .contact-hero-badge {
+        font-size: 0.7rem !important;
+        padding: 5px 10px !important;
+    }
+
+    /* Form Mobile */
+    .contact-card {
+        padding: 25px 15px !important;
+    }
+
+    .input-container {
+        min-height: 40px !important;
+    }
+
+    .input-container input,
+    .input-container select,
+    .input-container textarea {
+        padding: 10px 14px !important;
+        font-size: 13px !important;
+    }
+
+    .input-icon {
+        width: 40px !important;
+        font-size: 14px !important;
+    }
+
+    .btn-submit {
+        padding: 12px 25px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* Extra Small Mobile - 320px and below */
+@media (max-width: 320px) {
+    .contact-hero-content {
+        padding: 0 5px !important;
+        gap: 12px !important;
+    }
+
+    .contact-hero-text h1 {
+        font-size: 1.1rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .contact-hero-description p {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .contact-btn-primary,
+    .contact-btn-secondary {
+        padding: 10px 16px !important;
+        font-size: 0.8rem !important;
+        max-width: 200px !important;
+    }
+
+    .contact-hero-image {
+        max-height: 120px !important;
+    }
+
+    .contact-card {
+        padding: 20px 10px !important;
+    }
+
+    .logo {
+        height: 40px !important;
+    }
+
+    nav {
+        padding: 6px 8px !important;
+    }
+}
+
+/* Landscape Mobile Fix */
+@media (max-width: 768px) and (orientation: landscape) {
+    .contact-hero-section {
+        min-height: auto !important;
+        padding: 15px 0 !important;
+    }
+
+    .contact-hero-content {
+        gap: 15px !important;
+    }
+
+    .contact-hero-text h1 {
+        font-size: 1.3rem !important;
+    }
+
+    .contact-hero-image {
+        max-height: 120px !important;
+    }
+}
+
+/* Force Mobile Layout */
+@media (max-width: 768px) {
+    .contact-hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+    }
+}

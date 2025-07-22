@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Abroad - White Wings Visa Consultancy</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="professional-mobile-menu.css">
     <link rel="stylesheet" href="style-fix.css">
     <link rel="stylesheet" href="pages.css">
     <link rel="stylesheet" href="work-styles.css">
     <link rel="stylesheet" href="work-destinations.css">
     <link rel="stylesheet" href="work-opportunity-images-enhanced.css">
+    <link rel="stylesheet" href="work-cards-fix.css">
     <link rel="stylesheet" href="work-mobile-consistency.css">
+    <link rel="stylesheet" href="work-mobile-card-fix.css">
     <link rel="stylesheet" href="work-process.css">
     <link rel="stylesheet" href="work-cta-fixed.css">
     <link rel="stylesheet" href="premium-cta-text-fix.css">
-    <link rel="stylesheet" href="simple-mobile-navbar.css">
     <link rel="stylesheet" href="apply-now-button.css">
+    <link rel="stylesheet" href="mobile-form-fix.css">
+    <link rel="stylesheet" href="navbar-fix.css">
+    <link rel="stylesheet" href="professional-mobile-navbar.css">
+    <link rel="stylesheet" href="mobile-menu-overlay.css">
+    <link rel="stylesheet" href="mobile-menu-animations.css">
+    <link rel="stylesheet" href="mobile-navbar-zindex-fix.css">
+    <link rel="stylesheet" href="mobile-navbar-vertical.css">
+    <link rel="stylesheet" href="improved-dropdown-menu.css">
+    <link rel="stylesheet" href="work-mobile-fix-important.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
     <!-- White Wings Custom Color Scheme -->
@@ -48,28 +57,24 @@
                                 <i class="ri-graduation-cap-line"></i>
                                 <div>
                                     <strong>Study Abroad</strong>
-                                    <span>Student visa & education guidance</span>
                                 </div>
                             </a>
                             <a href="migrate.html">
                                 <i class="ri-home-heart-line"></i>
                                 <div>
                                     <strong>Migrate</strong>
-                                    <span>Permanent residency & immigration</span>
                                 </div>
                             </a>
                             <a href="work.html">
                                 <i class="ri-briefcase-line"></i>
                                 <div>
                                     <strong>Work Abroad</strong>
-                                    <span>Work visa & job opportunities</span>
                                 </div>
                             </a>
                             <a href="visit.html">
                                 <i class="ri-plane-line"></i>
                                 <div>
                                     <strong>Visit</strong>
-                                    <span>Tourist & business visa</span>
                                 </div>
                             </a>
                         </div>
@@ -86,40 +91,7 @@
                 </div>
             </div>
 
-            <!-- Professional Mobile Hamburger -->
-            <button class="simple-hamburger" onclick="openMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </nav>
-
-        <!-- Professional Mobile Menu -->
-        <div class="mobile-menu-overlay"></div>
-        <div class="mobile-menu-sidebar">
-            <div class="mobile-menu-header">
-                <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-menu-logo">
-                <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
-            </div>
-
-            <ul class="mobile-menu-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="mobile-services-dropdown">
-                    <div class="mobile-services-toggle" onclick="toggleServices()">
-                        <span>Services</span>
-                        <i class="ri-arrow-down-s-line mobile-services-arrow"></i>
-                    </div>
-                    <div class="mobile-services-links">
-                        <a href="study.html">Study Abroad</a>
-                        <a href="migrate.html">Migrate</a>
-                        <a href="work.html" class="active">Work Abroad</a>
-                        <a href="visit.html">Visit</a>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
     </nav-div>
 
     <!-- Work Hero Section -->
@@ -225,52 +197,8 @@
 
             <div class="work-destinations-grid">
                 <div class="work-destination-card">
-                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
-                        <div class="destination-icon">
-                            <i class="ri-briefcase-4-line"></i>
-                        </div>
-                        <h3>Jobs in USA</h3>
-                    </div>
-                    <div class="destination-flag">
-                        <img src="https://flagcdn.com/w80/us.png" alt="USA Flag">
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-features">
-                            <span class="feature-tag">H-1B</span>
-                            <span class="feature-tag">L-1 Visa</span>
-                            <span class="feature-tag">Green Card</span>
-                        </div>
-                        <p>8.8 million job opportunities with high salaries</p>
-                        <a href="#" class="destination-btn">Explore USA Jobs <i class="ri-arrow-right-line"></i></a>
-                    </div>
-                </div>
-
-                <div class="work-destination-card">
-                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
-                        <div class="destination-icon">
-                            <i class="ri-briefcase-4-line"></i>
-                        </div>
-                        <h3>Jobs in Germany</h3>
-                    </div>
-                    <div class="destination-flag">
-                        <img src="https://flagcdn.com/w80/de.png" alt="Germany Flag">
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-features">
-                            <span class="feature-tag">Opportunity Card</span>
-                            <span class="feature-tag">EU Blue Card</span>
-                            <span class="feature-tag">Job Seeker</span>
-                        </div>
-                        <p>2 million job opportunities with excellent work-life balance</p>
-                        <a href="#" class="destination-btn">Explore Germany Jobs <i class="ri-arrow-right-line"></i></a>
-                    </div>
-                </div>
-
-                <div class="work-destination-card">
-                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
-                        <div class="destination-icon">
-                            <i class="ri-briefcase-4-line"></i>
-                        </div>
+                    <div class="destination-header">
+                        <img src="images/countries/work/work webp/canada.webp" alt="Canada Jobs" class="header-bg-img">
                         <h3>Jobs in Canada</h3>
                     </div>
                     <div class="destination-flag">
@@ -282,16 +210,14 @@
                             <span class="feature-tag">Work Permit</span>
                             <span class="feature-tag">Express Entry</span>
                         </div>
-                        <p>1.1 million job opportunities with pathway to PR</p>
+                        <p style="min-height: 0 !important; margin-bottom: 10px !important;">1.1 million job opportunities with pathway to PR</p>
                         <a href="#" class="destination-btn">Explore Canada Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
 
                 <div class="work-destination-card">
-                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
-                        <div class="destination-icon">
-                            <i class="ri-briefcase-4-line"></i>
-                        </div>
+                    <div class="destination-header">
+                        <img src="images/countries/work/work webp/Aus.webp" alt="Australia Jobs" class="header-bg-img">
                         <h3>Jobs in Australia</h3>
                     </div>
                     <div class="destination-flag">
@@ -303,37 +229,35 @@
                             <span class="feature-tag">Skilled Worker</span>
                             <span class="feature-tag">Regional Visa</span>
                         </div>
-                        <p>8 lakh job opportunities with high living standards</p>
+                        <p style="min-height: 0 !important; margin-bottom: 10px !important;">8 lakh job opportunities with high living standards</p>
                         <a href="#" class="destination-btn">Explore Australia Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
 
                 <div class="work-destination-card">
-                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
-                        <div class="destination-icon">
-                            <i class="ri-briefcase-4-line"></i>
-                        </div>
-                        <h3>Jobs in UK</h3>
+                    <div class="destination-header">
+                        <img src="images/countries/work/work webp/New.webp" alt="New Zealand Jobs" class="header-bg-img">
+                        <h3>Jobs in New Zealand</h3>
                     </div>
                     <div class="destination-flag">
-                        <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag">
+                        <img src="https://flagcdn.com/w80/nz.png" alt="New Zealand Flag">
                     </div>
                     <div class="destination-content">
                         <div class="destination-features">
-                            <span class="feature-tag">Skilled Worker</span>
-                            <span class="feature-tag">Global Talent</span>
-                            <span class="feature-tag">Innovator</span>
+                            <span class="feature-tag">Work Visa</span>
+                            <span class="feature-tag">Skilled Migrant</span>
+                            <span class="feature-tag">Working Holiday</span>
                         </div>
-                        <p>13 million job opportunities with rich career prospects</p>
-                        <a href="#" class="destination-btn">Explore UK Jobs <i class="ri-arrow-right-line"></i></a>
+                        <p style="min-height: 0 !important; margin-bottom: 10px !important;">1.2 million job opportunities with beautiful landscapes</p>
+                        <a href="#" class="destination-btn">Explore New Zealand Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
-
+            </div>
+            
+            <div class="work-destinations-grid" style="margin-top: 30px;">
                 <div class="work-destination-card">
-                    <div class="destination-header" style="background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
-                        <div class="destination-icon">
-                            <i class="ri-briefcase-4-line"></i>
-                        </div>
+                    <div class="destination-header">
+                        <img src="images/countries/work/work webp/Dubai.webp" alt="Dubai Jobs" class="header-bg-img">
                         <h3>Jobs in Dubai</h3>
                     </div>
                     <div class="destination-flag">
@@ -345,8 +269,46 @@
                             <span class="feature-tag">Golden Visa</span>
                             <span class="feature-tag">Freelance Visa</span>
                         </div>
-                        <p>418,500 job opportunities with tax-free income</p>
+                        <p style="min-height: 0 !important; margin-bottom: 10px !important;">418,500 job opportunities with tax-free income</p>
                         <a href="#" class="destination-btn">Explore Dubai Jobs <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <div class="work-destination-card">
+                    <div class="destination-header">
+                        <img src="images/countries/work/work webp/europ.webp" alt="Europe Jobs" class="header-bg-img">
+                        <h3>Jobs in Europe</h3>
+                    </div>
+                    <div class="destination-flag">
+                        <img src="https://flagcdn.com/w80/eu.png" alt="EU Flag">
+                    </div>
+                    <div class="destination-content">
+                        <div class="destination-features">
+                            <span class="feature-tag">Blue Card</span>
+                            <span class="feature-tag">Schengen</span>
+                            <span class="feature-tag">Work Permit</span>
+                        </div>
+                        <p style="min-height: 0 !important; margin-bottom: 10px !important;">Multiple opportunities across European countries</p>
+                        <a href="#" class="destination-btn">Explore Europe Jobs <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <div class="work-destination-card">
+                    <div class="destination-header">
+                        <img src="images/countries/work/work webp/europ.webp" alt="Singapore Jobs" class="header-bg-img">
+                        <h3>Jobs in Singapore</h3>
+                    </div>
+                    <div class="destination-flag">
+                        <img src="https://flagcdn.com/w80/sg.png" alt="Singapore Flag">
+                    </div>
+                    <div class="destination-content">
+                        <div class="destination-features">
+                            <span class="feature-tag">EP Pass</span>
+                            <span class="feature-tag">S Pass</span>
+                            <span class="feature-tag">Tech.Pass</span>
+                        </div>
+                        <p style="min-height: 0 !important; margin-bottom: 10px !important;">Global financial hub with excellent opportunities</p>
+                        <a href="#" class="destination-btn">Explore Singapore Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -512,19 +474,19 @@
                     <input type="hidden" name="_next" value="https://whitewingsvisa.com/thank-you.html">
                     <input type="hidden" name="_captcha" value="false">
                     <div class="premium-form-row">
-                        <i class="ri-user-line"></i>
+                        <div class="input-icon"><i class="ri-user-line"></i></div>
                         <input type="text" placeholder="Your Name" name="name" class="premium-input" required>
                     </div>
                     <div class="premium-form-row">
-                        <i class="ri-phone-line"></i>
+                        <div class="input-icon"><i class="ri-phone-line"></i></div>
                         <input type="tel" placeholder="Phone Number" name="phone" class="premium-input" required>
                     </div>
                     <div class="premium-form-row">
-                        <i class="ri-mail-line"></i>
+                        <div class="input-icon"><i class="ri-mail-line"></i></div>
                         <input type="email" placeholder="Email Address" name="email" class="premium-input" required>
                     </div>
                     <div class="premium-form-row">
-                        <i class="ri-map-pin-line"></i>
+                        <div class="input-icon"><i class="ri-map-pin-line"></i></div>
                         <select class="premium-input" name="preferred_destination" required>
                             <option value="" selected disabled>Preferred Destination</option>
                             <option value="usa">USA</option>
@@ -547,36 +509,47 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section - Exact Copy from Home Page -->
     <footer class="footer-section">
+        <!-- Apply for Visa CTA Section -->
+        <div class="apply-visa-cta">
+            <div class="cta-container">
+                <h6>APPLY FOR A VISA</h6>
+                <h2>You Focus on Flying, We'll Handle the Paperwork!</h2>
+                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and guaranteed success.</p>
+                <a href="https://wa.me/919130448831" class="apply-btn">APPLY NOW</a>
+            </div>
+        </div>
 
+        <!-- Main Footer -->
         <div class="main-footer">
             <div class="footer-container">
                 <div class="footer-content">
+                    <!-- Left Column - Logo and Social -->
                     <div class="footer-left">
                         <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="footer-logo">
-                        <p class="footer-tagline">Your trusted partner for international visa services</p>
-                        <p class="footer-slogan">Making Global Dreams Come True</p>
+                        <p class="footer-tagline">Hassle-free travel shouldn't just be a dream.</p>
+                        <p class="footer-slogan">White Wings - Visa Simplified.</p>
                         <div class="social-links">
-                            <a href="#"><i class="ri-facebook-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-fill"></i></a>
-                            <a href="#"><i class="ri-twitter-fill"></i></a>
-                            <a href="#"><i class="ri-linkedin-fill"></i></a>
                             <a href="https://wa.me/919130448831"><i class="ri-whatsapp-fill"></i></a>
+                            <a href="mailto:mrunal@whitewingsvisa.com"><i class="ri-mail-fill"></i></a>
+                            <a href="#"><i class="ri-instagram-fill"></i></a>
+                            <a href="#"><i class="ri-facebook-fill"></i></a>
                         </div>
                     </div>
 
+                    <!-- Middle Column - Quick Links -->
                     <div class="footer-middle">
                         <h4>Quick Links</h4>
                         <ul>
                             <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="contact.html">Apply Now</a></li>
                             <li><a href="tel:+919130448831">Call Us</a></li>
                         </ul>
                     </div>
 
+                    <!-- Right Column - Contact Info -->
                     <div class="footer-right">
                         <h4>Get In Touch</h4>
                         <div class="contact-details">
@@ -587,9 +560,10 @@
                     </div>
                 </div>
 
+                <!-- Copyright -->
                 <div class="copyright">
-                    <p>&copy; 2024 White Wings Visa Consultancy. All rights reserved.</p>
-                    <p>Best Visa Consultant in Pune, Maharashtra | Expert Immigration Services</p>
+                    <p>Copyright © 2025 White Wings. All Rights Reserved.</p>
+                    <p>Powered by White Wings</p>
                 </div>
             </div>
         </div>
@@ -604,65 +578,11 @@
 
     <!-- Custom Scripts -->
     <script src="universal-lenis.js"></script>
-    <script src="new-mobile-navbar.js"></script>
+    <script src="professional-mobile-navbar.js"></script>
     <script src="script.js"></script>
     <script src="enable-scroll.js"></script>
 
-    <script>
-        function openMobileMenu() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
-            if (overlay && sidebar) {
-                overlay.classList.add('show');
-                sidebar.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeMobileMenu() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-            if (overlay && sidebar) {
-                overlay.classList.remove('show');
-                sidebar.classList.remove('show');
-                document.body.style.overflow = 'auto';
-                if (servicesDropdown) {
-                    servicesDropdown.classList.remove('active');
-                }
-            }
-        }
-
-        function toggleServices() {
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-            if (servicesDropdown) {
-                servicesDropdown.classList.toggle('active');
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            if (overlay) {
-                overlay.addEventListener('click', function(e) {
-                    if (e.target === overlay) closeMobileMenu();
-                });
-            }
-
-            const menuLinks = document.querySelectorAll('.mobile-menu-links a:not(.mobile-services-toggle)');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-
-            const serviceLinks = document.querySelectorAll('.mobile-services-links a');
-            serviceLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-        });
-    </script>
+    <!-- Mobile menu functionality is now handled by disable-mobile-navbar.js -->
 
 </body>
 </html>

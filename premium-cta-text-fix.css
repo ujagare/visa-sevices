@@ -114,11 +114,13 @@
 
 .premium-cta-form * {
     color: #111827 !important;
+    
 }
 
 .premium-cta-form input,
 .premium-cta-form button {
     color: #111827 !important;
+    border: none;
 }
 
 .premium-cta-form button {
@@ -153,7 +155,7 @@
 @media (max-width: 768px) {
     .premium-cta-section {
         padding: 80px 0 !important;
-        min-height: auto !important;
+        min-height: 140vh !important;
     }
 
     .premium-cta-container {
@@ -192,7 +194,7 @@
     /* Form maintains your changes and full visibility */
     .premium-cta-form {
         width: 100% !important;
-        height: 100%;
+        height: auto;
         max-width: 500px !important;
         margin: 0 auto !important;
         padding: 30px 20px !important;

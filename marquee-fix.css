@@ -1,0 +1,69 @@
+/* Marquee Animation Fixes for All Browsers */
+
+/* Container fixes */
+.countries-image-marquee-section,
+.choice-section {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.image-marquee-container,
+.choice-marquee-line {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Hardware acceleration for all marquee elements */
+.image-marquee-content,
+.choice-marquee-right .choice-marquee-content,
+.choice-marquee-left .choice-marquee-content {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    will-change: transform;
+    display: flex;
+    width: max-content;
+}
+
+/* Ensure animations run smoothly */
+@media screen and (max-width: 768px) {
+    .image-marquee-content {
+        animation: imageMarqueeScroll 30s linear infinite !important;
+        -webkit-animation: imageMarqueeScroll 30s linear infinite !important;
+    }
+    
+    .choice-marquee-right .choice-marquee-content {
+        animation: choiceMarqueeRight 30s linear infinite !important;
+        -webkit-animation: choiceMarqueeRight 30s linear infinite !important;
+    }
+    
+    .choice-marquee-left .choice-marquee-content {
+        animation: choiceMarqueeLeft 30s linear infinite !important;
+        -webkit-animation: choiceMarqueeLeft 30s linear infinite !important;
+    }
+}
+
+/* Fix for Safari */
+@supports (-webkit-overflow-scrolling: touch) {
+    .image-marquee-content,
+    .choice-marquee-right .choice-marquee-content,
+    .choice-marquee-left .choice-marquee-content {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Fix for Firefox */
+@-moz-document url-prefix() {
+    .image-marquee-content,
+    .choice-marquee-right .choice-marquee-content,
+    .choice-marquee-left .choice-marquee-content {
+        animation-play-state: running !important;
+        will-change: transform;
+    }
+}

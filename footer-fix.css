@@ -1,0 +1,29 @@
+/* Footer Fixes */
+
+/* Make social media icons white */
+.footer-left .social-links a i {
+    color: white !important;
+}
+
+/* Add line above copyright and center text */
+.footer-bottom {
+    position: relative;
+    padding-top: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom-content {
+    text-align: center;
+}

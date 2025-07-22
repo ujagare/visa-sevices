@@ -1,0 +1,135 @@
+/* Enhanced vertical mobile navbar links */
+.mobile-menu {
+    padding: 30px 15px;
+    background-color: #ffffff;
+    background-image: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mobile-menu ul li {
+    margin-bottom: 0;
+}
+
+.mobile-menu ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 0;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.mobile-menu ul li a i {
+    margin-right: 10px;
+    color: #0066cc;
+    font-size: 1.2em;
+}
+
+.mobile-menu ul li a:hover {
+    background-color: #e9f0ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,102,204,0.1);
+    padding-left: 0;
+}
+
+.mobile-menu ul li a::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #0066cc;
+    border-radius: 50%;
+    margin-right: 10px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.mobile-menu ul li a:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.mobile-menu ul li a::after {
+    display: none;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 0;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.mobile-dropdown-toggle i:first-child {
+    margin-right: 10px;
+    color: #0369A1;
+}
+
+.mobile-dropdown-toggle i:last-child {
+    margin-left: 8px;
+}
+
+.mobile-dropdown-toggle:hover {
+    background-color: #e9f0ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,102,204,0.1);
+    color: #222;
+}
+
+.mobile-dropdown-content {
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.mobile-dropdown-content a {
+    padding: 15px;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.mobile-dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.mobile-dropdown-content a:hover {
+    background-color: #e9f0ff;
+}
+
+.mobile-apply-btn {
+    margin-top: 40px;
+    padding: 18px 20px;
+    font-size: 18px;
+    border-radius: 12px;
+    background: #0369A1;
+    box-shadow: 0 4px 15px rgba(0,102,204,0.3);
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.mobile-apply-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,102,204,0.4);
+    color: #fff !important;
+}

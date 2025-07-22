@@ -1,0 +1,90 @@
+WHITE WINGS VISA - EXTERNAL IMAGES TO DOWNLOAD AND CONVERT
+===========================================================
+
+WORK PAGE IMAGES (work.html):
+-----------------------------
+1. Canada Work:
+   URL: https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80
+   Save as: images/countries/work/canada-work.webp
+
+2. Australia Work:
+   URL: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80
+   Save as: images/countries/work/australia-work.webp
+
+3. New Zealand Work:
+   URL: https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80
+   Save as: images/countries/work/newzealand-work.webp
+
+4. Dubai Work:
+   URL: https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80
+   Save as: images/countries/work/dubai-work.webp
+
+5. Europe Work:
+   URL: https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80
+   Save as: images/countries/work/europe-work.webp
+
+6. Singapore Work:
+   URL: https://images.unsplash.com/photo-1508964942454-1a56651d54ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80
+   Save as: images/countries/work/singapore-work.webp
+
+VISIT PAGE IMAGES (visit.html):
+-------------------------------
+1. USA Visit:
+   URL: https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80
+   Save as: images/countries/visit/usa-visit.webp
+
+2. Australia Visit:
+   URL: https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80
+   Save as: images/countries/visit/australia-visit.webp
+
+3. Europe Visit:
+   URL: https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80
+   Save as: images/countries/visit/europe-visit.webp
+
+STUDY PAGE IMAGES (study.html):
+-------------------------------
+1. Canada Study:
+   URL: https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80
+   Save as: images/countries/study/canada-study.webp
+
+2. USA Study:
+   URL: https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80
+   Save as: images/countries/study/usa-study.webp
+
+3. Europe Study:
+   URL: https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80
+   Save as: images/countries/study/europe-study.webp
+
+FLAG IMAGES (from flagcdn.com):
+-------------------------------
+These are already optimized and small, but you can download them too:
+- Canada: https://flagcdn.com/w80/ca.png
+- Australia: https://flagcdn.com/w80/au.png
+- New Zealand: https://flagcdn.com/w80/nz.png
+- UAE: https://flagcdn.com/w80/ae.png
+- EU: https://flagcdn.com/w80/eu.png
+- Singapore: https://flagcdn.com/w80/sg.png
+- USA: https://flagcdn.com/w80/us.png
+
+CONVERSION TOOLS:
+-----------------
+1. Online WebP Converter: https://convertio.co/jpg-webp/
+2. Squoosh (Google): https://squoosh.app/
+3. TinyPNG: https://tinypng.com/
+4. ImageMagick (Command Line): https://imagemagick.org/
+
+RECOMMENDED SETTINGS FOR WEBP:
+------------------------------
+- Quality: 80-85%
+- Compression: Lossy
+- Size: Keep original dimensions
+- Format: WebP
+
+FOLDER STRUCTURE TO CREATE:
+---------------------------
+images/
+├── countries/
+│   ├── work/
+│   ├── visit/
+│   └── study/
+└── flags/

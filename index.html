@@ -19,21 +19,14 @@
     <link rel="apple-touch-icon" href="images/logo/WING LOGO.png">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="simple-mobile-navbar.css">
 
     <!-- White Wings Custom Color Scheme -->
     <link rel="stylesheet" href="white-wings-colors.css">
+    
+    <script src="fix-mime.js"></script>
 
-    <!-- Hero Slider Text Fix -->
-    <link rel="stylesheet" href="hero-slider-text.css">
-
-
-
-
-
-
-    <!-- Gilroy Font -->
-    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <!-- Google Fonts (more reliable than cdnfonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Local Business Schema Markup -->
     <script type="application/ld+json">
@@ -65,11 +58,43 @@
     }
     </script>
 
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-fix.css">
     <link rel="stylesheet" href="loader.css">
-    <link rel="stylesheet" href="simple-mobile-navbar.css">
     <link rel="stylesheet" href="apply-now-button.css">
+    <link rel="stylesheet" href="navbar-fix.css">
+    <link rel="stylesheet" href="footer-fix-updated.css">
+    <link rel="stylesheet" href="cta-button-fix.css">
+    <link rel="stylesheet" href="hero-text-fix.css">
+    <!-- Professional Mobile Navbar -->
+    <link rel="stylesheet" href="professional-mobile-navbar.css">
+    <link rel="stylesheet" href="page-mobile-fix.css">
+    <link rel="stylesheet" href="mobile-menu-overlay.css">
+    <link rel="stylesheet" href="mobile-menu-animations.css">
+    <link rel="stylesheet" href="mobile-navbar-zindex-fix.css">
+    <link rel="stylesheet" href="mobile-navbar-vertical.css">
+    <link rel="stylesheet" href="improved-dropdown-menu.css">
+    <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="testimonials-fix.css">
+    <link rel="stylesheet" href="testimonial-badge-fix.css">
+    <link rel="stylesheet" href="testimonial-border-fix.css">
+    <!-- Mobile optimization styles inlined to avoid MIME type issues -->
+    <style>
+        /* Mobile optimization styles */
+        @media (max-width: 768px) {
+            body, html {
+                overflow-x: hidden;
+            }
+            
+            .image-marquee-content {
+                animation-duration: 80s !important;
+            }
+            
+            .choice-marquee-right .choice-marquee-content,
+            .choice-marquee-left .choice-marquee-content {
+                animation-duration: 80s !important;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
@@ -77,6 +102,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css">
 
     <title>White Wings Visa Consultancy Pune | Best Visa Services in Maharashtra | Immigration Expert</title>
+    
+    <!-- Marquee animations are handled by inline-marquee.js -->
 </head>
 <body>
     <div>
@@ -105,28 +132,24 @@
                                         <i class="ri-graduation-cap-line"></i>
                                         <div>
                                             <strong>Study Abroad</strong>
-                                            <span>Student visa & education guidance</span>
                                         </div>
                                     </a>
                                     <a href="migrate.html">
                                         <i class="ri-home-heart-line"></i>
                                         <div>
                                             <strong>Migrate</strong>
-                                            <span>Permanent residency & immigration</span>
                                         </div>
                                     </a>
                                     <a href="work.html">
                                         <i class="ri-briefcase-line"></i>
                                         <div>
                                             <strong>Work Abroad</strong>
-                                            <span>Work visa & job opportunities</span>
                                         </div>
                                     </a>
                                     <a href="visit.html">
                                         <i class="ri-plane-line"></i>
                                         <div>
                                             <strong>Visit</strong>
-                                            <span>Tourist & business visa</span>
                                         </div>
                                     </a>
                                 </div>
@@ -143,40 +166,7 @@
                         </div>
                     </div>
 
-                    <!-- Simple Mobile Hamburger -->
-                    <button class="simple-hamburger" id="simple-hamburger" type="button" onclick="openMobileMenu()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
                 </nav>
-
-                <!-- Professional Mobile Menu -->
-                <div class="mobile-menu-overlay"></div>
-                <div class="mobile-menu-sidebar">
-                    <div class="mobile-menu-header">
-                        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-menu-logo">
-                        <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
-                    </div>
-
-                    <ul class="mobile-menu-links">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li class="mobile-services-dropdown">
-                            <div class="mobile-services-toggle" onclick="toggleServices()">
-                                <span>Services</span>
-                                <i class="ri-arrow-down-s-line mobile-services-arrow"></i>
-                            </div>
-                            <div class="mobile-services-links">
-                                <a href="study.html">Study Abroad</a>
-                                <a href="migrate.html">Migrate</a>
-                                <a href="work.html">Work Abroad</a>
-                                <a href="visit.html">Visit</a>
-                            </div>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
             </nav-div>
 
 
@@ -191,56 +181,56 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
-                            <img src="images/hero/usa.jpeg" alt="Japan Visa">
+                            <img src="images/hero/webp/usa_batcheditor_fotor.webp" alt="Japan Visa">
                             <div class="slide-content">
                               <h3>USA VISA</h3>
                               <p>Discover the American Dream</p>
                             </div>
                           </div>
                           <div class="swiper-slide">
-                            <img src="images/hero/Canada.jpeg" alt="USA Visa">
+                            <img src="images/hero/webp/Canada-ezgif.com-jpg-to-webp-converter.webp" alt="USA Visa">
                             <div class="slide-content">
                               <h3>CANADA VISA</h3>
                               <p>Experience the Beauty of Canada</p>
                             </div>
                           </div>
                         <div class="swiper-slide">
-                            <img src="images/hero/Asutrlia.jpeg" alt="Australia Visa">
+                            <img src="images/hero/webp/Asutrlia-ezgif.com-jpg-to-webp-converter.webp" alt="Australia Visa" loading="lazy">
                             <div class="slide-content">
                                 <h3>AUSTRALIA VISA</h3>
                                 <p>from India</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/hero/New Zealand.jpeg" alt="Australia Visa">
+                            <img src="images/hero/webp/NewZealand-ezgif.com-jpg-to-webp-converter.webp" alt="Australia Visa">
                             <div class="slide-content">
                                 <h3>NEW ZEALAND VISA</h3>
                                 <p>from India</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/hero/United Kingdom.jpeg" alt="UK Visa">
+                            <img src="images/hero/webp/United Kingdom_batcheditor_fotor.webp" alt="UK Visa">
                             <div class="slide-content">
                                 <h3>UK VISA</h3>
                                 <p>Explore Great Britain</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/hero/Schengen.jpeg" alt="UK Visa">
+                            <img src="images/hero/webp/Schengen-ezgif.com-jpg-to-webp-converter.webp" alt="UK Visa">
                             <div class="slide-content">
                                 <h3>SCHENGEN VISA</h3>
                                 <p>from India</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/hero/Dubai.jpeg" alt="UK Visa">
+                            <img src="images/hero/webp/Dubai-ezgif.com-jpg-to-webp-converter.webp" alt="UK Visa">
                             <div class="slide-content">
                                 <h3>DUBAI VISA</h3>
                                 <p>from India</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/hero/Singapore.jpeg" alt="UK Visa">
+                            <img src="images/hero/webp/Singapore-ezgif.com-jpg-to-webp-converter.webp" alt="UK Visa">
                             <div class="slide-content">
                                 <h3>SINGAPORE VISA</h3>
                                 <p>from India</p>
@@ -254,14 +244,14 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/hero/Brazil.jpeg" alt="Brazil Visa">
+                            <img src="images/hero/webp/Brazil-ezgif.com-jpg-to-webp-converter.webp" alt="Brazil Visa">
                             <div class="slide-content">
                                 <h3>BRAZIL VISA</h3>
                                 <p>from India</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/hero/China.jpeg" alt="China Visa">
+                            <img src="images/hero/webp/China-ezgif.com-jpg-to-webp-converter.webp" alt="China Visa">
                             <div class="slide-content">
                                 <h3>CHINA VISA</h3>
                                 <p>from India</p>
@@ -284,35 +274,35 @@
         <div class="image-marquee-container">
             <div class="image-marquee-content">
                 <div class="marquee-country-card">
-                    <img src="images/hero/usa.jpeg" alt="Japan Visa">
+                    <img src="images/hero/webp/usa_batcheditor_fotor.webp" alt="Japan Visa">
                     <div class="marquee-overlay">
                         <h4>USA Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/Canada.jpeg" alt="Japan Visa">
+                    <img src="images/hero/webp/Canada-ezgif.com-jpg-to-webp-converter.webp" alt="Japan Visa">
                     <div class="marquee-overlay">
                         <h4>Canada Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/Asutrlia.jpeg" alt="Japan Visa">
+                    <img src="images/hero/webp/Asutrlia-ezgif.com-jpg-to-webp-converter.webp" alt="Japan Visa">
                     <div class="marquee-overlay">
                         <h4>Australia Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/New Zealand.jpeg" alt="Japan Visa">
+                    <img src="images/hero/webp/NewZealand-ezgif.com-jpg-to-webp-converter.webp" alt="Japan Visa">
                     <div class="marquee-overlay">
                         <h4>New Zealand Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/United Kingdom.jpeg" alt="USA Visa">
+                    <img src="images/hero/webp/United Kingdom_batcheditor_fotor.webp" alt="USA Visa">
                     <div class="marquee-overlay">
                         <h4>UK Visa</h4>
                         <p>from Pune India</p>
@@ -320,21 +310,21 @@
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/Schengen.jpeg" alt="USA Visa">
+                    <img src="images/hero/webp/Schengen-ezgif.com-jpg-to-webp-converter.webp" alt="USA Visa">
                     <div class="marquee-overlay">
                         <h4>Schengen Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/Dubai.jpeg" alt="USA Visa">
+                    <img src="images/hero/webp/Dubai-ezgif.com-jpg-to-webp-converter.webp" alt="USA Visa">
                     <div class="marquee-overlay">
                         <h4>Dubai Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/Singapore.jpeg" alt="USA Visa">
+                    <img src="images/hero/webp/Singapore-ezgif.com-jpg-to-webp-converter.webp" alt="USA Visa">
                     <div class="marquee-overlay">
                         <h4>Singapore Visa</h4>
                         <p>From India</p>
@@ -349,14 +339,14 @@
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/Brazil.jpeg" alt="Brazil Visa">
+                    <img src="images/hero/webp/Brazil-ezgif.com-jpg-to-webp-converter.webp" alt="Brazil Visa">
                     <div class="marquee-overlay">
                         <h4>Brazil Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/China.jpeg" alt="China Visa">
+                    <img src="images/hero/webp/China-ezgif.com-jpg-to-webp-converter.webp" alt="China Visa">
                     <div class="marquee-overlay">
                         <h4>China Visa</h4>
                         <p>From India</p>
@@ -365,49 +355,49 @@
 
                 <!-- Duplicate cards for seamless loop -->
                 <div class="marquee-country-card">
-                    <img src="images/hero/usa.jpeg" alt="USA Visa">
+                    <img src="images/hero/webp/usa_batcheditor_fotor.webp" alt="USA Visa">
                     <div class="marquee-overlay">
                         <h4>USA Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/Canada.jpeg" alt="Canada Visa">
+                    <img src="images/hero/webp/Canada-ezgif.com-jpg-to-webp-converter.webp" alt="Canada Visa">
                     <div class="marquee-overlay">
                         <h4>Canada Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/Asutrlia.jpeg" alt="Australia Visa">
+                    <img src="images/hero/webp/Asutrlia-ezgif.com-jpg-to-webp-converter.webp" alt="Australia Visa">
                     <div class="marquee-overlay">
                         <h4>Australia Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/New Zealand.jpeg" alt="New Zealand Visa">
+                    <img src="images/hero/webp/NewZealand-ezgif.com-jpg-to-webp-converter.webp" alt="New Zealand Visa">
                     <div class="marquee-overlay">
                         <h4>New Zealand Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/United Kingdom.jpeg" alt="UK Visa">
+                    <img src="images/hero/webp/United Kingdom_batcheditor_fotor.webp" alt="UK Visa">
                     <div class="marquee-overlay">
                         <h4>UK Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/Brazil.jpeg" alt="Brazil Visa">
+                    <img src="images/hero/webp/Brazil-ezgif.com-jpg-to-webp-converter.webp" alt="Brazil Visa">
                     <div class="marquee-overlay">
                         <h4>Brazil Visa</h4>
                         <p>From India</p>
                     </div>
                 </div>
                 <div class="marquee-country-card">
-                    <img src="images/hero/China.jpeg" alt="China Visa">
+                    <img src="images/hero/webp/China-ezgif.com-jpg-to-webp-converter.webp" alt="China Visa">
                     <div class="marquee-overlay">
                         <h4>China Visa</h4>
                         <p>From India</p>
@@ -713,14 +703,13 @@
         </div>
     </section>
 
-    <!-- Visa Assistance Services Section -->
 
     <!-- Office Door Step Section -->
     <section class="doorstep-section">
         <div class="doorstep-container">
             <div class="doorstep-content">
                 <div class="doorstep-image">
-                    <img src="images/visa1.jpg" alt="Visa Assistance At Your Office Door Step">
+                    <img src="images/hero/webp/visa1_batcheditor_fotor.webp" alt="Visa Assistance At Your Office Door Step">
                 </div>
                 <div class="doorstep-features">
                     <div class="feature-badge">
@@ -776,7 +765,7 @@
         <div class="customer-testimonial-container">
             <div class="testimonial-content">
                 <div class="testimonial-image">
-                    <img src="images/hero/bag-full-famous-monument-with-passport.jpg" alt="Bag Full Famous Monument with Passport">
+                    <img src="images/hero/webp/bag-full-famous-monument-with-passport-ezgif.com-jpg-to-webp-converter.webp" alt="Bag Full Famous Monument with Passport">
                 </div>
                 <div class="testimonial-text">
                     <h6>What our customers say</h6>
@@ -834,7 +823,7 @@
                     </div>
                 </div>
                 <div class="sets-apart-image">
-                    <img src="images/hero/close-up-passport-wooden-table.jpg" alt="Top View Passports and Flag Arrangement">
+                    <img src="images/hero/webp/close-up-passport-wooden-table-ezgif.com-jpg-to-webp-converter.webp" alt="Top View Passports and Flag Arrangement">
                 </div>
             </div>
         </div>
@@ -846,9 +835,10 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials-section">
         <div class="testimonials-container">
+            <h5 class="testimonial-badge">GOOGLE REVIEWS</h5>
             <div class="testimonials-header">
-                <span class="testimonial-badge">GOOGLE REVIEWS</span>
-                <h2>What Our Happy Clients Say About Us</h2>
+               
+                <h2>What Our Happy Clients Say About Us </h2>
             </div>
 
             <div class="testimonials-slider">
@@ -994,8 +984,8 @@
                             </div>
                         </div>
                     </div>
-
-
+                <!-- Pagination removed as requested -->
+                <!-- Navigation arrows removed as requested -->
                 </div>
             </div>
         </div>
@@ -1190,7 +1180,6 @@
                         <h4>Quick Links</h4>
                         <ul>
                             <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="contact.html">Apply Now</a></li>
                             <li><a href="tel:+919130448831">Call Us</a></li>
@@ -1209,9 +1198,11 @@
                 </div>
 
                 <!-- Copyright -->
-                <div class="copyright">
-                    <p>Copyright © 2025 White Wings. All Rights Reserved.</p>
-                    <p>Powered by White Wings</p>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p>Copyright © 2025 White Wings. All Rights Reserved.</p>
+                        <p>Powered by White Wings</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1236,86 +1227,13 @@
     <!-- Custom Scripts -->
     <script src="loader.js"></script>
     <script src="universal-lenis.js"></script>
-    <script src="script.js"></script>
+    <script src="consolidated-scripts.js"></script>
+    <script src="hero-slider-fix.js"></script>
+    <script src="testimonials-slider.js"></script>
+    <script src="professional-mobile-navbar.js"></script>
 
-    <!-- Professional Mobile Menu Script -->
-    <script>
-        function openMobileMenu() {
-            console.log('Opening mobile menu...');
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
 
-            if (overlay && sidebar) {
-                overlay.classList.add('show');
-                sidebar.classList.add('show');
-                document.body.style.overflow = 'hidden';
-                console.log('Menu opened!');
-            } else {
-                console.log('Menu elements not found!');
-            }
-        }
-
-        function closeMobileMenu() {
-            console.log('Closing mobile menu...');
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            const sidebar = document.querySelector('.mobile-menu-sidebar');
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-
-            if (overlay && sidebar) {
-                overlay.classList.remove('show');
-                sidebar.classList.remove('show');
-                document.body.style.overflow = 'auto';
-
-                // Close services dropdown when menu closes
-                if (servicesDropdown) {
-                    servicesDropdown.classList.remove('active');
-                }
-
-                console.log('Menu closed!');
-            }
-        }
-
-        function toggleServices() {
-            console.log('Toggling services dropdown...');
-            const servicesDropdown = document.querySelector('.mobile-services-dropdown');
-            if (servicesDropdown) {
-                servicesDropdown.classList.toggle('active');
-                console.log('Services dropdown toggled!');
-            }
-        }
-
-        // Close menu when clicking overlay
-        document.addEventListener('DOMContentLoaded', function() {
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            if (overlay) {
-                overlay.addEventListener('click', function(e) {
-                    if (e.target === overlay) {
-                        closeMobileMenu();
-                    }
-                });
-            }
-
-            // Close menu when clicking navigation links (not services toggle)
-            const menuLinks = document.querySelectorAll('.mobile-menu-links a:not(.mobile-services-toggle)');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-
-            // Close menu when clicking services dropdown links
-            const serviceLinks = document.querySelectorAll('.mobile-services-links a');
-            serviceLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMobileMenu();
-                });
-            });
-        });
-
-        // Immediate scroll fix
-        document.body.style.overflow = 'auto';
-        document.documentElement.style.overflow = 'auto';
-        document.body.style.height = 'auto';
-    </script>
+    <!-- Mobile menu and marquee animations are now handled by consolidated-scripts.js -->
+    <!-- Mobile menu functions are now handled by universal-mobile-navbar.js -->
     </body>
 </html>

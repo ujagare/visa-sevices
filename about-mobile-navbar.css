@@ -1,0 +1,61 @@
+/* About page mobile navbar styles */
+@media screen and (max-width: 768px) {
+    /* Hide the original nav on about page */
+    body.about-page nav {
+        display: none !important;
+    }
+    
+    /* Style the mobile logo for about page - align left */
+    body.about-page .mobile-logo {
+        display: flex;
+        justify-content: flex-start;
+        width: auto;
+    }
+    
+    body.about-page .mobile-logo img {
+        height: 80px;
+        margin: 10px 0;
+        filter: drop-shadow(2px 2px 8px rgba(0, 102, 204, 0.2));
+        transition: transform 0.3s ease;
+    }
+    
+    body.about-page .mobile-logo img:hover {
+        transform: scale(1.05);
+    }
+    
+    /* Position the mobile navbar container and toggle button */
+    body.about-page .mobile-navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        width: 100%;
+        height: 90px;
+    }
+    
+    body.about-page .mobile-menu-toggle {
+        position: relative;
+        z-index: 1000;
+    }
+    
+    /* Add padding to body to account for fixed navbar */
+    body.about-page {
+        padding-top: 90px;
+    }
+    
+    /* Style the mobile navbar for about page */
+    body.about-page .mobile-navbar {
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+    
+    /* Adjust hero section margin */
+    body.about-page .about-hero-section {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,40 @@
+<!-- Mobile Navbar Template - Based on Chrome DevTools screenshot -->
+
+<!-- Add this to the head section of all pages -->
+<link rel="stylesheet" href="mobile-navbar.css">
+
+<!-- Add this right after the nav element in all pages -->
+<div class="mobile-menu">
+    <div class="mobile-header">
+        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="mobile-logo">
+        <button class="mobile-close">&times;</button>
+    </div>
+    <ul class="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="mobile-dropdown">
+            <button class="dropdown-toggle">
+                Services
+                <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="study.html">Study Abroad</a>
+                <a href="migrate.html">Migrate</a>
+                <a href="work.html">Work Abroad</a>
+                <a href="visit.html">Visit</a>
+            </div>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+<div class="mobile-overlay"></div>
+
+<!-- Add this to the nav element in all pages -->
+<button class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- Add this before the closing body tag in all pages -->
+<script src="mobile-navbar.js"></script>
