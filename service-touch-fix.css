@@ -1,0 +1,36 @@
+/* Touch-specific improvements for service items */
+@media (max-width: 768px) {
+  /* Add active state for touch devices */
+  .service-item:active {
+    transform: scale(0.98);
+    background-color: #f5f9ff;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  /* Make service items more touch-friendly */
+  .service-item {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    cursor: pointer;
+  }
+  
+  /* Improve touch target size */
+  .service-icon-small {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Add subtle visual feedback */
+  .service-item:before {
+    transition: background-color 0.2s ease;
+  }
+  
+  .service-item:active:before {
+    background-color: #0077cc;
+  }
+  
+  /* Improve spacing between items for touch */
+  .services-list {
+    gap: 16px;
+  }
+}

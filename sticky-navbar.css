@@ -1,0 +1,55 @@
+/* Sticky Navigation Bar Styles */
+nav-div {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Smooth scroll behavior for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improved spacing for navigation items */
+.desktop-menu ul {
+    display: flex;
+    gap: 30px;
+}
+
+.desktop-menu ul li a {
+    padding: 8px 0;
+    position: relative;
+}
+
+/* Underline animation for nav links */
+.desktop-menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #C5D5E6;
+    transition: width 0.3s ease;
+}
+
+.desktop-menu ul li a:hover::after {
+    width: 100%;
+}
+
+/* Active state for current page */
+.desktop-menu ul li a.active::after {
+    width: 100%;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    nav-div {
+        position: sticky;
+        top: 0;
+    }
+}
