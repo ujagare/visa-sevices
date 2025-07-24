@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="white-wings-colors.css">
     
     <script src="fix-mime.js"></script>
+    
+    <!-- Simple MIME Type Fix -->
+    <script src="fix-mime-simple.js"></script>
 
     <!-- Google Fonts (more reliable than cdnfonts) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -77,6 +80,18 @@
     <link rel="stylesheet" href="testimonials-fix.css">
     <link rel="stylesheet" href="testimonial-badge-fix.css">
     <link rel="stylesheet" href="testimonial-border-fix.css">
+    <!-- Enhanced UI Styles -->
+    <link rel="stylesheet" href="sticky-navbar.css">
+    <link rel="stylesheet" href="typography-spacing.css">
+    <link rel="stylesheet" href="icons-graphics.css">
+    <link rel="stylesheet" href="enhanced-responsive.css">
+    <link rel="stylesheet" href="testimonial-cards.css">
+    <link rel="stylesheet" href="social-proof.css">
+    <link rel="stylesheet" href="stats-fix.css">
+    <link rel="stylesheet" href="service-highlight-fix.css">
+    <link rel="stylesheet" href="services-mobile.css">
+    <link rel="stylesheet" href="service-touch-fix.css">
+    <link rel="stylesheet" href="visa-grid-cards.css">
     <!-- Mobile optimization styles inlined to avoid MIME type issues -->
     <style>
         /* Mobile optimization styles */
@@ -123,10 +138,10 @@
                     <!-- Desktop Menu -->
                     <div id="links" class="desktop-menu">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html" class="active">Home</a></li>
                             <li><a href="about.html">About</a></li>
                             <li class="dropdown">
-                                <a href="#" onclick="return false;">Services <i class="ri-arrow-down-s-line"></i></a>
+                                <a href="#services" class="active">Services <i class="ri-arrow-down-s-line"></i></a>
                                 <div class="dropdown-content">
                                     <a href="study.html">
                                         <i class="ri-graduation-cap-line"></i>
@@ -175,7 +190,7 @@
                     <h1>Reach New Heights</h1>
                     <button>Book Your Free Consultation  </button>
                     <!-- <a href="https://wa.me/919130448831" class="apply-btn">Book Your Free Consultation<i class="ri-arrow-right-circle-line"> </i></a> -->
-                    <p>Looking for trusted visa consultants in Pune, INDIA? White Wings is the leading visa consultancy in Pune offering expert visa assistance for USA, Canada, UK, Australia, Schengen and more. From tourist visas to work permits and student visas, we handle all your international travel needs with professional care and guaranteed success.</p>
+                    <p>Looking for trusted visa consultants in Pune, INDIA? White Wings is the leading visa consultancy in Pune offering expert visa assistance for USA, Canada, UK, Australia, Schengen and more. From tourist visas to work permits and student visas, we handle all your international travel needs with professional care and provide expert visa consultation with a strong record of successful applications.</p>
                 </div>
                 <div class="slider">
                     <div class="swiper mySwiper">
@@ -578,7 +593,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Our Services Section -->
     <section class="services-section" id="services">
         <div class="services-container">
             <div class="services-header">
@@ -638,7 +653,7 @@
                         </div>
 
                         <div class="contact-cta">
-                            <a href="#contact" class="cta-btn">
+                            <a href="contact.html" class="cta-btn">
                                 <i class="ri-phone-line"></i>
                                 Get Free Consultation
                             </a>
@@ -646,55 +661,60 @@
                     </div>
                 </div>
 
-                <div class="services-right">
+                <div class="services-right" id="visa-services">
                     <div class="services-list">
-                        <div class="service-item">
+                        <div class="service-item" onclick="window.location.href='visit.html';">
+                            <span class="service-flag"><img src="https://flagcdn.com/w20/us.png" alt="USA Flag"></span>
                             <div class="service-icon-small">
                                 <i class="ri-plane-fill"></i>
                             </div>
                             <div class="service-content">
                                 <h4>Tourist Visa Services</h4>
-                                <p>Complete tourist visa assistance for USA, Canada, UK, Australia, Schengen countries and more with document preparation and interview guidance.</p>
+                                <p>Complete tourist visa assistance for USA, Canada, UK, Australia, Schengen countries and more.</p>
                             </div>
                         </div>
 
-                        <div class="service-item">
+                        <div class="service-item" onclick="window.location.href='visit.html#business';">
+                            <span class="service-flag"><img src="https://flagcdn.com/w20/ca.png" alt="Canada Flag"></span>
                             <div class="service-icon-small">
                                 <i class="ri-briefcase-fill"></i>
                             </div>
                             <div class="service-content">
                                 <h4>Business Visa Solutions</h4>
-                                <p>Professional business visa services for corporate travel, meetings, and conferences with fast-track processing and corporate documentation.</p>
+                                <p>Professional business visa services for corporate travel, meetings, and conferences.</p>
                             </div>
                         </div>
 
-                        <div class="service-item">
+                        <div class="service-item" onclick="window.location.href='study.html';">
+                            <span class="service-flag"><img src="https://flagcdn.com/w20/au.png" alt="Australia Flag"></span>
                             <div class="service-icon-small">
                                 <i class="ri-graduation-cap-fill"></i>
                             </div>
                             <div class="service-content">
                                 <h4>Student Visa Guidance</h4>
-                                <p>Complete student visa assistance for studying abroad including university applications, financial documentation, and scholarship guidance.</p>
+                                <p>Complete student visa assistance for studying abroad including university applications.</p>
                             </div>
                         </div>
 
-                        <div class="service-item">
+                        <div class="service-item" onclick="window.location.href='work.html';">
+                            <span class="service-flag"><img src="https://flagcdn.com/w20/gb.png" alt="UK Flag"></span>
                             <div class="service-icon-small">
                                 <i class="ri-user-settings-fill"></i>
                             </div>
                             <div class="service-content">
                                 <h4>Work Visa Support</h4>
-                                <p>Professional work visa services for employment opportunities worldwide with job offer verification and work permit assistance.</p>
+                                <p>Professional work visa services for employment opportunities worldwide.</p>
                             </div>
                         </div>
 
-                        <div class="service-item">
+                        <div class="service-item" onclick="window.location.href='visit.html#family';">
+                            <span class="service-flag"><img src="https://flagcdn.com/w20/de.png" alt="Germany Flag"></span>
                             <div class="service-icon-small">
                                 <i class="ri-heart-fill"></i>
                             </div>
                             <div class="service-content">
                                 <h4>Family & Medical Visas</h4>
-                                <p>Specialized services for family reunion visas and medical treatment visas with complete documentation and application support.</p>
+                                <p>Specialized services for family reunion visas and medical treatment visas.</p>
                             </div>
                         </div>
                     </div>
@@ -752,7 +772,7 @@
                     </div>
 
                     <div class="doorstep-buttons">
-                        <a href="#contact" class="btn-know-more">Know More!</a>
+                        <a href="contact.html" class="btn-know-more">Know More!</a>
                         <a href="tel:+919130448831" class="btn-call-us">Call Us</a>
                     </div>
                 </div>
@@ -770,22 +790,22 @@
                 <div class="testimonial-text">
                     <h6>What our customers say</h6>
                     <p>Recently me, my husband and my colleagues got the US
-                    visa. We just had I month to get the Visa and Fly to the
+                    visa. We just had one month to get the Visa and Fly to the
                     USA, but seeing the waiting period, it was just
                     impossible to get an appointment. After contacting many
                     visa vendors, I found this vendor through google Search,
                     and I am so glad that I have found them.
-                    It was a fast track visa application, and all 4 of us got out
+                    It was a fast track visa application, and all four of us got out
                     appointment dates within 15 days.
                     Special thanks to Mrunal Hazare, who helped me in this.
-                    She is very professional,polite, patient, and always
+                    She is very professional, polite, patient, and always
                     prompt in replying to all my queries. She has a thorough
                     knowledge of everything. Highly recommend her for any
                     visa related services.        Cheers, Mrunal..</p>
                     <div class="customer-info">
                         <div class="customer-name-row">
                             <h5>sayali kanade</h5>
-                            <a href="#testimonials" class="read-reviews-link">Read All Reviews</a>
+                            <a href="index.html#testimonials" class="read-reviews-link">Read All Reviews</a>
                         </div>
                     </div>
                 </div>
@@ -793,7 +813,7 @@
         </div>
     </section>
 
-    <!-- What Sets Us Apart Section -->
+    <!-- Why Choose Us Section -->
     <section class="sets-apart-section">
         <div class="sets-apart-container">
             <div class="sets-apart-content">
@@ -819,7 +839,7 @@
                     </div>
 
                     <div class="apart-buttons">
-                        <a href="#contact" class="btn-apply-now">Apply Now</a>
+                        <a href="contact.html" class="btn-apply-now">Apply Now</a>
                     </div>
                 </div>
                 <div class="sets-apart-image">
@@ -832,7 +852,7 @@
 
 
 
-    <!-- Testimonials Section -->
+    <!-- Client Testimonials Section -->
     <section id="testimonials" class="testimonials-section">
         <div class="testimonials-container">
             <h5 class="testimonial-badge">GOOGLE REVIEWS</h5>
@@ -857,8 +877,11 @@
                                     <i class="ri-star-fill"></i>
                                     <i class="ri-star-fill"></i>
                                 </div>
-                                <p class="testimonial-text">Mrunal will understand your requirement thoroughly and will give you the best advise. Thanks a lot for the help. Really appreciate your service.</p>
+                                <p class="testimonial-text">Mrunal will understand your requirement thoroughly and will give you the best advice. Thanks a lot for the help. Really appreciate your service.</p>
                                 <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <i class="ri-user-fill"></i>
+                                    </div>
                                     <div class="author-info">
                                         <h4>Varun Sharma</h4>
                                         <span>Google Review</span>
@@ -880,9 +903,12 @@
                                     <i class="ri-star-fill"></i>
                                     <i class="ri-star-fill"></i>
                                 </div>
-                                <p class="testimonial-text truncated">Best place to get your visa done... Recently me, my husband and my colleagues got the US visa. We just had 1 month to get the Visa and Fly to the USA, but seeing the waiting period, it was just impossible to get an appointment. After contacting many visa vendors, I found this vendor through google Search, and I am so glad that I have found them. It was a fast track visa application, and all 4 of us got out appointment dates within 15 days. Special thanks to Mrunal Hazare, who helped me in this. She is very professional, polite, patient, and always prompt in replying to all my queries. She has a thorough knowledge of everything. Highly recommend her for any visa related services. Cheers, Mrunal..</p>
+                                <p class="testimonial-text truncated">Best place to get your visa done... Recently me, my husband and my colleagues got the US visa. We just had one month to get the Visa and Fly to the USA, but seeing the waiting period, it was just impossible to get an appointment. After contacting many visa vendors, I found this vendor through google Search, and I am so glad that I have found them. It was a fast track visa application, and all four of us got out appointment dates within 15 days. Special thanks to Mrunal Hazare, who helped me in this. She is very professional, polite, patient, and always prompt in replying to all my queries. She has a thorough knowledge of everything. Highly recommend her for any visa related services. Cheers, Mrunal..</p>
                                 <button class="read-more-btn">Read More</button>
                                 <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <i class="ri-user-fill"></i>
+                                    </div>
                                     <div class="author-info">
                                         <h4>Sayali Kanade</h4>
                                         <span>Google Review</span>
@@ -906,6 +932,9 @@
                                 </div>
                                 <p class="testimonial-text">Mrunal has helped me with multiple visas. Very professional and always prompt in replying to all my queries. Highly recommend her for any visa related services.</p>
                                 <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <i class="ri-user-fill"></i>
+                                    </div>
                                     <div class="author-info">
                                         <h4>Rima Wandhekar</h4>
                                         <span>Google Review</span>
@@ -929,6 +958,9 @@
                                 </div>
                                 <p class="testimonial-text">This review is specially for Mrunal Hazare who guided us properly with all our queries. She is very patient listener and have thorough knowledge. Thank you.</p>
                                 <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <i class="ri-user-fill"></i>
+                                    </div>
                                     <div class="author-info">
                                         <h4>Shikha Upadhyay</h4>
                                         <span>Google Review</span>
@@ -952,6 +984,9 @@
                                 </div>
                                 <p class="testimonial-text">Customer satisfaction... Clearing all the doubts with results... Must recommend..</p>
                                 <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <i class="ri-user-fill"></i>
+                                    </div>
                                     <div class="author-info">
                                         <h4>Jenny Muntode</h4>
                                         <span>Google Review</span>
@@ -976,6 +1011,9 @@
                                 <p class="testimonial-text truncated">I truly appreciate the knowledge and patience with which Mrunal explained the process. She is extremely professional and approachable. She is always available for any kind of clarification.</p>
                                 <button class="read-more-btn">Read More</button>
                                 <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <i class="ri-user-fill"></i>
+                                    </div>
                                     <div class="author-info">
                                         <h4>Sacheen Bhandari</h4>
                                         <span>Google Review</span>
@@ -1153,7 +1191,7 @@
             <div class="cta-container">
                 <h6>APPLY FOR A VISA</h6>
                 <h2>You Focus on Flying, We'll Handle the Paperwork!</h2>
-                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and guaranteed success.</p>
+                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and provide expert visa consultation with a strong record of successful applications.</p>
                 <a href="https://wa.me/919130448831" class="apply-btn">APPLY NOW</a>
             </div>
         </div>
@@ -1231,7 +1269,13 @@
     <script src="hero-slider-fix.js"></script>
     <script src="testimonials-slider.js"></script>
     <script src="professional-mobile-navbar.js"></script>
-
+    <!-- Enhanced UI Scripts -->
+    <script src="smooth-scroll.js"></script>
+    <script src="add-testimonial-avatars.js"></script>
+    <script src="stats-animation.js"></script>
+    <script src="service-items-hover.js"></script>
+    <script src="service-items-animation.js"></script>
+    <script src="mobile-service-fix.js"></script>
 
     <!-- Mobile menu and marquee animations are now handled by consolidated-scripts.js -->
     <!-- Mobile menu functions are now handled by universal-mobile-navbar.js -->

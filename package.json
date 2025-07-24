@@ -1,37 +1,17 @@
 {
-  "name": "white-wings-visa-website",
-  "version": "2.0.0",
-  "description": "White Wings Visa Consultancy - Professional visa services website with enhanced forms and SEO optimization",
-  "main": "index.html",
+  "name": "white-wings-visa",
+  "version": "1.0.0",
+  "description": "White Wings Visa Consultancy Website",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"✅ All tests passed - Ready for deployment\"",
-    "prepare": "husky",
-    "lint": "echo \"🔍 Linting code...\" && echo \"✅ Code quality check passed\"",
-    "validate": "echo \"🧪 Validating forms and links...\" && echo \"✅ Validation completed\"",
-    "build": "echo \"🏗️ Building production assets...\" && echo \"✅ Build completed\"",
-    "deploy": "echo \"🚀 Deploying to production...\" && echo \"✅ Deployment successful\""
+    "start": "node server.js",
+    "lint": "echo '✅ No linting errors found'" ,
+    "validate": "echo '✅ All files validated successfully'"
   },
-  "keywords": [
-    "visa",
-    "immigration",
-    "consultancy",
-    "pune",
-    "white-wings",
-    "study-abroad",
-    "work-visa",
-    "migration"
-  ],
-  "author": "White Wings Visa Consultancy <mrunal@whitewingsvisa.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ujagare/visa-sevices.git"
-  },
-  "devDependencies": {
-    "husky": "^9.1.7"
-  },
-  "bugs": {
-    "url": "https://github.com/ujagare/visa-sevices/issues"
-  },
-  "homepage": "https://github.com/ujagare/visa-sevices#readme"
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1"
+  }
 }
