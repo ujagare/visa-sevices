@@ -40,6 +40,14 @@
 
     <!-- White Wings Custom Color Scheme -->
     <link rel="stylesheet" href="white-wings-colors.css">
+    
+    <!-- Enhanced UI Styles -->
+    <link rel="stylesheet" href="social-proof.css">
+    <link rel="stylesheet" href="sticky-navbar.css">
+    <link rel="stylesheet" href="typography-spacing.css">
+    <link rel="stylesheet" href="icons-graphics.css">
+    <link rel="stylesheet" href="enhanced-responsive.css">
+    <link rel="stylesheet" href="testimonial-cards.css">
 
 
 
@@ -48,6 +56,9 @@
 
     <!-- Font blocker script to prevent font loading errors - must be at the top -->
     <script src="font-blocker.js"></script>
+    
+    <!-- Simple MIME Type Fix -->
+    <script src="fix-mime-simple.js"></script>
     
     <!-- Google Fonts (more reliable than cdnfonts) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -68,7 +79,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="dropdown">
-                        <a href="#" onclick="return false;">Services <i class="ri-arrow-down-s-line"></i></a>
+                        <a href="index.html#services" class="active">Services <i class="ri-arrow-down-s-line"></i></a>
                         <div class="dropdown-content">
                             <a href="study.html">
                                 <i class="ri-graduation-cap-line"></i>
@@ -216,7 +227,7 @@
         </div>
     </section>
 
-    <!-- Study Opportunity Section -->
+    <!-- Our Services Section -->
     <section class="study-opportunity-section">
         <div class="study-opportunity-container">
             <div class="section-header">
@@ -593,7 +604,7 @@
         </div>
     </section>
 
-    <!-- University Placements Section -->
+    <!-- Client Success Section -->
     <section class="university-placements-section">
         <div class="placements-container">
             <div class="placements-header">
@@ -725,7 +736,7 @@
             <div class="cta-container">
                 <h6>APPLY FOR A VISA</h6>
                 <h2>You Focus on Flying, We'll Handle the Paperwork!</h2>
-                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and guaranteed success.</p>
+                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and provide expert visa consultation with a strong record of successful applications.</p>
                 <a href="https://wa.me/919130448831" class="apply-btn">APPLY NOW</a>
             </div>
         </div>
@@ -782,16 +793,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- Lenis Smooth Scroll -->
-    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
-
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Custom Scripts -->
-    <script src="universal-lenis.js"></script>
     <script src="professional-mobile-navbar.js"></script>
     <script src="script.js"></script>
+    <!-- Enhanced UI Scripts -->
+
+    <script src="add-testimonial-avatars.js"></script></script>
 
     <!-- Mobile menu functions are now handled by universal-mobile-navbar.js -->
 
