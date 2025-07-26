@@ -3,23 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Test - White Wings Visa</title>
+    <title>Test Contact Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             max-width: 600px;
-            margin: 50px auto;
+            margin: 0 auto;
             padding: 20px;
-            background: #f5f5f5;
-        }
-        .test-form {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         label {
             display: block;
@@ -28,120 +21,116 @@
         }
         input, textarea, select {
             width: 100%;
-            padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
         button {
-            background: #007bff;
+            background-color: #1e40af;
             color: white;
-            padding: 12px 30px;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 4px;
             cursor: pointer;
         }
-        button:hover {
-            background: #0056b3;
-        }
-        .test-info {
-            background: #e7f3ff;
+        .result {
+            margin-top: 20px;
             padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            border-left: 4px solid #007bff;
+            border-radius: 4px;
+        }
+        .success {
+            background-color: #d1fae5;
+            border: 1px solid #a7f3d0;
+            color: #065f46;
+        }
+        .error {
+            background-color: #fee2e2;
+            border: 1px solid #fecaca;
+            color: #b91c1c;
         }
     </style>
 </head>
 <body>
-    <div class="test-form">
-        <div class="test-info">
-            <h3>🧪 Form Testing Tool</h3>
-            <p><strong>Purpose:</strong> Test if emails are being delivered to mrunal@whitewingsvisa.com</p>
-            <p><strong>Time:</strong> <span id="current-time"></span></p>
+    <h1>Test Contact Form</h1>
+    <p>Use this form to test the email functionality</p>
+    
+    <form id="testForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
         </div>
-
-        <h2>Test Form Submission</h2>
-        <form action="https://formsubmit.co/mrunal@whitewingsvisa.com" method="POST">
-            <input type="hidden" name="_subject" value="🧪 FORM TEST - Email Delivery Verification">
-            <input type="hidden" name="_next" value="https://whitewingsvisa.com/thank-you.html">
-            <input type="hidden" name="_captcha" value="false">
-            
-            <div class="form-group">
-                <label for="test_name">Test Name:</label>
-                <input type="text" id="test_name" name="test_name" value="Form Delivery Test" required>
-            </div>
-
-            <div class="form-group">
-                <label for="test_email">Test Email:</label>
-                <input type="email" id="test_email" name="test_email" value="test@whitewingsvisa.com" required>
-            </div>
-
-            <div class="form-group">
-                <label for="test_phone">Test Phone:</label>
-                <input type="tel" id="test_phone" name="test_phone" value="+91 9130448831" required>
-            </div>
-
-            <div class="form-group">
-                <label for="form_source">Form Source:</label>
-                <select id="form_source" name="form_source" required>
-                    <option value="test-form">Test Form</option>
-                    <option value="contact-page">Contact Page</option>
-                    <option value="homepage">Homepage</option>
-                    <option value="study-page">Study Page</option>
-                    <option value="work-page">Work Page</option>
-                    <option value="migrate-page">Migrate Page</option>
-                    <option value="visit-page">Visit Page</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="test_message">Test Message:</label>
-                <textarea id="test_message" name="test_message" rows="4" required>This is a test submission to verify that forms are working correctly and emails are being delivered to mrunal@whitewingsvisa.com. 
-
-Test Details:
-- Date: [Current Date]
-- Time: [Current Time]
-- Purpose: Email delivery verification
-- Expected: Email should arrive within 1-2 minutes
-
-If you receive this email, the form system is working correctly!</textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="test_priority">Test Priority:</label>
-                <select id="test_priority" name="test_priority" required>
-                    <option value="high">High - Immediate Testing</option>
-                    <option value="medium">Medium - Regular Testing</option>
-                    <option value="low">Low - Routine Check</option>
-                </select>
-            </div>
-
-            <button type="submit">🚀 Send Test Email</button>
-        </form>
-
-        <div style="margin-top: 30px; padding: 15px; background: #fff3cd; border-radius: 5px;">
-            <h4>📋 Testing Instructions:</h4>
-            <ol>
-                <li>Click "Send Test Email" button</li>
-                <li>Check email at <strong>mrunal@whitewingsvisa.com</strong></li>
-                <li>Email should arrive within 1-2 minutes</li>
-                <li>Check spam folder if not in inbox</li>
-                <li>Verify all form data is included</li>
-            </ol>
-        </div>
-    </div>
-
-    <script>
-        // Display current time
-        document.getElementById('current-time').textContent = new Date().toLocaleString();
         
-        // Update test message with current date/time
-        const textarea = document.getElementById('test_message');
-        const currentDateTime = new Date().toLocaleString();
-        textarea.value = textarea.value.replace('[Current Date]', new Date().toLocaleDateString());
-        textarea.value = textarea.value.replace('[Current Time]', new Date().toLocaleTimeString());
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="visaType">Visa Type:</label>
+            <select id="visaType" name="visaType" required>
+                <option value="">Select visa type</option>
+                <option value="Student">Student Visa</option>
+                <option value="Work">Work Visa</option>
+                <option value="Tourist">Tourist Visa</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="">Select destination</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+        </div>
+        
+        <button type="submit">Send Test Email</button>
+    </form>
+    
+    <div id="result" style="display: none;"></div>
+    
+    <script>
+        document.getElementById('testForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const resultDiv = document.getElementById('result');
+            
+            try {
+                const response = await fetch('send-mail.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                resultDiv.style.display = 'block';
+                if (result.success) {
+                    resultDiv.className = 'result success';
+                    resultDiv.innerHTML = '<strong>Success!</strong> ' + result.message;
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.innerHTML = '<strong>Error!</strong> ' + result.message;
+                }
+            } catch (error) {
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = '<strong>Error!</strong> An unexpected error occurred. Please try again.';
+                console.error('Error:', error);
+            }
+        });
     </script>
 </body>
 </html>

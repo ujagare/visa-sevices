@@ -3,89 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - White Wings Visa Consultancy</title>
+    <title>Thank You - White Wings Visa Consultancy Pune</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-fix.css">
     <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="apply-now-button.css">
+    <link rel="stylesheet" href="navbar-fix.css">
+    <link rel="stylesheet" href="professional-mobile-navbar.css">
+    <link rel="stylesheet" href="page-mobile-fix.css">
+    <link rel="stylesheet" href="mobile-menu-overlay.css">
+    <link rel="stylesheet" href="mobile-menu-animations.css">
+    <link rel="stylesheet" href="mobile-navbar-zindex-fix.css">
+    <link rel="stylesheet" href="mobile-navbar-vertical.css">
+    <link rel="stylesheet" href="improved-dropdown-menu.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="simple-mobile-navbar.css">
 
     <!-- White Wings Custom Color Scheme -->
     <link rel="stylesheet" href="white-wings-colors.css">
-
-
-
-
-
-
-    <!-- Gilroy Font -->
-    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    
     <style>
         .thank-you-container {
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 100px auto;
+            padding: 40px;
+            text-align: center;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
+        
         .thank-you-icon {
-            font-size: 5rem;
-            color: #4CAF50;
-            margin-bottom: 1rem;
+            font-size: 80px;
+            color: #1e40af;
+            margin-bottom: 20px;
         }
-
+        
         .thank-you-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #333;
+            font-size: 32px;
+            color: #1e40af;
+            margin-bottom: 20px;
         }
-
+        
         .thank-you-message {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #666;
+            font-size: 18px;
+            color: #334155;
+            margin-bottom: 30px;
             line-height: 1.6;
         }
-
-        .thank-you-buttons {
+        
+        .thank-you-steps {
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .thank-you-steps h3 {
+            color: #1e40af;
+            margin-bottom: 15px;
+        }
+        
+        .step-item {
             display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 15px;
         }
-
-        .thank-you-btn {
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
-            background-color: #1a73e8;
+        
+        .step-number {
+            background-color: #1e40af;
             color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
         }
-
-        .btn-primary:hover {
-            background-color: #1557b0;
+        
+        .step-text {
+            flex: 1;
         }
-
-        .btn-secondary {
-            background-color: #f1f3f4;
-            color: #333;
+        
+        .return-home-btn {
+            display: inline-block;
+            background-color: #1e40af;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
-
-        .btn-secondary:hover {
-            background-color: #e0e0e0;
+        
+        .return-home-btn:hover {
+            background-color: #1e3a8a;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -107,137 +124,80 @@
                                 <i class="ri-graduation-cap-line"></i>
                                 <div>
                                     <strong>Study Abroad</strong>
-                                    <span>Student visa & education guidance</span>
                                 </div>
                             </a>
                             <a href="migrate.html">
                                 <i class="ri-home-heart-line"></i>
                                 <div>
                                     <strong>Migrate</strong>
-                                    <span>Permanent residency & immigration</span>
                                 </div>
                             </a>
                             <a href="work.html">
                                 <i class="ri-briefcase-line"></i>
                                 <div>
                                     <strong>Work Abroad</strong>
-                                    <span>Work visa & job opportunities</span>
                                 </div>
                             </a>
                             <a href="visit.html">
                                 <i class="ri-plane-line"></i>
                                 <div>
                                     <strong>Visit</strong>
-                                    <span>Tourist & business visa</span>
                                 </div>
                             </a>
                         </div>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
-                    <button>
-                        <a href="contact.html">Apply Now</a>
-                    </button>
                 </ul>
-            </div>
 
-            <!-- Mobile Menu Button -->
-            <div class="mobile-menu-btn">
-                <i class="ri-menu-line" id="menu-toggle"></i>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div class="mobile-menu" id="mobile-menu">
-                <div class="mobile-menu-content">
-                    <div class="mobile-menu-header">
-                        <img src="images/logo/WING LOGO.png" class="mobile-logo" alt="White Wings Logo">
-                        <i class="ri-close-line" id="menu-close" title="Close Menu"></i>
-                    </div>
-                    <ul class="mobile-nav-links">
-                        <li><a href="index.html"><i class="ri-home-4-line"></i> Home</a></li>
-                        <li><a href="about.html"><i class="ri-information-line"></i> About</a></li>
-                        <li class="mobile-services-dropdown">
-                            <div class="mobile-services-header">
-                                <i class="ri-service-line"></i>
-                                <span>Services</span>
-                                <i class="ri-arrow-down-s-line mobile-dropdown-arrow"></i>
-                            </div>
-                            <div class="mobile-services-content">
-                                <a href="study.html">
-                                    <i class="ri-graduation-cap-line"></i>
-                                    <div>
-                                        <strong>Study Abroad</strong>
-                                        <span>Student visa & education guidance</span>
-                                    </div>
-                                </a>
-                                <a href="migrate.html">
-                                    <i class="ri-home-heart-line"></i>
-                                    <div>
-                                        <strong>Migrate</strong>
-                                        <span>Permanent residency & immigration</span>
-                                    </div>
-                                </a>
-                                <a href="work.html">
-                                    <i class="ri-briefcase-line"></i>
-                                    <div>
-                                        <strong>Work Abroad</strong>
-                                        <span>Work visa & job opportunities</span>
-                                    </div>
-                                </a>
-                                <a href="visit.html">
-                                    <i class="ri-plane-line"></i>
-                                    <div>
-                                        <strong>Visit</strong>
-                                        <span>Tourist & business visa</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li><a href="contact.html"><i class="ri-phone-line"></i> Contact</a></li>
-                    </ul>
-                    <button class="mobile-apply-btn">
-                        <a href="contact.html"><i class="ri-send-plane-line"></i> Apply Now</a>
-                    </button>
+                <!-- Apply Now Button for Desktop -->
+                <div class="apply-now-btn">
+                    <a href="https://wa.me/919130448831" class="btn-apply">
+                        <i class="ri-whatsapp-line"></i>
+                        Apply Now
+                    </a>
                 </div>
             </div>
         </nav>
     </nav-div>
 
     <!-- Thank You Content -->
-    <section class="thank-you-section">
-        <div class="thank-you-container">
-            <div class="thank-you-icon">
-                <i class="ri-check-double-line"></i>
+    <div class="thank-you-container">
+        <div class="thank-you-icon">
+            <i class="ri-check-double-line"></i>
+        </div>
+        <h1 class="thank-you-title">Thank You for Contacting Us!</h1>
+        <p class="thank-you-message">
+            Your message has been received successfully. Our visa experts will review your information and get back to you shortly.
+        </p>
+        
+        <div class="thank-you-steps">
+            <h3>What happens next?</h3>
+            
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-text">Our team will review your application within 24 hours</div>
             </div>
-            <h1 class="thank-you-title">Thank You for Contacting Us!</h1>
-            <div class="thank-you-message">
-                <p>Your message has been successfully submitted. Our visa experts will review your information and get back to you within 24 hours.</p>
-                <p>If you have any urgent queries, please feel free to call us directly at <strong>+91 9130448831</strong>.</p>
+            
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-text">We'll contact you via your preferred communication method</div>
             </div>
-            <div class="thank-you-buttons">
-                <a href="index.html" class="thank-you-btn btn-secondary">
-                    <i class="ri-home-4-line"></i>
-                    Return to Home
-                </a>
-                <a href="tel:+919130448831" class="thank-you-btn btn-primary">
-                    <i class="ri-phone-line"></i>
-                    Call Us Now
-                </a>
+            
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-text">We'll provide a personalized consultation plan for your visa needs</div>
             </div>
         </div>
-    </section>
+        
+        <p>For urgent queries, please call us at <strong>+91 9130448831</strong></p>
+        
+        <a href="index.html" class="return-home-btn">
+            <i class="ri-home-line"></i> Return to Homepage
+        </a>
+    </div>
 
-    <!-- Footer Section -->
+    <!-- Footer - Same as Home Page -->
     <footer class="footer-section">
-        <!-- Apply for Visa CTA Section -->
-        <div class="apply-visa-cta">
-            <div class="cta-container">
-                <h6>APPLY FOR A VISA</h6>
-                <h2>You Focus on Flying, We'll Handle the Paperwork!</h2>
-                <p>Planning your international journey from India? Let White Wings Visa Consultancy in Pune handle all the complex visa processes. From USA to Canada, UK to Australia - we make your global travel dreams come true with expert guidance and guaranteed success.</p>
-                <a href="https://wa.me/919130448831" class="apply-btn">APPLY NOW</a>
-            </div>
-        </div>
-
         <!-- Main Footer -->
         <div class="main-footer">
             <div class="footer-container">
@@ -278,70 +238,20 @@
                 </div>
 
                 <!-- Copyright -->
-                <div class="copyright">
-                    <p>Copyright © 2025 White Wings. All Rights Reserved.</p>
-                    <p>Powered by White Wings</p>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p>Copyright © 2025 White Wings. All Rights Reserved.</p>
+                        <p>Powered by White Wings</p>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <!-- Lenis Smooth Scroll -->
-    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
-
     <!-- Scripts -->
-    <script src="universal-lenis.js"></script>
-    <script src="universal-mobile-menu.js"></script>
     <script src="script.js"></script>
-    <script src="enable-scroll.js"></script>
-
-    <!-- Inline Mobile Menu Fix -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Thank you page: Checking mobile menu elements...');
-
-            const menuToggle = document.getElementById('menu-toggle');
-            const menuClose = document.getElementById('menu-close');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (menuToggle && menuClose && mobileMenu) {
-                console.log('Thank you page: All elements found, binding events...');
-
-                menuToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    console.log('Thank you page: Menu toggle clicked');
-                    mobileMenu.classList.add('active');
-                    mobileMenu.style.display = 'block';
-                    document.body.style.overflow = 'hidden';
-                    setTimeout(() => {
-                        mobileMenu.style.top = '0';
-                    }, 10);
-                });
-
-                menuClose.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    console.log('Thank you page: Menu close clicked');
-                    mobileMenu.style.top = '-100%';
-                    document.body.style.overflow = 'auto';
-                    setTimeout(() => {
-                        mobileMenu.classList.remove('active');
-                        mobileMenu.style.display = 'none';
-                    }, 400);
-                });
-
-                console.log('Thank you page: Mobile menu events bound successfully');
-            } else {
-                console.error('Thank you page: Mobile menu elements not found', {
-                    menuToggle: !!menuToggle,
-                    menuClose: !!menuClose,
-                    mobileMenu: !!mobileMenu
-                });
-            }
-        });
-    </script>
+    <script src="professional-mobile-navbar.js"></script>
+    <script src="image-optimization.js"></script>
+    <script src="css-optimization.js"></script>
 </body>
 </html>

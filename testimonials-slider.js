@@ -52,13 +52,22 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.read-more-btn').forEach(button => {
             button.addEventListener('click', function() {
                 const testimonialText = this.previousElementSibling;
+                const testimonialCard = this.closest('.testimonial-card');
                 
                 if (testimonialText.classList.contains('truncated')) {
                     testimonialText.classList.remove('truncated');
                     this.textContent = 'Read Less';
+                    // Add animation for expanding
+                    testimonialCard.style.transition = 'all 0.3s ease';
+                    testimonialCard.style.transform = 'translateY(-5px)';
+                    setTimeout(() => {
+                        testimonialCard.style.transform = '';
+                    }, 300);
                 } else {
                     testimonialText.classList.add('truncated');
                     this.textContent = 'Read More';
+                    // Add animation for collapsing
+                    testimonialCard.style.transition = 'all 0.3s ease';
                 }
                 
                 // Update Swiper to recalculate heights

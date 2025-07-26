@@ -7,16 +7,27 @@ const DYNAMIC_CACHE = 'dynamic-v1.0.0';
 const STATIC_ASSETS = [
     '/',
     '/index.html',
+    '/404.html',
+    '/privacy-policy.html',
+    '/terms-of-service.html',
+    '/cookie-policy.html',
+    '/faq.html',
     '/style-optimized.css',
+    '/consolidated-styles.css',
     '/script-optimized.js',
     '/performance-monitor.js',
     '/loader.js',
     '/universal-lenis.js',
     '/animation-data.js',
+    '/cookie-consent.js',
+    '/analytics.js',
     '/professional-mobile-menu.css',
     '/white-wings-colors.css',
     '/barba-simple.css',
     '/hero-slider-text.css',
+    '/favicon/favicon.ico',
+    '/favicon/apple-touch-icon.png',
+    '/favicon/site.webmanifest',
     '/images/logo/WING LOGO.png'
 ];
 

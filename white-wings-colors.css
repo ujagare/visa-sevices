@@ -355,6 +355,9 @@ table, th, td {
 .contact-form p, .contact-form span, .contact-form a, .contact-form label {
     color: var(--text-dark) !important;
 }
+.contact-form span{
+    color:var(--white) !important;
+}
 
 /* Thank you page text */
 .thank-you-section h1, .thank-you-section h2, .thank-you-section h3, .thank-you-section h4, .thank-you-section h5, .thank-you-section h6,

@@ -18,22 +18,26 @@
         }
 
         try {
+            // Check if device is mobile
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
             // Create new Lenis instance with mobile-optimized settings
             const lenis = new Lenis({
-                duration: 1.2,
+                duration: isMobile ? 0.8 : 1.2,
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
                 direction: 'vertical',
                 gestureDirection: 'vertical',
                 smooth: true,
                 mouseMultiplier: 1,
                 smoothTouch: true,
-                touchMultiplier: 1.5,
+                touchMultiplier: isMobile ? 1.2 : 1.5,
                 infinite: false,
                 normalizeWheel: true,
                 wheelEventsTarget: document.documentElement,
                 autoResize: true,
-                syncTouch: true,
-                touchInertiaMultiplier: 35
+                syncTouch: isMobile,
+                touchInertiaMultiplier: isMobile ? 25 : 35,
+                orientation: 'vertical'
             });
 
             // Make globally accessible

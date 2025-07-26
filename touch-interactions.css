@@ -1,0 +1,68 @@
+/**
+ * Touch Interactions CSS for White Wings Visa Consultancy
+ * Enhances touch interactions on mobile devices
+ */
+
+/* Only apply these styles on mobile devices */
+@media (max-width: 768px) {
+    /* Improve touch targets */
+    a, button, .btn, .cta-btn, .apply-btn, 
+    .info-card, .service-item, .feature-item {
+        min-height: 44px; /* Apple's recommended minimum touch target size */
+        min-width: 44px;
+    }
+    
+    /* Add touch feedback */
+    a:active, button:active, .btn:active, 
+    .cta-btn:active, .apply-btn:active {
+        transform: scale(0.97);
+        transition: transform 0.1s ease;
+    }
+    
+    /* Prevent text selection during touch interactions */
+    .coaching-grid, .journey-steps, .university-logos,
+    .testimonials-swiper, .swiper-wrapper,
+    .image-marquee-content, .choice-marquee-content {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    
+    /* Improve scrolling on iOS */
+    .lenis.lenis-smooth {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Prevent pull-to-refresh on mobile browsers */
+    body {
+        overscroll-behavior-y: none;
+    }
+    
+    /* Optimize touch scrolling for horizontal elements */
+    .coaching-grid, .journey-steps, .university-logos {
+        scroll-snap-type: x mandatory;
+        scroll-padding: 16px;
+    }
+    
+    /* Optimize touch scrolling items */
+    .coaching-card, .journey-step, .university-logo {
+        scroll-snap-align: start;
+        touch-action: pan-x;
+    }
+    
+    /* Improve touch feedback for form elements */
+    input, select, textarea {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        touch-action: manipulation;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(3, 105, 161, 0.3);
+    }
+    
+    /* Optimize buttons for touch */
+    .submit-btn, .apply-btn, .cta-btn, .btn-apply-now {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+}

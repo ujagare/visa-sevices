@@ -169,23 +169,22 @@ class WhiteWingsFormValidator {
             // Use fetch for better error handling
             const response = await fetch(form.action, {
                 method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                body: formData
             });
 
-            if (response.ok) {
+            const result = await response.json();
+            
+            if (response.ok && result.success) {
                 // Success
                 this.showSuccessMessage(form);
                 
                 // Redirect after delay
                 setTimeout(() => {
-                    const redirectUrl = form.querySelector('input[name="_next"]')?.value || '/thank-you.html';
+                    const redirectUrl = form.querySelector('input[name="_next"]')?.value || 'thank-you.html';
                     window.location.href = redirectUrl;
                 }, 2000);
             } else {
-                throw new Error('Form submission failed');
+                throw new Error(result.message || 'Form submission failed');
             }
 
         } catch (error) {

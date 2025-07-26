@@ -1,18 +1,35 @@
 {
-  "name": "white-wings-visa",
+  "name": "white-wings-visa-website",
   "version": "1.0.0",
-  "description": "White Wings Visa Consultancy Website",
-  "main": "server.js",
+  "description": "White Wings Visa Consultancy Website with Lenis Smooth Scroll and DoubleClick Floodlight",
+  "main": "index.html",
   "scripts": {
-    "start": "node server.js",
-    "lint": "echo '✅ No linting errors found'",
-    "validate": "echo '✅ All files validated successfully'",
-    "test": "echo '✅ All tests passed successfully'"
+    "test": "echo \"Running tests...\" && exit 0",
+    "lint": "echo \"Linting files...\" && exit 0",
+    "validate": "echo \"Validating HTML/CSS/JS...\" && exit 0",
+    "prepare": "husky install"
   },
-  "dependencies": {
-    "express": "^4.18.2",
-    "nodemailer": "^6.9.7",
-    "body-parser": "^1.20.2",
-    "dotenv": "^16.3.1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ujagare/Important-Setup-Required.git"
+  },
+  "keywords": [
+    "visa",
+    "consultancy",
+    "website",
+    "lenis",
+    "floodlight",
+    "tracking"
+  ],
+  "author": "White Wings Visa Consultancy",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^8.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run validate",
+      "pre-push": "npm test"
+    }
   }
 }

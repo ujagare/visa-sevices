@@ -1,0 +1,93 @@
+/**
+ * Mobile Scroll Optimizations for White Wings Visa Consultancy
+ * Improves scrolling performance on mobile devices with Lenis
+ */
+
+/* Apply hardware acceleration to scrollable elements */
+.coaching-grid,
+.journey-steps,
+.university-logos,
+.testimonials-swiper,
+.swiper-wrapper,
+.image-marquee-content,
+.choice-marquee-content {
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Lenis-specific optimizations */
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+/* Optimize touch interactions */
+@media (max-width: 768px) {
+    /* Reduce animation complexity on mobile */
+    * {
+        transition-duration: 0.2s !important;
+    }
+    
+    /* Optimize horizontal scrolling elements */
+    .coaching-grid {
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+    
+    .coaching-card {
+        scroll-snap-align: start;
+    }
+    
+    /* Reduce motion for better performance */
+    .image-marquee-content {
+        animation-duration: 120s !important;
+    }
+    
+    .choice-marquee-right .choice-marquee-content,
+    .choice-marquee-left .choice-marquee-content {
+        animation-duration: 120s !important;
+    }
+    
+    /* Optimize fixed elements */
+    .footer-section,
+    .main-footer,
+    nav {
+        transform: translateZ(0);
+    }
+    
+    /* Optimize images */
+    img {
+        content-visibility: auto;
+    }
+    
+    /* Lenis mobile optimizations */
+    html.lenis {
+        height: auto;
+    }
+    
+    .lenis.lenis-smooth {
+        scroll-behavior: auto;
+    }
+    
+    .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+    }
+    
+    .lenis.lenis-stopped {
+        overflow: hidden;
+    }
+}

@@ -11,6 +11,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 12px;
     margin-top: 15px;
+    padding: 1.5rem 0;
   }
   
   /* Card styling */
