@@ -51,6 +51,8 @@ nav, .navbar, .nav-div, nav-div {
 /* Sections with darker backgrounds */
 .sets-apart, .testimonials, .contact-card-section, .about-journey, 
 .study-opportunity-section, .work-benefits, .migrate-benefits {
+    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%) !important;
+    color: var(--text-dark) !important;
 }
 
 /* Cards and containers */
