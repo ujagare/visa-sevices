@@ -159,10 +159,11 @@
                             <i class="ri-briefcase-4-line"></i>
                         </div>
                         <h3>Find Work Opportunities</h3>
-                        <form class="work-form" action="https://formsubmit.co/mrunal@whitewingsvisa.com" method="POST">
+                        <form id="workForm1" class="work-form" novalidate>
                             <input type="hidden" name="_subject" value="Work Abroad Form Submission">
-                            <input type="hidden" name="_next" value="https://whitewingsvisa.com/thank-you.html">
+                            <input type="hidden" name="_next" value="thank-you.html">
                             <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
                             <div class="form-row">
                                 <select class="form-select" name="country" required>
                                     <option value="">Select Country</option>
@@ -184,7 +185,52 @@
                                 </select>
                             </div>
                             <div class="form-row">
-                                <input type="tel" placeholder="Phone Number" name="phone" class="form-input" required>
+                                <input type="text" placeholder="Full Name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="email" placeholder="Email Address" name="email" class="form-input" required>
+                            </div>
+                            <div class="form-row" style="display: flex; gap: 10px;">
+                                <select name="countryCode" class="form-input" style="width: 120px;" required>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+1">🇨🇦 +1</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                    <option value="+34">🇪🇸 +34</option>
+                                    <option value="+31">🇳🇱 +31</option>
+                                    <option value="+41">🇨🇭 +41</option>
+                                    <option value="+46">🇸🇪 +46</option>
+                                    <option value="+47">🇳🇴 +47</option>
+                                    <option value="+45">🇩🇰 +45</option>
+                                    <option value="+64">🇳🇿 +64</option>
+                                    <option value="+65">🇸🇬 +65</option>
+                                    <option value="+60">🇲🇾 +60</option>
+                                    <option value="+66">🇹🇭 +66</option>
+                                    <option value="+84">🇻🇳 +84</option>
+                                    <option value="+62">🇮🇩 +62</option>
+                                    <option value="+63">🇵🇭 +63</option>
+                                    <option value="+971">🇦🇪 +971</option>
+                                    <option value="+974">🇶🇦 +974</option>
+                                    <option value="+965">🇰🇼 +965</option>
+                                    <option value="+966">🇸🇦 +966</option>
+                                    <option value="+968">🇴🇲 +968</option>
+                                    <option value="+973">🇧🇭 +973</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                    <option value="+82">🇰🇷 +82</option>
+                                    <option value="+86">🇨🇳 +86</option>
+                                    <option value="+852">🇭🇰 +852</option>
+                                    <option value="+27">🇿🇦 +27</option>
+                                    <option value="+55">🇧🇷 +55</option>
+                                    <option value="+54">🇦🇷 +54</option>
+                                    <option value="+56">🇨🇱 +56</option>
+                                    <option value="+57">🇨🇴 +57</option>
+                                    <option value="+52">🇲🇽 +52</option>
+                                </select>
+                                <input type="tel" placeholder="Phone Number" name="phone" class="form-input" pattern="[0-9]{10}" title="Please enter 10 digit phone number" style="flex: 1;" required>
                             </div>
                             <button type="submit" class="form-submit"><i class="ri-send-plane-line"></i> Get Free Assessment</button>
                         </form>
@@ -222,7 +268,7 @@
                             <span class="feature-tag">Express Entry</span>
                         </div>
                         <p style="min-height: 0 !important; margin-bottom: 10px !important;">1.1 million job opportunities with pathway to PR</p>
-                        <a href="#" class="destination-btn">Explore Canada Jobs <i class="ri-arrow-right-line"></i></a>
+                        <a href="contact.html" class="destination-btn">Explore Canada Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
 
@@ -241,7 +287,7 @@
                             <span class="feature-tag">Regional Visa</span>
                         </div>
                         <p style="min-height: 0 !important; margin-bottom: 10px !important;">8 lakh job opportunities with high living standards</p>
-                        <a href="#" class="destination-btn">Explore Australia Jobs <i class="ri-arrow-right-line"></i></a>
+                        <a href="contact.html" class="destination-btn">Explore Australia Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
 
@@ -260,7 +306,7 @@
                             <span class="feature-tag">Working Holiday</span>
                         </div>
                         <p style="min-height: 0 !important; margin-bottom: 10px !important;">1.2 million job opportunities with beautiful landscapes</p>
-                        <a href="#" class="destination-btn">Explore New Zealand Jobs <i class="ri-arrow-right-line"></i></a>
+                        <a href="contact.html" class="destination-btn">Explore New Zealand Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -281,7 +327,7 @@
                             <span class="feature-tag">Freelance Visa</span>
                         </div>
                         <p style="min-height: 0 !important; margin-bottom: 10px !important;">418,500 job opportunities with tax-free income</p>
-                        <a href="#" class="destination-btn">Explore Dubai Jobs <i class="ri-arrow-right-line"></i></a>
+                        <a href="contact.html" class="destination-btn">Explore Dubai Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
 
@@ -300,7 +346,7 @@
                             <span class="feature-tag">Work Permit</span>
                         </div>
                         <p style="min-height: 0 !important; margin-bottom: 10px !important;">Multiple opportunities across European countries</p>
-                        <a href="#" class="destination-btn">Explore Europe Jobs <i class="ri-arrow-right-line"></i></a>
+                        <a href="contact.html" class="destination-btn">Explore Europe Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
 
@@ -319,7 +365,7 @@
                             <span class="feature-tag">Tech.Pass</span>
                         </div>
                         <p style="min-height: 0 !important; margin-bottom: 10px !important;">Global financial hub with excellent opportunities</p>
-                        <a href="#" class="destination-btn">Explore Singapore Jobs <i class="ri-arrow-right-line"></i></a>
+                        <a href="contact.html" class="destination-btn">Explore Singapore Jobs <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -480,10 +526,11 @@
             <div class="premium-cta-form">
                 <h3>Get Your Free Assessment</h3>
                 <p>Take the first step towards your international career</p>
-                <form class="premium-form" action="https://formsubmit.co/mrunal@whitewingsvisa.com" method="POST">
+                <form id="workForm2" class="premium-form" novalidate>
                     <input type="hidden" name="_subject" value="Premium Work Abroad Application">
-                    <input type="hidden" name="_next" value="https://whitewingsvisa.com/thank-you.html">
+                    <input type="hidden" name="_next" value="thank-you.html">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
                     <div class="premium-form-row">
                         <div class="input-icon"><i class="ri-user-line"></i></div>
                         <input type="text" placeholder="Your Name" name="name" class="premium-input" required>
@@ -629,7 +676,13 @@
     
     <!-- Enhanced UI Scripts -->
     <script src="add-testimonial-avatars.js"></script>
+    
 
+
+    <!-- Appwrite SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@13.0.1"></script>
+    <script src="appwrite-config.js"></script>
+    
     <!-- Mobile menu functionality is now handled by disable-mobile-navbar.js -->
 
 </body>

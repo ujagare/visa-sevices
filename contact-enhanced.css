@@ -234,7 +234,7 @@
 .codex-form-submit:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0, 0, 128, 0.3);
-    background: linear-gradient(135deg, #1e40af, #000080);
+    background: rgb(75, 75, 255);
 }
 
 .codex-form-submit:hover::before {

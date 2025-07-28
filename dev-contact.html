@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Development Contact Test</title>
+</head>
+<body>
+    <h2>Development Mode - Contact Form Test</h2>
+    
+    <form id="testForm">
+        <input type="text" id="name" placeholder="Name" required><br><br>
+        <input type="email" id="email" placeholder="Email" required><br><br>
+        <input type="tel" id="phone" placeholder="Phone" required><br><br>
+        <select id="visaType" required>
+            <option value="">Select Visa Type</option>
+            <option value="Student Visa">Student Visa</option>
+            <option value="Work Visa">Work Visa</option>
+            <option value="Tourist Visa">Tourist Visa</option>
+        </select><br><br>
+        <button type="submit">Test Submit</button>
+    </form>
+
+    <div id="result" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc;"></div>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                visaType: document.getElementById('visaType').value
+            };
+            
+            // Development mode - show data instead of sending
+            document.getElementById('result').innerHTML = `
+                <h3>✅ Development Mode - Form Data Captured:</h3>
+                <strong>Name:</strong> ${formData.name}<br>
+                <strong>Email:</strong> ${formData.email}<br>
+                <strong>Phone:</strong> ${formData.phone}<br>
+                <strong>Visa Type:</strong> ${formData.visaType}<br>
+                <strong>Time:</strong> ${new Date().toLocaleString()}<br><br>
+                <em>In production, this data will be emailed to mrunal@whitewingsvisa.com</em>
+            `;
+            
+            // Optional: Save to localStorage for testing
+            localStorage.setItem('lastSubmission', JSON.stringify(formData));
+            
+            alert('✅ Development Test Successful! Check the result below.');
+        });
+    </script>
+</body>
+</html>

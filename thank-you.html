@@ -3,255 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - White Wings Visa Consultancy Pune</title>
+    <title>Thank You - White Wings Visa Consultancy</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-fix.css">
-    <link rel="stylesheet" href="pages.css">
-    <link rel="stylesheet" href="apply-now-button.css">
-    <link rel="stylesheet" href="navbar-fix.css">
-    <link rel="stylesheet" href="professional-mobile-navbar.css">
-    <link rel="stylesheet" href="page-mobile-fix.css">
-    <link rel="stylesheet" href="mobile-menu-overlay.css">
-    <link rel="stylesheet" href="mobile-menu-animations.css">
-    <link rel="stylesheet" href="mobile-navbar-zindex-fix.css">
-    <link rel="stylesheet" href="mobile-navbar-vertical.css">
-    <link rel="stylesheet" href="improved-dropdown-menu.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-
-    <!-- White Wings Custom Color Scheme -->
     <link rel="stylesheet" href="white-wings-colors.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
     <style>
         .thank-you-container {
-            max-width: 800px;
-            margin: 100px auto;
-            padding: 40px;
-            text-align: center;
-            background-color: #f8fafc;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .thank-you-icon {
-            font-size: 80px;
-            color: #1e40af;
-            margin-bottom: 20px;
-        }
-        
-        .thank-you-title {
-            font-size: 32px;
-            color: #1e40af;
-            margin-bottom: 20px;
-        }
-        
-        .thank-you-message {
-            font-size: 18px;
-            color: #334155;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        
-        .thank-you-steps {
-            text-align: left;
-            max-width: 500px;
-            margin: 0 auto 30px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-        
-        .thank-you-steps h3 {
-            color: #1e40af;
-            margin-bottom: 15px;
-        }
-        
-        .step-item {
+            min-height: 100vh;
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
         }
-        
-        .step-number {
-            background-color: #1e40af;
-            color: white;
-            width: 24px;
-            height: 24px;
+        .thank-you-card {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 600px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #10b981;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
+            margin: 0 auto 30px;
+            animation: bounce 1s ease-in-out;
         }
-        
-        .step-text {
-            flex: 1;
-        }
-        
-        .return-home-btn {
-            display: inline-block;
-            background-color: #1e40af;
+        .success-icon i {
+            font-size: 40px;
             color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
+        }
+        .thank-you-card h1 {
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        .thank-you-card p {
+            color: #6b7280;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 30px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
-        
-        .return-home-btn:hover {
-            background-color: #1e3a8a;
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #5a67d8;
             transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 2px solid #e5e7eb;
+        }
+        .btn-secondary:hover {
+            background: #e5e7eb;
+            transform: translateY(-2px);
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        @media (max-width: 768px) {
+            .thank-you-card {
+                padding: 40px 20px;
+            }
+            .thank-you-card h1 {
+                font-size: 2rem;
+            }
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation - Same as Home Page -->
-    <nav-div>
-        <nav>
-            <img src="images/logo/WING LOGO.png" class="logo">
-
-            <!-- Desktop Menu -->
-            <div id="links" class="desktop-menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="#" onclick="return false;">Services <i class="ri-arrow-down-s-line"></i></a>
-                        <div class="dropdown-content">
-                            <a href="study.html">
-                                <i class="ri-graduation-cap-line"></i>
-                                <div>
-                                    <strong>Study Abroad</strong>
-                                </div>
-                            </a>
-                            <a href="migrate.html">
-                                <i class="ri-home-heart-line"></i>
-                                <div>
-                                    <strong>Migrate</strong>
-                                </div>
-                            </a>
-                            <a href="work.html">
-                                <i class="ri-briefcase-line"></i>
-                                <div>
-                                    <strong>Work Abroad</strong>
-                                </div>
-                            </a>
-                            <a href="visit.html">
-                                <i class="ri-plane-line"></i>
-                                <div>
-                                    <strong>Visit</strong>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-
-                <!-- Apply Now Button for Desktop -->
-                <div class="apply-now-btn">
-                    <a href="https://wa.me/919130448831" class="btn-apply">
-                        <i class="ri-whatsapp-line"></i>
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </nav-div>
-
-    <!-- Thank You Content -->
     <div class="thank-you-container">
-        <div class="thank-you-icon">
-            <i class="ri-check-double-line"></i>
-        </div>
-        <h1 class="thank-you-title">Thank You for Contacting Us!</h1>
-        <p class="thank-you-message">
-            Your message has been received successfully. Our visa experts will review your information and get back to you shortly.
-        </p>
-        
-        <div class="thank-you-steps">
-            <h3>What happens next?</h3>
-            
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-text">Our team will review your application within 24 hours</div>
+        <div class="thank-you-card">
+            <div class="success-icon">
+                <i class="ri-check-double-line"></i>
             </div>
+            <h1>Thank You!</h1>
+            <p>Your message has been successfully submitted. Our expert team at White Wings Visa Consultancy will review your inquiry and get back to you within 2-4 hours with personalized assistance for your visa requirements.</p>
+            <p>We appreciate your trust in our services and look forward to helping you achieve your international travel goals.</p>
             
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-text">We'll contact you via your preferred communication method</div>
-            </div>
-            
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <div class="step-text">We'll provide a personalized consultation plan for your visa needs</div>
+            <div class="action-buttons">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="ri-home-line"></i>
+                    Back to Home
+                </a>
+                <a href="https://wa.me/919130448831" class="btn btn-secondary">
+                    <i class="ri-whatsapp-line"></i>
+                    WhatsApp Us
+                </a>
             </div>
         </div>
-        
-        <p>For urgent queries, please call us at <strong>+91 9130448831</strong></p>
-        
-        <a href="index.html" class="return-home-btn">
-            <i class="ri-home-line"></i> Return to Homepage
-        </a>
     </div>
 
-    <!-- Footer - Same as Home Page -->
-    <footer class="footer-section">
-        <!-- Main Footer -->
-        <div class="main-footer">
-            <div class="footer-container">
-                <div class="footer-content">
-                    <!-- Left Column - Logo and Social -->
-                    <div class="footer-left">
-                        <img src="images/logo/WING LOGO.png" alt="White Wings Logo" class="footer-logo">
-                        <p class="footer-tagline">Hassle-free travel shouldn't just be a dream.</p>
-                        <p class="footer-slogan">White Wings - Visa Simplified.</p>
-                        <div class="social-links">
-                            <a href="https://wa.me/919130448831"><i class="ri-whatsapp-fill"></i></a>
-                            <a href="mailto:mrunal@whitewingsvisa.com"><i class="ri-mail-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-fill"></i></a>
-                            <a href="#"><i class="ri-facebook-fill"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Middle Column - Quick Links -->
-                    <div class="footer-middle">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="contact.html">Apply Now</a></li>
-                            <li><a href="tel:+919130448831">Call Us</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Right Column - Contact Info -->
-                    <div class="footer-right">
-                        <h4>Get In Touch</h4>
-                        <div class="contact-details">
-                            <p>📞 +91 9130448831</p>
-                            <p><strong>✉ mrunal@whitewingsvisa.com</strong></p>
-                            <p>📍 Pune, Maharashtra, India</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Copyright -->
-                <div class="footer-bottom">
-                    <div class="footer-bottom-content">
-                        <p>Copyright © 2025 White Wings. All Rights Reserved.</p>
-                        <p>Powered by White Wings</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
-    <script src="professional-mobile-navbar.js"></script>
-    <script src="image-optimization.js"></script>
-    <script src="css-optimization.js"></script>
+    <script>
+        // Auto redirect after 10 seconds
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 10000);
+    </script>
 </body>
 </html>

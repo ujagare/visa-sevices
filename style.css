@@ -999,7 +999,7 @@ overflow-x: hidden;
 
 .btn-know-more {
     background:#D9EAFD;
-    color: white;
+    color: #222;
     padding: 12px 24px;
     border-radius: 25px;
     text-decoration: none;
@@ -1014,7 +1014,7 @@ overflow-x: hidden;
 
 .btn-call-us {
     background: #D9EAFD;
-    color: #D9EAFD;
+    color: #222;
     padding: 12px 24px;
     border-radius: 25px;
     text-decoration: none;
@@ -1346,13 +1346,16 @@ overflow-x: hidden;
 
 .btn-apply-now {
     background: #D9EAFD;
-    color: white;
+    color: #222;
     padding: 12px 24px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+}
+.btn-apply-now:hover{
+    color:white;
 }
 
 .btn-apply-now:hover {
@@ -2137,7 +2140,7 @@ overflow-x: hidden;
 
 .footer-middle ul li a,
 .footer-services ul li a {
-    color: rgba(255, 255, 255, 0.9);
+    color:#222;
     text-decoration: none;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -2424,7 +2427,7 @@ overflow-x: hidden;
 }
 
 .contact-text a {
-    color: rgba(255, 255, 255, 0.9);
+    color: #222;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;

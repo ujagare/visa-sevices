@@ -69,8 +69,8 @@
 
 .hero-codex-btn-primary {
     display: inline-block;
-    background-color: #fff;
-    color: #687FE5;
+    background-color:#E7EEFA;
+    color: #222;
     padding: 15px 30px;
     border-radius: 50px;
     font-weight: 600;
@@ -81,7 +81,7 @@
 
 .hero-codex-btn-primary:hover {
     background-color: #f8f9ff;
-    color: #687FE5;
+    color: #222;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }

@@ -95,14 +95,18 @@
 }
 
 .cta-btn:hover {
-    background: var(--secondary-color, #0077cc);
+    background: var(--secondary-color, #4053fd);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 .cta-btn i {
     margin-right: 10px;
     font-size: 18px;
+}
+.cta-btn:hover i{
+    color: white;
 }
 
 /* Responsive styles */

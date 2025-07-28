@@ -240,7 +240,7 @@
     display: inline-block;
     position: relative;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #000080, #3b82f6);
+    background: #222;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

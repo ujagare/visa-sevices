@@ -149,7 +149,7 @@
 
 .destination-link:hover {
     gap: 10px;
-    color: var(--primary-light);
+    color: var(--primary);
 }
 
 .destination-badge {

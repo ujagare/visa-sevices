@@ -137,7 +137,7 @@ body {
     gap: 10px;
     padding: 15px 30px;
         background:#A4B1BE;
-    color: white;
+    color: #222;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
@@ -157,9 +157,8 @@ body {
     align-items: center;
     gap: 10px;
     padding: 15px 30px;
-    background: transparent;
-    color: #000080;
-    border: 2px solid #A4B1BE;
+    background: #A4B1BE;
+    color: #222;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
@@ -168,7 +167,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background: rgba(0, 0, 128, 0.05);
+    background: #3b82f6;
     transform: translateY(-5px);
 }
 

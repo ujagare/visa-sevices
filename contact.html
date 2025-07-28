@@ -44,9 +44,8 @@
 
     <!-- Enhanced Form Validation -->
     <script src="enhanced-form-validation.js" defer></script>
+    
 
-    <!-- Enhanced Form Validation -->
-    <script src="enhanced-form-validation.js" defer></script>
 </head>
 <body>
     <!-- Navigation - Same as Home Page -->
@@ -227,14 +226,13 @@
         <div class="card-wrapper">
             <h2>Start Your Visa Journey Today</h2>
             <div class="contact-card">
-                <form id="visaContact" action="secure-mail.php" method="POST" enctype="multipart/form-data" novalidate>
-                    <?php
-                    session_start();
-                    if (!isset($_SESSION['csrf_token'])) {
-                        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-                    }
-                    ?>
-                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                <form id="visaContact" action="https://formsubmit.co/2ad5406fe3ca5d4bc7c78f8b2a424961" method="POST" novalidate>
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Visa Inquiry from Website">
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
                     <div class="field">
                         <label for="name">Full Legal Name</label>
                         <div class="input-container">
@@ -255,15 +253,54 @@
 
                     <div class="field">
                         <label for="phone">Contact Number</label>
-                        <div class="input-container">
+                        <div class="input-container" style="display: flex; gap: 10px;">
                             <span class="input-icon"><i class="ri-smartphone-line"></i></span>
-                            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required />
+                            <select name="countryCode" style="width: 120px; padding: 12px; border: 1px solid #ddd; border-radius: 8px;" required>
+                                <option value="+91">🇮🇳 +91</option>
+                                <option value="+1">🇺🇸 +1</option>
+                                <option value="+44">🇬🇧 +44</option>
+                                <option value="+61">🇦🇺 +61</option>
+                                <option value="+1">🇨🇦 +1</option>
+                                <option value="+49">🇩🇪 +49</option>
+                                <option value="+33">🇫🇷 +33</option>
+                                <option value="+39">🇮🇹 +39</option>
+                                <option value="+34">🇪🇸 +34</option>
+                                <option value="+31">🇳🇱 +31</option>
+                                <option value="+41">🇨🇭 +41</option>
+                                <option value="+46">🇸🇪 +46</option>
+                                <option value="+47">🇳🇴 +47</option>
+                                <option value="+45">🇩🇰 +45</option>
+                                <option value="+64">🇳🇿 +64</option>
+                                <option value="+65">🇸🇬 +65</option>
+                                <option value="+60">🇲🇾 +60</option>
+                                <option value="+66">🇹🇭 +66</option>
+                                <option value="+84">🇻🇳 +84</option>
+                                <option value="+62">🇮🇩 +62</option>
+                                <option value="+63">🇵🇭 +63</option>
+                                <option value="+971">🇦🇪 +971</option>
+                                <option value="+974">🇶🇦 +974</option>
+                                <option value="+965">🇰🇼 +965</option>
+                                <option value="+966">🇸🇦 +966</option>
+                                <option value="+968">🇴🇲 +968</option>
+                                <option value="+973">🇧🇭 +973</option>
+                                <option value="+81">🇯🇵 +81</option>
+                                <option value="+82">🇰🇷 +82</option>
+                                <option value="+86">🇨🇳 +86</option>
+                                <option value="+852">🇭🇰 +852</option>
+                                <option value="+27">🇿🇦 +27</option>
+                                <option value="+55">🇧🇷 +55</option>
+                                <option value="+54">🇦🇷 +54</option>
+                                <option value="+56">🇨🇱 +56</option>
+                                <option value="+57">🇨🇴 +57</option>
+                                <option value="+52">🇲🇽 +52</option>
+                            </select>
+                            <input type="tel" id="phone" name="phone" placeholder="XXXXXXXXXX" pattern="[0-9]{10}" title="Please enter 10 digit phone number" style="flex: 1;" required />
                         </div>
                         <div class="error-message"></div>
                     </div>
 
                     <div class="field">
-                        <label for="country">Current Residence</label>
+                        <label for="country">Current Residence *</label>
                         <div class="input-container">
                             <span class="input-icon"><i class="ri-map-pin-line"></i></span>
                             <input type="text" id="country" name="country" placeholder="Country where you currently reside" required />
@@ -397,21 +434,10 @@
                     </div>
 
                     <div class="field full">
-                        <label for="docs">Upload Documents (Optional)</label>
-                        <div class="input-container file-input">
-                            <span class="input-icon"><i class="ri-upload-cloud-line"></i></span>
-                            <input type="file" id="docs" name="docs" accept=".pdf,.jpg,.png,.jpeg" multiple />
-                            <span class="file-text">Upload passport copy, photos, or other documents</span>
-                        </div>
-                        <small>Accepted formats: PDF, JPG, PNG (Max 10MB per file)</small>
-                        <div class="error-message"></div>
-                    </div>
-
-                    <div class="field full">
-                        <label for="notes">Additional Information</label>
+                        <label for="notes">Additional Information *</label>
                         <div class="input-container">
                             <span class="input-icon"><i class="ri-chat-3-line"></i></span>
-                            <textarea id="notes" name="notes" rows="4" placeholder="Share any specific requirements, concerns, or questions about your visa application..."></textarea>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Share any specific requirements, concerns, or questions about your visa application..." required></textarea>
                         </div>
                         <div class="error-message"></div>
                     </div>
@@ -559,6 +585,10 @@
 
     <script src="add-testimonial-avatars.js"></script></script>
 
+    <!-- Appwrite SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@13.0.1"></script>
+    <script src="appwrite-form-handler.js"></script>
+    
     <!-- Mobile menu functionality is now handled by disable-mobile-navbar.js -->
 
 

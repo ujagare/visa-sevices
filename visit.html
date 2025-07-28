@@ -1711,27 +1711,69 @@
                 </div>
 
                 <div class="codex-contact-form">
-                    <form action="https://formsubmit.co/mrunal@whitewingsvisa.com" method="POST">
+                    <form id="visitForm" novalidate>
                         <input type="hidden" name="_subject" value="Visit Visa Assessment Request">
-                        <input type="hidden" name="_next" value="https://whitewingsvisa.com/thank-you.html">
+                        <input type="hidden" name="_next" value="thank-you.html">
                         <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
                         <div class="codex-form-row">
                             <div class="codex-form-group">
-                                <label for="name">Full Name</label>
+                                <label for="name">Full Name *</label>
                                 <input type="text" id="name" name="name" class="codex-form-control" required>
                             </div>
                             <div class="codex-form-group">
-                                <label for="email">Email Address</label>
+                                <label for="email">Email Address *</label>
                                 <input type="email" id="email" name="email" class="codex-form-control" required>
                             </div>
                         </div>
                         <div class="codex-form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="codex-form-control" required>
+                            <label for="phone">Phone Number *</label>
+                            <div style="display: flex; gap: 10px;">
+                                <select name="countryCode" class="codex-form-control" style="width: 120px;" required>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+1">🇨🇦 +1</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                    <option value="+34">🇪🇸 +34</option>
+                                    <option value="+31">🇳🇱 +31</option>
+                                    <option value="+41">🇨🇭 +41</option>
+                                    <option value="+46">🇸🇪 +46</option>
+                                    <option value="+47">🇳🇴 +47</option>
+                                    <option value="+45">🇩🇰 +45</option>
+                                    <option value="+64">🇳🇿 +64</option>
+                                    <option value="+65">🇸🇬 +65</option>
+                                    <option value="+60">🇲🇾 +60</option>
+                                    <option value="+66">🇹🇭 +66</option>
+                                    <option value="+84">🇻🇳 +84</option>
+                                    <option value="+62">🇮🇩 +62</option>
+                                    <option value="+63">🇵🇭 +63</option>
+                                    <option value="+971">🇦🇪 +971</option>
+                                    <option value="+974">🇶🇦 +974</option>
+                                    <option value="+965">🇰🇼 +965</option>
+                                    <option value="+966">🇸🇦 +966</option>
+                                    <option value="+968">🇴🇲 +968</option>
+                                    <option value="+973">🇧🇭 +973</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                    <option value="+82">🇰🇷 +82</option>
+                                    <option value="+86">🇨🇳 +86</option>
+                                    <option value="+852">🇭🇰 +852</option>
+                                    <option value="+27">🇿🇦 +27</option>
+                                    <option value="+55">🇧🇷 +55</option>
+                                    <option value="+54">🇦🇷 +54</option>
+                                    <option value="+56">🇨🇱 +56</option>
+                                    <option value="+57">🇨🇴 +57</option>
+                                    <option value="+52">🇲🇽 +52</option>
+                                </select>
+                                <input type="tel" id="phone" name="phone" class="codex-form-control" pattern="[0-9]{10}" placeholder="XXXXXXXXXX" title="Please enter 10 digit phone number" style="flex: 1;" required>
+                            </div>
                         </div>
                         <div class="codex-form-row">
                             <div class="codex-form-group">
-                                <label for="visa-type">Visa Type</label>
+                                <label for="visa-type">Visa Type *</label>
                                 <select id="visa-type" name="visa_type" class="codex-form-control" required>
                                     <option value="">Select Visa Type</option>
                                     <option value="tourist">Tourist Visa</option>
@@ -1743,7 +1785,7 @@
                                 </select>
                             </div>
                             <div class="codex-form-group">
-                                <label for="country">Destination Country</label>
+                                <label for="country">Destination Country *</label>
                                 <select id="country" name="destination_country" class="codex-form-control" required>
                                     <option value="">Select Country</option>
                                     <option value="usa">USA</option>
@@ -2088,7 +2130,13 @@
     <!-- Enhanced UI Scripts -->
 
     <script src="add-testimonial-avatars.js"></script>
+    
 
+
+    <!-- Appwrite SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@13.0.1"></script>
+    <script src="appwrite-config.js"></script>
+    
     <!-- Mobile menu functionality is now handled by disable-mobile-navbar.js -->
 
     <!-- Scroll to Top Button -->

@@ -221,7 +221,7 @@
     line-height: 1.6;
     margin-bottom: 0;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clam: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -239,7 +239,7 @@
     align-items: center;
     gap: 10px;
     background: #A1AEBB;
-    color: #fff;
+    color: #222;
     padding: 15px 30px;
     border-radius: 50px;
     font-weight: 700;

@@ -20,13 +20,13 @@
 
 .btn-primary {
     background:#C4D4E5;
-    color: white;
+    color: #222;
     box-shadow: 0 10px 20px rgba(0, 0, 128, 0.2);
 }
 
 .btn-secondary {
     background: rgba(255, 255, 255, 0.2);
-    color: white;
+    color: #222;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }

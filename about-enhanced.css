@@ -129,7 +129,7 @@
 .about-subtitle {
     display: inline-block;
     padding: 8px 20px;
-    background: #A1AEBB;
+    background:#A9B6C4;
     border-radius: 30px;
     color: #fff;
     font-size: 14px;
@@ -216,7 +216,7 @@
     align-items: center;
     gap: 10px;
     background-color: #C5D5E6;
-    color: #fff;
+    color: #222;
     padding: 15px 30px;
     border-radius: 50px;
     font-weight: 700;
