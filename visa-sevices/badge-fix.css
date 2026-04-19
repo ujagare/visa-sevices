@@ -1,0 +1,27 @@
+/* Badge Position Fix */
+.testimonial-badge,
+.faq-badge,
+.contact-badge {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    display: inline-block !important;
+    margin-bottom: 15px !important;
+}
+
+.codex-section-title {
+    position: relative;
+}
+
+.codex-section-title h6 {
+    display: inline-block;
+    background-color: rgba(0, 0, 128, 0.1);
+    color: #000080;
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}

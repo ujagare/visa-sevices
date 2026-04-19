@@ -1,0 +1,42 @@
+/* Fix for Lenis scroll */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Additional fixes for mouse wheel scrolling */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  touch-action: manipulation;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure proper wheel event handling */
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Fix for potential conflicts */
+body {
+  overscroll-behavior: none;
+}

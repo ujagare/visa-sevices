@@ -1,0 +1,22 @@
+/* Fix for mobile Apply Now button */
+.mobile-apply-btn {
+    display: block;
+    margin: 20px 15px;
+    text-align: center;
+}
+
+.mobile-apply-btn a {
+    display: inline-block;
+    background: #000080;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    width: 80%;
+    text-align: center;
+}
+
+.mobile-apply-btn a i {
+    margin-right: 8px;
+}

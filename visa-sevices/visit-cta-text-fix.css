@@ -1,0 +1,116 @@
+/*
+ * VISIT CTA TEXT FIX
+ * Fix for "Ready to Start Your Journey?" section text visibility
+ */
+
+/* CTA Section - Force white text visibility */
+.codex-cta {
+    color: #FFFFFF !important;
+}
+
+.codex-cta-content {
+    position: relative !important;
+    z-index: 10 !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+}
+
+.codex-cta-content h2 {
+    color: #FFFFFF !important;
+    font-size: 40px !important;
+    font-weight: 800 !important;
+    margin-bottom: 20px !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+    line-height: 1.2 !important;
+}
+
+.codex-cta-content p {
+    color: #FFFFFF !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 30px !important;
+    opacity: 0.95 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Override any conflicting styles */
+.codex-cta h1,
+.codex-cta h2,
+.codex-cta h3,
+.codex-cta h4,
+.codex-cta h5,
+.codex-cta h6,
+.codex-cta p,
+.codex-cta span,
+.codex-cta div {
+    color: #FFFFFF !important;
+}
+
+/* Button styling - Your changes maintained */
+.codex-cta .codex-btn-primary {
+    color: #222 !important;
+    background: #A5B3C0 !important;
+    text-shadow: none !important;
+    border: none !important;
+}
+
+.codex-cta .codex-btn-primary:hover {
+    background: #9AA6B2 !important;
+    color: #222 !important;
+}
+
+/* Ensure all text elements are white */
+.codex-cta * {
+    color: #FFFFFF !important;
+}
+
+/* Button text should remain as designed */
+.codex-cta button,
+.codex-cta .btn,
+.codex-cta [class*="btn"] {
+    color: #FFFFFF !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1200px) {
+    .codex-cta-content h2 {
+        font-size: 36px !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .codex-cta-content h2 {
+        font-size: 30px !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+    }
+    
+    .codex-cta-content p {
+        font-size: 16px !important;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .codex-cta-content h2 {
+        font-size: 26px !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    .codex-cta-content p {
+        font-size: 15px !important;
+    }
+
+    /* Button maintains your changes on mobile */
+    .codex-cta .codex-btn-primary {
+        color: #222 !important;
+        background: #A5B3C0 !important;
+        padding: 12px 20px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .codex-cta .codex-btn-primary:hover {
+        background: #9AA6B2 !important;
+        color: #222 !important;
+    }
+}

@@ -1,0 +1,123 @@
+/* Improved Dropdown Menu Styles - Removing subtitles and enhancing UI */
+
+/* Desktop Dropdown Menu Improvements */
+.dropdown-content {
+    min-width: 250px;
+    padding: 15px 0;
+}
+
+.dropdown-content a {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A7B4C2;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.4rem !important;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover i {
+    background: #0369A1;
+    transform: scale(1.1);
+}
+
+/* Remove subtitles and improve strong text */
+.dropdown-content a div {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content a div span {
+    display: none; /* Hide the subtitles */
+}
+
+.dropdown-content a div strong {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover div strong {
+    color: #0369A1;
+    transform: translateX(3px);
+}
+
+/* Mobile Dropdown Menu Improvements */
+.mobile-dropdown-content {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-dropdown-content a {
+    padding: 16px ;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    text-align: center;
+    line-height: 2px;
+}
+
+.mobile-dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.mobile-dropdown-content a i {
+   display: none;
+}
+
+.mobile-dropdown-content a:hover i {
+    background: #0369A1;
+    transform: scale(1.1);
+}
+
+/* Remove subtitles in mobile dropdown */
+.mobile-dropdown-content a div {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-dropdown-content a div span {
+    display: none; /* Hide the subtitles */
+}
+
+.mobile-dropdown-content a div strong {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.mobile-dropdown-content a:hover {
+    background: #f8f9fa;
+}
+
+.mobile-dropdown-content a:hover div strong {
+    color: #0369A1;
+    transform: translateX(3px);
+}
+
+/* Improved mobile dropdown toggle */
+.mobile-dropdown-toggle {
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-dropdown-toggle.active i:last-child {
+    transform: rotate(180deg);
+}

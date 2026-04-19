@@ -1,0 +1,30 @@
+/* Visit Mobile Hero Fix */
+@media (max-width: 992px) {
+    /* High specificity selectors to override all other styles */
+    html body .hero-codex .hero-codex-text,
+    html body .hero-codex .hero-codex-content,
+    html body .hero-codex {
+        background: #A1AEBB !important;
+    }
+    
+    html body .hero-codex .hero-codex-text {
+        color: #222 !important;
+    }
+    
+    html body .hero-codex .hero-codex-title,
+    html body .hero-codex .hero-codex-description,
+    html body .hero-codex .hero-codex-subtitle,
+    html body .hero-codex .hero-codex-stat-value,
+    html body .hero-codex .hero-codex-stat-label,
+    html body .hero-codex .hero-codex-stat-icon i {
+        color: #222 !important;
+    }
+    
+    /* Override any gradient backgrounds */
+    html body .hero-codex .hero-codex-text,
+    html body .hero-codex-text {
+        background: #A1AEBB !important;
+        background-image: none !important;
+        background-color: #A1AEBB !important;
+    }
+}

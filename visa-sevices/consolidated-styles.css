@@ -1,0 +1,178 @@
+/**
+ * Consolidated CSS for White Wings Visa Consultancy
+ * This file combines multiple CSS files to improve performance
+ */
+
+/* Import base styles */
+@import url('style.css');
+@import url('white-wings-colors.css');
+@import url('navbar-fix.css');
+@import url('footer-fix-updated.css');
+@import url('cta-button-fix.css');
+@import url('hero-text-fix.css');
+
+/* Mobile navigation */
+@import url('professional-mobile-navbar.css');
+@import url('mobile-navbar-zindex-fix.css');
+@import url('mobile-menu-overlay.css');
+@import url('mobile-menu-animations.css');
+@import url('mobile-navbar-vertical.css');
+@import url('improved-dropdown-menu.css');
+
+/* Testimonials */
+@import url('testimonials.css');
+@import url('testimonials-fix.css');
+@import url('testimonial-badge-fix.css');
+@import url('testimonial-border-fix.css');
+
+/* Page-specific styles */
+@import url('work-mobile-card-fix.css');
+@import url('work-mobile-fix-important.css');
+@import url('cta-section-fix.css');
+
+/* Accessibility improvements */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #0369A1;
+    color: white;
+    padding: 8px 15px;
+    z-index: 100;
+    transition: top 0.3s;
+    border-bottom-right-radius: 5px;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Focus states for interactive elements */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #0369A1;
+    outline-offset: 2px;
+}
+
+/* ARIA improvements */
+[aria-hidden="true"] {
+    display: none;
+}
+
+/* Font display strategy */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Poppins Regular'), local('Poppins-Regular'), 
+         url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Poppins SemiBold'), local('Poppins-SemiBold'), 
+         url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Poppins Bold'), local('Poppins-Bold'), 
+         url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');
+}
+
+/* Image size optimization */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Resource preloading */
+/* Add this to head of HTML:
+<link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="images/logo/WING LOGO.png" as="image">
+*/
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    body, html {
+        overflow-x: hidden;
+    }
+    
+    .image-marquee-content {
+        animation-duration: 80s !important;
+    }
+    
+    .choice-marquee-right .choice-marquee-content,
+    .choice-marquee-left .choice-marquee-content {
+        animation-duration: 80s !important;
+    }
+    
+    /* Improve text size for mobile */
+    p, li, label, input, textarea, select {
+        font-size: 16px !important; /* Prevents iOS zoom on input */
+    }
+    
+    /* Improve touch targets */
+    button, 
+    .btn, 
+    a.btn,
+    input[type="submit"],
+    input[type="button"],
+    .nav-link,
+    .dropdown-item {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 12px 16px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    
+    h2, h3, h4 {
+        page-break-after: avoid;
+    }
+    
+    table {
+        border-collapse: collapse !important;
+    }
+    
+    table td, table th {
+        background-color: #fff !important;
+        border: 1px solid #000 !important;
+    }
+}

@@ -1,0 +1,49 @@
+/* Mobile navbar z-index fixes */
+.mobile-navbar-container {
+    z-index: 1002 !important;
+    position: relative;
+    background-color: #fff;
+}
+
+.mobile-menu-toggle {
+    z-index: 1001 !important;
+    position: relative;
+}
+
+.mobile-logo {
+    z-index: 1001 !important;
+    position: relative;
+}
+
+.mobile-menu {
+    z-index: 980 !important;
+}
+
+/* Ensure the menu slides from behind the navbar */
+.mobile-menu.active {
+    top: 90px !important;
+    border-top: 1px solid #eee;
+}
+
+/* Add a subtle animation to emphasize the z-index difference */
+@keyframes slideFromBehind {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.mobile-menu.active ul li {
+    animation: slideFromBehind 0.3s ease forwards;
+    animation-delay: calc(0.05s * var(--item-index, 1));
+    opacity: 0;
+}
+
+.mobile-menu.active ul li:nth-child(1) { --item-index: 1; }
+.mobile-menu.active ul li:nth-child(2) { --item-index: 2; }
+.mobile-menu.active ul li:nth-child(3) { --item-index: 3; }
+.mobile-menu.active ul li:nth-child(4) { --item-index: 4; }

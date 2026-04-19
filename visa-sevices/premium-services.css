@@ -1,0 +1,324 @@
+/* Premium Services Section Styles */
+.premium-services-section {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, #f8fafc, #ffffff);
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.premium-section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.premium-section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 128, 0.1);
+    color: #000080;
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.premium-section-badge i {
+    font-size: 1.2rem;
+}
+
+.premium-section-header h2 {
+    font-size: 2.8rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.premium-section-header h2::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #000080;
+    border-radius: 2px;
+}
+
+.premium-section-header p {
+    font-size: 1.2rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 30px auto 0;
+}
+
+.premium-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.premium-service-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.premium-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 0, 128, 0.2);
+}
+
+.premium-service-header {
+    padding: 30px;
+    background: #000080;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.premium-service-icon {
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.premium-service-icon i {
+    font-size: 2rem;
+    color: #000080;
+}
+
+.premium-service-title {
+    flex: 1;
+}
+
+.premium-service-title h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.premium-service-title p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.premium-service-content {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.premium-service-features {
+    margin-bottom: 30px;
+    flex: 1;
+}
+
+.premium-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.premium-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.premium-feature-list li:last-child {
+    border-bottom: none;
+}
+
+.premium-feature-icon {
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 128, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.premium-feature-icon i {
+    font-size: 0.8rem;
+    color: #000080;
+}
+
+.premium-feature-text {
+    font-size: 1rem;
+    color: #334155;
+    line-height: 1.5;
+}
+
+.premium-service-countries {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.premium-countries-label {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.premium-country-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.premium-country-tag {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: #f8fafc;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: #334155;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #f1f5f9;
+}
+
+.premium-country-tag:hover {
+    background: #f1f5f9;
+    transform: translateY(-3px);
+}
+
+.premium-country-flag {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.premium-country-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.premium-service-cta {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.premium-service-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: #000080;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 128, 0.2);
+}
+
+.premium-service-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 128, 0.3);
+    background: #000066;
+}
+
+.premium-service-btn i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.premium-service-btn:hover i {
+    transform: translateX(5px);
+}
+
+.premium-service-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.premium-service-badge.popular {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .premium-services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .premium-section-header h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .premium-services-section {
+        padding: 80px 0;
+    }
+    
+    .premium-section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .premium-section-header p {
+        font-size: 1rem;
+    }
+    
+    .premium-service-header {
+        padding: 20px;
+    }
+    
+    .premium-service-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .premium-service-content {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,4 @@
+/* Fix for Apply Now button in the CTA section */
+.apply-visa-cta .apply-btn {
+    color: white !important;
+}

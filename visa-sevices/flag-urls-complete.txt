@@ -1,0 +1,145 @@
+🏳️ WHITE WINGS VISA - COMPLETE FLAG IMAGES LIST
+===============================================
+
+📋 ALL FLAG SIZES USED IN WEBSITE:
+----------------------------------
+
+🇺🇸 USA FLAG:
+- Small (40px): https://flagcdn.com/w40/us.png
+- Medium (80px): https://flagcdn.com/w80/us.png  
+- Large (120px): https://flagcdn.com/h120/us.png
+Save as: images/flags/usa-flag-[size].png
+
+🇨🇦 CANADA FLAG:
+- Small (40px): https://flagcdn.com/w40/ca.png
+- Medium (80px): https://flagcdn.com/w80/ca.png
+- Large (120px): https://flagcdn.com/h120/ca.png
+Save as: images/flags/canada-flag-[size].png
+
+🇦🇺 AUSTRALIA FLAG:
+- Small (40px): https://flagcdn.com/w40/au.png
+- Medium (80px): https://flagcdn.com/w80/au.png
+- Large (120px): https://flagcdn.com/h120/au.png
+Save as: images/flags/australia-flag-[size].png
+
+🇳🇿 NEW ZEALAND FLAG:
+- Small (40px): https://flagcdn.com/w40/nz.png
+- Medium (80px): https://flagcdn.com/w80/nz.png
+- Large (120px): https://flagcdn.com/h120/nz.png
+Save as: images/flags/newzealand-flag-[size].png
+
+🇦🇪 UAE FLAG (Dubai):
+- Small (40px): https://flagcdn.com/w40/ae.png
+- Medium (80px): https://flagcdn.com/w80/ae.png
+- Large (120px): https://flagcdn.com/h120/ae.png
+Save as: images/flags/uae-flag-[size].png
+
+🇪🇺 EU FLAG (Europe):
+- Small (40px): https://flagcdn.com/w40/eu.png
+- Medium (80px): https://flagcdn.com/w80/eu.png
+- Large (120px): https://flagcdn.com/h120/eu.png
+Save as: images/flags/eu-flag-[size].png
+
+🇸🇬 SINGAPORE FLAG:
+- Small (40px): https://flagcdn.com/w40/sg.png
+- Medium (80px): https://flagcdn.com/w80/sg.png
+- Large (120px): https://flagcdn.com/h120/sg.png
+Save as: images/flags/singapore-flag-[size].png
+
+🇬🇧 UK FLAG:
+- Small (40px): https://flagcdn.com/w40/gb.png
+- Medium (80px): https://flagcdn.com/w80/gb.png
+- Large (120px): https://flagcdn.com/h120/gb.png
+Save as: images/flags/uk-flag-[size].png
+
+🇩🇪 GERMANY FLAG:
+- Small (40px): https://flagcdn.com/w40/de.png
+- Medium (80px): https://flagcdn.com/w80/de.png
+- Large (120px): https://flagcdn.com/h120/de.png
+Save as: images/flags/germany-flag-[size].png
+
+📍 WHERE EACH SIZE IS USED:
+---------------------------
+
+w40 (40px width):
+- study.html: Study destination cards
+- index.html: Country marquee section
+
+w80 (80px width):
+- work.html: Work destination cards (circular flags)
+
+h120 (120px height):
+- visit.html: Visit destination cards
+
+📁 RECOMMENDED FOLDER STRUCTURE:
+--------------------------------
+images/
+└── flags/
+    ├── small/     (w40 - 40px width)
+    ├── medium/    (w80 - 80px width)
+    └── large/     (h120 - 120px height)
+
+🔄 CONVERSION NOTES:
+-------------------
+- Flag images are already optimized PNG files
+- Small file sizes (2-5KB each)
+- Can convert to WebP for even smaller sizes
+- Maintain transparency for circular flag displays
+
+⚡ QUICK DOWNLOAD COMMANDS:
+--------------------------
+Right-click on each URL and "Save link as..." to download:
+
+USA Flags:
+https://flagcdn.com/w40/us.png
+https://flagcdn.com/w80/us.png
+https://flagcdn.com/h120/us.png
+
+Canada Flags:
+https://flagcdn.com/w40/ca.png
+https://flagcdn.com/w80/ca.png
+https://flagcdn.com/h120/ca.png
+
+Australia Flags:
+https://flagcdn.com/w40/au.png
+https://flagcdn.com/w80/au.png
+https://flagcdn.com/h120/au.png
+
+New Zealand Flags:
+https://flagcdn.com/w40/nz.png
+https://flagcdn.com/w80/nz.png
+https://flagcdn.com/h120/nz.png
+
+UAE Flags:
+https://flagcdn.com/w40/ae.png
+https://flagcdn.com/w80/ae.png
+https://flagcdn.com/h120/ae.png
+
+EU Flags:
+https://flagcdn.com/w40/eu.png
+https://flagcdn.com/w80/eu.png
+https://flagcdn.com/h120/eu.png
+
+Singapore Flags:
+https://flagcdn.com/w40/sg.png
+https://flagcdn.com/w80/sg.png
+https://flagcdn.com/h120/sg.png
+
+UK Flags:
+https://flagcdn.com/w40/gb.png
+https://flagcdn.com/w80/gb.png
+https://flagcdn.com/h120/gb.png
+
+Germany Flags:
+https://flagcdn.com/w40/de.png
+https://flagcdn.com/w80/de.png
+https://flagcdn.com/h120/de.png
+
+📊 TOTAL FLAG IMAGES: 27 files (9 countries × 3 sizes each)
+
+🎯 PRIORITY DOWNLOAD ORDER:
+1. w80 flags (work.html) - Most visible
+2. h120 flags (visit.html) - Large cards
+3. w40 flags (study.html, index.html) - Small icons
+
+💡 TIP: Download all sizes to future-proof your website!

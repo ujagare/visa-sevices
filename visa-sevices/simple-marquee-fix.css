@@ -1,0 +1,45 @@
+/* Simple Marquee Animation Fixes */
+
+/* Container fixes */
+.countries-image-marquee-section,
+.choice-section {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.image-marquee-container,
+.choice-marquee-line {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Hardware acceleration for all marquee elements */
+.image-marquee-content,
+.choice-marquee-right .choice-marquee-content,
+.choice-marquee-left .choice-marquee-content {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    display: flex;
+    width: max-content;
+}
+
+/* Mobile-specific fixes */
+@media screen and (max-width: 768px) {
+    .image-marquee-content {
+        animation: imageMarqueeScroll 30s linear infinite !important;
+        -webkit-animation: imageMarqueeScroll 30s linear infinite !important;
+    }
+    
+    .choice-marquee-right .choice-marquee-content {
+        animation: choiceMarqueeRight 30s linear infinite !important;
+        -webkit-animation: choiceMarqueeRight 30s linear infinite !important;
+    }
+    
+    .choice-marquee-left .choice-marquee-content {
+        animation: choiceMarqueeLeft 30s linear infinite !important;
+        -webkit-animation: choiceMarqueeLeft 30s linear infinite !important;
+    }
+}

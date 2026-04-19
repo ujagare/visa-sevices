@@ -1,0 +1,54 @@
+/* Hide Mobile Navbar CSS */
+
+/* Hide all mobile menu elements */
+.mobile-menu-overlay,
+.mobile-menu-sidebar,
+.simple-hamburger {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Make desktop menu always visible */
+@media (max-width: 768px) {
+    .desktop-menu,
+    #links {
+        display: flex !important;
+        visibility: visible !important;
+    }
+    
+    /* Responsive desktop menu for mobile */
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    .desktop-menu ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .desktop-menu ul li {
+        margin: 5px 0;
+        width: 100%;
+    }
+    
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+    
+    .apply-now-btn {
+        display: flex !important;
+        justify-content: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+}

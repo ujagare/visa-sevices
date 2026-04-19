@@ -1,0 +1,68 @@
+/* Remove Mobile Navbar CSS */
+
+/* Hide mobile menu elements */
+.mobile-menu-overlay,
+.mobile-menu-sidebar {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Hide hamburger button */
+.simple-hamburger {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Ensure desktop menu is always visible */
+@media (max-width: 768px) {
+    .desktop-menu,
+    #links {
+        display: flex !important;
+        visibility: visible !important;
+    }
+    
+    /* Make desktop menu responsive for mobile */
+    .desktop-menu ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .desktop-menu ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Adjust dropdown for mobile */
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    /* Make apply now button visible on mobile */
+    .apply-now-btn {
+        display: flex !important;
+        justify-content: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    /* Adjust navbar layout for mobile */
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,212 @@
+/* Enhanced FAQ Section Styles */
+.codex-faq {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f7fa 50%, #f0f9ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.codex-faq::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="30" y="35" text-anchor="middle" font-size="20" fill="%23000080" opacity="0.03">?</text></svg>') repeat;
+}
+
+.codex-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.codex-faq-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+/* Badge styling moved to badge-fix.css */
+
+.codex-section-title h2 {
+    font-size: 36px;
+    color: #000080;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.codex-section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #000080, #1e40af);
+    border-radius: 3px;
+}
+
+.codex-faq-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.codex-accordion-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 128, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 128, 0.1);
+    margin-bottom: 20px;
+}
+
+.codex-accordion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 128, 0.15);
+    border-color: rgba(0, 0, 128, 0.2);
+}
+
+.codex-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(0, 0, 128, 0.02), transparent);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.codex-accordion-item:hover .codex-accordion-header {
+    background: linear-gradient(to right, rgba(0, 0, 128, 0.05), rgba(0, 0, 128, 0.01));
+}
+
+.codex-accordion-item.active .codex-accordion-header {
+    border-left: 4px solid #000080;
+    background: linear-gradient(to right, rgba(0, 0, 128, 0.05), rgba(0, 0, 128, 0.01));
+}
+
+.codex-accordion-header h5 {
+    font-size: 18px;
+    color: #000080;
+    margin: 0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding-right: 20px;
+}
+
+.codex-accordion-item:hover .codex-accordion-header h5 {
+    color: #1e40af;
+}
+
+.codex-accordion-header i {
+    color: #000080;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 128, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.codex-accordion-item:hover .codex-accordion-header i {
+    background: rgba(0, 0, 128, 0.15);
+}
+
+.codex-accordion-item.active .codex-accordion-header i {
+    transform: rotate(180deg);
+    background: #000080;
+    color: white;
+}
+
+.codex-accordion-body {
+    padding: 0 25px 25px;
+    color: #64748b;
+    line-height: 1.7;
+    font-size: 16px;
+    display: none;
+    border-top: 1px solid rgba(0, 0, 128, 0.1);
+    background: rgba(0, 0, 128, 0.02);
+}
+
+.codex-accordion-item.active .codex-accordion-body {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .codex-faq {
+        padding: 70px 0;
+    }
+    
+    .codex-section-title h2 {
+        font-size: 28px;
+    }
+    
+    .codex-faq-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .codex-accordion-header {
+        padding: 20px;
+    }
+    
+    .codex-accordion-header h5 {
+        font-size: 16px;
+    }
+    
+    .codex-accordion-body {
+        padding: 0 20px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .codex-faq {
+        padding: 50px 0;
+    }
+    
+    .codex-section-title h2 {
+        font-size: 24px;
+    }
+    
+    .codex-accordion-header {
+        padding: 15px;
+    }
+    
+    .codex-accordion-header h5 {
+        font-size: 15px;
+    }
+    
+    .codex-accordion-body {
+        padding: 0 15px 15px;
+        font-size: 14px;
+    }
+}

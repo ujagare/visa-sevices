@@ -1,0 +1,79 @@
+/* Testimonials Section Fixes */
+
+/* Fix for testimonial cards on mobile */
+@media (max-width: 768px) {
+    .testimonial-card {
+        height: auto !important;
+        min-height: 250px;
+    }
+    
+    .testimonials-swiper {
+        padding-bottom: 50px;
+    }
+    
+    .testimonials-pagination {
+        bottom: 0 !important;
+    }
+}
+
+/* Fix for swiper container */
+.testimonials-swiper {
+    overflow: visible;
+}
+
+/* Fix for testimonial card heights */
+.swiper-slide {
+    height: auto;
+}
+
+/* Fix for read more functionality */
+.testimonial-text.truncated {
+    max-height: 150px;
+    overflow: hidden;
+}
+
+/* Fix for quote icon */
+.quote-icon {
+    z-index: 1;
+}
+
+/* Fix for stars alignment */
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+/* Fix for author info */
+.testimonial-author {
+    margin-top: 15px;
+}
+
+/* Navigation button styles */
+.testimonials-button-next,
+.testimonials-button-prev {
+    color: #000080;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-button-next:after,
+.testimonials-button-prev:after {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.testimonials-button-next:hover,
+.testimonials-button-prev:hover {
+    background-color: #000080;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .testimonials-button-next,
+    .testimonials-button-prev {
+        display: none;
+    }
+}

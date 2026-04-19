@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://whitewingsvisa.com/sitemap.xml
+
+# Disallow admin and private directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /node_modules/
+
+# Allow important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /study.html
+Allow: /work.html
+Allow: /visit.html
+Allow: /migrate.html
+
+# Allow CSS and JS files
+Allow: /*.css
+Allow: /*.js
+
+# Allow images
+Allow: /images/

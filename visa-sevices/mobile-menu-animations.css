@@ -1,0 +1,63 @@
+/* Mobile Menu Animations - Optimized for Performance */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations only when not in reduced motion mode */
+@media (prefers-reduced-motion: no-preference) {
+    .mobile-menu.active ul li {
+        animation: fadeInDown 0.3s ease forwards;
+        opacity: 0;
+        will-change: opacity, transform;
+    }
+    
+    .mobile-menu.active ul li:nth-child(1) {
+        animation-delay: 0.05s;
+    }
+    
+    .mobile-menu.active ul li:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+    
+    .mobile-menu.active ul li:nth-child(3) {
+        animation-delay: 0.15s;
+    }
+    
+    .mobile-menu.active ul li:nth-child(4) {
+        animation-delay: 0.2s;
+    }
+    
+    .mobile-menu.active .mobile-apply-btn {
+        animation: fadeInUp 0.3s ease forwards 0.25s;
+        opacity: 0;
+        will-change: opacity, transform;
+    }
+}
+
+/* Fallback for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .mobile-menu.active ul li,
+    .mobile-menu.active .mobile-apply-btn {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+}

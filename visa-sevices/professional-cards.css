@@ -1,0 +1,169 @@
+/* Professional Card Styles - Will be added inline */
+.professional-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.professional-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.professional-card-header {
+  background: linear-gradient(135deg, #0369A1, #0284c7);
+  padding: 25px;
+  position: relative;
+  color: white;
+}
+
+.professional-card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.professional-card-icon i {
+  font-size: 28px;
+  color: #fff;
+}
+
+.professional-card-title {
+  margin-bottom: 5px;
+}
+
+.professional-card-subtitle {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.professional-card-body {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.professional-card-description {
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.professional-card-features {
+  margin-bottom: 25px;
+}
+
+.professional-card-feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.professional-card-feature-icon {
+  width: 24px;
+  height: 24px;
+  background: rgba(3, 105, 161, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.professional-card-feature-icon i {
+  font-size: 12px;
+  color: #0369A1;
+}
+
+.professional-card-feature-text {
+  font-size: 14px;
+  color: #444;
+}
+
+.professional-card-action {
+  margin-top: auto;
+}
+
+.professional-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 20px;
+  background: #0369A1;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.professional-card-btn:hover {
+  background: #0284c7;
+  transform: translateY(-3px);
+}
+
+.professional-card-btn i {
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.professional-card-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.professional-card-badge i {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Color variations */
+.professional-card.purple .professional-card-header {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.professional-card.green .professional-card-header {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.professional-card.orange .professional-card-header {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.professional-card.red .professional-card-header {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .professional-card-header {
+    padding: 20px;
+  }
+  
+  .professional-card-body {
+    padding: 20px;
+  }
+}

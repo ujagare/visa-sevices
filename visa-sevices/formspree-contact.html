@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formspree Contact Form</title>
+</head>
+<body>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
+        <input type="hidden" name="_subject" value="New Visa Inquiry - White Wings">
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+        
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone" required>
+        
+        <select name="visa_type" required>
+            <option value="">Select Visa Type</option>
+            <option value="Student Visa">Student Visa</option>
+            <option value="Work Visa">Work Visa</option>
+            <option value="Tourist Visa">Tourist Visa</option>
+        </select>
+        
+        <select name="destination" required>
+            <option value="">Select Destination</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+        </select>
+        
+        <textarea name="message" placeholder="Additional Information"></textarea>
+        
+        <button type="submit">Send Inquiry</button>
+    </form>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function() {
+            // Optional: Show loading state
+            const btn = this.querySelector('button');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+        });
+    </script>
+</body>
+</html>
