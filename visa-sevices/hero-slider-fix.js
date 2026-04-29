@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
             centeredSlides: true,
             speed: 1000,
             effect: 'slide',
+            allowTouchMove: window.innerWidth > 768,
+            touchStartPreventDefault: false,
+            touchMoveStopPropagation: false,
+            passiveListeners: true,
+            threshold: 12,
+            touchAngle: 30,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,

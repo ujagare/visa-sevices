@@ -3303,8 +3303,10 @@ ul li a:hover {
 
 
     .hero {
+        height: auto;
         min-height: 100vh;
         padding-bottom: 2rem;
+        overflow-y: visible;
     }
 
     .hero-container {
@@ -3394,8 +3396,10 @@ ul li a:hover {
     }
 
     .hero {
+        height: auto;
         background-position: center center;
         min-height: 100vh;
+        overflow-y: visible;
     }
 
     .hero-container {

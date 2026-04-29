@@ -1,6 +1,7 @@
 [build]
   publish = "visa-sevices"
   command = ""
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"

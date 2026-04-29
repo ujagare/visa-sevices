@@ -4,9 +4,13 @@ let lottieAnimation = null;
 function updateBodyScrollLock() {
     const isMenuOpen = document.body.classList.contains('mobile-menu-open');
     const isLoaderActive = document.body.classList.contains('loader-active');
+    const shouldLock = isMenuOpen || isLoaderActive;
 
-    document.body.style.overflow = (isMenuOpen || isLoaderActive) ? 'hidden' : 'auto';
+    document.body.style.overflow = shouldLock ? 'hidden' : '';
+    document.documentElement.style.overflowY = shouldLock ? 'hidden' : '';
 }
+
+window.updateBodyScrollLock = updateBodyScrollLock;
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize Lottie animation

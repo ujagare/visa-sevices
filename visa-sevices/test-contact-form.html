@@ -90,6 +90,7 @@
             flex: 1;
         }
     </style>
+    <link rel="stylesheet" href="mobile-scroll-unlock.css?v=20260429-5">
 </head>
 <body>
     <div class="form-container">
@@ -98,7 +99,8 @@
             यह form direct आपके email पर mail send करेगा
         </p>
         
-        <form id="testForm">
+        <form id="testForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="61b1d9fd-aa75-488a-a470-d78f301859b1">
             <div class="form-group">
                 <label for="firstName">First Name *</label>
                 <input type="text" id="firstName" name="firstName" required>
@@ -164,13 +166,14 @@
             
             try {
                 // Test with FormSubmit (temporary solution)
-                const response = await fetch('https://formsubmit.co/mrunal@whitewingsvisa.com', {
+                const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        _subject: `🧪 Test Email - ${data.subject}`,
+                        access_key: '61b1d9fd-aa75-488a-a470-d78f301859b1',
+                        subject: `🧪 Test Email - ${data.subject}`,
                         _captcha: false,
                         _template: 'table',
                         name: `${data.firstName} ${data.lastName || ''}`,
@@ -209,5 +212,6 @@
             }
         });
     </script>
+    <script src="mobile-scroll-unlock.js?v=20260429-6"></script>
 </body>
 </html>

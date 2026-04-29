@@ -75,7 +75,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileDropdownContent = document.querySelector('.mobile-dropdown-content');
 
     function syncBodyScrollState() {
-        document.body.classList.toggle('mobile-menu-open', mobileMenu.classList.contains('active'));
+        const isOpen = mobileMenu.classList.contains('active');
+        document.body.classList.toggle('mobile-menu-open', isOpen);
+
+        if (typeof window.updateBodyScrollLock === 'function') {
+            window.updateBodyScrollLock();
+        } else {
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+            document.documentElement.style.overflowY = isOpen ? 'hidden' : '';
+        }
     }
 
     // Toggle mobile menu

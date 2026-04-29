@@ -1,7 +1,7 @@
 // Service Worker for Performance Optimization
-const CACHE_NAME = 'white-wings-v1.0.0';
-const STATIC_CACHE = 'static-v1.0.0';
-const DYNAMIC_CACHE = 'dynamic-v1.0.0';
+const CACHE_NAME = 'white-wings-v1.0.1';
+const STATIC_CACHE = 'static-v1.0.1';
+const DYNAMIC_CACHE = 'dynamic-v1.0.1';
 
 // Assets to cache immediately
 const STATIC_ASSETS = [
@@ -17,6 +17,8 @@ const STATIC_ASSETS = [
     '/script-optimized.js',
     '/performance-monitor.js',
     '/loader.js',
+    '/mobile-scroll-unlock.css',
+    '/mobile-scroll-unlock.js',
     '/universal-lenis.js',
     '/animation-data.js',
     '/cookie-consent.js',
@@ -118,9 +120,9 @@ self.addEventListener('fetch', event => {
         return;
     }
     
-    // Stale-while-revalidate for HTML pages
+    // HTML should prefer the network so mobile browsers do not keep old scroll-lock code.
     if (request.headers.get('accept').includes('text/html')) {
-        event.respondWith(staleWhileRevalidate(request));
+        event.respondWith(networkFirst(request));
         return;
     }
     

@@ -1,0 +1,73 @@
+/* Final mobile scroll guard for all pages. */
+@media (max-width: 1024px) {
+    html,
+    body {
+        height: auto !important;
+        min-height: 100% !important;
+        max-height: none !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        position: static !important;
+        touch-action: pan-y !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body.mobile-menu-open,
+    body.loader-active {
+        overflow: hidden !important;
+    }
+
+    body:not(.mobile-menu-open):not(.loader-active) {
+        overflow-y: auto !important;
+    }
+
+    .main,
+    .hero,
+    .hero-codex,
+    .about-hero-section,
+    .study-hero-section,
+    .work-hero-section,
+    .visit-hero-section,
+    .migrate-hero-section,
+    .contact-hero-section,
+    .contact-hero,
+    .page-header,
+    [class*="hero"] {
+        height: auto !important;
+        max-height: none !important;
+        overflow-y: visible !important;
+        touch-action: pan-y !important;
+    }
+
+    .hero-container,
+    [class*="hero-content"] {
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        touch-action: pan-y !important;
+    }
+
+    .hero .swiper,
+    .hero .swiper-wrapper,
+    .hero .swiper-slide,
+    .hero .slider {
+        touch-action: pan-y !important;
+    }
+
+    .hero .slider,
+    .hero .swiper {
+        pointer-events: none !important;
+    }
+
+    .hero .swiper-wrapper,
+    .hero .swiper-slide,
+    .hero .swiper-slide img,
+    .hero .slide-content {
+        pointer-events: none !important;
+    }
+
+    .hero .swiper-button-prev,
+    .hero .swiper-button-next {
+        pointer-events: auto !important;
+    }
+}
