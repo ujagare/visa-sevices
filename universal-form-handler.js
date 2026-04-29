@@ -1,5 +1,7 @@
 // Universal Form Handler for All White Wings Visa Forms - Vercel + Resend
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("Universal Form Handler Loaded");
+
   // List of all form IDs to handle
   const formIds = [
     "homeContactForm",
@@ -15,17 +17,33 @@ document.addEventListener("DOMContentLoaded", function () {
   formIds.forEach((formId) => {
     const form = document.getElementById(formId);
     if (form) {
+      console.log(`Initializing form: ${formId}`);
       initializeForm(form, formId);
     }
   });
 
   function initializeForm(form, formId) {
-    const submitBtn = form.querySelector(
-      'button[type="submit"], .submit-btn, .btn-submit, input[type="submit"]',
-    );
+    // Find submit button with multiple selectors
+    let submitBtn =
+      form.querySelector('button[type="submit"]') ||
+      form.querySelector(".submit-btn") ||
+      form.querySelector(".btn-submit") ||
+      form.querySelector('input[type="submit"]') ||
+      form.querySelector("button");
+
+    // If no submit button found, create one
+    if (!submitBtn) {
+      submitBtn = document.createElement("button");
+      submitBtn.type = "submit";
+      submitBtn.className = "submit-btn";
+      submitBtn.innerHTML = "<span>Send Message</span>";
+      form.appendChild(submitBtn);
+      console.log(`Created submit button for ${formId}`);
+    }
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      console.log(`Form ${formId} submitted`);
 
       // Show loading state
       if (submitBtn) {
@@ -46,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
       data.formId = formId;
       data.timestamp = new Date().toISOString();
 
+      console.log("Sending data:", data);
+
       // Submit to Vercel API
       fetch("/api/send-email", {
         method: "POST",
@@ -54,8 +74,12 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         body: JSON.stringify(data),
       })
-        .then((response) => response.json())
+        .then((response) => {
+          console.log("Response status:", response.status);
+          return response.json();
+        })
         .then((result) => {
+          console.log("Response result:", result);
           if (result.success) {
             // Success - redirect to thank you page
             window.location.href = "thank-you.html";
@@ -64,11 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         })
         .catch((error) => {
-          console.error("Error:", error);
+          console.error("Form submission error:", error);
 
           // Show error message
           showErrorMessage(
-            "Sorry, there was an error sending your message. Please try again or contact us directly at +91 9130448831",
+            `Sorry, there was an error sending your message. Please try again or contact us directly at +91 9130448831. Error: ${error.message}`,
           );
 
           // Reset button
@@ -207,9 +231,10 @@ document.addEventListener("DOMContentLoaded", function () {
             background: white;
             padding: 30px;
             border-radius: 10px;
-            max-width: 400px;
+            max-width: 500px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin: 20px;
         `;
 
     content.innerHTML = `
@@ -229,11 +254,11 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.appendChild(content);
     document.body.appendChild(modal);
 
-    // Auto remove after 5 seconds
+    // Auto remove after 10 seconds
     setTimeout(() => {
       if (modal.parentNode) {
         modal.remove();
       }
-    }, 5000);
+    }, 10000);
   }
 });

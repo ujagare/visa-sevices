@@ -1,5 +1,5 @@
 // Enhanced Vercel Serverless Function for All Forms
-// White Wings Visa Consultancy - Universal Email Handler with Resend
+// White Wings Visa Consultancy - Universal Email Handler with Resend ONLY
 
 export default async function handler(req, res) {
   // Set CORS headers
@@ -26,6 +26,8 @@ export default async function handler(req, res) {
   }
 
   try {
+    console.log("Received request body:", req.body);
+
     const formData = req.body;
     const {
       firstName,
@@ -52,6 +54,7 @@ export default async function handler(req, res) {
 
     // Basic validation
     if (!email) {
+      console.log("Validation failed: Email missing");
       return res.status(400).json({
         error: "Email is required",
       });
@@ -60,6 +63,7 @@ export default async function handler(req, res) {
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
+      console.log("Validation failed: Invalid email format");
       return res.status(400).json({ error: "Invalid email format" });
     }
 
@@ -75,6 +79,8 @@ export default async function handler(req, res) {
     const submissionTime = new Date().toLocaleString("en-IN", {
       timeZone: "Asia/Kolkata",
     });
+
+    console.log("Processing form:", { formTypeDisplay, fullName, email });
 
     // Create comprehensive email template
     const emailSubject = `${formTypeDisplay} - ${fullName} - White Wings Visa`;
@@ -116,40 +122,6 @@ export default async function handler(req, res) {
             </table>
           </div>
 
-          ${
-            destination
-              ? `
-          <!-- Visa Details -->
-          <div style="background: #e8f4fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 4px solid #2196F3;">
-            <h3 style="color: #333; margin: 0 0 15px 0; font-size: 18px;">Visa Requirements</h3>
-            <table style="width: 100%; border-collapse: collapse;">
-              ${destination ? `<tr><td style="padding: 5px 0; font-weight: 600; color: #555; width: 140px;">Destination:</td><td style="padding: 5px 0; color: #333;">${destination}</td></tr>` : ""}
-              ${visaType ? `<tr><td style="padding: 5px 0; font-weight: 600; color: #555;">Visa Type:</td><td style="padding: 5px 0; color: #333;">${visaType}</td></tr>` : ""}
-              ${travelDate ? `<tr><td style="padding: 5px 0; font-weight: 600; color: #555;">Travel Date:</td><td style="padding: 5px 0; color: #333;">${travelDate}</td></tr>` : ""}
-              ${duration ? `<tr><td style="padding: 5px 0; font-weight: 600; color: #555;">Duration:</td><td style="padding: 5px 0; color: #333;">${duration}</td></tr>` : ""}
-              ${purpose ? `<tr><td style="padding: 5px 0; font-weight: 600; color: #555;">Purpose:</td><td style="padding: 5px 0; color: #333;">${purpose}</td></tr>` : ""}
-              ${budget ? `<tr><td style="padding: 5px 0; font-weight: 600; color: #555;">Budget:</td><td style="padding: 5px 0; color: #333;">${budget}</td></tr>` : ""}
-            </table>
-          </div>
-          `
-              : ""
-          }
-
-          ${
-            experience || qualification
-              ? `
-          <!-- Professional Details -->
-          <div style="background: #f0f9ff; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 4px solid #0ea5e9;">
-            <h3 style="color: #333; margin: 0 0 15px 0; font-size: 18px;">Professional Background</h3>
-            <table style="width: 100%; border-collapse: collapse;">
-              ${experience ? `<tr><td style="padding: 5px 0; font-weight: 600; color: #555; width: 140px;">Experience:</td><td style="padding: 5px 0; color: #333;">${experience}</td></tr>` : ""}
-              ${qualification ? `<tr><td style="padding: 5px 0; font-weight: 600; color: #555;">Qualification:</td><td style="padding: 5px 0; color: #333;">${qualification}</td></tr>` : ""}
-            </table>
-          </div>
-          `
-              : ""
-          }
-
           <!-- Message -->
           ${
             message
@@ -184,78 +156,64 @@ export default async function handler(req, res) {
       </div>
     `;
 
-    // Send email using Resend API
-    if (process.env.RESEND_API_KEY) {
-      const resendResponse = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-        },
-        body: JSON.stringify({
-          from: "White Wings Visa <noreply@whitewingsvisa.com>",
-          to: ["mrunal@whitewingsvisa.com"],
-          subject: emailSubject,
-          html: emailHTML,
-          // Add reply-to for direct client communication
-          reply_to: email,
-        }),
+    // Send email using Resend API ONLY
+    if (!process.env.RESEND_API_KEY) {
+      console.log("Error: RESEND_API_KEY not found in environment variables");
+      return res.status(500).json({
+        error: "Email service not configured. Please contact administrator.",
+        message: "RESEND_API_KEY missing",
       });
-
-      const resendResult = await resendResponse.json();
-
-      if (resendResponse.ok) {
-        return res.status(200).json({
-          success: true,
-          message: "Email sent successfully!",
-          id: resendResult.id,
-          formType: formTypeDisplay,
-        });
-      } else {
-        console.error("Resend API Error:", resendResult);
-      }
     }
 
-    // Fallback to Formspree if Resend fails
-    const formspreeResponse = await fetch("https://formspree.io/f/wvkrdrz", {
+    console.log("Sending email via Resend API...");
+
+    const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        name: fullName,
-        email: email,
-        phone: fullPhone,
+        from: "White Wings Visa <noreply@whitewingsvisa.com>",
+        to: ["mrunal@whitewingsvisa.com"],
         subject: emailSubject,
-        message: message || "Form submission from website",
-        formType: formTypeDisplay,
-        _subject: emailSubject,
+        html: emailHTML,
+        // Add reply-to for direct client communication
+        reply_to: email,
       }),
     });
 
-    if (formspreeResponse.ok) {
+    const resendResult = await resendResponse.json();
+    console.log("Resend API response:", resendResult);
+
+    if (resendResponse.ok) {
+      console.log("Email sent successfully via Resend");
       return res.status(200).json({
         success: true,
-        message: "Email sent successfully via backup service!",
+        message: "Email sent successfully via Resend API!",
+        id: resendResult.id,
         formType: formTypeDisplay,
       });
+    } else {
+      console.error("Resend API Error:", resendResult);
+      return res.status(500).json({
+        error: "Failed to send email via Resend API",
+        details: resendResult,
+        fallback: {
+          email: "mrunal@whitewingsvisa.com",
+          phone: "+91 9130448831",
+        },
+      });
     }
-
-    // If all methods fail
-    return res.status(500).json({
-      error: "Failed to send email. Please try again or contact us directly.",
-      fallback: {
-        email: "mrunal@whitewingsvisa.com",
-        phone: "+91 9130448831",
-      },
-    });
   } catch (error) {
     console.error("Email sending error:", error);
     return res.status(500).json({
       error: "Internal server error",
-      message:
-        "Please try again or contact us directly at mrunal@whitewingsvisa.com",
+      message: error.message,
+      fallback: {
+        email: "mrunal@whitewingsvisa.com",
+        phone: "+91 9130448831",
+      },
     });
   }
 }
