@@ -1,13 +1,13 @@
 {
   "name": "white-wings-visa-website",
   "version": "1.0.0",
-  "description": "White Wings Visa Consultancy Website with Lenis Smooth Scroll and DoubleClick Floodlight",
+  "description": "White Wings Visa Consultancy Website - Vercel Deployment",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Running tests...\" && exit 0",
-    "lint": "echo \"Linting files...\" && exit 0",
-    "validate": "echo \"Validating HTML/CSS/JS...\" && exit 0",
-    "prepare": "husky install"
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "start": "vercel dev",
+    "deploy": "vercel --prod"
   },
   "repository": {
     "type": "git",
@@ -17,19 +17,16 @@
     "visa",
     "consultancy",
     "website",
-    "lenis",
-    "floodlight",
-    "tracking"
+    "vercel",
+    "serverless"
   ],
   "author": "White Wings Visa Consultancy",
   "license": "MIT",
   "devDependencies": {
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "vercel": "^33.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run validate",
-      "pre-push": "npm test"
-    }
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
