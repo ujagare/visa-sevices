@@ -1,0 +1,38 @@
+/* Universal dropdown fix for all pages */
+
+/* Services dropdown styling */
+.mobile-services-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.mobile-services-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mobile-services-arrow {
+    transition: transform 0.3s ease;
+}
+
+.mobile-services-dropdown.active .mobile-services-arrow {
+    transform: rotate(180deg);
+}
+
+/* Services links styling */
+.mobile-services-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mobile-services-dropdown.active .mobile-services-links {
+    max-height: 250px;
+}

@@ -1,0 +1,54 @@
+# 🚀 White Wings Visa - Commit Message Template
+# 
+# Format: <type>(<scope>): <subject>
+#
+# Types:
+# ✨ feat: New feature
+# 🐛 fix: Bug fix
+# 📝 docs: Documentation
+# 💄 style: Formatting, missing semi colons, etc
+# ♻️ refactor: Code change that neither fixes a bug nor adds a feature
+# ⚡ perf: Performance improvement
+# ✅ test: Adding missing tests
+# 🔧 chore: Maintain, build process, etc
+# 🚀 deploy: Deployment related changes
+# 🔒 security: Security improvements
+# 📱 mobile: Mobile responsiveness
+# 🌐 seo: SEO improvements
+# 📧 forms: Form functionality
+# 🎨 ui: UI/UX improvements
+#
+# Scopes (optional):
+# - homepage
+# - contact
+# - forms
+# - study
+# - work
+# - migrate
+# - visit
+# - about
+# - seo
+# - performance
+# - security
+#
+# Examples:
+# ✨ feat(forms): Add enhanced validation with spam protection
+# 🐛 fix(contact): Resolve email delivery issues
+# 📝 docs: Update README with deployment instructions
+# 🚀 deploy: Production-ready website with all optimizations
+# 🔒 security: Add form security and validation
+# 📧 forms: Implement backup email system
+# 🌐 seo: Add robots.txt and sitemap.xml
+# 💄 style(homepage): Improve hero section design
+# 📱 mobile: Fix navigation menu responsiveness
+# ⚡ perf: Optimize images and CSS loading
+#
+# Remember:
+# - Use present tense ("Add feature" not "Added feature")
+# - Keep subject line under 50 characters
+# - Reference issues/PRs if applicable
+# - Be descriptive but concise
+#
+# White Wings Visa Consultancy
+# Repository: ujagare/visa-sevices
+# Contact: mrunal@whitewingsvisa.com

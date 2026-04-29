@@ -1,0 +1,365 @@
+/* White Wings Visa - Custom Color Scheme
+ * Colors: #F8FAFC, #D9EAFD, #BCCCDC, #9AA6B2
+ * Font: Poppins
+ */
+
+/* Use system fonts instead of Gilroy */
+
+/* Base font for entire website */
+body, html, * {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+/* Color Variables */
+:root {
+    --primary-light: #F8FAFC;
+    --primary-medium: #D9EAFD;
+    --primary-dark: #BCCCDC;
+    --primary-darker: #9AA6B2;
+
+    --text-dark: #1a1a1a;
+    --text-medium: #2d2d2d;
+    --text-light: #404040;
+
+
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --shadow-light: rgba(154, 166, 178, 0.1);
+    --shadow-medium: rgba(154, 166, 178, 0.2);
+    --shadow-dark: rgba(154, 166, 178, 0.3);
+}
+
+/* Background Colors */
+body {
+    background-color: var(--primary-light) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Navigation */
+nav, .navbar, .nav-div, nav-div {
+    background-color: var(--white) !important;
+    border-bottom: 1px solid var(--primary-dark) !important;
+}
+
+/* Hero Sections */
+.hero, .hero-section, .contact-hero-section, .about-hero-section,
+.study-hero-section, .work-hero-section, .migrate-hero-section, .visit-hero-section {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-medium) 100%) !important;
+}
+
+/* Sections with darker backgrounds */
+.sets-apart, .testimonials, .contact-card-section, .about-journey, 
+.study-opportunity-section, .work-benefits, .migrate-benefits {
+    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Cards and containers */
+.card, .service-card, .country-universities, .university-logo, 
+.testimonial-card, .contact-card, .about-card, .study-card, 
+.work-card, .migrate-card, .visit-card {
+    background-color: var(--white) !important;
+    border: 1px solid var(--primary-dark) !important;
+    box-shadow: 0 10px 30px var(--shadow-light) !important;
+}
+
+/* Card hover effects */
+.card:hover, .service-card:hover, .country-universities:hover, 
+.university-logo:hover, .testimonial-card:hover, .contact-card:hover, 
+.about-card:hover, .study-card:hover, .work-card:hover, 
+.migrate-card:hover, .visit-card:hover {
+    box-shadow: 0 15px 40px var(--shadow-medium) !important;
+    border-color: var(--primary-medium) !important;
+}
+
+
+
+/* Form elements */
+input, textarea, select, .form-control {
+    background-color: var(--primary-light) !important;
+    border: 1px solid var(--primary-dark) !important;
+    color: var(--text-dark) !important;
+}
+
+input:focus, textarea:focus, select:focus, .form-control:focus {
+    border-color: var(--primary-medium) !important;
+    box-shadow: 0 0 0 3px var(--shadow-light) !important;
+}
+
+/* Footer */
+footer, .footer-section, .main-footer, .footer-container {
+    color: var(--text-dark) !important;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    background-color: transparent !important;
+}
+
+.footer-left p, .footer-middle p, .footer-right p,
+.footer-left h4, .footer-middle h4, .footer-right h4,
+.footer-tagline, .footer-slogan, .copyright p,
+.contact-details p {
+    color: var(--text-dark) !important;
+}
+
+.footer-logo {
+    filter: none !important;
+}
+
+/* Apply for Visa CTA Section */
+.apply-visa-cta {
+    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%) !important;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%) !important;
+}
+
+.mobile-nav-links a, .mobile-services-header {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Headings */
+h1,  h3, h4, h5, h6 {
+    color: var(--text-dark) !important;
+}
+
+/* Links - basic text color only */
+
+
+/* Dropdown menus */
+.dropdown-content {
+    background-color: var(--white) !important;
+    border: 1px solid var(--primary-dark) !important;
+    box-shadow: 0 10px 30px var(--shadow-light) !important;
+    color: var(--text-light);
+}
+
+/* Swiper and sliders */
+.swiper-pagination-bullet {
+    background-color: var(--primary-darker) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-dark) !important;
+}
+
+/* Badges and tags */
+.badge, .tag, .section-badge {
+    background-color: var(--primary-medium) !important;
+    color: var(--text-dark) !important;
+}
+
+
+i[class*=".stars"],
+.stars {
+    color: var(--yellow) !important;
+}
+/* Borders */
+.border, [class*="border-"] {
+    border-color: var(--primary-dark) !important;
+}
+
+/* Shadows */
+.shadow, [class*="shadow-"] {
+    box-shadow: 0 10px 30px var(--shadow-light) !important;
+}
+
+
+
+/* Remove background images */
+[style*="background-image"] {
+    background-image: none !important;
+}
+
+/* Override any !important styles */
+[style*="!important"] {
+    color: var(--text-dark) !important;
+}
+
+
+
+/* Fix for any dark backgrounds with dark text */
+[style*="background-color: #"] {
+    color: var(--text-dark) !important;
+}
+
+/* Fix for any light text on light backgrounds */
+[style*="color: #fff"], [style*="color: white"], [style*="color: #ffffff"] {
+    color: var(--text-dark) !important;
+}
+
+/* Ensure all elements use system fonts */
+* {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    color: var(--text-dark);
+}
+/* COMPREHENSIVE TEXT VISIBILITY FIXES */
+
+
+
+
+
+/* Navigation text - basic color only */
+nav a, .navbar a, .nav-link, .menu-item {
+    color: var(--text-dark) !important;
+}
+
+
+
+/* Card text - basic colors only */
+.card p, .card h1, .card h2, .card h3, .card h4, .card h5, .card h6, .card span,
+.service-card p, .service-card h1, .service-card h2, .service-card h3, .service-card h4, .service-card h5, .service-card h6, .service-card span,
+.country-universities p, .country-universities h1, .country-universities h2, .country-universities h3, .country-universities h4, .country-universities h5, .country-universities h6, .country-universities span,
+.university-logo p, .university-logo h1, .university-logo h2, .university-logo h3, .university-logo h4, .university-logo h5, .university-logo h6, .university-logo span,
+.testimonial-card p, .testimonial-card h1, .testimonial-card h2, .testimonial-card h3, .testimonial-card h4, .testimonial-card h5, .testimonial-card h6, .testimonial-card span,
+.contact-card p, .contact-card h1, .contact-card h2, .contact-card h3, .contact-card h4, .contact-card h5, .contact-card h6, .contact-card span,
+.about-card p, .about-card h1, .about-card h2, .about-card h3, .about-card h4, .about-card h5, .about-card h6, .about-card span,
+.study-card p, .study-card h1, .study-card h2, .study-card h3, .study-card h4, .study-card h5, .study-card h6, .study-card span,
+.work-card p, .work-card h1, .work-card h2, .work-card h3, .work-card h4, .work-card h5, .work-card h6, .work-card span,
+.migrate-card p, .migrate-card h1, .migrate-card h2, .migrate-card h3, .migrate-card h4, .migrate-card h5, .migrate-card h6, .migrate-card span,
+.visit-card p, .visit-card h1, .visit-card h2, .visit-card h3, .visit-card h4, .visit-card h5, .visit-card h6, .visit-card span {
+    color: var(--text-dark) !important;
+}
+
+/* Section text - basic colors only */
+.section p, .section h1,  .section h3, .section h4, .section h5, .section h6, .section span,
+.sets-apart p, .sets-apart h1, .sets-apart h2, .sets-apart h3, .sets-apart h4, .sets-apart h5, .sets-apart h6, .sets-apart span,
+.testimonials p, .testimonials h1, .testimonials h2, .testimonials h3, .testimonials h4, .testimonials h5, .testimonials h6, .testimonials span,
+.contact-card-section p, .contact-card-section h1, .contact-card-section h2, .contact-card-section h3, .contact-card-section h4, .contact-card-section h5, .contact-card-section h6, .contact-card-section span,
+.about-journey p, .about-journey h1, .about-journey h2, .about-journey h3, .about-journey h4, .about-journey h5, .about-journey h6, .about-journey span,
+.study-opportunity-section p, .study-opportunity-section h1, .study-opportunity-section h2, .study-opportunity-section h3, .study-opportunity-section h4, .study-opportunity-section h5, .study-opportunity-section h6, .study-opportunity-section span,
+.work-benefits p, .work-benefits h1, .work-benefits h2, .work-benefits h3, .work-benefits h4, .work-benefits h5, .work-benefits h6, .work-benefits span,
+.migrate-benefits p, .migrate-benefits h1, .migrate-benefits h2, .migrate-benefits h3, .migrate-benefits h4, .migrate-benefits h5, .migrate-benefits h6, .migrate-benefits span {
+    color: var(--text-dark) !important;
+}
+
+
+
+/* Form text */
+input, textarea, select, .form-control {
+    color: var(--text-dark) !important;
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
+    color: var(--text-medium) !important;
+}
+
+
+
+
+
+/* Dropdown text - basic color only */
+.dropdown-content a {
+    color: var(--text-dark) !important;
+}
+
+
+
+/* List items */
+ul li, ol li {
+    color: var(--text-dark) !important;
+}
+
+/* Table text */
+table, th, td {
+    color: var(--text-dark) !important;
+}
+
+
+
+
+
+/* SPECIFIC PROBLEM AREA FIXES */
+
+
+
+/* Service section text - basic colors only */
+.services-section h1, .services-section h2, .services-section h3, .services-section h4, .services-section h5, .services-section h6,
+.services-section p, .services-section span {
+    color: var(--text-dark) !important;
+}
+
+/* About section text - basic colors only */
+.about-section h1, .about-section h2, .about-section h3, .about-section h4, .about-section h5, .about-section h6,
+.about-section p, .about-section span {
+    color: var(--text-dark) !important;
+}
+
+/* Process section text - basic colors only */
+.process-section h1, .process-section h2, .process-section h3, .process-section h4, .process-section h5, .process-section h6,
+.process-section p, .process-section span {
+    color: var(--text-dark) !important;
+}
+
+/* FAQ section text - basic colors only */
+.faq-section h1, .faq-section h2, .faq-section h3, .faq-section h4, .faq-section h5, .faq-section h6,
+.faq-section p, .faq-section span {
+    color: var(--text-dark) !important;
+}
+
+
+
+/* Stats section text - basic colors only */
+.stats-section h1, .stats-section h2, .stats-section h3, .stats-section h4, .stats-section h5, .stats-section h6,
+.stats-section p, .stats-section span {
+    color: var(--text-dark) !important;
+}
+
+/* Features section text - basic colors only */
+.features-section h1, .features-section h2, .features-section h3, .features-section h4, .features-section h5, .features-section h6,
+.features-section p, .features-section span {
+    color: var(--text-dark) !important;
+}
+
+/* Benefits section text - basic colors only */
+.benefits-section h1, .benefits-section h2, .benefits-section h3, .benefits-section h4, .benefits-section h5, .benefits-section h6,
+.benefits-section p, .benefits-section span {
+    color: var(--text-dark) !important;
+}
+
+/* Destinations section text - basic colors only */
+.destinations-section h1, .destinations-section h2, .destinations-section h3, .destinations-section h4, .destinations-section h5, .destinations-section h6,
+.destinations-section p, .destinations-section span {
+    color: var(--text-dark) !important;
+}
+
+/* Timeline text - basic colors only */
+.timeline h1, .timeline h2, .timeline h3, .timeline h4, .timeline h5, .timeline h6,
+.timeline p, .timeline span {
+    color: var(--text-dark) !important;
+}
+
+/* Assessment form text - basic colors only */
+.assessment-section h1, .assessment-section h2, .assessment-section h3, .assessment-section h4, .assessment-section h5, .assessment-section h6,
+.assessment-section p, .assessment-section span {
+    color: var(--text-dark) !important;
+}
+
+
+
+/* Contact form text - basic colors only */
+.contact-form h1, .contact-form h2, .contact-form h3, .contact-form h4, .contact-form h5, .contact-form h6,
+.contact-form p, .contact-form span, .contact-form label {
+    color: var(--text-dark) !important;
+}
+.contact-form span{
+    color:var(--white) !important;
+}
+
+/* Thank you page text - basic colors only */
+.thank-you-section h1, .thank-you-section h2, .thank-you-section h3, .thank-you-section h4, .thank-you-section h5, .thank-you-section h6,
+.thank-you-section p, .thank-you-section span {
+    color: var(--text-dark) !important;
+}
+
+/* Error page text - basic colors only */
+.error-section h1, .error-section h2, .error-section h3, .error-section h4, .error-section h5, .error-section h6,
+.error-section p, .error-section span {
+    color: var(--text-dark) !important;
+}
+
+/* File cleaned - button styles removed */

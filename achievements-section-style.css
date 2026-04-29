@@ -1,0 +1,132 @@
+/*
+ * ACHIEVEMENTS SECTION STYLING
+ * Background color #0369A1 and white text for "Excellence Measured in Numbers" section
+ */
+
+/* Enhanced Achievements Section - Blue background */
+.enhanced-achievements-section {
+    background-color: #0369A1 !important;
+    position: relative !important;
+    padding: 80px 0 !important;
+}
+
+/* Achievements background overlay */
+.achievements-background {
+    background-color: #0369A1 !important;
+}
+
+.achievements-overlay {
+    background-color: rgba(3, 105, 161, 0.9) !important;
+}
+
+/* All text in achievements section - WHITE */
+.enhanced-achievements-section h1,
+.enhanced-achievements-section h2,
+.enhanced-achievements-section h3,
+.enhanced-achievements-section h4,
+.enhanced-achievements-section h5,
+.enhanced-achievements-section h6,
+.enhanced-achievements-section p,
+.enhanced-achievements-section span,
+.enhanced-achievements-section div,
+.enhanced-achievements-section a {
+    color: #FFFFFF !important;
+}
+
+/* Achievements header text */
+.achievements-header h2,
+.achievements-header p,
+.achievements-header span {
+    color: #FFFFFF !important;
+    text-shadow: none !important;
+}
+
+/* Header badge styling */
+.header-badge {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.header-badge i {
+    color: #FFFFFF !important;
+}
+
+.header-badge span {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+/* Achievement cards text */
+.achievement-card h3,
+.achievement-card p,
+.achievement-card span {
+    color: #FFFFFF !important;
+}
+
+/* Achievement numbers */
+.achievement-number .count,
+.achievement-number .number-suffix {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+/* Achievement card backgrounds - semi-transparent white */
+.achievement-card {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.achievement-card:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Achievement icons */
+.achievement-icon {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #FFFFFF !important;
+}
+
+.achievement-icon i {
+    color: #FFFFFF !important;
+}
+
+/* Progress bars */
+.progress-bar {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.progress-bar::after {
+    background-color: #FFFFFF !important;
+}
+
+/* Floating elements - lighter for contrast */
+.floating-element {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Card glow effects */
+.card-glow {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%) !important;
+}
+
+/* Icon pulse effects */
+.icon-pulse {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Ensure all text is white and visible */
+.enhanced-achievements-section * {
+    color: #FFFFFF !important;
+}
+
+/* Override any dark text */
+.enhanced-achievements-section .achievement-content h3,
+.enhanced-achievements-section .achievement-content p,
+.enhanced-achievements-section .achievement-number {
+    color: #FFFFFF !important;
+    text-shadow: none !important;
+}

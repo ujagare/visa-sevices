@@ -1,0 +1,149 @@
+/* Assessment Form Styles */
+.quick-assessment-section {
+    padding: 40px;
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(135deg, #000080 0%, #3b82f6 100%);
+    box-shadow: 0 15px 40px rgba(0, 0, 128, 0.15);
+    border-radius: 15px;
+    margin: -50px auto 50px;
+    max-width: 1100px;
+    color: white;
+}
+
+.assessment-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.assessment-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.assessment-header .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.assessment-header .section-badge i {
+    font-size: 1.2rem;
+}
+
+.assessment-header h3 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.assessment-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+}
+
+.quick-assessment-form {
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #334155;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: white;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+    background: white;
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.assessment-submit {
+    width: 100%;
+    padding: 15px;
+    background: white;
+    color: #000080;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.assessment-submit i {
+    margin-left: 8px;
+    transition: all 0.3s ease;
+}
+
+.assessment-submit:hover {
+    background: #f0f9ff;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.assessment-submit:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .quick-assessment-section {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .quick-assessment-section {
+        margin-top: -30px;
+        margin-bottom: 30px;
+        padding: 25px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .assessment-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .assessment-header {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,200 @@
+/* Destination Cards Section Styles */
+.destination-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.destination-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.destination-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.destination-header h2 {
+    font-size: 2.5rem;
+    color: #000080;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.destination-header p {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.destination-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.destination-card:hover .destination-image img {
+    transform: scale(1.1);
+}
+
+.destination-flag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.destination-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destination-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-title {
+    margin-bottom: 15px;
+}
+
+.destination-title h3 {
+    font-size: 1.5rem;
+    color: #000080;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.destination-title p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.destination-features {
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.destination-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.destination-features ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.destination-features ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #000080;
+    font-weight: bold;
+}
+
+.destination-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.destination-visa-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.visa-type-tag {
+    padding: 3px 8px;
+    background: #f1f5f9;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #334155;
+}
+
+.destination-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #000080;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.destination-btn:hover {
+    color: #000066;
+}
+
+.destination-btn i {
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.destination-btn:hover i {
+    transform: translateX(3px);
+}
+
+@media (max-width: 992px) {
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .destination-header h2 {
+        font-size: 2rem;
+    }
+}

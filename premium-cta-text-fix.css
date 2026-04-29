@@ -1,0 +1,294 @@
+/*
+ * PREMIUM CTA TEXT VISIBILITY FIX
+ * Fix for "TAKE THE NEXT STEP" section text visibility
+ */
+
+/* Premium CTA Section - Force white text visibility */
+.premium-cta-section {
+    position: relative !important;
+}
+
+.premium-cta-section .section-badge {
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.premium-cta-section .section-badge span {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+.premium-cta-section .section-badge i {
+    color: #FFFFFF !important;
+}
+
+.premium-cta-section h2 {
+    color: #FFFFFF !important;
+    font-size: 3rem !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+.premium-cta-section p {
+    color: #FFFFFF !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 30px !important;
+    opacity: 0.95 !important;
+    line-height: 1.6 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.premium-cta-content {
+    color: #FFFFFF !important;
+}
+
+.premium-cta-content * {
+    color: #FFFFFF !important;
+}
+
+/* Premium features - White text */
+.premium-cta-features {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+    margin-bottom: 30px !important;
+}
+
+.premium-feature {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    padding: 10px 20px !important;
+    border-radius: 25px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.premium-feature:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-3px) !important;
+}
+
+.premium-feature i {
+    color: #FFFFFF !important;
+    font-size: 1.2rem !important;
+}
+
+.premium-feature span {
+    color: #FFFFFF !important;
+    font-weight: 500 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Override any conflicting styles - ONLY for left side content */
+.premium-cta-content h1,
+.premium-cta-content h2,
+.premium-cta-content h3,
+.premium-cta-content h4,
+.premium-cta-content h5,
+.premium-cta-content h6,
+.premium-cta-content p,
+.premium-cta-content span,
+.premium-cta-content div,
+.premium-cta-content a {
+    color: #FFFFFF !important;
+}
+
+/* Form text visibility - RIGHT SIDE FORM */
+.premium-cta-form h3 {
+    color: #111827 !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+}
+
+.premium-cta-form p {
+    color: #4b5563 !important;
+    text-align: center !important;
+    margin-bottom: 25px !important;
+    font-size: 1rem !important;
+}
+
+.premium-cta-form * {
+    color: #111827 !important;
+    
+}
+
+.premium-cta-form input,
+.premium-cta-form button {
+    color: #111827 !important;
+    border: none;
+}
+
+.premium-cta-form button {
+    color: #222 !important;
+    background: #A9B6C4 !important;
+}
+
+/* Specific text elements */
+.premium-cta-section .section-badge span {
+    color: #FFFFFF !important;
+}
+
+/* Ensure all text in premium features is white */
+.premium-feature * {
+    color: #FFFFFF !important;
+}
+
+/* Form heading and description - Make sure they are visible */
+.premium-cta-form h3 {
+    color: #111827 !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+}
+
+.premium-cta-form > p {
+    color: #4b5563 !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+}
+
+/* Mobile responsiveness - Maintain all changes */
+@media (max-width: 768px) {
+    .premium-cta-section {
+        padding: 80px 0 !important;
+        min-height: 140vh !important;
+    }
+
+    .premium-cta-container {
+        flex-direction: column !important;
+        gap: 40px !important;
+        padding: 0 15px !important;
+    }
+
+    .premium-cta-content {
+        padding-right: 0 !important;
+        text-align: center !important;
+        margin-bottom: 0 !important;
+    }
+
+    .premium-cta-section h2 {
+        font-size: 2.5rem !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+        margin-bottom: 15px !important;
+    }
+
+    .premium-cta-section p {
+        font-size: 1.1rem !important;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+        margin-bottom: 25px !important;
+    }
+
+    .premium-feature span {
+        font-size: 0.9rem !important;
+    }
+
+    .premium-cta-features {
+        justify-content: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Form maintains your changes and full visibility */
+    .premium-cta-form {
+        width: 100% !important;
+        height: auto;
+        max-width: 500px !important;
+        margin: 0 auto !important;
+        padding: 30px 20px !important;
+        border-radius: 15px !important;
+        position: relative !important;
+        z-index: 10 !important;
+    }
+
+    .premium-cta-form h3 {
+        color: #111827 !important;
+        font-size: 1.6rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .premium-cta-form p {
+        color: #4b5563 !important;
+        font-size: 0.95rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    .premium-cta-form button {
+        color: #222 !important;
+        background: #A9B6C4 !important;
+        width: 100% !important;
+        padding: 15px !important;
+        font-size: 1rem !important;
+        border-radius: 8px !important;
+    }
+
+    /* Ensure form inputs are visible */
+    .premium-form-row {
+        margin-bottom: 15px !important;
+    }
+
+    .premium-input {
+        width: 100% !important;
+        padding: 12px 15px !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .premium-cta-section {
+        padding: 60px 0 !important;
+    }
+
+    .premium-cta-container {
+        padding: 0 10px !important;
+    }
+
+    .premium-cta-section h2 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .premium-cta-section p {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .premium-cta-features {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    .premium-feature {
+        width: 100% !important;
+        max-width: 250px !important;
+        justify-content: center !important;
+        padding: 8px 15px !important;
+    }
+
+    /* Form full visibility on small screens */
+    .premium-cta-form {
+        padding: 25px 15px !important;
+        margin: 0 5px !important;
+    }
+
+    .premium-cta-form h3 {
+        font-size: 1.4rem !important;
+    }
+
+    .premium-cta-form p {
+        font-size: 0.9rem !important;
+    }
+
+    .premium-cta-form button {
+        padding: 12px !important;
+        font-size: 0.95rem !important;
+    }
+
+    .premium-input {
+        padding: 10px 12px !important;
+        font-size: 0.95rem !important;
+    }
+}

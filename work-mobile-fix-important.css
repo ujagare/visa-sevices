@@ -1,0 +1,35 @@
+/* Critical mobile fixes for work cards */
+@media (max-width: 768px) {
+  /* Reset all min-heights */
+  .work-destination-card p,
+  .destination-features,
+  .work-destination-card,
+  .destination-content {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  
+  /* Fix spacing */
+  .work-destination-card p {
+    margin: 5px 0 10px !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Compact layout */
+  .work-destination-card .destination-content {
+    padding: 15px !important;
+  }
+  
+  /* Fix button position */
+  .destination-btn {
+    margin-top: 5px !important;
+    padding: 8px 15px !important;
+  }
+  
+  /* Fix feature tags */
+  .feature-tag {
+    margin: 0 5px 5px 0 !important;
+    padding: 3px 8px !important;
+  }
+}

@@ -1,0 +1,28 @@
+/* Study page specific overrides */
+html, body {
+    scroll-behavior: auto !important;
+    overflow-y: auto !important;
+    overscroll-behavior: auto !important;
+}
+
+/* Fix for mouse wheel scrolling */
+* {
+    touch-action: auto !important;
+}
+
+/* Ensure all sections allow scrolling */
+section {
+    overflow: visible !important;
+    position: relative !important;
+    z-index: auto !important;
+}
+
+/* Fix for destination cards */
+.destination-card {
+    overflow: visible !important;
+}
+
+/* Fix for assessment form */
+.assessment-form {
+    overflow: visible !important;
+}

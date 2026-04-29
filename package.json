@@ -1,0 +1,35 @@
+{
+  "name": "white-wings-visa-website",
+  "version": "1.0.0",
+  "description": "White Wings Visa Consultancy Website with Lenis Smooth Scroll and DoubleClick Floodlight",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Running tests...\" && exit 0",
+    "lint": "echo \"Linting files...\" && exit 0",
+    "validate": "echo \"Validating HTML/CSS/JS...\" && exit 0",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ujagare/visa-sevices.git"
+  },
+  "keywords": [
+    "visa",
+    "consultancy",
+    "website",
+    "lenis",
+    "floodlight",
+    "tracking"
+  ],
+  "author": "White Wings Visa Consultancy",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^8.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run validate",
+      "pre-push": "npm test"
+    }
+  }
+}

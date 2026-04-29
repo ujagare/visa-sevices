@@ -1,0 +1,28 @@
+/* Mobile active states for better touch feedback */
+@media (max-width: 768px) {
+  .service-item-active {
+    background-color: #f0f7ff !important;
+    transform: scale(0.98) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .service-item-active .service-icon-small {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-item-active .service-content h4 {
+    color: #0056b3;
+    transition: color 0.3s ease;
+  }
+  
+  /* Improve mobile layout for services section */
+  .mobile-view .services-container {
+    padding: 0 15px;
+  }
+  
+  .mobile-view .services-header {
+    text-align: center;
+  }
+}

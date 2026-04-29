@@ -1,0 +1,15 @@
+# Set correct MIME types
+<IfModule mod_mime.c>
+    # CSS
+    AddType text/css .css
+    
+    # JavaScript
+    AddType text/javascript .js
+</IfModule>
+
+# Enable CORS for fonts and other resources
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
