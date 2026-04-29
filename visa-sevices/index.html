@@ -23,6 +23,9 @@
     <!-- White Wings Custom Color Scheme -->
     <link rel="stylesheet" href="white-wings-colors.css">
     
+    <!-- Contact Form Fix -->
+    <link rel="stylesheet" href="contact-form-fix.css">
+    
     <!-- Hero Button Fix -->
     <link rel="stylesheet" href="hero-button-fix.css">
     
@@ -1133,33 +1136,68 @@
                         <input type="hidden" name="_subject" value="New Contact Form - White Wings">
                         <input type="hidden" name="_next" value="thank-you.html">
                         <input type="hidden" name="_captcha" value="false">
-                                        <option value="+45">🇩🇰 +45</option>
-                                        <option value="+64">🇳🇿 +64</option>
-                                        <option value="+65">🇸🇬 +65</option>
-                                        <option value="+60">🇲🇾 +60</option>
-                                        <option value="+66">🇹🇭 +66</option>
-                                        <option value="+84">🇻🇳 +84</option>
-                                        <option value="+62">🇮🇩 +62</option>
-                                        <option value="+63">🇵🇭 +63</option>
-                                        <option value="+971">🇦🇪 +971</option>
-                                        <option value="+974">🇶🇦 +974</option>
-                                        <option value="+965">🇰🇼 +965</option>
-                                        <option value="+966">🇸🇦 +966</option>
-                                        <option value="+968">🇴🇲 +968</option>
-                                        <option value="+973">🇧🇭 +973</option>
-                                        <option value="+81">🇯🇵 +81</option>
-                                        <option value="+82">🇰🇷 +82</option>
-                                        <option value="+86">🇨🇳 +86</option>
-                                        <option value="+852">🇭🇰 +852</option>
-                                        <option value="+27">🇿🇦 +27</option>
-                                        <option value="+55">🇧🇷 +55</option>
-                                        <option value="+54">🇦🇷 +54</option>
-                                        <option value="+56">🇨🇱 +56</option>
-                                        <option value="+57">🇨🇴 +57</option>
-                                        <option value="+52">🇲🇽 +52</option>
-                                    </select>
-                                    <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="XXXXXXXXXX" title="Please enter 10 digit phone number" style="flex: 1;" required>
-                                </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name *</label>
+                                <input type="text" name="firstName" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name *</label>
+                                <input type="text" name="lastName" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <div class="phone-input-group">
+                                <select name="countryCode" class="country-select" required>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+1">🇨🇦 +1</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                    <option value="+34">🇪🇸 +34</option>
+                                    <option value="+31">🇳🇱 +31</option>
+                                    <option value="+41">🇨🇭 +41</option>
+                                    <option value="+43">🇦🇹 +43</option>
+                                    <option value="+32">🇧🇪 +32</option>
+                                    <option value="+46">🇸🇪 +46</option>
+                                    <option value="+47">🇳🇴 +47</option>
+                                    <option value="+45">🇩🇰 +45</option>
+                                    <option value="+64">🇳🇿 +64</option>
+                                    <option value="+65">🇸🇬 +65</option>
+                                    <option value="+60">🇲🇾 +60</option>
+                                    <option value="+66">🇹🇭 +66</option>
+                                    <option value="+84">🇻🇳 +84</option>
+                                    <option value="+62">🇮🇩 +62</option>
+                                    <option value="+63">🇵🇭 +63</option>
+                                    <option value="+971">🇦🇪 +971</option>
+                                    <option value="+974">🇶🇦 +974</option>
+                                    <option value="+965">🇰🇼 +965</option>
+                                    <option value="+966">🇸🇦 +966</option>
+                                    <option value="+968">🇴🇲 +968</option>
+                                    <option value="+973">🇧🇭 +973</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                    <option value="+82">🇰🇷 +82</option>
+                                    <option value="+86">🇨🇳 +86</option>
+                                    <option value="+852">🇭🇰 +852</option>
+                                    <option value="+27">🇿🇦 +27</option>
+                                    <option value="+55">🇧🇷 +55</option>
+                                    <option value="+54">🇦🇷 +54</option>
+                                    <option value="+56">🇨🇱 +56</option>
+                                    <option value="+57">🇨🇴 +57</option>
+                                    <option value="+52">🇲🇽 +52</option>
+                                </select>
+                                <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="XXXXXXXXXX" title="Please enter 10 digit phone number" style="flex: 1;" required>
                             </div>
                         </div>
 
@@ -1308,6 +1346,7 @@
 
     <!-- Custom Scripts -->
     <script src="loader.js"></script>
+    <script src="contact-form-handler.js"></script>
 
     <script src="consolidated-scripts.js"></script>
     <script src="hero-slider-fix.js?v=20260429-2"></script>
